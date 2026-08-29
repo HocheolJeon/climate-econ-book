@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>행동경제학과 기후변화 – 기후변화경제학</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./15-international-finance.html" rel="next">
+<link href="./13-adaptation.html" rel="prev">
+<link href="./images/favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-627e94411287757dbab6744ee64f64c5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-e20e1f3c904b4e5828350fc7ba45231a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-627e94411287757dbab6744ee64f64c5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a4cec59530d85c1f623a3498225afff6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4a18dfd70d581cb06c05b5ac74428948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a4cec59530d85c1f623a3498225afff6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+</head>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10-carbon-tax.html">Part IV. 기후변화 해결을 위한 경제학적 접근</a></li><li class="breadcrumb-item"><a href="./14-behavioral-climate.html"><span class="chapter-title">행동경제학과 기후변화</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">기후변화경제학</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/YOUR_USERNAME/climate-econ-book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후변화경제학</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 들어가며: 기후와 경제</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-what-is-climate-change.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후변화란 무엇인가</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-climate-economy-link.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후와 경제의 연결</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 시장은 언제, 왜 실패하는가</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-market-efficiency.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시장의 효율성과 후생경제학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-market-failure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시장실패: 외부효과와 공공재</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 기후변화의 비용과 편익</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-climate-damages.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후 피해의 측정과 가치평가</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-abatement-costs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">감축비용과 한계감축비용곡선</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-discounting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">편익, 할인율, 세대간 형평성</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-uncertainty-risk.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">불확실성과 기후 리스크</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-climate-burdens.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후변화 부담의 분배</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 기후변화 해결을 위한 경제학적 접근</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-carbon-tax.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">탄소세</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-emissions-trading.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">배출권거래제</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-optimal-policy-iam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">최적 기후정책: 비용-편익 분석과 통합평가모형</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-adaptation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후 적응의 경제학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-behavioral-climate.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">행동경제학과 기후변화</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-international-finance.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">국제협력과 기후금융</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-green-growth.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">녹색 성장</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#sec-standard-limits" id="toc-sec-standard-limits" class="nav-link active" data-scroll-target="#sec-standard-limits">표준 경제 모형의 한계</a></li>
+  <li><a href="#sec-present-bias" id="toc-sec-present-bias" class="nav-link" data-scroll-target="#sec-present-bias">현재 편향과 기후변화</a></li>
+  <li><a href="#sec-loss-aversion" id="toc-sec-loss-aversion" class="nav-link" data-scroll-target="#sec-loss-aversion">손실 회피와 현상 유지 편향</a></li>
+  <li><a href="#sec-availability" id="toc-sec-availability" class="nav-link" data-scroll-target="#sec-availability">가용성 휴리스틱과 기후 위험 인식</a></li>
+  <li><a href="#sec-social-norms" id="toc-sec-social-norms" class="nav-link" data-scroll-target="#sec-social-norms">사회적 규범과 정보 효과</a></li>
+  <li><a href="#sec-nudge" id="toc-sec-nudge" class="nav-link" data-scroll-target="#sec-nudge">넛지와 기후 정책</a></li>
+  <li><a href="#sec-energy-paradox" id="toc-sec-energy-paradox" class="nav-link" data-scroll-target="#sec-energy-paradox">에너지 효율 역설</a></li>
+  <li><a href="#sec-climate-communication" id="toc-sec-climate-communication" class="nav-link" data-scroll-target="#sec-climate-communication">기후 커뮤니케이션의 행동경제학</a></li>
+  <li><a href="#sec-behavioral-market" id="toc-sec-behavioral-market" class="nav-link" data-scroll-target="#sec-behavioral-market">행동 정책과 시장 기반 정책의 결합</a></li>
+  <li><a href="#%EC%9A%94%EC%95%BD" id="toc-요약" class="nav-link" data-scroll-target="#%EC%9A%94%EC%95%BD">요약</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/YOUR_USERNAME/climate-econ-book/edit/main/14-behavioral-climate.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YOUR_USERNAME/climate-econ-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10-carbon-tax.html">Part IV. 기후변화 해결을 위한 경제학적 접근</a></li><li class="breadcrumb-item"><a href="./14-behavioral-climate.html"><span class="chapter-title">행동경제학과 기후변화</span></a></li></ol></nav><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-behavioral-climate" class="quarto-section-identifier"><span class="chapter-title">행동경제학과 기후변화</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>학습 목표
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>이 장을 마치면 다음을 할 수 있다:</p>
+<ol type="1">
+<li>행동경제학의 핵심 개념(제한적 합리성, 휴리스틱, 편향)을 설명할 수 있다.</li>
+<li>현재 편향과 쌍곡형 할인이 기후 행동을 어떻게 저해하는지 분석할 수 있다.</li>
+<li>손실 회피, 현상 유지 편향, 가용성 휴리스틱이 기후 정책 수용에 미치는 영향을 설명할 수 있다.</li>
+<li>사회적 규범과 정보 제공이 에너지 절약 행동에 미치는 효과를 평가할 수 있다.</li>
+<li>넛지(nudge)의 개념과 기후 분야 적용 사례를 분석할 수 있다.</li>
+<li>행동 정책 수단과 시장 기반 정책 수단의 보완 관계를 이해할 수 있다.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>뉴스 읽기: “당신의 이웃은 전기를 덜 씁니다”
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>미국 에너지 기업 오파워(Opower)는 가정에 전기요금 청구서를 보낼 때 단순한 숫자 대신 특별한 정보를 추가했다. “당신의 이웃 100가구 평균 전력 사용량은 800kWh입니다. 당신은 950kWh를 사용했습니다.” 그리고 이웃 평균보다 적게 쓰는 가정에는 웃는 얼굴 이모티콘을, 많이 쓰는 가정에는 찡그린 얼굴을 넣었다. 이 단순한 개입으로 전력 소비가 평균 2%p 줄었다. 탄소세 수십 달러에 버금가는 효과다. 이 사례는 리처드 탈러(Richard Thaler)와 캐스 선스타인(Cass Sunstein)이 제안한 <strong>넛지(nudge)</strong> 이론의 대표적 성공 사례로 꼽힌다. 2017년 탈러는 이 연구를 포함한 행동경제학 공로로 노벨 경제학상을 받았다.</p>
+<p><em>출처: Allcott (2011), </em>Journal of Public Economics<em>; Thaler &amp; Sunstein (2008), </em>Nudge**</p>
+</div>
+</div>
+<section id="sec-standard-limits" class="level2"><h2 class="anchored" data-anchor-id="sec-standard-limits">표준 경제 모형의 한계</h2>
+<p>표준 경제학은 인간을 <strong>합리적 경제인(homo economicus)</strong>으로 가정한다. 완전한 정보를 보유하고, 일관된 선호를 가지며, 자신의 장기적 이익을 극대화하는 존재다. 이 가정 하에서 기후변화 대응의 실패는 외부효과와 공공재 문제—시장 가격 신호의 왜곡—로 완전히 설명된다.</p>
+<p>그러나 현실의 인간은 다르다. 심리학과 경제학의 결합인 <strong>행동경제학(behavioral economics)</strong>은 인간의 실제 의사결정이 표준 모형과 어떻게 다른지를 연구한다. 다니엘 카너먼(Daniel Kahneman)과 아모스 트버스키(Amos Tversky)의 연구, 리처드 탈러의 정신 계좌(mental accounting) 이론이 대표적이다.</p>
+<p>기후변화는 행동 편향이 특히 두드러지는 문제다. 비용은 지금 당장, 편익은 수십 년 후에 발생하고, 위험은 추상적이며, 책임은 전 지구적으로 분산되어 있기 때문이다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>행동경제학의 핵심 개념
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>제한적 합리성(bounded rationality)</strong>: 인간은 완전한 정보와 무한한 계산 능력이 없다. 만족스러운 수준에서 결정을 내린다(Herbert Simon).</p>
+<p><strong>휴리스틱(heuristics)</strong>: 복잡한 문제를 단순화하는 사고 지름길. 빠르고 효율적이지만 체계적 오류를 낳는다.</p>
+<p><strong>편향(bias)</strong>: 휴리스틱의 결과로 발생하는 일관된 방향의 판단 오류.</p>
+<p><strong>시스템 1 vs.&nbsp;시스템 2 사고</strong>: 카너먼(2011). 빠르고 직관적인 시스템 1이 느리고 분석적인 시스템 2를 압도할 때 편향이 발생한다.</p>
+</div>
+</div>
+</section><section id="sec-present-bias" class="level2"><h2 class="anchored" data-anchor-id="sec-present-bias">현재 편향과 기후변화</h2>
+<p>기후 행동을 저해하는 가장 중요한 행동 요인 중 하나는 <strong>현재 편향(present bias)</strong>이다. 사람들은 먼 미래보다 가까운 미래를 과도하게 선호한다.</p>
+<p>표준 경제학의 지수 할인(exponential discounting)에서 미래 가치의 현재 가치는:</p>
+<p><span class="math display">\[PV = \frac{V_t}{(1+r)^t}\]</span></p>
+<p>그러나 실제 인간의 선호는 <strong>쌍곡형 할인(hyperbolic discounting)</strong>에 더 가깝다:</p>
+<p><span class="math display">\[PV = \frac{V_t}{1 + k \cdot t}\]</span></p>
+<p>쌍곡형 할인에서는 단기 미래일수록 할인율이 더 높아진다. 즉, “오늘 vs.&nbsp;내일”의 차이를 “10년 후 vs.&nbsp;11년 후”의 차이보다 훨씬 크게 느낀다. 이 때문에 장기 혜택(기후 안정)을 위해 단기 비용(에너지 절약, 탄소세)을 감수하는 행동이 어렵다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-hyperbolic-discounting" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-hyperbolic-discounting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="14-behavioral-climate_files/figure-html/fig-hyperbolic-discounting-1.png" class="img-fluid figure-img" width="1800">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hyperbolic-discounting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.1: Exponential vs.&nbsp;Hyperbolic Discounting: Present Value Over Time
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>현재 편향은 <strong>시간 불일치(time inconsistency)</strong> 문제를 낳는다. 사람들은 미래 계획을 세울 때는 합리적이지만, 막상 그 시점이 되면 계획을 바꾼다. “내년부터 에너지 절약을 시작하겠다”는 계획은 내년이 되면 또 “다음 해부터”로 미뤄진다.</p>
+</section><section id="sec-loss-aversion" class="level2"><h2 class="anchored" data-anchor-id="sec-loss-aversion">손실 회피와 현상 유지 편향</h2>
+<p>카너먼과 트버스키(1979)의 <strong>전망 이론(prospect theory)</strong>에 따르면 사람들은 이득보다 손실에 약 2배 더 민감하게 반응한다.</p>
+<p><span class="math display">\[V(\Delta x) = \begin{cases} (\Delta x)^\alpha &amp; \Delta x \geq 0 \\ -\lambda(-\Delta x)^\alpha &amp; \Delta x &lt; 0 \end{cases}, \quad \lambda \approx 2.25\]</span></p>
+<p>이 <strong>손실 회피(loss aversion)</strong>는 기후 정책에 두 가지 방향으로 작용한다.</p>
+<p><strong>기후 행동을 저해하는 방향</strong>: 탄소세, 에너지 효율 투자 등은 단기적으로 비용(손실)처럼 느껴진다. 비록 장기적으로 이득이더라도 즉각적인 비용 회피 심리가 행동을 막는다.</p>
+<p><strong>기후 행동을 촉진하는 방향</strong>: 기후변화를 현재의 손실로 프레이밍하면 행동 동기가 강화된다. “이 조치를 취하지 않으면 GDP의 5%를 잃는다”는 메시지가 “이 조치를 취하면 GDP의 5%를 얻는다”보다 더 강한 반응을 이끌어낸다.</p>
+<p><strong>현상 유지 편향(status quo bias)</strong>도 관련이 있다. 사람들은 현재 상태를 기준점(reference point)으로 삼고 변화를 손실로 인식한다. 화석연료 의존 생활 방식에서 벗어나는 것이 합리적임을 알면서도 변화 자체를 꺼린다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-prospect-theory" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-prospect-theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="14-behavioral-climate_files/figure-html/fig-prospect-theory-1.png" class="img-fluid figure-img" width="1800">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prospect-theory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.2: Prospect Theory Value Function: Loss Aversion
+</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="sec-availability" class="level2"><h2 class="anchored" data-anchor-id="sec-availability">가용성 휴리스틱과 기후 위험 인식</h2>
+<p><strong>가용성 휴리스틱(availability heuristic)</strong>은 기억에 쉽게 떠오르는 사례를 기반으로 확률을 추정하는 사고 방식이다. 이것이 기후 위험 인식에 중요한 영향을 미친다.</p>
+<p>홍수, 폭염, 태풍 등 극단적 기상 현상을 최근에 경험한 사람들은 기후변화의 위험을 더 크게 인식하고 관련 정책을 더 지지하는 경향이 있다. 반면, 추운 겨울을 보낸 직후에는 지구 온난화에 대한 관심이 줄어드는 “로컬 기온 효과(local temperature effect)”가 나타난다.</p>
+<p><strong>낙관주의 편향(optimism bias)</strong>도 문제다. 사람들은 자신이 평균보다 덜 피해를 입을 것이라고 믿는 경향이 있다. “기후변화는 심각한 문제지만 나는 괜찮을 것”이라는 생각이 행동을 막는다.</p>
+<p><strong>심리적 거리(psychological distance)</strong>도 중요하다. 기후변화는 시간적(먼 미래), 공간적(다른 지역), 사회적(다른 사람들의 문제), 불확실성(아직 확실하지 않은) 측면에서 모두 심리적으로 멀게 느껴진다. 심리적 거리가 멀수록 추상적으로 인식되어 즉각적 행동 동기가 약해진다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-psychological-distance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-psychological-distance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="14-behavioral-climate_files/figure-html/fig-psychological-distance-1.png" class="img-fluid figure-img" width="1800">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-psychological-distance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.3: Psychological Distance and Climate Change Concern
+</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="sec-social-norms" class="level2"><h2 class="anchored" data-anchor-id="sec-social-norms">사회적 규범과 정보 효과</h2>
+<p>행동경제학의 강력한 정책 수단 중 하나는 <strong>사회적 규범(social norms)</strong>을 활용하는 것이다. 사람들은 자신의 행동을 타인과 비교하며 규범에 맞추려는 경향이 있다.</p>
+<p>오파워(Opower) 실험에서 확인되었듯이, <strong>서술적 규범(descriptive norm)</strong>—“이웃은 이렇게 한다”—을 제공하는 것만으로도 에너지 절약 행동이 의미 있게 변화한다. 이는 탄소세와 같은 가격 수단이 없이도 달성할 수 있는 효과다.</p>
+<p>흥미로운 사실은 <strong>부메랑 효과(boomerang effect)</strong>다. 이웃보다 에너지를 적게 쓰는 가정에 단순히 비교 정보만 제공하면, 오히려 에너지 소비가 증가하는 역효과가 나타난다. 오파워는 이를 웃는 얼굴 이모티콘을 추가하는 방식으로(지지적 규범 제공) 해결했다. <strong>주입적 규범(injunctive norm)</strong>—“사회가 좋다고 인정하는 행동”—과 결합해야 한다.</p>
+</section><section id="sec-nudge" class="level2"><h2 class="anchored" data-anchor-id="sec-nudge">넛지와 기후 정책</h2>
+<p><strong>넛지(nudge)</strong>는 탈러와 선스타인(2008)이 제안한 개념으로, 선택을 금지하거나 경제적 인센티브를 크게 바꾸지 않으면서도 예측 가능한 방식으로 사람들의 행동을 바꾸는 선택 설계(choice architecture)다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>넛지의 정의 (Thaler &amp; Sunstein, 2008)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“선택을 금지하지도 않고 경제적 인센티브를 크게 바꾸지도 않으면서 예측 가능한 방식으로 사람들의 행동을 변화시키는 선택 환경의 어떤 측면.”</p>
+<p>예를 들어, 자동 가입(opt-out) 방식으로 퇴직연금에 등록하는 것은 넛지다. 의무 가입이 아니라 탈퇴 의사를 표명해야 빠져나올 수 있게 설계하는 것이다.</p>
+</div>
+</div>
+<p>기후·에너지 분야의 주요 넛지 사례는 다음과 같다.</p>
+<p><strong>기본값(default) 설정</strong>: 전력 요금제의 기본값을 재생에너지 요금제로 설정하면, 별도로 변경하지 않는 한 소비자가 자동으로 재생에너지를 선택하게 된다. 독일의 연구에 따르면 opt-out 방식의 그린 전력 요금제가 opt-in 방식보다 가입률이 약 4배 높다.</p>
+<p><strong>사회적 비교 정보</strong>: 위에서 언급한 오파워 사례.</p>
+<p><strong>에너지 라벨링</strong>: 가전제품, 자동차의 에너지 효율 등급 라벨은 복잡한 정보를 단순화하여 소비자의 선택을 돕는다.</p>
+<p><strong>환경 영향 피드백</strong>: 실시간 에너지 모니터(smart meter)로 즉각적인 피드백을 제공하면 절약 행동이 강화된다. 즉각성이 현재 편향을 일부 극복하게 돕는다.</p>
+<p><strong>프레이밍(framing)</strong>: 같은 내용이라도 어떻게 표현하느냐에 따라 선택이 달라진다. “이 조치를 하면 연간 200달러를 절약합니다”와 “이 조치를 안 하면 연간 200달러를 낭비합니다”는 수학적으로 동일하지만 후자가 행동을 더 강하게 유도한다(손실 회피 활용).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-nudge-effects" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-nudge-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="14-behavioral-climate_files/figure-html/fig-nudge-effects-1.png" class="img-fluid figure-img" width="1800">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nudge-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.4: Nudge Effectiveness vs.&nbsp;Carbon Price: Energy Reduction Estimates
+</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="sec-energy-paradox" class="level2"><h2 class="anchored" data-anchor-id="sec-energy-paradox">에너지 효율 역설</h2>
+<p><strong>에너지 효율 역설(energy efficiency paradox)</strong>은 경제적으로 수익성이 있는 에너지 효율 개선이 실제로는 채택되지 않는 현상이다. 표준 경제학으로는 설명하기 어렵지만 행동경제학으로 잘 설명된다.</p>
+<p>몇 가지 원인이 있다. <strong>현재 편향</strong>: 초기 투자 비용(현재)보다 미래 절약액을 과도하게 할인한다. <strong>주의력 한계</strong>: 작은 에너지 비용 절감은 다른 소비 결정에 비해 주목을 받지 못한다. <strong>정보 비대칭</strong>: 소비자가 실제 에너지 비용을 정확히 모른다. <strong>분리 인센티브(split incentive)</strong>: 임대주택에서 건물주는 에너지 효율 개선 비용을 지불하지만, 에너지 비용은 세입자가 낸다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>에너지 효율 역설의 함의
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>에너지 효율 역설이 존재한다는 것은 탄소 가격만으로는 충분하지 않다는 뜻이다. 행동 장벽을 제거하는 추가 정책—정보 라벨, 그린 모기지, 장기 리스 프로그램 등—이 필요하다. 동시에 역설이 과장되었다는 반론도 있다. 소비자가 가시화되지 않은 비용(설치 불편, 기술 위험 등)을 합리적으로 고려하고 있을 수 있기 때문이다.</p>
+</div>
+</div>
+</section><section id="sec-climate-communication" class="level2"><h2 class="anchored" data-anchor-id="sec-climate-communication">기후 커뮤니케이션의 행동경제학</h2>
+<p>기후변화 인식과 행동 사이의 간극을 좁히는 데 행동경제학적 통찰이 중요하다.</p>
+<p><strong>구체성과 생생함</strong>: 추상적 통계보다 구체적 이야기가 행동을 더 강하게 유도한다. “2100년 해수면이 1m 상승할 것”보다 “당신이 사는 이 동네가 2100년에 침수될 것”이 더 강한 반응을 이끌어낸다.</p>
+<p><strong>정체성과 가치 프레이밍</strong>: 기후 행동을 특정 정치적 정체성과 연결 짓는 것은 역효과를 낳을 수 있다. 대신 경제적 기회, 에너지 안보, 지역 사회 건강 등 공유된 가치와 연결하는 것이 효과적이다.</p>
+<p><strong>과부하 방지</strong>: 너무 많은 정보는 의사결정 피로(decision fatigue)를 유발한다. 단순하고 명확한 행동 지침이 필요하다.</p>
+<p><strong>긍정적 프레임</strong>: 지나치게 암울한 메시지는 무력감(learned helplessness)을 유발한다. “이미 많은 것이 잘못되었고 더 늦었다”는 메시지보다 “지금 행동하면 이러한 것을 지킬 수 있다”는 희망적 프레이밍이 더 효과적일 수 있다.</p>
+</section><section id="sec-behavioral-market" class="level2"><h2 class="anchored" data-anchor-id="sec-behavioral-market">행동 정책과 시장 기반 정책의 결합</h2>
+<p>넛지와 행동 정책은 탄소세나 배출권거래제를 대체하는 것이 아니라 <strong>보완</strong>하는 역할을 한다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-policy-complement" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-policy-complement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="14-behavioral-climate_files/figure-html/fig-policy-complement-1.png" class="img-fluid figure-img" width="1800">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-policy-complement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.5: Behavioral and Market-Based Policies: Complementary Roles
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>그림은 행동 장벽(friction)이 있을 때 탄소세만으로는 기대한 감축이 달성되지 않음을 보여준다. 넛지를 통해 행동 장벽을 줄이면 같은 탄소 가격에서도 더 많은 감축이 이루어진다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>행동 정책의 장단점
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>장점</strong>: 낮은 비용으로 상당한 행동 변화를 유도할 수 있다. 정치적 저항이 적다(세금이 아니므로). 시장 기반 정책의 빈틈을 보완한다.</p>
+<p><strong>단점</strong>: 효과의 이질성이 크다(개인별, 문화별 차이). 규모 확장이 어렵다. 일시적 효과에 그칠 수 있다(습관이 형성되면 효과 감소). 윤리적 문제 제기: “조작(manipulation)”으로 볼 수 있는가?</p>
+</div>
+</div>
+</section><section id="요약" class="level2"><h2 class="anchored" data-anchor-id="요약">요약</h2>
+<p>이 장에서는 행동경제학의 핵심 개념과 기후변화 적용을 살펴보았다. <strong>현재 편향</strong>과 쌍곡형 할인은 기후 행동에서 단기 비용과 장기 편익 사이의 심리적 장벽을 만든다. <strong>손실 회피</strong>와 현상 유지 편향은 변화에 대한 저항을 낳지만, 적절한 프레이밍으로 역으로 활용할 수 있다. <strong>가용성 휴리스틱</strong>과 심리적 거리는 기후 위험 인식의 왜곡을 가져온다. <strong>사회적 규범</strong>을 활용한 정보 제공과 <strong>넛지</strong>는 낮은 비용으로 의미 있는 행동 변화를 이끌어낼 수 있다. <strong>에너지 효율 역설</strong>은 경제적 합리성만으로는 설명되지 않는 시장 실패의 추가적 층위를 드러낸다. 행동 정책은 탄소 가격 등 시장 기반 정책과 <strong>보완적</strong>으로 작동하며, 둘의 결합이 최선의 기후 정책 믹스를 구성한다.</p>
+<p>다음 장에서는 국가 간 기후 협력 문제, 즉 국제환경협약의 경제학을 다룬다.</p>
+
+
+<!-- -->
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./13-adaptation.html" class="pagination-link" aria-label="기후 적응의 경제학">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">기후 적응의 경제학</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./15-international-finance.html" class="pagination-link" aria-label="국제협력과 기후금융">
+        <span class="nav-page-text"><span class="chapter-title">국제협력과 기후금융</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 행동경제학과 기후변화 {#sec-behavioral-climate}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="false"}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## 학습 목표</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>이 장을 마치면 다음을 할 수 있다:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>행동경제학의 핵심 개념(제한적 합리성, 휴리스틱, 편향)을 설명할 수 있다.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>현재 편향과 쌍곡형 할인이 기후 행동을 어떻게 저해하는지 분석할 수 있다.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>손실 회피, 현상 유지 편향, 가용성 휴리스틱이 기후 정책 수용에 미치는 영향을 설명할 수 있다.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>사회적 규범과 정보 제공이 에너지 절약 행동에 미치는 효과를 평가할 수 있다.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>넛지(nudge)의 개념과 기후 분야 적용 사례를 분석할 수 있다.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>행동 정책 수단과 시장 기반 정책 수단의 보완 관계를 이해할 수 있다.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple" icon="false"}</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## 뉴스 읽기: "당신의 이웃은 전기를 덜 씁니다"</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>미국 에너지 기업 오파워(Opower)는 가정에 전기요금 청구서를 보낼 때 단순한 숫자 대신 특별한 정보를 추가했다. "당신의 이웃 100가구 평균 전력 사용량은 800kWh입니다. 당신은 950kWh를 사용했습니다." 그리고 이웃 평균보다 적게 쓰는 가정에는 웃는 얼굴 이모티콘을, 많이 쓰는 가정에는 찡그린 얼굴을 넣었다. 이 단순한 개입으로 전력 소비가 평균 2%p 줄었다. 탄소세 수십 달러에 버금가는 효과다. 이 사례는 리처드 탈러(Richard Thaler)와 캐스 선스타인(Cass Sunstein)이 제안한 **넛지(nudge)** 이론의 대표적 성공 사례로 꼽힌다. 2017년 탈러는 이 연구를 포함한 행동경제학 공로로 노벨 경제학상을 받았다.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>*출처: Allcott (2011), *Journal of Public Economics*; Thaler &amp; Sunstein (2008), *Nudge**</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## 표준 경제 모형의 한계 {#sec-standard-limits}</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>표준 경제학은 인간을 **합리적 경제인(homo economicus)**으로 가정한다. 완전한 정보를 보유하고, 일관된 선호를 가지며, 자신의 장기적 이익을 극대화하는 존재다. 이 가정 하에서 기후변화 대응의 실패는 외부효과와 공공재 문제—시장 가격 신호의 왜곡—로 완전히 설명된다.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>그러나 현실의 인간은 다르다. 심리학과 경제학의 결합인 **행동경제학(behavioral economics)**은 인간의 실제 의사결정이 표준 모형과 어떻게 다른지를 연구한다. 다니엘 카너먼(Daniel Kahneman)과 아모스 트버스키(Amos Tversky)의 연구, 리처드 탈러의 정신 계좌(mental accounting) 이론이 대표적이다.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>기후변화는 행동 편향이 특히 두드러지는 문제다. 비용은 지금 당장, 편익은 수십 년 후에 발생하고, 위험은 추상적이며, 책임은 전 지구적으로 분산되어 있기 때문이다.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## 행동경제학의 핵심 개념</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>**제한적 합리성(bounded rationality)**: 인간은 완전한 정보와 무한한 계산 능력이 없다. 만족스러운 수준에서 결정을 내린다(Herbert Simon).</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>**휴리스틱(heuristics)**: 복잡한 문제를 단순화하는 사고 지름길. 빠르고 효율적이지만 체계적 오류를 낳는다.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>**편향(bias)**: 휴리스틱의 결과로 발생하는 일관된 방향의 판단 오류.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>**시스템 1 vs. 시스템 2 사고**: 카너먼(2011). 빠르고 직관적인 시스템 1이 느리고 분석적인 시스템 2를 압도할 때 편향이 발생한다.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## 현재 편향과 기후변화 {#sec-present-bias}</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>기후 행동을 저해하는 가장 중요한 행동 요인 중 하나는 **현재 편향(present bias)**이다. 사람들은 먼 미래보다 가까운 미래를 과도하게 선호한다.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>표준 경제학의 지수 할인(exponential discounting)에서 미래 가치의 현재 가치는:</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>$$PV = \frac{V_t}{(1+r)^t}$$</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>그러나 실제 인간의 선호는 **쌍곡형 할인(hyperbolic discounting)**에 더 가깝다:</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>$$PV = \frac{V_t}{1 + k \cdot t}$$</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>쌍곡형 할인에서는 단기 미래일수록 할인율이 더 높아진다. 즉, "오늘 vs. 내일"의 차이를 "10년 후 vs. 11년 후"의 차이보다 훨씬 크게 느낀다. 이 때문에 장기 혜택(기후 안정)을 위해 단기 비용(에너지 절약, 탄소세)을 감수하는 행동이 어렵다.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-hyperbolic-discounting</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Exponential vs. Hyperbolic Discounting: Present Value Over Time"</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">50</span>, <span class="at">length.out =</span> <span class="dv">300</span>)</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Exponential: r = 5%</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>pv_exp <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> (<span class="fl">1.05</span><span class="sc">^</span>t)</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Hyperbolic: k = 0.5</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>pv_hyp <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fl">0.5</span> <span class="sc">*</span> t)</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="co"># Quasi-hyperbolic (beta-delta): beta=0.7, delta=0.97</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>pv_qh <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(t <span class="sc">==</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.7</span> <span class="sc">*</span> <span class="fl">0.97</span><span class="sc">^</span>t)</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">t =</span> t, <span class="at">pv =</span> pv_exp, <span class="at">type =</span> <span class="st">"Exponential (r = 5%)"</span>),</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">t =</span> t, <span class="at">pv =</span> pv_hyp, <span class="at">type =</span> <span class="st">"Hyperbolic (k = 0.5)"</span>),</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">t =</span> t, <span class="at">pv =</span> pv_qh,  <span class="at">type =</span> <span class="st">"Quasi-hyperbolic (β=0.7, δ=0.97)"</span>)</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> t, <span class="at">y =</span> pv, <span class="at">color =</span> type, <span class="at">linetype =</span> type)) <span class="sc">+</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="dv">0</span>, <span class="at">xmax =</span> <span class="dv">5</span>, <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>,</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="st">"yellow"</span>, <span class="at">alpha =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">2.5</span>, <span class="at">y =</span> <span class="fl">0.92</span>,</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"Near future:</span><span class="sc">\n</span><span class="st">hyperbolic</span><span class="sc">\n</span><span class="st">discounts faster"</span>,</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">color =</span> <span class="st">"goldenrod4"</span>) <span class="sc">+</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Exponential (r = 5%)"</span>               <span class="ot">=</span> <span class="st">"#1f77b4"</span>,</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hyperbolic (k = 0.5)"</span>               <span class="ot">=</span> <span class="st">"#d62728"</span>,</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Quasi-hyperbolic (β=0.7, δ=0.97)"</span>  <span class="ot">=</span> <span class="st">"#2ca02c"</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Exponential (r = 5%)"</span>               <span class="ot">=</span> <span class="st">"solid"</span>,</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hyperbolic (k = 0.5)"</span>               <span class="ot">=</span> <span class="st">"dashed"</span>,</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Quasi-hyperbolic (β=0.7, δ=0.97)"</span>  <span class="ot">=</span> <span class="st">"dotted"</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"Exponential vs. Hyperbolic Discounting"</span>,</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Hyperbolic discounting: near future discounted more steeply → present bias"</span>,</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Years into the Future"</span>,</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Present Value (V₀ = 1)"</span>,</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="cn">NULL</span>, <span class="at">linetype =</span> <span class="cn">NULL</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>현재 편향은 **시간 불일치(time inconsistency)** 문제를 낳는다. 사람들은 미래 계획을 세울 때는 합리적이지만, 막상 그 시점이 되면 계획을 바꾼다. "내년부터 에너지 절약을 시작하겠다"는 계획은 내년이 되면 또 "다음 해부터"로 미뤄진다.</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="fu">## 손실 회피와 현상 유지 편향 {#sec-loss-aversion}</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>카너먼과 트버스키(1979)의 **전망 이론(prospect theory)**에 따르면 사람들은 이득보다 손실에 약 2배 더 민감하게 반응한다.</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>$$V(\Delta x) = \begin{cases} (\Delta x)^\alpha &amp; \Delta x \geq 0 <span class="sc">\\</span> -\lambda(-\Delta x)^\alpha &amp; \Delta x &lt; 0 \end{cases}, \quad \lambda \approx 2.25$$</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>이 **손실 회피(loss aversion)**는 기후 정책에 두 가지 방향으로 작용한다.</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>**기후 행동을 저해하는 방향**: 탄소세, 에너지 효율 투자 등은 단기적으로 비용(손실)처럼 느껴진다. 비록 장기적으로 이득이더라도 즉각적인 비용 회피 심리가 행동을 막는다.</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>**기후 행동을 촉진하는 방향**: 기후변화를 현재의 손실로 프레이밍하면 행동 동기가 강화된다. "이 조치를 취하지 않으면 GDP의 5%를 잃는다"는 메시지가 "이 조치를 취하면 GDP의 5%를 얻는다"보다 더 강한 반응을 이끌어낸다.</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>**현상 유지 편향(status quo bias)**도 관련이 있다. 사람들은 현재 상태를 기준점(reference point)으로 삼고 변화를 손실로 인식한다. 화석연료 의존 생활 방식에서 벗어나는 것이 합리적임을 알면서도 변화 자체를 꺼린다.</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-prospect-theory</span></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Prospect Theory Value Function: Loss Aversion"</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="at">length.out =</span> <span class="dv">500</span>)</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.88</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="fl">2.25</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(x <span class="sc">&gt;=</span> <span class="dv">0</span>, x<span class="sc">^</span>alpha, <span class="sc">-</span>lambda <span class="sc">*</span> (<span class="sc">-</span>x)<span class="sc">^</span>alpha)</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> x, <span class="at">v =</span> v)</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> v)) <span class="sc">+</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.3</span>, <span class="at">color =</span> <span class="st">"#1f77b4"</span>) <span class="sc">+</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"gray40"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"gray40"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Annotate asymmetry</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">xend =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">2</span><span class="sc">^</span>alpha),</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>               <span class="at">linetype =</span> <span class="st">"dotted"</span>, <span class="at">color =</span> <span class="st">"green4"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="sc">-</span><span class="dv">2</span>, <span class="at">xend =</span> <span class="sc">-</span><span class="dv">2</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="sc">-</span>lambda <span class="sc">*</span> <span class="dv">2</span><span class="sc">^</span>alpha),</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>               <span class="at">linetype =</span> <span class="st">"dotted"</span>, <span class="at">color =</span> <span class="st">"red3"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">2</span><span class="sc">^</span>alpha, <span class="at">yend =</span> <span class="dv">2</span><span class="sc">^</span>alpha),</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>               <span class="at">linetype =</span> <span class="st">"dotted"</span>, <span class="at">color =</span> <span class="st">"green4"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="sc">-</span><span class="dv">2</span>, <span class="at">y =</span> <span class="sc">-</span>lambda <span class="sc">*</span> <span class="dv">2</span><span class="sc">^</span>alpha,</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>                   <span class="at">yend =</span> <span class="sc">-</span>lambda <span class="sc">*</span> <span class="dv">2</span><span class="sc">^</span>alpha),</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>               <span class="at">linetype =</span> <span class="st">"dotted"</span>, <span class="at">color =</span> <span class="st">"red3"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">2.3</span>, <span class="at">y =</span> <span class="dv">2</span><span class="sc">^</span>alpha <span class="sc">/</span> <span class="dv">2</span>,</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">paste0</span>(<span class="st">"Gain</span><span class="sc">\n</span><span class="st">+"</span>, <span class="fu">round</span>(<span class="dv">2</span><span class="sc">^</span>alpha, <span class="dv">2</span>)),</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">"green4"</span>, <span class="at">size =</span> <span class="fl">3.2</span>) <span class="sc">+</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="sc">-</span><span class="fl">2.5</span>, <span class="at">y =</span> <span class="sc">-</span>lambda <span class="sc">*</span> <span class="dv">2</span><span class="sc">^</span>alpha <span class="sc">/</span> <span class="dv">2</span>,</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">paste0</span>(<span class="st">"Loss</span><span class="sc">\n</span><span class="st">−"</span>, <span class="fu">round</span>(lambda <span class="sc">*</span> <span class="dv">2</span><span class="sc">^</span>alpha, <span class="dv">2</span>)),</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">"red3"</span>, <span class="at">size =</span> <span class="fl">3.2</span>) <span class="sc">+</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">3.5</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">3.5</span>,</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">paste0</span>(<span class="st">"λ ≈ "</span>, lambda, <span class="st">"</span><span class="sc">\n</span><span class="st">(loss aversion</span><span class="sc">\n</span><span class="st">coefficient)"</span>),</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"gray30"</span>) <span class="sc">+</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"Prospect Theory Value Function"</span>,</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Losses loom larger than equivalent gains (λ ≈ 2.25)"</span>,</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Outcome relative to reference point"</span>,</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Subjective value V(x)"</span></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="fu">## 가용성 휴리스틱과 기후 위험 인식 {#sec-availability}</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>**가용성 휴리스틱(availability heuristic)**은 기억에 쉽게 떠오르는 사례를 기반으로 확률을 추정하는 사고 방식이다. 이것이 기후 위험 인식에 중요한 영향을 미친다.</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>홍수, 폭염, 태풍 등 극단적 기상 현상을 최근에 경험한 사람들은 기후변화의 위험을 더 크게 인식하고 관련 정책을 더 지지하는 경향이 있다. 반면, 추운 겨울을 보낸 직후에는 지구 온난화에 대한 관심이 줄어드는 "로컬 기온 효과(local temperature effect)"가 나타난다.</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>**낙관주의 편향(optimism bias)**도 문제다. 사람들은 자신이 평균보다 덜 피해를 입을 것이라고 믿는 경향이 있다. "기후변화는 심각한 문제지만 나는 괜찮을 것"이라는 생각이 행동을 막는다.</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>**심리적 거리(psychological distance)**도 중요하다. 기후변화는 시간적(먼 미래), 공간적(다른 지역), 사회적(다른 사람들의 문제), 불확실성(아직 확실하지 않은) 측면에서 모두 심리적으로 멀게 느껴진다. 심리적 거리가 멀수록 추상적으로 인식되어 즉각적 행동 동기가 약해진다.</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-psychological-distance</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Psychological Distance and Climate Change Concern"</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="co"># Stylized relationship: psychological distance vs. concern/action</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="co"># Based on Construal Level Theory (Trope &amp; Liberman, 2010)</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>dist <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="at">length.out =</span> <span class="dv">200</span>)</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>concern <span class="ot">&lt;-</span> <span class="dv">90</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.2</span> <span class="sc">*</span> dist) <span class="sc">+</span> <span class="dv">10</span>       <span class="co"># high concern → low action</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>action  <span class="ot">&lt;-</span> <span class="dv">80</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.35</span> <span class="sc">*</span> dist) <span class="sc">+</span> <span class="dv">5</span>        <span class="co"># action drops faster</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">dist =</span> dist, <span class="at">value =</span> concern, <span class="at">measure =</span> <span class="st">"Concern Level"</span>),</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">dist =</span> dist, <span class="at">value =</span> action,  <span class="at">measure =</span> <span class="st">"Likelihood of Action"</span>)</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> dist, <span class="at">y =</span> value, <span class="at">color =</span> measure, <span class="at">linetype =</span> measure)) <span class="sc">+</span></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.3</span>) <span class="sc">+</span></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">10</span>),</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Local/Now</span><span class="sc">\n</span><span class="st">(Low Distance)"</span>,</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>               <span class="st">"National</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Global</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Remote/Future</span><span class="sc">\n</span><span class="st">(High Distance)"</span>)</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Concern Level"</span>         <span class="ot">=</span> <span class="st">"#1f77b4"</span>,</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Likelihood of Action"</span>  <span class="ot">=</span> <span class="st">"#d62728"</span></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Concern Level"</span>         <span class="ot">=</span> <span class="st">"solid"</span>,</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Likelihood of Action"</span>  <span class="ot">=</span> <span class="st">"dashed"</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"Psychological Distance and Climate Engagement"</span>,</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Action drops faster than concern as climate feels more distant"</span>,</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Psychological Distance"</span>,</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Level (0–100)"</span>,</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="cn">NULL</span>, <span class="at">linetype =</span> <span class="cn">NULL</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="fu">## 사회적 규범과 정보 효과 {#sec-social-norms}</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>행동경제학의 강력한 정책 수단 중 하나는 **사회적 규범(social norms)**을 활용하는 것이다. 사람들은 자신의 행동을 타인과 비교하며 규범에 맞추려는 경향이 있다.</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>오파워(Opower) 실험에서 확인되었듯이, **서술적 규범(descriptive norm)**—"이웃은 이렇게 한다"—을 제공하는 것만으로도 에너지 절약 행동이 의미 있게 변화한다. 이는 탄소세와 같은 가격 수단이 없이도 달성할 수 있는 효과다.</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>흥미로운 사실은 **부메랑 효과(boomerang effect)**다. 이웃보다 에너지를 적게 쓰는 가정에 단순히 비교 정보만 제공하면, 오히려 에너지 소비가 증가하는 역효과가 나타난다. 오파워는 이를 웃는 얼굴 이모티콘을 추가하는 방식으로(지지적 규범 제공) 해결했다. **주입적 규범(injunctive norm)**—"사회가 좋다고 인정하는 행동"—과 결합해야 한다.</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="fu">## 넛지와 기후 정책 {#sec-nudge}</span></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**넛지(nudge)**는 탈러와 선스타인(2008)이 제안한 개념으로, 선택을 금지하거나 경제적 인센티브를 크게 바꾸지 않으면서도 예측 가능한 방식으로 사람들의 행동을 바꾸는 선택 설계(choice architecture)다.</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## 넛지의 정의 (Thaler &amp; Sunstein, 2008)</span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>"선택을 금지하지도 않고 경제적 인센티브를 크게 바꾸지도 않으면서 예측 가능한 방식으로 사람들의 행동을 변화시키는 선택 환경의 어떤 측면."</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>예를 들어, 자동 가입(opt-out) 방식으로 퇴직연금에 등록하는 것은 넛지다. 의무 가입이 아니라 탈퇴 의사를 표명해야 빠져나올 수 있게 설계하는 것이다.</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>기후·에너지 분야의 주요 넛지 사례는 다음과 같다.</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>**기본값(default) 설정**: 전력 요금제의 기본값을 재생에너지 요금제로 설정하면, 별도로 변경하지 않는 한 소비자가 자동으로 재생에너지를 선택하게 된다. 독일의 연구에 따르면 opt-out 방식의 그린 전력 요금제가 opt-in 방식보다 가입률이 약 4배 높다.</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>**사회적 비교 정보**: 위에서 언급한 오파워 사례.</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>**에너지 라벨링**: 가전제품, 자동차의 에너지 효율 등급 라벨은 복잡한 정보를 단순화하여 소비자의 선택을 돕는다.</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**환경 영향 피드백**: 실시간 에너지 모니터(smart meter)로 즉각적인 피드백을 제공하면 절약 행동이 강화된다. 즉각성이 현재 편향을 일부 극복하게 돕는다.</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>**프레이밍(framing)**: 같은 내용이라도 어떻게 표현하느냐에 따라 선택이 달라진다. "이 조치를 하면 연간 200달러를 절약합니다"와 "이 조치를 안 하면 연간 200달러를 낭비합니다"는 수학적으로 동일하지만 후자가 행동을 더 강하게 유도한다(손실 회피 활용).</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-nudge-effects</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Nudge Effectiveness vs. Carbon Price: Energy Reduction Estimates"</span></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="co"># Stylized comparison of policy effectiveness</span></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>policies <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>  <span class="at">policy =</span> <span class="fu">c</span>(</span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Social comparison</span><span class="sc">\n</span><span class="st">(Opower-style)"</span>,</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Default green</span><span class="sc">\n</span><span class="st">electricity"</span>,</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Real-time</span><span class="sc">\n</span><span class="st">energy feedback"</span>,</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Carbon tax</span><span class="sc">\n</span><span class="st">$30/tCO2"</span>,</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Carbon tax</span><span class="sc">\n</span><span class="st">$100/tCO2"</span>,</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Energy efficiency</span><span class="sc">\n</span><span class="st">standard (CAC)"</span></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>  <span class="at">reduction =</span> <span class="fu">c</span>(<span class="fl">2.0</span>, <span class="fl">4.5</span>, <span class="fl">5.0</span>, <span class="fl">3.5</span>, <span class="fl">10.0</span>, <span class="fl">8.0</span>),</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>  <span class="at">cost      =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.2</span>, <span class="fl">1.5</span>, <span class="dv">30</span>, <span class="dv">100</span>, <span class="dv">15</span>),</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>  <span class="at">type      =</span> <span class="fu">c</span>(<span class="st">"Nudge"</span>, <span class="st">"Nudge"</span>, <span class="st">"Nudge"</span>,</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Market-based"</span>, <span class="st">"Market-based"</span>, <span class="st">"Direct Regulation"</span>)</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(policies,</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(policy, reduction),</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> reduction, <span class="at">fill =</span> type)) <span class="sc">+</span></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="fl">0.6</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste0</span>(reduction, <span class="st">"%"</span>)),</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.15</span>, <span class="at">size =</span> <span class="fl">3.2</span>) <span class="sc">+</span></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Nudge"</span>            <span class="ot">=</span> <span class="st">"#aec7e8"</span>,</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Market-based"</span>     <span class="ot">=</span> <span class="st">"#ffbb78"</span>,</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Direct Regulation"</span> <span class="ot">=</span> <span class="st">"#98df8a"</span></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"Estimated Energy/Emissions Reduction by Policy Type"</span>,</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Nudges achieve meaningful reductions at very low cost"</span>,</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Energy/Emissions Reduction (%)"</span>,</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Policy Type"</span></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">12</span>)) <span class="sc">+</span></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="fu">## 에너지 효율 역설 {#sec-energy-paradox}</span></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>**에너지 효율 역설(energy efficiency paradox)**은 경제적으로 수익성이 있는 에너지 효율 개선이 실제로는 채택되지 않는 현상이다. 표준 경제학으로는 설명하기 어렵지만 행동경제학으로 잘 설명된다.</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>몇 가지 원인이 있다. **현재 편향**: 초기 투자 비용(현재)보다 미래 절약액을 과도하게 할인한다. **주의력 한계**: 작은 에너지 비용 절감은 다른 소비 결정에 비해 주목을 받지 못한다. **정보 비대칭**: 소비자가 실제 에너지 비용을 정확히 모른다. **분리 인센티브(split incentive)**: 임대주택에서 건물주는 에너지 효율 개선 비용을 지불하지만, 에너지 비용은 세입자가 낸다.</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="fu">## 에너지 효율 역설의 함의</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>에너지 효율 역설이 존재한다는 것은 탄소 가격만으로는 충분하지 않다는 뜻이다. 행동 장벽을 제거하는 추가 정책—정보 라벨, 그린 모기지, 장기 리스 프로그램 등—이 필요하다. 동시에 역설이 과장되었다는 반론도 있다. 소비자가 가시화되지 않은 비용(설치 불편, 기술 위험 등)을 합리적으로 고려하고 있을 수 있기 때문이다.</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="fu">## 기후 커뮤니케이션의 행동경제학 {#sec-climate-communication}</span></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>기후변화 인식과 행동 사이의 간극을 좁히는 데 행동경제학적 통찰이 중요하다.</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>**구체성과 생생함**: 추상적 통계보다 구체적 이야기가 행동을 더 강하게 유도한다. "2100년 해수면이 1m 상승할 것"보다 "당신이 사는 이 동네가 2100년에 침수될 것"이 더 강한 반응을 이끌어낸다.</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>**정체성과 가치 프레이밍**: 기후 행동을 특정 정치적 정체성과 연결 짓는 것은 역효과를 낳을 수 있다. 대신 경제적 기회, 에너지 안보, 지역 사회 건강 등 공유된 가치와 연결하는 것이 효과적이다.</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>**과부하 방지**: 너무 많은 정보는 의사결정 피로(decision fatigue)를 유발한다. 단순하고 명확한 행동 지침이 필요하다.</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>**긍정적 프레임**: 지나치게 암울한 메시지는 무력감(learned helplessness)을 유발한다. "이미 많은 것이 잘못되었고 더 늦었다"는 메시지보다 "지금 행동하면 이러한 것을 지킬 수 있다"는 희망적 프레이밍이 더 효과적일 수 있다.</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="fu">## 행동 정책과 시장 기반 정책의 결합 {#sec-behavioral-market}</span></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>넛지와 행동 정책은 탄소세나 배출권거래제를 대체하는 것이 아니라 **보완**하는 역할을 한다.</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-policy-complement</span></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Behavioral and Market-Based Policies: Complementary Roles"</span></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="co"># Marginal abatement cost with behavioral friction vs. without</span></span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="at">length.out =</span> <span class="dv">300</span>)</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a><span class="co"># Standard MAC (no behavioral friction)</span></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>mac_standard <span class="ot">&lt;-</span> <span class="fl">1.5</span> <span class="sc">*</span> a</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a><span class="co"># MAC with behavioral friction (shifted right: same abatement costs more)</span></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>mac_friction <span class="ot">&lt;-</span> <span class="fl">1.5</span> <span class="sc">*</span> a <span class="sc">+</span> <span class="dv">3</span></span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="co"># Nudge effect: shifts the "friction" MAC back toward standard</span></span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>mac_nudge <span class="ot">&lt;-</span> <span class="fl">1.5</span> <span class="sc">*</span> a <span class="sc">+</span> <span class="fl">1.2</span></span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">a =</span> a, <span class="at">mac =</span> mac_standard, <span class="at">curve =</span> <span class="st">"Standard MAC (no friction)"</span>),</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">a =</span> a, <span class="at">mac =</span> mac_friction, <span class="at">curve =</span> <span class="st">"MAC with Behavioral Friction"</span>),</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">a =</span> a, <span class="at">mac =</span> mac_nudge,    <span class="at">curve =</span> <span class="st">"MAC after Nudge Intervention"</span>)</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>t_star <span class="ot">&lt;-</span> <span class="dv">9</span>  <span class="co"># carbon price</span></span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> a, <span class="at">y =</span> mac, <span class="at">color =</span> curve, <span class="at">linetype =</span> curve)) <span class="sc">+</span></span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> t_star, <span class="at">linetype =</span> <span class="st">"dotted"</span>,</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"purple"</span>, <span class="at">linewidth =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">9.3</span>, <span class="at">y =</span> t_star <span class="sc">+</span> <span class="fl">0.6</span>,</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"Carbon</span><span class="sc">\n</span><span class="st">price t*"</span>, <span class="at">color =</span> <span class="st">"purple"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Abatement under each curve at t*</span></span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> t_star <span class="sc">/</span> <span class="fl">1.5</span>, <span class="at">y =</span> t_star),</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"#1f77b4"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> (t_star <span class="sc">-</span> <span class="dv">3</span>) <span class="sc">/</span> <span class="fl">1.5</span>, <span class="at">y =</span> t_star),</span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"#d62728"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> (t_star <span class="sc">-</span> <span class="fl">1.2</span>) <span class="sc">/</span> <span class="fl">1.5</span>, <span class="at">y =</span> t_star),</span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"#2ca02c"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Standard MAC (no friction)"</span>      <span class="ot">=</span> <span class="st">"#1f77b4"</span>,</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MAC with Behavioral Friction"</span>    <span class="ot">=</span> <span class="st">"#d62728"</span>,</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MAC after Nudge Intervention"</span>    <span class="ot">=</span> <span class="st">"#2ca02c"</span></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Standard MAC (no friction)"</span>      <span class="ot">=</span> <span class="st">"solid"</span>,</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MAC with Behavioral Friction"</span>    <span class="ot">=</span> <span class="st">"dashed"</span>,</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MAC after Nudge Intervention"</span>    <span class="ot">=</span> <span class="st">"dotted"</span></span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"Nudges Reduce Behavioral Friction in Abatement"</span>,</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Carbon price alone underperforms when friction exists; nudges help close the gap"</span>,</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Abatement (tCO2)"</span>,</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Marginal Abatement Cost ($/tCO2)"</span>,</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="cn">NULL</span>, <span class="at">linetype =</span> <span class="cn">NULL</span></span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">20</span>))</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>그림은 행동 장벽(friction)이 있을 때 탄소세만으로는 기대한 감축이 달성되지 않음을 보여준다. 넛지를 통해 행동 장벽을 줄이면 같은 탄소 가격에서도 더 많은 감축이 이루어진다.</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a><span class="fu">## 행동 정책의 장단점</span></span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>**장점**: 낮은 비용으로 상당한 행동 변화를 유도할 수 있다. 정치적 저항이 적다(세금이 아니므로). 시장 기반 정책의 빈틈을 보완한다.</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>**단점**: 효과의 이질성이 크다(개인별, 문화별 차이). 규모 확장이 어렵다. 일시적 효과에 그칠 수 있다(습관이 형성되면 효과 감소). 윤리적 문제 제기: "조작(manipulation)"으로 볼 수 있는가?</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a><span class="fu">## 요약</span></span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>이 장에서는 행동경제학의 핵심 개념과 기후변화 적용을 살펴보았다. **현재 편향**과 쌍곡형 할인은 기후 행동에서 단기 비용과 장기 편익 사이의 심리적 장벽을 만든다. **손실 회피**와 현상 유지 편향은 변화에 대한 저항을 낳지만, 적절한 프레이밍으로 역으로 활용할 수 있다. **가용성 휴리스틱**과 심리적 거리는 기후 위험 인식의 왜곡을 가져온다. **사회적 규범**을 활용한 정보 제공과 **넛지**는 낮은 비용으로 의미 있는 행동 변화를 이끌어낼 수 있다. **에너지 효율 역설**은 경제적 합리성만으로는 설명되지 않는 시장 실패의 추가적 층위를 드러낸다. 행동 정책은 탄소 가격 등 시장 기반 정책과 **보완적**으로 작동하며, 둘의 결합이 최선의 기후 정책 믹스를 구성한다.</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>다음 장에서는 국가 간 기후 협력 문제, 즉 국제환경협약의 경제학을 다룬다.</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/YOUR_USERNAME/climate-econ-book/edit/main/14-behavioral-climate.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YOUR_USERNAME/climate-econ-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

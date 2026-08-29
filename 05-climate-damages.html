@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>기후 피해의 측정과 가치평가 – 기후변화경제학</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./06-abatement-costs.html" rel="next">
+<link href="./04-market-failure.html" rel="prev">
+<link href="./images/favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-627e94411287757dbab6744ee64f64c5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-e20e1f3c904b4e5828350fc7ba45231a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-627e94411287757dbab6744ee64f64c5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a4cec59530d85c1f623a3498225afff6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4a18dfd70d581cb06c05b5ac74428948.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a4cec59530d85c1f623a3498225afff6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+</head>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-climate-damages.html">Part III. 기후변화의 비용과 편익</a></li><li class="breadcrumb-item"><a href="./05-climate-damages.html"><span class="chapter-title">기후 피해의 측정과 가치평가</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">기후변화경제학</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/YOUR_USERNAME/climate-econ-book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후변화경제학</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I. 들어가며: 기후와 경제</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-what-is-climate-change.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후변화란 무엇인가</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-climate-economy-link.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후와 경제의 연결</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II. 시장은 언제, 왜 실패하는가</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-market-efficiency.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시장의 효율성과 후생경제학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-market-failure.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">시장실패: 외부효과와 공공재</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III. 기후변화의 비용과 편익</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-climate-damages.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">기후 피해의 측정과 가치평가</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-abatement-costs.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">감축비용과 한계감축비용곡선</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-discounting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">편익, 할인율, 세대간 형평성</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-uncertainty-risk.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">불확실성과 기후 리스크</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-climate-burdens.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후변화 부담의 분배</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV. 기후변화 해결을 위한 경제학적 접근</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-carbon-tax.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">탄소세</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-emissions-trading.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">배출권거래제</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-optimal-policy-iam.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">최적 기후정책: 비용-편익 분석과 통합평가모형</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-adaptation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">기후 적응의 경제학</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-behavioral-climate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">행동경제학과 기후변화</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-international-finance.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">국제협력과 기후금융</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-green-growth.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">녹색 성장</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li>
+<a href="#%EA%B8%B0%ED%9B%84%EB%B3%80%ED%99%94%EC%9D%98-%EB%AC%BC%EB%A6%AC%EC%A0%81-%EC%98%81%ED%96%A5" id="toc-기후변화의-물리적-영향" class="nav-link active" data-scroll-target="#%EA%B8%B0%ED%9B%84%EB%B3%80%ED%99%94%EC%9D%98-%EB%AC%BC%EB%A6%AC%EC%A0%81-%EC%98%81%ED%96%A5">기후변화의 물리적 영향</a>
+  <ul class="collapse">
+<li><a href="#%EC%83%9D%ED%83%9C%EA%B3%84-%EB%B0%8F-%EC%83%9D%EB%AC%BC-%EB%8B%A4%EC%96%91%EC%84%B1" id="toc-생태계-및-생물-다양성" class="nav-link" data-scroll-target="#%EC%83%9D%ED%83%9C%EA%B3%84-%EB%B0%8F-%EC%83%9D%EB%AC%BC-%EB%8B%A4%EC%96%91%EC%84%B1">생태계 및 생물 다양성</a></li>
+  <li><a href="#%EB%86%8D%EC%97%85%EA%B3%BC-%EC%8B%9D%EB%9F%89-%EC%95%88%EB%B3%B4" id="toc-농업과-식량-안보" class="nav-link" data-scroll-target="#%EB%86%8D%EC%97%85%EA%B3%BC-%EC%8B%9D%EB%9F%89-%EC%95%88%EB%B3%B4">농업과 식량 안보</a></li>
+  <li><a href="#%ED%95%B4%EC%88%98%EB%A9%B4-%EC%83%81%EC%8A%B9%EA%B3%BC-%ED%95%B4%EC%95%88-%EC%A7%80%EC%97%AD" id="toc-해수면-상승과-해안-지역" class="nav-link" data-scroll-target="#%ED%95%B4%EC%88%98%EB%A9%B4-%EC%83%81%EC%8A%B9%EA%B3%BC-%ED%95%B4%EC%95%88-%EC%A7%80%EC%97%AD">해수면 상승과 해안 지역</a></li>
+  <li><a href="#%EC%9D%B8%EA%B0%84-%EA%B1%B4%EA%B0%95" id="toc-인간-건강" class="nav-link" data-scroll-target="#%EC%9D%B8%EA%B0%84-%EA%B1%B4%EA%B0%95">인간 건강</a></li>
+  <li><a href="#%EB%85%B8%EB%8F%99-%EC%83%9D%EC%82%B0%EC%84%B1%EA%B3%BC-%EC%97%90%EB%84%88%EC%A7%80-%EC%88%98%EC%9A%94" id="toc-노동-생산성과-에너지-수요" class="nav-link" data-scroll-target="#%EB%85%B8%EB%8F%99-%EC%83%9D%EC%82%B0%EC%84%B1%EA%B3%BC-%EC%97%90%EB%84%88%EC%A7%80-%EC%88%98%EC%9A%94">노동 생산성과 에너지 수요</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#%EC%A0%81%EC%9D%91%EA%B3%BC-%EC%99%84%ED%99%94" id="toc-적응과-완화" class="nav-link" data-scroll-target="#%EC%A0%81%EC%9D%91%EA%B3%BC-%EC%99%84%ED%99%94">적응과 완화</a>
+  <ul class="collapse">
+<li><a href="#%EB%91%90-%EC%A0%84%EB%9E%B5%EC%9D%98-%EA%B2%BD%EC%A0%9C%ED%95%99" id="toc-두-전략의-경제학" class="nav-link" data-scroll-target="#%EB%91%90-%EC%A0%84%EB%9E%B5%EC%9D%98-%EA%B2%BD%EC%A0%9C%ED%95%99">두 전략의 경제학</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#%EA%B8%B0%ED%9B%84%EB%B3%80%ED%99%94-%ED%94%BC%ED%95%B4%EC%9D%98-%ED%99%94%ED%8F%90%EC%A0%81-%EA%B0%80%EC%B9%98-%ED%8F%89%EA%B0%80" id="toc-기후변화-피해의-화폐적-가치-평가" class="nav-link" data-scroll-target="#%EA%B8%B0%ED%9B%84%EB%B3%80%ED%99%94-%ED%94%BC%ED%95%B4%EC%9D%98-%ED%99%94%ED%8F%90%EC%A0%81-%EA%B0%80%EC%B9%98-%ED%8F%89%EA%B0%80">기후변화 피해의 화폐적 가치 평가</a>
+  <ul class="collapse">
+<li><a href="#%EB%B9%84%EC%8B%9C%EC%9E%A5-%EA%B0%80%EC%B9%98-%ED%8F%89%EA%B0%80%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1" id="toc-비시장-가치-평가의-필요성" class="nav-link" data-scroll-target="#%EB%B9%84%EC%8B%9C%EC%9E%A5-%EA%B0%80%EC%B9%98-%ED%8F%89%EA%B0%80%EC%9D%98-%ED%95%84%EC%9A%94%EC%84%B1">비시장 가치 평가의 필요성</a></li>
+  <li><a href="#%EC%B4%9D-%EA%B2%BD%EC%A0%9C%EC%A0%81-%ED%94%BC%ED%95%B4-%EC%B6%94%EC%A0%95" id="toc-총-경제적-피해-추정" class="nav-link" data-scroll-target="#%EC%B4%9D-%EA%B2%BD%EC%A0%9C%EC%A0%81-%ED%94%BC%ED%95%B4-%EC%B6%94%EC%A0%95">총 경제적 피해 추정</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#%ED%83%84%EC%86%8C%EC%9D%98-%EC%82%AC%ED%9A%8C%EC%A0%81-%EB%B9%84%EC%9A%A9" id="toc-탄소의-사회적-비용" class="nav-link" data-scroll-target="#%ED%83%84%EC%86%8C%EC%9D%98-%EC%82%AC%ED%9A%8C%EC%A0%81-%EB%B9%84%EC%9A%A9">탄소의 사회적 비용</a>
+  <ul class="collapse">
+<li><a href="#scc%EC%9D%98-%EC%A0%95%EC%9D%98" id="toc-scc의-정의" class="nav-link" data-scroll-target="#scc%EC%9D%98-%EC%A0%95%EC%9D%98">SCC의 정의</a></li>
+  <li><a href="#scc%EB%A5%BC-%EA%B3%84%EC%82%B0%ED%95%9C%EB%8B%A4%EB%8A%94-%EA%B2%83-%EB%84%A4-%EB%8B%A8%EA%B3%84%EC%9D%98-%EC%82%AC%EA%B3%A0%EC%8B%A4%ED%97%98" id="toc-scc를-계산한다는-것-네-단계의-사고실험" class="nav-link" data-scroll-target="#scc%EB%A5%BC-%EA%B3%84%EC%82%B0%ED%95%9C%EB%8B%A4%EB%8A%94-%EA%B2%83-%EB%84%A4-%EB%8B%A8%EA%B3%84%EC%9D%98-%EC%82%AC%EA%B3%A0%EC%8B%A4%ED%97%98">SCC를 계산한다는 것: 네 단계의 사고실험</a></li>
+  <li><a href="#scc-%EC%B6%94%EC%A0%95-%EB%B0%A9%EB%B2%95-%ED%86%B5%ED%95%A9%ED%8F%89%EA%B0%80%EB%AA%A8%ED%98%95" id="toc-scc-추정-방법-통합평가모형" class="nav-link" data-scroll-target="#scc-%EC%B6%94%EC%A0%95-%EB%B0%A9%EB%B2%95-%ED%86%B5%ED%95%A9%ED%8F%89%EA%B0%80%EB%AA%A8%ED%98%95">SCC 추정 방법: 통합평가모형</a></li>
+  <li><a href="#%EA%B7%B8%EB%9E%98%EC%84%9C-scc%EB%8A%94-%EC%96%BC%EB%A7%88%EC%9D%B8%EA%B0%80" id="toc-그래서-scc는-얼마인가" class="nav-link" data-scroll-target="#%EA%B7%B8%EB%9E%98%EC%84%9C-scc%EB%8A%94-%EC%96%BC%EB%A7%88%EC%9D%B8%EA%B0%80">그래서 SCC는 얼마인가</a></li>
+  <li><a href="#%EA%B7%9C%EB%B2%94%EA%B3%BC-%ED%98%84%EC%8B%A4-%EB%8F%84%EC%9E%85%EC%9D%98-%EC%A7%88%EB%AC%B8%EC%9C%BC%EB%A1%9C-%EB%8F%8C%EC%95%84%EA%B0%80%EC%84%9C" id="toc-규범과-현실-도입의-질문으로-돌아가서" class="nav-link" data-scroll-target="#%EA%B7%9C%EB%B2%94%EA%B3%BC-%ED%98%84%EC%8B%A4-%EB%8F%84%EC%9E%85%EC%9D%98-%EC%A7%88%EB%AC%B8%EC%9C%BC%EB%A1%9C-%EB%8F%8C%EC%95%84%EA%B0%80%EC%84%9C">규범과 현실: 도입의 질문으로 돌아가서</a></li>
+  </ul>
+</li>
+  <li><a href="#%EC%9A%94%EC%95%BD" id="toc-요약" class="nav-link" data-scroll-target="#%EC%9A%94%EC%95%BD">요약</a></li>
+  <li>
+<a href="#%EB%B6%80%EB%A1%9D-r-%EC%BD%94%EB%93%9C" id="toc-부록-r-코드" class="nav-link" data-scroll-target="#%EB%B6%80%EB%A1%9D-r-%EC%BD%94%EB%93%9C">부록: R 코드</a>
+  <ul class="collapse">
+<li><a href="#fig-scc-cascade-%EC%BD%94%EB%93%9C" id="toc-fig-scc-cascade-코드" class="nav-link" data-scroll-target="#fig-scc-cascade-%EC%BD%94%EB%93%9C">Figure&nbsp;<span>6.2</span> 코드</a></li>
+  <li><a href="#fig-scc-estimates-%EC%BD%94%EB%93%9C" id="toc-fig-scc-estimates-코드" class="nav-link" data-scroll-target="#fig-scc-estimates-%EC%BD%94%EB%93%9C">Figure&nbsp;<span>6.3</span> 코드</a></li>
+  </ul>
+</li>
+  <li><a href="#%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C" id="toc-참고문헌" class="nav-link" data-scroll-target="#%EC%B0%B8%EA%B3%A0%EB%AC%B8%ED%97%8C">참고문헌</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/YOUR_USERNAME/climate-econ-book/edit/main/05-climate-damages.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YOUR_USERNAME/climate-econ-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-climate-damages.html">Part III. 기후변화의 비용과 편익</a></li><li class="breadcrumb-item"><a href="./05-climate-damages.html"><span class="chapter-title">기후 피해의 측정과 가치평가</span></a></li></ol></nav><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">기후 피해의 측정과 가치평가</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>학습목표
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>기후변화가 농업, 보건, 해수면, 생태계에 미치는 물리적·경제적 영향을 이해한다.</li>
+<li>적응(adaptation)과 완화(mitigation)를 경제학적으로 구분하고, 두 전략 사이의 대체 관계를 분석할 수 있다.</li>
+<li>현시선호법과 진술선호법 등 비시장 가치 평가 방법을 구분하고 적용 사례를 제시할 수 있다.</li>
+<li>탄소의 사회적 비용(SCC)을 한계 외부비용으로 정의하고, 최적 탄소세와의 관계를 설명할 수 있다.</li>
+<li>SCC 추정의 네 단계(배출 경로·기후 반응·피해 함수·할인)를 제시하고, 각 단계의 불확실성이 추정치를 크게 갈라놓는 이유를 설명할 수 있다.</li>
+</ol>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>📰 &nbsp; 탄소 1톤의 값은 얼마인가?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2021년 미국 정부는 이산화탄소 1톤이 사회에 입히는 피해액을 51달러로 계산했다. 2023년 환경보호청(EPA)은 같은 숫자를 <strong>190달러</strong>로 올렸다. 두 해 사이에 기후가 네 배로 나빠진 것은 물론 아니다. 달라진 것은 계산에 들어간 가정이었다. 그런데 이 숫자 하나가 발전소 건설 허가, 자동차 연비 기준, 파이프라인 승인 등 수천 건의 규제 결정을 좌우한다.</p>
+<p>한편 유럽연합 배출권거래제(EU ETS)에서 실제로 거래된 탄소 가격은 2024년 기준 톤당 60~70유로였고, 전 세계 배출량으로 가중평균한 탄소 가격은 20달러에도 미치지 못한다.</p>
+<p>이 숫자들 사이에는 성격이 전혀 다른 두 개의 질문이 섞여 있다. 하나는 <strong>“1톤의 값은 얼마여야 하는가”</strong>—피해를 제대로 계산하면 얼마가 나오는가—이고, 다른 하나는 <strong>“실제로 얼마가 매겨지고 있는가”</strong>이다. 이 장은 첫 번째 질문을 다룬다. 그리고 그 답에 이르려면 먼저 기후변화가 무엇을 얼마나 망가뜨리는지, 시장 가격이 없는 피해를 어떻게 화폐로 환산하는지부터 알아야 한다. 두 번째 질문—왜 현실의 탄소 가격은 그토록 낮은가—은 10장 이후의 정책 논의에서 다시 만나게 된다.</p>
+</div>
+</div>
+<section id="기후변화의-물리적-영향" class="level2"><h2 class="anchored" data-anchor-id="기후변화의-물리적-영향">기후변화의 물리적 영향</h2>
+<p>경제적 피해를 따지기 전에, 기후변화가 물리적으로 무엇을 바꾸는지부터 정리할 필요가 있다. 화폐로 환산할 대상이 무엇인지 알아야 가치평가를 시작할 수 있기 때문이다. <a href="#fig-physical-impacts" class="quarto-xref">Figure&nbsp;<span>6.1</span></a> 는 IPCC 제6차 평가보고서가 종합한 관측·전망 결과를 네 영역으로 나누어 보여준다 <span class="citation" data-cites="ipcc2022wg2ch16">(<a href="01-what-is-climate-change.html#ref-ipcc2022wg2ch16" role="doc-biblioref">O’Neill et al. 2022</a>)</span>.</p>
+<p><strong>① 대기와 기온</strong>에서는 지구 평균기온 상승과 함께 폭염·가뭄·산불이 잦아진다. <strong>② 해양과 수문</strong>에서는 해수면 상승, 해양 온난화와 산성화, 열대저기압의 강화가 나타난다. <strong>③ 빙권</strong>에서는 그린란드·남극 빙상의 융해, 빙하 후퇴, 해빙 감소, 그리고 메탄(<span class="math inline">\(\text{CH}_4\)</span>)을 방출하는 영구동토층 해빙이 진행된다. <strong>④ 물 균형과 식량 안보</strong>에서는 강수 패턴의 변화가 홍수와 작물 실패로 이어진다.</p>
+<div id="fig-physical-impacts" class="quarto-float quarto-figure quarto-figure-center anchored" alt="기후변화의 물리적 영향을 대기와 기온, 해양과 수문, 빙권, 물 균형과 식량 안보의 네 영역으로 나누어 그린 인포그래픽">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-physical-impacts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/climate-physical-impacts.png" class="img-fluid figure-img" style="width:100.0%" alt="기후변화의 물리적 영향을 대기와 기온, 해양과 수문, 빙권, 물 균형과 식량 안보의 네 영역으로 나누어 그린 인포그래픽">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-physical-impacts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: 기후변화의 물리적 영향 개관. 대기·기온(①), 해양·수문(②), 빙권(③), 물 균형·식량 안보(④)의 네 영역으로 정리했다. <strong>이 그림은 IPCC 제6차 평가보고서 제2실무그룹(WGII) 16장의 내용을 바탕으로 생성형 AI(Google Gemini)를 이용해 제작한 개념도이며, IPCC가 발간한 원본 도표가 아니다.</strong> 수치와 서술의 과학적 근거는 IPCC AR6 WGII를 참조하라.
+</figcaption></figure>
+</div>
+<p>주목할 점은 이 영향들이 서로 독립적이지 않다는 것이다. 기온 상승이 빙상을 녹여 해수면을 밀어 올리고, 따뜻해진 바다가 열대저기압에 에너지를 공급하며, 영구동토층에서 풀려난 메탄이 다시 온난화를 가속한다. 1장에서 익힌 결합 분포의 언어로 말하면, 이 변수들은 공분산 구조로 얽혀 <strong>함께 움직인다</strong>. 경제적 피해를 추정할 때 각 부문의 피해를 따로 계산해 단순 합산하는 방식(뒤에서 볼 열거법)이 한계를 갖는 이유가 여기에 있다.</p>
+<p>아래에서는 이 물리적 변화가 경제와 만나는 지점을 부문별로 살펴본다.</p>
+<section id="생태계-및-생물-다양성" class="level3"><h3 class="anchored" data-anchor-id="생태계-및-생물-다양성">생태계 및 생물 다양성</h3>
+<p>기후변화는 관리·비관리 생태계 모두에 영향을 미친다. 온도 상승, 강수 패턴 변화, 해양 산성화, 극단적 기상 현상의 빈도 증가가 동식물의 서식지를 변화시키고 생물 다양성을 위협한다.</p>
+<p>가장 명확한 현상 중 하나는 <strong>종 분포의 이동</strong>이다. 기온 상승에 따라 생물군계(biome)의 경계가 극지방과 고지대로 이동하며, 많은 종들이 적합한 서식지를 따라 이주한다. 이 과정에서 이주 능력이 부족한 종들은 국지적 멸종 위기에 처한다.</p>
+</section><section id="농업과-식량-안보" class="level3"><h3 class="anchored" data-anchor-id="농업과-식량-안보">농업과 식량 안보</h3>
+<p>기후변화가 농업에 미치는 영향은 복잡하다.</p>
+<p>긍정적 측면도 있다. 대기 중 <span class="math inline">\(\text{CO}_2\)</span> 농도 증가는 광합성을 촉진하는 <span class="math inline">\(\text{CO}_2\)</span> 시비 효과(CO₂ fertilization effect)로 작물 생산성을 단기적으로 높일 수 있다. 또한 한랭 지역에서는 성장 기간이 늘어나기도 한다.</p>
+<p>그러나 장기적으로는 부정적 영향이 지배적이다. 고온 스트레스, 가뭄, 극단적 강수 이벤트 증가, 병해충 확산이 작물 수확량을 감소시킨다. IPCC에 따르면 전 지구 식량 생산은 세기 중반 이후 전반적으로 감소하며, 열대·아열대 지역 개발도상국에서 타격이 특히 크다.</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>온도 상승</th>
+<th>주요 작물 수확량 변화(전 지구 평균)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>+1°C</td>
+<td>소폭 증가 (CO₂ 시비 효과 우세)</td>
+</tr>
+<tr class="even">
+<td>+2°C</td>
+<td>밀·옥수수 등 일부 감소 시작</td>
+</tr>
+<tr class="odd">
+<td>+3°C 이상</td>
+<td>대부분 작물 10~25% 이상 감소</td>
+</tr>
+</tbody>
+</table></section><section id="해수면-상승과-해안-지역" class="level3"><h3 class="anchored" data-anchor-id="해수면-상승과-해안-지역">해수면 상승과 해안 지역</h3>
+<p>해양의 열팽창과 그린란드·남극 빙상의 융해로 해수면이 지속 상승 중이다. 저지대 해안 도시, 소도서 국가, 삼각주 지역이 침수·침식·염수 침입 위협에 노출된다. 해안 보호 기반시설 투자 비용도 급증한다.</p>
+</section><section id="인간-건강" class="level3"><h3 class="anchored" data-anchor-id="인간-건강">인간 건강</h3>
+<p>기후변화는 다양한 경로로 인간 건강에 영향을 미친다.</p>
+<p>한파 사망은 줄지만 폭염 사망이 늘어나며, 순 효과는 지역과 시나리오에 따라 다르다. 말라리아, 뎅기열 등 열대성 감염병의 분포 지역이 확대된다. 대기 오염과 알레르기 악화도 기후변화와 연관된다.</p>
+</section><section id="노동-생산성과-에너지-수요" class="level3"><h3 class="anchored" data-anchor-id="노동-생산성과-에너지-수요">노동 생산성과 에너지 수요</h3>
+<p>고온은 옥외 노동 생산성을 직접 저하시킨다. 특히 건설, 농업 등 열에 민감한 부문과 열대·아열대 지역에서 영향이 크다. 에너지 수요는 냉방 수요 증가로 여름에 늘고, 난방 수요 감소로 겨울에 줄어—순 효과는 지역 기후에 따라 다르다.</p>
+<hr></section></section><section id="적응과-완화" class="level2"><h2 class="anchored" data-anchor-id="적응과-완화">적응과 완화</h2>
+<section id="두-전략의-경제학" class="level3"><h3 class="anchored" data-anchor-id="두-전략의-경제학">두 전략의 경제학</h3>
+<p>기후변화에 대응하는 경제적 수단은 크게 <strong>완화(mitigation)</strong>와 <strong>적응(adaptation)</strong> 두 가지로 나뉜다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>완화(Mitigation)와 적응(Adaptation)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>완화(Mitigation)</strong>: 온실가스 배출을 줄이거나 흡수원을 늘려 기후변화 자체를 억제하는 행동. 태양광·풍력 투자, 에너지 효율 개선, 산림 보전 등이 해당한다.</p>
+<p><strong>적응(Adaptation)</strong>: 기후변화의 영향을 수용하고 그 피해를 줄이는 행동. 해안 방벽 건설, 내열성 작물 개발, 폭염 대응 의료 인프라 구축 등이 해당한다.</p>
+</div>
+</div>
+<p>경제학적으로 두 전략은 <strong>정책 대체재(policy substitutes)</strong>다. 적응을 많이 할수록 완화의 필요성이 줄고, 완화를 많이 할수록 적응 비용이 줄어든다. 최적 대응은 두 전략의 한계비용이 일치하는 수준에서 결정된다.</p>
+<p><span class="math display">\[\text{MC}_{\text{완화}} = \text{MC}_{\text{적응}}\]</span></p>
+<p>그러나 두 전략은 중요한 차이점이 있다. 완화는 <strong>전 지구적 공공재</strong> 문제—한 나라의 감축이 모든 나라에게 편익을 준다—이므로 국제 협력이 필수적이다. 반면 적응은 대부분 <strong>국지적·사적(local and private)</strong>이다. 농부가 내열성 작물 품종으로 바꾸는 것은 국제 협약 없이 개인이 결정한다.</p>
+<hr></section></section><section id="기후변화-피해의-화폐적-가치-평가" class="level2"><h2 class="anchored" data-anchor-id="기후변화-피해의-화폐적-가치-평가">기후변화 피해의 화폐적 가치 평가</h2>
+<section id="비시장-가치-평가의-필요성" class="level3"><h3 class="anchored" data-anchor-id="비시장-가치-평가의-필요성">비시장 가치 평가의 필요성</h3>
+<p>기후변화의 많은 피해—생태계 손실, 건강 영향, 문화유산 훼손—는 시장에서 직접 거래되지 않는다. 이를 감축비용과 비교하여 비용-편익 분석을 수행하려면 모든 영향을 공통 단위(화폐)로 표현해야 한다. 이것이 <strong>비시장 가치 평가(non-market valuation)</strong>다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>주요 비시장 가치 평가 방법
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>현시선호법(Revealed Preference Methods)</strong>: 시장에서의 실제 행동으로부터 환경재의 가치를 추론한다.</p>
+<ul>
+<li>
+<em>헤도닉 가격법(Hedonic Pricing)</em>: 주택 가격이나 임금에 반영된 환경 특성의 가치를 추정한다. 예: 소음·대기오염이 심한 지역의 주택이 얼마나 낮은 가격에 거래되는가?</li>
+<li>
+<em>여행비용법(Travel Cost Method)</em>: 사람들이 자연 명소를 방문하기 위해 지출하는 비용에서 그 자원의 가치를 추정한다.</li>
+</ul>
+<p><strong>진술선호법(Stated Preference Methods)</strong>: 가상 시나리오에 대한 설문 응답으로 가치를 직접 측정한다.</p>
+<ul>
+<li>
+<em>조건부 가치측정법(Contingent Valuation Method, CVM)</em>: “이 환경 개선을 위해 얼마를 지불하겠습니까?”</li>
+<li>
+<em>선택실험법(Choice Experiment)</em>: 여러 속성을 가진 대안 중 선택하게 하여 각 속성의 가치를 추정한다.</li>
+</ul>
+</div>
+</div>
+</section><section id="총-경제적-피해-추정" class="level3"><h3 class="anchored" data-anchor-id="총-경제적-피해-추정">총 경제적 피해 추정</h3>
+<p>연구자들은 다양한 방법으로 기후변화의 총 경제적 피해를 화폐 단위로 추정해왔다.</p>
+<p><strong>열거법(Enumerative Method)</strong>: 개별 분야(농업, 해안, 건강 등)의 물리적 피해를 추정하고, 각각에 시장·비시장 가격을 곱해 합산한다. 분야 간 상호작용을 포착하지 못한다는 한계가 있다.</p>
+<p><strong>연산 가능 일반균형 모형(CGE Model)</strong>: 개별 충격이 시장 가격과 국가 간 교역에 미치는 파급 효과를 포착한다.</p>
+<p><strong>통계 모형</strong>: 기상 데이터와 경제 성과 지표의 패널 데이터를 활용해 기후-경제 관계를 통계적으로 추정한다. 최근 활발히 발전하고 있는 방법이다.</p>
+<p>일반적인 발견은 다음과 같다. 기후변화의 총 경제적 피해는 기온 상승에 대해 비선형적으로(대략 제곱에 비례하여) 증가한다. <strong>빈곤 국가와 열대 지역이 불균형적으로 큰 피해</strong>를 입는다—경제 활동이 날씨에 더 직접 노출되어 있고, 적응 능력이 낮기 때문이다.</p>
+<hr></section></section><section id="탄소의-사회적-비용" class="level2"><h2 class="anchored" data-anchor-id="탄소의-사회적-비용">탄소의 사회적 비용</h2>
+<section id="scc의-정의" class="level3"><h3 class="anchored" data-anchor-id="scc의-정의">SCC의 정의</h3>
+<p><strong>탄소의 사회적 비용(Social Cost of Carbon, SCC)</strong>은 온실가스 1톤을 추가 배출할 때 발생하는 미래 피해의 <strong>현재 가치(present value)</strong>다. SCC는 기후 정책의 목표 강도를 나타내는 핵심 지표다.</p>
+<p><span class="math display">\[\text{SCC} = \frac{\partial \text{NPV}(\text{피해})}{\partial M}\]</span></p>
+<p>이름의 각 부분이 개념을 정확히 담고 있으므로 하나씩 뜯어볼 필요가 있다.</p>
+<p><strong>’비용’인 이유</strong>는 배출이 실제로 누군가에게 손실을 입히기 때문이다. <strong>’사회적’인 이유</strong>는 그 손실을 배출한 당사자가 아니라 사회가 대신 짊어지기 때문이다 <span class="citation" data-cites="pindyck2022">(<a href="01-what-is-climate-change.html#ref-pindyck2022" role="doc-biblioref">Pindyck 2022</a>)</span>. 화석연료를 태운 기업이나 가계는 연료값은 지불하지만 그 배출이 일으킬 폭염·홍수·농작물 감소의 비용은 지불하지 않는다. 4장의 언어로 말하면, 이 비용은 배출자의 의사결정 <strong>바깥에 있다</strong>—그래서 외부성이다. <strong>’탄소’는</strong> 이 비용이 <span class="math inline">\(\text{CO}_2\)</span> 배출량 1톤이라는 물리적 단위에 결부된다는 뜻이다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>용어 주의: 미시경제학의 ’사회적 비용’과 다르다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>혼동하기 쉬운 지점이 있다. 미시경제학 교과서에서 어떤 활동의 <strong>사회적 비용</strong>은 대개 <em>사적 비용 + 외부비용</em>의 <strong>합계</strong>를 뜻한다. 그러나 기후 문헌에서 SCC는 관례적으로 <strong>외부비용만</strong>을 가리킨다 <span class="citation" data-cites="pindyck2022">(<a href="01-what-is-climate-change.html#ref-pindyck2022" role="doc-biblioref">Pindyck 2022</a>)</span>.</p>
+<p>따라서 4장에서 본 관계식</p>
+<p><span class="math display">\[\text{SMC}_{\text{CO}_2} = \text{PMC}_{\text{CO}_2} + \underbrace{\text{SCC}}_{\text{외부비용}}\]</span></p>
+<p>에서 SCC는 좌변의 사회적 한계비용(SMC)이 아니라 우변에 더해지는 <strong>외부</strong> 부분임에 유의하라. 이름은 ’사회적 비용’이지만 실제로는 ’외부비용’인 셈이다.</p>
+</div>
+</div>
+<p>또 하나 놓치기 쉬운 것은 SCC가 <strong>한계(marginal) 개념</strong>이라는 점이다. SCC는 “기후변화 전체의 피해가 얼마인가”가 아니라 “<strong>지금 1톤을 더</strong> 배출하면 추가로 얼마의 피해가 생기는가”를 묻는다. 3장에서 배운 등한계 원칙을 떠올려 보자. 효율적 감축 수준은 감축의 한계편익이 한계비용과 같아지는 곳에서 결정되는데, <strong>감축의 한계편익이 바로 회피된 SCC</strong>다. 그래서 배출 경로가 최적이라면 SCC는 정확히 <strong>피구세(Pigouvian tax)</strong>—즉 지금 부과해야 할 탄소세의 수준—와 같아진다. 논리는 단순명료하다. 당신이 배출한 1톤이 사회에 100달러의 피해를 입힌다면, 당신에게 100달러를 물리면 된다 <span class="citation" data-cites="pindyck2022">(<a href="01-what-is-climate-change.html#ref-pindyck2022" role="doc-biblioref">Pindyck 2022</a>)</span>.</p>
+<p><span class="math display">\[\text{최적 탄소세} = \text{SCC} = \text{한계감축비용(MAC)}\]</span></p>
+<p>이것이 SCC가 기후경제학에서 가장 중요한 숫자로 불리는 이유다. SCC를 알면 원칙적으로 최적 탄소세를 알고, 따라서 기후 문제를 어떻게 고칠지 알게 된다.</p>
+</section><section id="scc를-계산한다는-것-네-단계의-사고실험" class="level3"><h3 class="anchored" data-anchor-id="scc를-계산한다는-것-네-단계의-사고실험">SCC를 계산한다는 것: 네 단계의 사고실험</h3>
+<p>그렇다면 SCC는 어떻게 구하는가? Pindyck의 사고실험을 따라가 보면 그 구조가 선명해진다 <span class="citation" data-cites="pindyck2022">(<a href="01-what-is-climate-change.html#ref-pindyck2022" role="doc-biblioref">Pindyck 2022</a>)</span>. 오늘 <span class="math inline">\(\text{CO}_2\)</span> 1톤을 더 배출했다고 하자. 이 1톤의 값을 매기려면 다음 네 가지를 <strong>차례로 알아야</strong> 한다.</p>
+<ol type="1">
+<li>
+<strong>배출 경로</strong>: 앞으로 세계 경제가 얼마나 성장하고 얼마나 배출할 것인가? 배출은 경제활동의 부산물이므로, 출발점은 향후 100년의 GDP 성장 예측이다.</li>
+<li>
+<strong>기후 반응</strong>: 그 배출로 대기 중 농도가 얼마나 오르고, 그 농도에서 기온은 몇 도나 오르는가? 이 연결고리가 <strong>기후민감도(climate sensitivity)</strong>다.</li>
+<li>
+<strong>피해</strong>: 그 기온 상승이 GDP와 소비, 건강과 생명에 얼마만큼의 손실을 입히는가? 이것이 <strong>피해 함수(damage function)</strong>다.</li>
+<li>
+<strong>할인</strong>: 대부분 먼 미래에 발생할 그 손실을 오늘의 가치로 환산하려면 얼마의 <strong>할인율</strong>을 써야 하는가?</li>
+</ol>
+<p>이 네 단계를 모두 통과하면 SCC라는 하나의 숫자가 나온다. 문제는 각 단계마다 우리가 모르는 것이 있고, 그 모름이 뒤로 갈수록 누적되어 증폭된다는 데 있다(<a href="#fig-scc-cascade" class="quarto-xref">Figure&nbsp;<span>6.2</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-scc-cascade" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-scc-cascade-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05-climate-damages_files/figure-html/fig-scc-cascade-1.png" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scc-cascade-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2: SCC 추정의 불확실성 연쇄. 배출 경로에서 출발해 기후 반응, 피해, 할인을 차례로 거치며 불확실성이 누적·증폭된다. 각 단계의 불확실성이 곱해지기 때문에, 최종 SCC 추정치의 범위는 톤당 20달러 미만에서 400달러 이상까지 벌어진다.
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p><strong>1단계부터 이미 어렵다.</strong> 향후 5년간의 GDP 성장률을 맞히는 것조차 쉽지 않다. 2008년 금융위기도, 2020년 코로나19가 몰고 온 급격한 침체도 아무도 예측하지 못했다. 그런데 SCC 계산은 100년 이상의 성장 경로를 요구한다.</p>
+<p><strong>2단계에서 불확실성이 크게 벌어진다.</strong> 기후민감도는 대기 중 <span class="math inline">\(\text{CO}_2\)</span> 농도가 두 배가 되었을 때 최종적으로 오르는 기온을 뜻한다. IPCC가 제시하는 “가능성이 가장 높은” 범위는 <span class="math inline">\(1.5\)</span>~<span class="math inline">\(4.5\,^\circ\text{C}\)</span>이고, 가능성은 낮지만 배제할 수 없는 값까지 포함하면 <span class="math inline">\(1.0\)</span>~<span class="math inline">\(6.0\,^\circ\text{C}\)</span>까지 넓어진다. 최저값과 최고값 사이에 세 배 이상의 차이가 있는 것이다.</p>
+<p><strong>3단계는 가장 취약한 고리다.</strong> 설령 기온이 몇 도 오를지 정확히 안다 해도, 그것이 경제에 얼마의 손실을 입힐지에 대해 우리는 “거의 어둠 속에 있으며 추측할 수 있을 뿐”이라는 것이 Pindyck의 진단이다 <span class="citation" data-cites="pindyck2022">(<a href="01-what-is-climate-change.html#ref-pindyck2022" role="doc-biblioref">Pindyck 2022</a>)</span>. 관측된 적 없는 기온대에서 무슨 일이 벌어질지, 그리고 분쟁·이주·정치적 불안정 같은 간접 영향을 어떻게 화폐로 환산할지에 대한 신뢰할 만한 근거가 부족하기 때문이다.</p>
+<p><strong>4단계는 과학이 아니라 윤리의 문제다.</strong> 7장에서 자세히 다루겠지만, 할인율을 1%로 볼지 5%로 볼지는 데이터로 정해지지 않으며, 그 선택 하나로 SCC가 열 배 이상 달라진다.</p>
+</section><section id="scc-추정-방법-통합평가모형" class="level3"><h3 class="anchored" data-anchor-id="scc-추정-방법-통합평가모형">SCC 추정 방법: 통합평가모형</h3>
+<p>이 네 단계를 하나의 모형 안에 결합한 것이 <strong>통합평가모형(Integrated Assessment Model, IAM)</strong>이다. IAM은 기후 시스템과 경제 시스템을 ’통합’하여 다음 단계를 따른다.</p>
+<ol type="1">
+<li>인구 성장, 경제 성장, 에너지 기술 발전을 바탕으로 <strong>미래 배출 경로</strong>를 예측한다.</li>
+<li>탄소순환·기후 모형으로 <strong>기온 상승, 해수면 변화</strong> 등 기후 반응을 모형화한다.</li>
+<li>기후 변화가 농업, 건강, 에너지 등 경제에 미치는 <strong>피해 함수(damage function)</strong>를 추정한다.</li>
+<li>미래 피해를 <strong>할인율(discount rate)</strong>로 현재 가치로 환산하여 합산한다.</li>
+<li>배출을 1톤 늘린 시나리오를 다시 계산해, 두 결과의 차이를 SCC로 삼는다.</li>
+</ol>
+<p>노드하우스가 1990년대 초에 개발한 DICE 모형이 그 원형이며, 오늘날 각국 정부의 공식 SCC 추정치도 이런 모형들에 기초한다. IAM은 12장에서 본격적으로 다룬다.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>논쟁: IAM은 SCC를 믿을 만하게 추정하는가?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>IAM이 SCC 계산의 표준 도구라는 사실이 곧 그 결과가 신뢰할 만하다는 뜻은 아니다. 이 점을 가장 강하게 비판해 온 학자가 MIT의 로버트 핀다이크(Robert Pindyck)다.</p>
+<p>그의 비판은 이렇다. IAM 안의 여러 관계식—특히 기온과 경제 피해를 잇는 <strong>피해 함수</strong>—이 이론이나 데이터에 단단히 근거하지 않은 <strong>임의적(ad hoc) 설정</strong>에 가깝다는 것이다 <span class="citation" data-cites="pindyck2013">(<a href="01-what-is-climate-change.html#ref-pindyck2013" role="doc-biblioref">Pindyck 2013</a>)</span>. 우리는 기온이 <span class="math inline">\(4\,^\circ\text{C}\)</span> 올랐을 때 GDP가 몇 퍼센트 줄어드는지 관측한 적이 없으므로, 모형 제작자가 선택한 함수 형태가 결과를 좌우한다. 그 결과 모형은 정교한 수식으로 포장되어 있지만, 산출된 숫자는 입력한 가정을 되돌려 주는 것에 가까울 수 있다. 핀다이크는 초기 모형들이 기후와 경제의 상호작용을 이해시키는 데 기여했음은 인정하면서도, 지난 20여 년간 모형이 훨씬 크고 복잡해졌음에도 이해가 그만큼 깊어지지는 않았다고 지적한다.</p>
+<p>물론 반론도 있다. 불완전하더라도 일관된 틀 안에서 가정을 명시하고 그 함의를 추적할 수 있다는 점, 그리고 정책 결정은 어차피 어떤 숫자든 필요로 한다는 점에서 IAM의 유용성을 옹호하는 견해가 여전히 주류다. 최근 연구들은 실제 날씨 변동과 경제 성과의 관계를 계량적으로 추정해 피해 함수의 실증적 기반을 강화하려 시도하고 있다.</p>
+<p>학부생이 여기서 얻어야 할 교훈은 어느 편이 옳으냐가 아니라, <strong>SCC 숫자를 인용할 때는 그것이 어떤 가정 위에 서 있는지를 함께 물어야 한다</strong>는 태도다.</p>
+</div>
+</div>
+</section><section id="그래서-scc는-얼마인가" class="level3"><h3 class="anchored" data-anchor-id="그래서-scc는-얼마인가">그래서 SCC는 얼마인가</h3>
+<p>솔직한 답은 “모른다”이다. 다만 견해의 스펙트럼은 분명하다 <span class="citation" data-cites="pindyck2022">(<a href="01-what-is-climate-change.html#ref-pindyck2022" role="doc-biblioref">Pindyck 2022</a>)</span>.</p>
+<p>기후변화가 완만하게 진행되고, 대부분 국가에 미치는 경제적 충격이 크지 않으며, 그마저도 먼 미래의 일이라고 보는 쪽에서는 SCC를 <strong>톤당 20달러 수준</strong>으로 낮게 추정한다. 반대로 즉각적이고 강력한 감축이 없으면 상당한 기온 상승과 파국적 피해가 그리 멀지 않은 시점에 닥칠 가능성이 크다고 보는 쪽에서는 <strong>톤당 200달러 이상</strong>을 제시하며, 발표된 추정치 중에는 400달러에 이르는 것도 있다.</p>
+<p>핀다이크가 수백 명의 기후과학·기후경제학 전문가를 대상으로 실시한 설문 역시 같은 그림을 보여준다. 전문가들 사이의 견해 차이가 워낙 커서, 그 응답으로부터 <strong>단 하나의 SCC 추정치를 도출할 수 없었다</strong> <span class="citation" data-cites="pindyck2019">(<a href="01-what-is-climate-change.html#ref-pindyck2019" role="doc-biblioref">Pindyck 2019</a>)</span>. <a href="#fig-scc-estimates" class="quarto-xref">Figure&nbsp;<span>6.3</span></a> 는 주요 연구와 정부 추정치가 어떻게 갈리는지를 정리한 것이다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-scc-estimates" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-scc-estimates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="05-climate-damages_files/figure-html/fig-scc-estimates-1.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scc-estimates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.3: 탄소의 사회적 비용(SCC) 추정치의 범위. 낮은 할인율(예: Stern)은 높은 SCC를, 높은 할인율(예: Nordhaus)은 낮은 SCC를 산출한다. 피해 함수와 할인율 가정에 따른 추정 범위가 매우 넓다.
+</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="규범과-현실-도입의-질문으로-돌아가서" class="level3"><h3 class="anchored" data-anchor-id="규범과-현실-도입의-질문으로-돌아가서">규범과 현실: 도입의 질문으로 돌아가서</h3>
+<p>이제 이 장을 열었던 질문으로 돌아가자. 미국 EPA의 190달러, EU 배출권거래제의 70유로 남짓, 그리고 20달러에 못 미치는 전 세계 평균. 같은 1톤을 놓고 왜 이렇게 다른 숫자가 나오는가?</p>
+<p>앞서 예고했듯 여기에는 성격이 전혀 다른 두 개의 격차가 겹쳐 있으며, 이 둘을 구분하는 것이 이 장에서 가장 중요한 소득일지도 모른다.</p>
+<p><strong>첫째는 추정치들 사이의 격차다.</strong> EPA의 공식 수치가 51달러에서 190달러로 옮겨간 것, 노드하우스의 추정과 스턴의 추정이 열 배 넘게 벌어지는 것이 여기 속한다. 원인은 이 장에서 살펴본 그대로다—피해 함수를 어떻게 설정하고, 할인율을 얼마로 두며, 어떤 피해까지 계산에 넣는가. 이것은 <strong>“얼마여야 하는가”</strong>를 둘러싼 이견이다.</p>
+<p><strong>둘째는 규범과 현실 사이의 격차다.</strong> SCC가 190달러라는 말은 그만큼의 탄소 가격을 매겨야 효율적이라는 뜻이지, 실제로 그렇게 매겨지고 있다는 뜻이 아니다. 따라서 전 세계 평균 탄소 가격이 20달러에도 못 미친다는 사실은 SCC 추정이 틀렸다는 증거가 아니라, <strong>외부비용의 대부분이 여전히 가격에 반영되지 않고 있다는 증거</strong>다. 4장의 언어로 말하면 이 격차의 크기가 곧 <strong>아직 교정되지 않은 시장실패의 크기</strong>다.</p>
+<p>두 번째 격차가 좁혀지지 않는 이유는 계산의 문제가 아니라 정치와 제도의 문제다. 탄소 가격을 올리면 부담은 지금 여기의 유권자에게 돌아가지만 편익은 먼 미래와 지구 반대편에 흩어진다. 게다가 4장에서 본 죄수의 딜레마 구조 탓에 각국은 상대가 먼저 움직이기를 기다린다. 이 격차를 어떤 수단으로, 어떤 정치적 조건에서 메울 것인가—그것이 10장(탄소세), 11장(배출권거래제), 15장(국제 협력)의 과제다.</p>
+<hr></section></section><section id="요약" class="level2"><h2 class="anchored" data-anchor-id="요약">요약</h2>
+<p>기후변화가 농업, 해안, 보건, 생태계에 미치는 다양한 영향은 비시장 가치 평가—현시선호법과 진술선호법—를 통해 화폐로 환산된다. 총 피해는 기온 상승에 대해 비선형적으로 증가하며, <strong>빈곤 국가와 열대 지역의 피해가 불균형적으로 크다</strong>.</p>
+<p>탄소의 사회적 비용(SCC)은 온실가스 1톤 <strong>추가</strong> 배출이 초래하는 미래 피해의 현재 가치, 즉 한계 외부비용이다. 이름은 ’사회적 비용’이지만 미시경제학의 용법과 달리 사적 비용을 제외한 외부비용만을 가리킨다는 점에 유의해야 한다. 배출 경로가 최적이라면 SCC는 최적 탄소세 및 한계감축비용과 일치한다.</p>
+<p>SCC를 계산하려면 배출 경로, 기후 반응, 피해 함수, 할인율의 네 단계를 차례로 통과해야 하는데, 각 단계의 불확실성이 누적·증폭되어 최종 추정치는 톤당 20달러 미만에서 400달러 이상까지 벌어진다. 특히 기온 상승을 경제적 손실로 옮기는 피해 함수는 관측 근거가 희박해, 통합평가모형(IAM)의 신뢰성을 둘러싼 핀다이크의 비판처럼 근본적인 논쟁이 이어지고 있다. 따라서 SCC 숫자를 다룰 때는 그것이 어떤 가정 위에 서 있는지를 함께 묻는 태도가 필요하다.</p>
+<p>끝으로 두 종류의 격차를 구분해야 한다. 추정치들 사이의 차이는 “얼마여야 하는가”에 대한 이견이지만, SCC와 실제 탄소 가격 사이의 차이는 아직 내재화되지 않은 외부비용, 곧 교정되지 않은 시장실패의 크기를 뜻한다. 앞의 문제는 7장(할인율)과 12장(IAM)에서, 뒤의 문제는 10~11장(정책 수단)과 15장(국제 협력)에서 다룬다.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>토론 질문
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>동일한 IAM을 사용하더라도 할인율을 3%에서 1%로 낮추면 SCC는 어떻게 변하는가? 그 방향은 왜인가?</p></li>
+<li><p>기후변화 피해에서 빈곤 국가의 비중이 크다면, 이는 전 지구적 SCC 추정치와 개별 국가의 기후 정책 결정에 어떤 함의를 가지는가?</p></li>
+<li><p>생태계 손실이나 문화유산 훼손처럼 시장 가격이 없는 피해를 화폐로 환산하는 것에 대해 어떤 방법론적·윤리적 비판이 가능한가? 그럼에도 화폐화가 필요한 이유는 무엇인가?</p></li>
+<li><p>SCC는 “1톤을 <strong>추가로</strong> 배출할 때”의 피해를 뜻하는 한계 개념이다. 이를 “기후변화가 초래하는 총피해”와 혼동하면 정책 판단에서 어떤 오류가 생길 수 있는가? 3장의 등한계 원칙과 연결해 설명하라.</p></li>
+<li><p>핀다이크는 IAM의 피해 함수가 임의적이어서 SCC 추정치를 신뢰하기 어렵다고 비판한다. 그럼에도 각국 정부는 규제 결정을 위해 하나의 SCC 숫자를 정해야 한다. “불완전한 추정치라도 없는 것보다 낫다”는 입장과 “잘못된 정밀함은 오히려 해롭다”는 입장 중 어느 쪽을 지지하는가? 근거를 들어 논하라.</p></li>
+<li><p>도입부에서 보았듯 미국 EPA의 SCC는 톤당 190달러인 반면 EU ETS의 탄소 가격은 70유로 안팎이고 전 세계 평균은 20달러에도 못 미친다. SCC는 “얼마여야 하는가”를, 시장 탄소 가격은 “실제로 얼마인가”를 나타낸다. 이 격차가 뜻하는 바는 무엇이며, 4장의 시장실패 논의와 어떻게 연결되는가?</p></li>
+</ol>
+</div>
+</div>
+<hr></section><section id="부록-r-코드" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="부록-r-코드">부록: R 코드</h2>
+<p>이 장의 본문에 등장한 그림을 생성한 R 코드를 정리한다. 각 코드는 해당 그림 번호와 함께 표시되어 있다.</p>
+<section id="fig-scc-cascade-코드" class="level3"><h3 class="anchored" data-anchor-id="fig-scc-cascade-코드">
+<a href="#fig-scc-cascade" class="quarto-xref">Figure&nbsp;<span>6.2</span></a> 코드</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">steps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  x     <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span>,</span>
+<span>  stage <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"1. Emissions path\n(GDP growth)"</span>,</span>
+<span>            <span class="st">"2. Climate response\n(climate sensitivity)"</span>,</span>
+<span>            <span class="st">"3. Damages\n(damage function)"</span>,</span>
+<span>            <span class="st">"4. Present value\n(discount rate)"</span><span class="op">)</span>,</span>
+<span>  lo    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">0.5</span>, <span class="op">-</span><span class="fl">1.3</span>, <span class="op">-</span><span class="fl">2.6</span>, <span class="op">-</span><span class="fl">4.4</span><span class="op">)</span>,</span>
+<span>  hi    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span> <span class="fl">0.5</span>,  <span class="fl">1.3</span>,  <span class="fl">2.6</span>,  <span class="fl">4.4</span><span class="op">)</span>,</span>
+<span>  note  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Nobody foresaw\n2008 or COVID"</span>,</span>
+<span>            <span class="st">"IPCC range:\n1.5-4.5 C"</span>,</span>
+<span>            <span class="st">"\"We are largely\nin the dark\""</span>,</span>
+<span>            <span class="st">"1% vs 5%:\nSCC differs &gt;10x"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">steps</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_ribbon</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>ymin <span class="op">=</span> <span class="va">lo</span>, ymax <span class="op">=</span> <span class="va">hi</span><span class="op">)</span>, fill <span class="op">=</span> <span class="st">"#D73027"</span>, alpha <span class="op">=</span> <span class="fl">0.18</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">hi</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"#D73027"</span>, linewidth <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">lo</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"#D73027"</span>, linewidth <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">0</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"gray55"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">2.6</span>, color <span class="op">=</span> <span class="st">"#2166AC"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_label</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fl">0.40</span>, label <span class="op">=</span> <span class="va">stage</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">2.95</span>,</span>
+<span>             fontface <span class="op">=</span> <span class="st">"bold"</span>, color <span class="op">=</span> <span class="st">"gray15"</span>, vjust <span class="op">=</span> <span class="fl">0</span>, lineheight <span class="op">=</span> <span class="fl">0.95</span>,</span>
+<span>             fill <span class="op">=</span> <span class="st">"white"</span>, label.size <span class="op">=</span> <span class="fl">0</span>, label.padding <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">0.12</span>, <span class="st">"lines"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_label</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">-</span><span class="fl">0.60</span>, label <span class="op">=</span> <span class="va">note</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">2.5</span>,</span>
+<span>             color <span class="op">=</span> <span class="st">"gray40"</span>, vjust <span class="op">=</span> <span class="fl">1</span>, lineheight <span class="op">=</span> <span class="fl">0.95</span>, fontface <span class="op">=</span> <span class="st">"italic"</span>,</span>
+<span>             fill <span class="op">=</span> <span class="st">"white"</span>, label.size <span class="op">=</span> <span class="fl">0</span>, label.padding <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">0.12</span>, <span class="st">"lines"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span><span class="st">"segment"</span>, x <span class="op">=</span> <span class="fl">4.42</span>, xend <span class="op">=</span> <span class="fl">4.42</span>, y <span class="op">=</span> <span class="op">-</span><span class="fl">4.4</span>, yend <span class="op">=</span> <span class="fl">4.4</span>,</span>
+<span>           arrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/arrow.html">arrow</a></span><span class="op">(</span>ends <span class="op">=</span> <span class="st">"both"</span>, length <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/grid/unit.html">unit</a></span><span class="op">(</span><span class="fl">0.16</span>, <span class="st">"cm"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>           color <span class="op">=</span> <span class="st">"gray35"</span>, linewidth <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span><span class="st">"text"</span>, x <span class="op">=</span> <span class="fl">4.52</span>, y <span class="op">=</span> <span class="fl">0</span>, label <span class="op">=</span> <span class="st">"$20 to $400+ per ton"</span>,</span>
+<span>           angle <span class="op">=</span> <span class="fl">270</span>, size <span class="op">=</span> <span class="fl">2.9</span>, color <span class="op">=</span> <span class="st">"gray25"</span>, fontface <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.55</span>, <span class="fl">4.85</span><span class="op">)</span>, expand <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/expansion.html">expansion</a></span><span class="op">(</span>mult <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">5.6</span>, <span class="fl">5.4</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>       title <span class="op">=</span> <span class="st">"The Uncertainty Cascade in Estimating the SCC"</span>,</span>
+<span>       subtitle <span class="op">=</span> <span class="st">"Uncertainty compounds at every step from emissions to present value"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">11</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>panel.grid <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        axis.ticks <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span>, size <span class="op">=</span> <span class="fl">12</span><span class="op">)</span>,</span>
+<span>        plot.subtitle <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">9</span>, color <span class="op">=</span> <span class="st">"gray35"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="fig-scc-estimates-코드" class="level3"><h3 class="anchored" data-anchor-id="fig-scc-estimates-코드">
+<a href="#fig-scc-estimates" class="quarto-xref">Figure&nbsp;<span>6.3</span></a> 코드</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">scc_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
+<span>  study <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">"Nordhaus (2017)\nHigh discount"</span>,</span>
+<span>    <span class="st">"US EPA (2021)\nCentral"</span>,</span>
+<span>    <span class="st">"Rennert et al.\n(2022)"</span>,</span>
+<span>    <span class="st">"US EPA (2023)\nUpdated"</span>,</span>
+<span>    <span class="st">"Stern Review\nLow discount"</span></span>
+<span>  <span class="op">)</span>,</span>
+<span>  scc_central <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">15</span>, <span class="fl">51</span>, <span class="fl">185</span>, <span class="fl">190</span>, <span class="fl">310</span><span class="op">)</span>,</span>
+<span>  scc_low     <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>,  <span class="fl">14</span>,  <span class="fl">44</span>, <span class="fl">120</span>, <span class="fl">180</span><span class="op">)</span>,</span>
+<span>  scc_high    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">35</span>, <span class="fl">152</span>, <span class="fl">413</span>, <span class="fl">340</span>, <span class="fl">560</span><span class="op">)</span></span>
+<span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>study <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">study</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rev.html">rev</a></span><span class="op">(</span><span class="va">study</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">scc_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">study</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_errorbarh</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>xmin <span class="op">=</span> <span class="va">scc_low</span>, xmax <span class="op">=</span> <span class="va">scc_high</span><span class="op">)</span>,</span>
+<span>                 height <span class="op">=</span> <span class="fl">0.3</span>, color <span class="op">=</span> <span class="st">"gray50"</span>, linewidth <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">scc_central</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"#D73027"</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_vline</a></span><span class="op">(</span>xintercept <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">51</span>, <span class="fl">190</span><span class="op">)</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>,</span>
+<span>             color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#4393C3"</span>, <span class="st">"#D73027"</span><span class="op">)</span>, linewidth <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span><span class="st">"text"</span>, x <span class="op">=</span> <span class="fl">58</span>,  y <span class="op">=</span> <span class="fl">0.6</span>, label <span class="op">=</span> <span class="st">"EPA 2021\n($51)"</span>,</span>
+<span>           size <span class="op">=</span> <span class="fl">2.8</span>, color <span class="op">=</span> <span class="st">"#4393C3"</span>, hjust <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span><span class="st">"text"</span>, x <span class="op">=</span> <span class="fl">197</span>, y <span class="op">=</span> <span class="fl">0.6</span>, label <span class="op">=</span> <span class="st">"EPA 2023\n($190)"</span>,</span>
+<span>           size <span class="op">=</span> <span class="fl">2.8</span>, color <span class="op">=</span> <span class="st">"#D73027"</span>, hjust <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/dollar_format.html">dollar_format</a></span><span class="op">(</span>suffix <span class="op">=</span> <span class="st">"/tCO2"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Social Cost of Carbon ($/tCO2)"</span>,</span>
+<span>       y <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>       title <span class="op">=</span> <span class="st">"Range of SCC Estimates Across Studies"</span>,</span>
+<span>       caption <span class="op">=</span> <span class="st">"Bars indicate low-high range; points indicate central estimate."</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">11</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>panel.grid.minor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        panel.grid.major.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>        plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>,</span>
+<span>        plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"gray50"</span>, size <span class="op">=</span> <span class="fl">8</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section></section><section id="참고문헌" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-ipcc2022wg2ch16" class="csl-entry" role="listitem">
+O’Neill, Brian, Maarten van Aalst, Zelina Zaiton Ibrahim, et al. 2022. <span>“Key Risks Across Sectors and Regions.”</span> Chap. 16 in <em>Climate Change 2022: Impacts, Adaptation and Vulnerability. Contribution of Working Group II to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change</em>, <span class="nocase">edited by Hans-Otto Pörtner, Debra C. Roberts, et al.</span> Cambridge University Press. <a href="https://doi.org/10.1017/9781009325844.025">https://doi.org/10.1017/9781009325844.025</a>.
+</div>
+<div id="ref-pindyck2013" class="csl-entry" role="listitem">
+Pindyck, Robert S. 2013. <span>“Climate Change Policy: What Do the Models Tell Us?”</span> <em>Journal of Economic Literature</em> 51 (3): 860–72.
+</div>
+<div id="ref-pindyck2019" class="csl-entry" role="listitem">
+Pindyck, Robert S. 2019. <span>“The Social Cost of Carbon Revisited.”</span> <em>Journal of Environmental Economics and Management</em> 94: 140–60.
+</div>
+<div id="ref-pindyck2022" class="csl-entry" role="listitem">
+Pindyck, Robert S. 2022. <em>Climate Future: Averting and Adapting to Climate Change</em>. Oxford University Press.
+</div>
+</div>
+
+
+<!-- -->
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./04-market-failure.html" class="pagination-link" aria-label="시장실패: 외부효과와 공공재">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">시장실패: 외부효과와 공공재</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./06-abatement-costs.html" class="pagination-link" aria-label="감축비용과 한계감축비용곡선">
+        <span class="nav-page-text"><span class="chapter-title">감축비용과 한계감축비용곡선</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "기후 피해의 측정과 가치평가"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="false"}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## 학습목표</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>기후변화가 농업, 보건, 해수면, 생태계에 미치는 물리적·경제적 영향을 이해한다.</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>적응(adaptation)과 완화(mitigation)를 경제학적으로 구분하고, 두 전략 사이의 대체 관계를 분석할 수 있다.</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>현시선호법과 진술선호법 등 비시장 가치 평가 방법을 구분하고 적용 사례를 제시할 수 있다.</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>탄소의 사회적 비용(SCC)을 한계 외부비용으로 정의하고, 최적 탄소세와의 관계를 설명할 수 있다.</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>SCC 추정의 네 단계(배출 경로·기후 반응·피해 함수·할인)를 제시하고, 각 단계의 불확실성이 추정치를 크게 갈라놓는 이유를 설명할 수 있다.</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple" icon="false"}</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📰 &nbsp; 탄소 1톤의 값은 얼마인가?</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>2021년 미국 정부는 이산화탄소 1톤이 사회에 입히는 피해액을 51달러로 계산했다. 2023년 환경보호청(EPA)은 같은 숫자를 **190달러**로 올렸다. 두 해 사이에 기후가 네 배로 나빠진 것은 물론 아니다. 달라진 것은 계산에 들어간 가정이었다. 그런데 이 숫자 하나가 발전소 건설 허가, 자동차 연비 기준, 파이프라인 승인 등 수천 건의 규제 결정을 좌우한다.</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>한편 유럽연합 배출권거래제(EU ETS)에서 실제로 거래된 탄소 가격은 2024년 기준 톤당 60\~70유로였고, 전 세계 배출량으로 가중평균한 탄소 가격은 20달러에도 미치지 못한다.</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>이 숫자들 사이에는 성격이 전혀 다른 두 개의 질문이 섞여 있다. 하나는 **"1톤의 값은 얼마여야 하는가"**—피해를 제대로 계산하면 얼마가 나오는가—이고, 다른 하나는 **"실제로 얼마가 매겨지고 있는가"**이다. 이 장은 첫 번째 질문을 다룬다. 그리고 그 답에 이르려면 먼저 기후변화가 무엇을 얼마나 망가뜨리는지, 시장 가격이 없는 피해를 어떻게 화폐로 환산하는지부터 알아야 한다. 두 번째 질문—왜 현실의 탄소 가격은 그토록 낮은가—은 10장 이후의 정책 논의에서 다시 만나게 된다.</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## 기후변화의 물리적 영향</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>경제적 피해를 따지기 전에, 기후변화가 물리적으로 무엇을 바꾸는지부터 정리할 필요가 있다. 화폐로 환산할 대상이 무엇인지 알아야 가치평가를 시작할 수 있기 때문이다. @fig-physical-impacts 는 IPCC 제6차 평가보고서가 종합한 관측·전망 결과를 네 영역으로 나누어 보여준다 <span class="co">[</span><span class="ot">@ipcc2022wg2ch16</span><span class="co">]</span>.</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>**① 대기와 기온**에서는 지구 평균기온 상승과 함께 폭염·가뭄·산불이 잦아진다. **② 해양과 수문**에서는 해수면 상승, 해양 온난화와 산성화, 열대저기압의 강화가 나타난다. **③ 빙권**에서는 그린란드·남극 빙상의 융해, 빙하 후퇴, 해빙 감소, 그리고 메탄($\text{CH}_4$)을 방출하는 영구동토층 해빙이 진행된다. **④ 물 균형과 식량 안보**에서는 강수 패턴의 변화가 홍수와 작물 실패로 이어진다.</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="al">![기후변화의 물리적 영향 개관. 대기·기온(①), 해양·수문(②), 빙권(③), 물 균형·식량 안보(④)의 네 영역으로 정리했다. **이 그림은 IPCC 제6차 평가보고서 제2실무그룹(WGII) 16장의 내용을 바탕으로 생성형 AI(Google Gemini)를 이용해 제작한 개념도이며, IPCC가 발간한 원본 도표가 아니다.** 수치와 서술의 과학적 근거는 IPCC AR6 WGII를 참조하라.](images/climate-physical-impacts.png)</span>{#fig-physical-impacts fig-alt="기후변화의 물리적 영향을 대기와 기온, 해양과 수문, 빙권, 물 균형과 식량 안보의 네 영역으로 나누어 그린 인포그래픽" width="100%"}</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>주목할 점은 이 영향들이 서로 독립적이지 않다는 것이다. 기온 상승이 빙상을 녹여 해수면을 밀어 올리고, 따뜻해진 바다가 열대저기압에 에너지를 공급하며, 영구동토층에서 풀려난 메탄이 다시 온난화를 가속한다. 1장에서 익힌 결합 분포의 언어로 말하면, 이 변수들은 공분산 구조로 얽혀 **함께 움직인다**. 경제적 피해를 추정할 때 각 부문의 피해를 따로 계산해 단순 합산하는 방식(뒤에서 볼 열거법)이 한계를 갖는 이유가 여기에 있다.</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>아래에서는 이 물리적 변화가 경제와 만나는 지점을 부문별로 살펴본다.</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="fu">### 생태계 및 생물 다양성</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>기후변화는 관리·비관리 생태계 모두에 영향을 미친다. 온도 상승, 강수 패턴 변화, 해양 산성화, 극단적 기상 현상의 빈도 증가가 동식물의 서식지를 변화시키고 생물 다양성을 위협한다.</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>가장 명확한 현상 중 하나는 **종 분포의 이동**이다. 기온 상승에 따라 생물군계(biome)의 경계가 극지방과 고지대로 이동하며, 많은 종들이 적합한 서식지를 따라 이주한다. 이 과정에서 이주 능력이 부족한 종들은 국지적 멸종 위기에 처한다.</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="fu">### 농업과 식량 안보</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>기후변화가 농업에 미치는 영향은 복잡하다.</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>긍정적 측면도 있다. 대기 중 $\text{CO}_2$ 농도 증가는 광합성을 촉진하는 $\text{CO}_2$ 시비 효과(CO₂ fertilization effect)로 작물 생산성을 단기적으로 높일 수 있다. 또한 한랭 지역에서는 성장 기간이 늘어나기도 한다.</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>그러나 장기적으로는 부정적 영향이 지배적이다. 고온 스트레스, 가뭄, 극단적 강수 이벤트 증가, 병해충 확산이 작물 수확량을 감소시킨다. IPCC에 따르면 전 지구 식량 생산은 세기 중반 이후 전반적으로 감소하며, 열대·아열대 지역 개발도상국에서 타격이 특히 크다.</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 온도 상승 <span class="pp">|</span> 주요 작물 수확량 변화(전 지구 평균) <span class="pp">|</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="pp">|-----------|-------------------------------------|</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> +1°C      <span class="pp">|</span> 소폭 증가 (CO₂ 시비 효과 우세)      <span class="pp">|</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> +2°C      <span class="pp">|</span> 밀·옥수수 등 일부 감소 시작         <span class="pp">|</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> +3°C 이상 <span class="pp">|</span> 대부분 작물 10\~25% 이상 감소       <span class="pp">|</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="fu">### 해수면 상승과 해안 지역</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>해양의 열팽창과 그린란드·남극 빙상의 융해로 해수면이 지속 상승 중이다. 저지대 해안 도시, 소도서 국가, 삼각주 지역이 침수·침식·염수 침입 위협에 노출된다. 해안 보호 기반시설 투자 비용도 급증한다.</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="fu">### 인간 건강</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>기후변화는 다양한 경로로 인간 건강에 영향을 미친다.</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>한파 사망은 줄지만 폭염 사망이 늘어나며, 순 효과는 지역과 시나리오에 따라 다르다. 말라리아, 뎅기열 등 열대성 감염병의 분포 지역이 확대된다. 대기 오염과 알레르기 악화도 기후변화와 연관된다.</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="fu">### 노동 생산성과 에너지 수요</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>고온은 옥외 노동 생산성을 직접 저하시킨다. 특히 건설, 농업 등 열에 민감한 부문과 열대·아열대 지역에서 영향이 크다. 에너지 수요는 냉방 수요 증가로 여름에 늘고, 난방 수요 감소로 겨울에 줄어—순 효과는 지역 기후에 따라 다르다.</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## 적응과 완화</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="fu">### 두 전략의 경제학</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>기후변화에 대응하는 경제적 수단은 크게 **완화(mitigation)**와 **적응(adaptation)** 두 가지로 나뉜다.</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="fu">## 완화(Mitigation)와 적응(Adaptation)</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>**완화(Mitigation)**: 온실가스 배출을 줄이거나 흡수원을 늘려 기후변화 자체를 억제하는 행동. 태양광·풍력 투자, 에너지 효율 개선, 산림 보전 등이 해당한다.</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>**적응(Adaptation)**: 기후변화의 영향을 수용하고 그 피해를 줄이는 행동. 해안 방벽 건설, 내열성 작물 개발, 폭염 대응 의료 인프라 구축 등이 해당한다.</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>경제학적으로 두 전략은 **정책 대체재(policy substitutes)**다. 적응을 많이 할수록 완화의 필요성이 줄고, 완화를 많이 할수록 적응 비용이 줄어든다. 최적 대응은 두 전략의 한계비용이 일치하는 수준에서 결정된다.</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>$$\text{MC}_{\text{완화}} = \text{MC}_{\text{적응}}$$</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>그러나 두 전략은 중요한 차이점이 있다. 완화는 **전 지구적 공공재** 문제—한 나라의 감축이 모든 나라에게 편익을 준다—이므로 국제 협력이 필수적이다. 반면 적응은 대부분 **국지적·사적(local and private)**이다. 농부가 내열성 작물 품종으로 바꾸는 것은 국제 협약 없이 개인이 결정한다.</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## 기후변화 피해의 화폐적 가치 평가</span></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="fu">### 비시장 가치 평가의 필요성</span></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>기후변화의 많은 피해—생태계 손실, 건강 영향, 문화유산 훼손—는 시장에서 직접 거래되지 않는다. 이를 감축비용과 비교하여 비용-편익 분석을 수행하려면 모든 영향을 공통 단위(화폐)로 표현해야 한다. 이것이 **비시장 가치 평가(non-market valuation)**다.</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## 주요 비시장 가치 평가 방법</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>**현시선호법(Revealed Preference Methods)**: 시장에서의 실제 행동으로부터 환경재의 가치를 추론한다.</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*헤도닉 가격법(Hedonic Pricing)*: 주택 가격이나 임금에 반영된 환경 특성의 가치를 추정한다. 예: 소음·대기오염이 심한 지역의 주택이 얼마나 낮은 가격에 거래되는가?</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*여행비용법(Travel Cost Method)*: 사람들이 자연 명소를 방문하기 위해 지출하는 비용에서 그 자원의 가치를 추정한다.</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>**진술선호법(Stated Preference Methods)**: 가상 시나리오에 대한 설문 응답으로 가치를 직접 측정한다.</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*조건부 가치측정법(Contingent Valuation Method, CVM)*: "이 환경 개선을 위해 얼마를 지불하겠습니까?"</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*선택실험법(Choice Experiment)*: 여러 속성을 가진 대안 중 선택하게 하여 각 속성의 가치를 추정한다.</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="fu">### 총 경제적 피해 추정</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>연구자들은 다양한 방법으로 기후변화의 총 경제적 피해를 화폐 단위로 추정해왔다.</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>**열거법(Enumerative Method)**: 개별 분야(농업, 해안, 건강 등)의 물리적 피해를 추정하고, 각각에 시장·비시장 가격을 곱해 합산한다. 분야 간 상호작용을 포착하지 못한다는 한계가 있다.</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>**연산 가능 일반균형 모형(CGE Model)**: 개별 충격이 시장 가격과 국가 간 교역에 미치는 파급 효과를 포착한다.</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>**통계 모형**: 기상 데이터와 경제 성과 지표의 패널 데이터를 활용해 기후-경제 관계를 통계적으로 추정한다. 최근 활발히 발전하고 있는 방법이다.</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>일반적인 발견은 다음과 같다. 기후변화의 총 경제적 피해는 기온 상승에 대해 비선형적으로(대략 제곱에 비례하여) 증가한다. **빈곤 국가와 열대 지역이 불균형적으로 큰 피해**를 입는다—경제 활동이 날씨에 더 직접 노출되어 있고, 적응 능력이 낮기 때문이다.</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a><span class="fu">## 탄소의 사회적 비용</span></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a><span class="fu">### SCC의 정의</span></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>**탄소의 사회적 비용(Social Cost of Carbon, SCC)**은 온실가스 1톤을 추가 배출할 때 발생하는 미래 피해의 **현재 가치(present value)**다. SCC는 기후 정책의 목표 강도를 나타내는 핵심 지표다.</span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>$$\text{SCC} = \frac{\partial \text{NPV}(\text{피해})}{\partial M}$$</span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>이름의 각 부분이 개념을 정확히 담고 있으므로 하나씩 뜯어볼 필요가 있다.</span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>**'비용'인 이유**는 배출이 실제로 누군가에게 손실을 입히기 때문이다. **'사회적'인 이유**는 그 손실을 배출한 당사자가 아니라 사회가 대신 짊어지기 때문이다 [@pindyck2022]. 화석연료를 태운 기업이나 가계는 연료값은 지불하지만 그 배출이 일으킬 폭염·홍수·농작물 감소의 비용은 지불하지 않는다. 4장의 언어로 말하면, 이 비용은 배출자의 의사결정 **바깥에 있다**—그래서 외부성이다. **'탄소'는** 이 비용이 $\text{CO}_2$ 배출량 1톤이라는 물리적 단위에 결부된다는 뜻이다.</span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a><span class="fu">## 용어 주의: 미시경제학의 '사회적 비용'과 다르다</span></span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>혼동하기 쉬운 지점이 있다. 미시경제학 교과서에서 어떤 활동의 **사회적 비용**은 대개 *사적 비용 + 외부비용*의 **합계**를 뜻한다. 그러나 기후 문헌에서 SCC는 관례적으로 **외부비용만**을 가리킨다 <span class="co">[</span><span class="ot">@pindyck2022</span><span class="co">]</span>.</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>따라서 4장에서 본 관계식</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>$$\text{SMC}_{\text{CO}_2} = \text{PMC}_{\text{CO}_2} + \underbrace{\text{SCC}}_{\text{외부비용}}$$</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>에서 SCC는 좌변의 사회적 한계비용(SMC)이 아니라 우변에 더해지는 **외부** 부분임에 유의하라. 이름은 '사회적 비용'이지만 실제로는 '외부비용'인 셈이다.</span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>또 하나 놓치기 쉬운 것은 SCC가 **한계(marginal) 개념**이라는 점이다. SCC는 "기후변화 전체의 피해가 얼마인가"가 아니라 "**지금 1톤을 더** 배출하면 추가로 얼마의 피해가 생기는가"를 묻는다. 3장에서 배운 등한계 원칙을 떠올려 보자. 효율적 감축 수준은 감축의 한계편익이 한계비용과 같아지는 곳에서 결정되는데, **감축의 한계편익이 바로 회피된 SCC**다. 그래서 배출 경로가 최적이라면 SCC는 정확히 **피구세(Pigouvian tax)**—즉 지금 부과해야 할 탄소세의 수준—와 같아진다. 논리는 단순명료하다. 당신이 배출한 1톤이 사회에 100달러의 피해를 입힌다면, 당신에게 100달러를 물리면 된다 <span class="co">[</span><span class="ot">@pindyck2022</span><span class="co">]</span>.</span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>$$\text{최적 탄소세} = \text{SCC} = \text{한계감축비용(MAC)}$$</span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>이것이 SCC가 기후경제학에서 가장 중요한 숫자로 불리는 이유다. SCC를 알면 원칙적으로 최적 탄소세를 알고, 따라서 기후 문제를 어떻게 고칠지 알게 된다.</span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a><span class="fu">### SCC를 계산한다는 것: 네 단계의 사고실험</span></span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>그렇다면 SCC는 어떻게 구하는가? Pindyck의 사고실험을 따라가 보면 그 구조가 선명해진다 <span class="co">[</span><span class="ot">@pindyck2022</span><span class="co">]</span>. 오늘 $\text{CO}_2$ 1톤을 더 배출했다고 하자. 이 1톤의 값을 매기려면 다음 네 가지를 **차례로 알아야** 한다.</span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**배출 경로**: 앞으로 세계 경제가 얼마나 성장하고 얼마나 배출할 것인가? 배출은 경제활동의 부산물이므로, 출발점은 향후 100년의 GDP 성장 예측이다.</span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**기후 반응**: 그 배출로 대기 중 농도가 얼마나 오르고, 그 농도에서 기온은 몇 도나 오르는가? 이 연결고리가 **기후민감도(climate sensitivity)**다.</span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**피해**: 그 기온 상승이 GDP와 소비, 건강과 생명에 얼마만큼의 손실을 입히는가? 이것이 **피해 함수(damage function)**다.</span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**할인**: 대부분 먼 미래에 발생할 그 손실을 오늘의 가치로 환산하려면 얼마의 **할인율**을 써야 하는가?</span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>이 네 단계를 모두 통과하면 SCC라는 하나의 숫자가 나온다. 문제는 각 단계마다 우리가 모르는 것이 있고, 그 모름이 뒤로 갈수록 누적되어 증폭된다는 데 있다(@fig-scc-cascade).</span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-scc-cascade</span></span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "SCC 추정의 불확실성 연쇄. 배출 경로에서 출발해 기후 반응, 피해, 할인을 차례로 거치며 불확실성이 누적·증폭된다. 각 단계의 불확실성이 곱해지기 때문에, 최종 SCC 추정치의 범위는 톤당 20달러 미만에서 400달러 이상까지 벌어진다."</span></span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7.2</span></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 4.4</span></span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: "88%"</span></span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>steps <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>  <span class="at">x     =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>  <span class="at">stage =</span> <span class="fu">c</span>(<span class="st">"1. Emissions path</span><span class="sc">\n</span><span class="st">(GDP growth)"</span>,</span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>            <span class="st">"2. Climate response</span><span class="sc">\n</span><span class="st">(climate sensitivity)"</span>,</span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>            <span class="st">"3. Damages</span><span class="sc">\n</span><span class="st">(damage function)"</span>,</span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>            <span class="st">"4. Present value</span><span class="sc">\n</span><span class="st">(discount rate)"</span>),</span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>  <span class="at">lo    =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">1.3</span>, <span class="sc">-</span><span class="fl">2.6</span>, <span class="sc">-</span><span class="fl">4.4</span>),</span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>  <span class="at">hi    =</span> <span class="fu">c</span>( <span class="fl">0.5</span>,  <span class="fl">1.3</span>,  <span class="fl">2.6</span>,  <span class="fl">4.4</span>),</span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>  <span class="at">note  =</span> <span class="fu">c</span>(<span class="st">"Nobody foresaw</span><span class="sc">\n</span><span class="st">2008 or COVID"</span>,</span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>            <span class="st">"IPCC range:</span><span class="sc">\n</span><span class="st">1.5-4.5 C"</span>,</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a>            <span class="st">"</span><span class="sc">\"</span><span class="st">We are largely</span><span class="sc">\n</span><span class="st">in the dark</span><span class="sc">\"</span><span class="st">"</span>,</span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>            <span class="st">"1% vs 5%:</span><span class="sc">\n</span><span class="st">SCC differs &gt;10x"</span>)</span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(steps, <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span></span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lo, <span class="at">ymax =</span> hi), <span class="at">fill =</span> <span class="st">"#D73027"</span>, <span class="at">alpha =</span> <span class="fl">0.18</span>) <span class="sc">+</span></span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> hi), <span class="at">color =</span> <span class="st">"#D73027"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> lo), <span class="at">color =</span> <span class="st">"#D73027"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray55"</span>) <span class="sc">+</span></span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="dv">0</span>), <span class="at">size =</span> <span class="fl">2.6</span>, <span class="at">color =</span> <span class="st">"#2166AC"</span>) <span class="sc">+</span></span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fl">0.40</span>, <span class="at">label =</span> stage), <span class="at">size =</span> <span class="fl">2.95</span>,</span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>             <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">color =</span> <span class="st">"gray15"</span>, <span class="at">vjust =</span> <span class="dv">0</span>, <span class="at">lineheight =</span> <span class="fl">0.95</span>,</span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">label.size =</span> <span class="dv">0</span>, <span class="at">label.padding =</span> <span class="fu">unit</span>(<span class="fl">0.12</span>, <span class="st">"lines"</span>)) <span class="sc">+</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="sc">-</span><span class="fl">0.60</span>, <span class="at">label =</span> note), <span class="at">size =</span> <span class="fl">2.5</span>,</span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"gray40"</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">lineheight =</span> <span class="fl">0.95</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>,</span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">label.size =</span> <span class="dv">0</span>, <span class="at">label.padding =</span> <span class="fu">unit</span>(<span class="fl">0.12</span>, <span class="st">"lines"</span>)) <span class="sc">+</span></span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="fl">4.42</span>, <span class="at">xend =</span> <span class="fl">4.42</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">4.4</span>, <span class="at">yend =</span> <span class="fl">4.4</span>,</span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a>           <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">ends =</span> <span class="st">"both"</span>, <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.16</span>, <span class="st">"cm"</span>)),</span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">"gray35"</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">4.52</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"$20 to $400+ per ton"</span>,</span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>           <span class="at">angle =</span> <span class="dv">270</span>, <span class="at">size =</span> <span class="fl">2.9</span>, <span class="at">color =</span> <span class="st">"gray25"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="fl">0.55</span>, <span class="fl">4.85</span>), <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fl">0.01</span>)) <span class="sc">+</span></span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">5.6</span>, <span class="fl">5.4</span>)) <span class="sc">+</span></span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"The Uncertainty Cascade in Estimating the SCC"</span>,</span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Uncertainty compounds at every step from emissions to present value"</span>) <span class="sc">+</span></span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">9</span>, <span class="at">color =</span> <span class="st">"gray35"</span>))</span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a>**1단계부터 이미 어렵다.** 향후 5년간의 GDP 성장률을 맞히는 것조차 쉽지 않다. 2008년 금융위기도, 2020년 코로나19가 몰고 온 급격한 침체도 아무도 예측하지 못했다. 그런데 SCC 계산은 100년 이상의 성장 경로를 요구한다.</span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a>**2단계에서 불확실성이 크게 벌어진다.** 기후민감도는 대기 중 $\text{CO}_2$ 농도가 두 배가 되었을 때 최종적으로 오르는 기온을 뜻한다. IPCC가 제시하는 "가능성이 가장 높은" 범위는 $1.5$\~$4.5\,^\circ\text{C}$이고, 가능성은 낮지만 배제할 수 없는 값까지 포함하면 $1.0$\~$6.0\,^\circ\text{C}$까지 넓어진다. 최저값과 최고값 사이에 세 배 이상의 차이가 있는 것이다.</span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>**3단계는 가장 취약한 고리다.** 설령 기온이 몇 도 오를지 정확히 안다 해도, 그것이 경제에 얼마의 손실을 입힐지에 대해 우리는 "거의 어둠 속에 있으며 추측할 수 있을 뿐"이라는 것이 Pindyck의 진단이다 <span class="co">[</span><span class="ot">@pindyck2022</span><span class="co">]</span>. 관측된 적 없는 기온대에서 무슨 일이 벌어질지, 그리고 분쟁·이주·정치적 불안정 같은 간접 영향을 어떻게 화폐로 환산할지에 대한 신뢰할 만한 근거가 부족하기 때문이다.</span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>**4단계는 과학이 아니라 윤리의 문제다.** 7장에서 자세히 다루겠지만, 할인율을 1%로 볼지 5%로 볼지는 데이터로 정해지지 않으며, 그 선택 하나로 SCC가 열 배 이상 달라진다.</span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a><span class="fu">### SCC 추정 방법: 통합평가모형</span></span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a>이 네 단계를 하나의 모형 안에 결합한 것이 **통합평가모형(Integrated Assessment Model, IAM)**이다. IAM은 기후 시스템과 경제 시스템을 '통합'하여 다음 단계를 따른다.</span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>인구 성장, 경제 성장, 에너지 기술 발전을 바탕으로 **미래 배출 경로**를 예측한다.</span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>탄소순환·기후 모형으로 **기온 상승, 해수면 변화** 등 기후 반응을 모형화한다.</span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>기후 변화가 농업, 건강, 에너지 등 경제에 미치는 **피해 함수(damage function)**를 추정한다.</span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>미래 피해를 **할인율(discount rate)**로 현재 가치로 환산하여 합산한다.</span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>배출을 1톤 늘린 시나리오를 다시 계산해, 두 결과의 차이를 SCC로 삼는다.</span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a>노드하우스가 1990년대 초에 개발한 DICE 모형이 그 원형이며, 오늘날 각국 정부의 공식 SCC 추정치도 이런 모형들에 기초한다. IAM은 12장에서 본격적으로 다룬다.</span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a><span class="fu">## 논쟁: IAM은 SCC를 믿을 만하게 추정하는가?</span></span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>IAM이 SCC 계산의 표준 도구라는 사실이 곧 그 결과가 신뢰할 만하다는 뜻은 아니다. 이 점을 가장 강하게 비판해 온 학자가 MIT의 로버트 핀다이크(Robert Pindyck)다.</span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a>그의 비판은 이렇다. IAM 안의 여러 관계식—특히 기온과 경제 피해를 잇는 **피해 함수**—이 이론이나 데이터에 단단히 근거하지 않은 **임의적(ad hoc) 설정**에 가깝다는 것이다 <span class="co">[</span><span class="ot">@pindyck2013</span><span class="co">]</span>. 우리는 기온이 $4\,^\circ\text{C}$ 올랐을 때 GDP가 몇 퍼센트 줄어드는지 관측한 적이 없으므로, 모형 제작자가 선택한 함수 형태가 결과를 좌우한다. 그 결과 모형은 정교한 수식으로 포장되어 있지만, 산출된 숫자는 입력한 가정을 되돌려 주는 것에 가까울 수 있다. 핀다이크는 초기 모형들이 기후와 경제의 상호작용을 이해시키는 데 기여했음은 인정하면서도, 지난 20여 년간 모형이 훨씬 크고 복잡해졌음에도 이해가 그만큼 깊어지지는 않았다고 지적한다.</span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a>물론 반론도 있다. 불완전하더라도 일관된 틀 안에서 가정을 명시하고 그 함의를 추적할 수 있다는 점, 그리고 정책 결정은 어차피 어떤 숫자든 필요로 한다는 점에서 IAM의 유용성을 옹호하는 견해가 여전히 주류다. 최근 연구들은 실제 날씨 변동과 경제 성과의 관계를 계량적으로 추정해 피해 함수의 실증적 기반을 강화하려 시도하고 있다.</span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a>학부생이 여기서 얻어야 할 교훈은 어느 편이 옳으냐가 아니라, **SCC 숫자를 인용할 때는 그것이 어떤 가정 위에 서 있는지를 함께 물어야 한다**는 태도다.</span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a><span class="fu">### 그래서 SCC는 얼마인가</span></span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a>솔직한 답은 "모른다"이다. 다만 견해의 스펙트럼은 분명하다 <span class="co">[</span><span class="ot">@pindyck2022</span><span class="co">]</span>.</span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a>기후변화가 완만하게 진행되고, 대부분 국가에 미치는 경제적 충격이 크지 않으며, 그마저도 먼 미래의 일이라고 보는 쪽에서는 SCC를 **톤당 20달러 수준**으로 낮게 추정한다. 반대로 즉각적이고 강력한 감축이 없으면 상당한 기온 상승과 파국적 피해가 그리 멀지 않은 시점에 닥칠 가능성이 크다고 보는 쪽에서는 **톤당 200달러 이상**을 제시하며, 발표된 추정치 중에는 400달러에 이르는 것도 있다.</span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a>핀다이크가 수백 명의 기후과학·기후경제학 전문가를 대상으로 실시한 설문 역시 같은 그림을 보여준다. 전문가들 사이의 견해 차이가 워낙 커서, 그 응답으로부터 **단 하나의 SCC 추정치를 도출할 수 없었다** <span class="co">[</span><span class="ot">@pindyck2019</span><span class="co">]</span>. @fig-scc-estimates 는 주요 연구와 정부 추정치가 어떻게 갈리는지를 정리한 것이다.</span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-scc-estimates</span></span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "탄소의 사회적 비용(SCC) 추정치의 범위. 낮은 할인율(예: Stern)은 높은 SCC를, 높은 할인율(예: Nordhaus)은 낮은 SCC를 산출한다. 피해 함수와 할인율 가정에 따른 추정 범위가 매우 넓다."</span></span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 6</span></span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 4</span></span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: "70%"</span></span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a>scc_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>  <span class="at">study =</span> <span class="fu">c</span>(</span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Nordhaus (2017)</span><span class="sc">\n</span><span class="st">High discount"</span>,</span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a>    <span class="st">"US EPA (2021)</span><span class="sc">\n</span><span class="st">Central"</span>,</span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rennert et al.</span><span class="sc">\n</span><span class="st">(2022)"</span>,</span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a>    <span class="st">"US EPA (2023)</span><span class="sc">\n</span><span class="st">Updated"</span>,</span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Stern Review</span><span class="sc">\n</span><span class="st">Low discount"</span></span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a>  <span class="at">scc_central =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">51</span>, <span class="dv">185</span>, <span class="dv">190</span>, <span class="dv">310</span>),</span>
+<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a>  <span class="at">scc_low     =</span> <span class="fu">c</span>(<span class="dv">5</span>,  <span class="dv">14</span>,  <span class="dv">44</span>, <span class="dv">120</span>, <span class="dv">180</span>),</span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a>  <span class="at">scc_high    =</span> <span class="fu">c</span>(<span class="dv">35</span>, <span class="dv">152</span>, <span class="dv">413</span>, <span class="dv">340</span>, <span class="dv">560</span>)</span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">study =</span> <span class="fu">factor</span>(study, <span class="at">levels =</span> <span class="fu">rev</span>(study)))</span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(scc_data, <span class="fu">aes</span>(<span class="at">y =</span> study)) <span class="sc">+</span></span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> scc_low, <span class="at">xmax =</span> scc_high),</span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a>                 <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> scc_central), <span class="at">color =</span> <span class="st">"#D73027"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">51</span>, <span class="dv">190</span>), <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="fu">c</span>(<span class="st">"#4393C3"</span>, <span class="st">"#D73027"</span>), <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">58</span>,  <span class="at">y =</span> <span class="fl">0.6</span>, <span class="at">label =</span> <span class="st">"EPA 2021</span><span class="sc">\n</span><span class="st">($51)"</span>,</span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">color =</span> <span class="st">"#4393C3"</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">197</span>, <span class="at">y =</span> <span class="fl">0.6</span>, <span class="at">label =</span> <span class="st">"EPA 2023</span><span class="sc">\n</span><span class="st">($190)"</span>,</span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">color =</span> <span class="st">"#D73027"</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">dollar_format</span>(<span class="at">suffix =</span> <span class="st">"/tCO2"</span>)) <span class="sc">+</span></span>
+<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Social Cost of Carbon ($/tCO2)"</span>,</span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Range of SCC Estimates Across Studies"</span>,</span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Bars indicate low-high range; points indicate central estimate."</span>) <span class="sc">+</span></span>
+<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">size =</span> <span class="dv">8</span>))</span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a><span class="fu">### 규범과 현실: 도입의 질문으로 돌아가서</span></span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a>이제 이 장을 열었던 질문으로 돌아가자. 미국 EPA의 190달러, EU 배출권거래제의 70유로 남짓, 그리고 20달러에 못 미치는 전 세계 평균. 같은 1톤을 놓고 왜 이렇게 다른 숫자가 나오는가?</span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a>앞서 예고했듯 여기에는 성격이 전혀 다른 두 개의 격차가 겹쳐 있으며, 이 둘을 구분하는 것이 이 장에서 가장 중요한 소득일지도 모른다.</span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a>**첫째는 추정치들 사이의 격차다.** EPA의 공식 수치가 51달러에서 190달러로 옮겨간 것, 노드하우스의 추정과 스턴의 추정이 열 배 넘게 벌어지는 것이 여기 속한다. 원인은 이 장에서 살펴본 그대로다—피해 함수를 어떻게 설정하고, 할인율을 얼마로 두며, 어떤 피해까지 계산에 넣는가. 이것은 **"얼마여야 하는가"**를 둘러싼 이견이다.</span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a>**둘째는 규범과 현실 사이의 격차다.** SCC가 190달러라는 말은 그만큼의 탄소 가격을 매겨야 효율적이라는 뜻이지, 실제로 그렇게 매겨지고 있다는 뜻이 아니다. 따라서 전 세계 평균 탄소 가격이 20달러에도 못 미친다는 사실은 SCC 추정이 틀렸다는 증거가 아니라, **외부비용의 대부분이 여전히 가격에 반영되지 않고 있다는 증거**다. 4장의 언어로 말하면 이 격차의 크기가 곧 **아직 교정되지 않은 시장실패의 크기**다.</span>
+<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a>두 번째 격차가 좁혀지지 않는 이유는 계산의 문제가 아니라 정치와 제도의 문제다. 탄소 가격을 올리면 부담은 지금 여기의 유권자에게 돌아가지만 편익은 먼 미래와 지구 반대편에 흩어진다. 게다가 4장에서 본 죄수의 딜레마 구조 탓에 각국은 상대가 먼저 움직이기를 기다린다. 이 격차를 어떤 수단으로, 어떤 정치적 조건에서 메울 것인가—그것이 10장(탄소세), 11장(배출권거래제), 15장(국제 협력)의 과제다.</span>
+<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a><span class="fu">## 요약</span></span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a>기후변화가 농업, 해안, 보건, 생태계에 미치는 다양한 영향은 비시장 가치 평가—현시선호법과 진술선호법—를 통해 화폐로 환산된다. 총 피해는 기온 상승에 대해 비선형적으로 증가하며, **빈곤 국가와 열대 지역의 피해가 불균형적으로 크다**.</span>
+<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a>탄소의 사회적 비용(SCC)은 온실가스 1톤 **추가** 배출이 초래하는 미래 피해의 현재 가치, 즉 한계 외부비용이다. 이름은 '사회적 비용'이지만 미시경제학의 용법과 달리 사적 비용을 제외한 외부비용만을 가리킨다는 점에 유의해야 한다. 배출 경로가 최적이라면 SCC는 최적 탄소세 및 한계감축비용과 일치한다.</span>
+<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a>SCC를 계산하려면 배출 경로, 기후 반응, 피해 함수, 할인율의 네 단계를 차례로 통과해야 하는데, 각 단계의 불확실성이 누적·증폭되어 최종 추정치는 톤당 20달러 미만에서 400달러 이상까지 벌어진다. 특히 기온 상승을 경제적 손실로 옮기는 피해 함수는 관측 근거가 희박해, 통합평가모형(IAM)의 신뢰성을 둘러싼 핀다이크의 비판처럼 근본적인 논쟁이 이어지고 있다. 따라서 SCC 숫자를 다룰 때는 그것이 어떤 가정 위에 서 있는지를 함께 묻는 태도가 필요하다.</span>
+<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a>끝으로 두 종류의 격차를 구분해야 한다. 추정치들 사이의 차이는 "얼마여야 하는가"에 대한 이견이지만, SCC와 실제 탄소 가격 사이의 차이는 아직 내재화되지 않은 외부비용, 곧 교정되지 않은 시장실패의 크기를 뜻한다. 앞의 문제는 7장(할인율)과 12장(IAM)에서, 뒤의 문제는 10\~11장(정책 수단)과 15장(국제 협력)에서 다룬다.</span>
+<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="fu">## 토론 질문</span></span>
+<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>동일한 IAM을 사용하더라도 할인율을 3%에서 1%로 낮추면 SCC는 어떻게 변하는가? 그 방향은 왜인가?</span>
+<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>기후변화 피해에서 빈곤 국가의 비중이 크다면, 이는 전 지구적 SCC 추정치와 개별 국가의 기후 정책 결정에 어떤 함의를 가지는가?</span>
+<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>생태계 손실이나 문화유산 훼손처럼 시장 가격이 없는 피해를 화폐로 환산하는 것에 대해 어떤 방법론적·윤리적 비판이 가능한가? 그럼에도 화폐화가 필요한 이유는 무엇인가?</span>
+<span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>SCC는 "1톤을 **추가로** 배출할 때"의 피해를 뜻하는 한계 개념이다. 이를 "기후변화가 초래하는 총피해"와 혼동하면 정책 판단에서 어떤 오류가 생길 수 있는가? 3장의 등한계 원칙과 연결해 설명하라.</span>
+<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>핀다이크는 IAM의 피해 함수가 임의적이어서 SCC 추정치를 신뢰하기 어렵다고 비판한다. 그럼에도 각국 정부는 규제 결정을 위해 하나의 SCC 숫자를 정해야 한다. "불완전한 추정치라도 없는 것보다 낫다"는 입장과 "잘못된 정밀함은 오히려 해롭다"는 입장 중 어느 쪽을 지지하는가? 근거를 들어 논하라.</span>
+<span id="cb3-354"><a href="#cb3-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-355"><a href="#cb3-355" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>도입부에서 보았듯 미국 EPA의 SCC는 톤당 190달러인 반면 EU ETS의 탄소 가격은 70유로 안팎이고 전 세계 평균은 20달러에도 못 미친다. SCC는 "얼마여야 하는가"를, 시장 탄소 가격은 "실제로 얼마인가"를 나타낸다. 이 격차가 뜻하는 바는 무엇이며, 4장의 시장실패 논의와 어떻게 연결되는가?</span>
+<span id="cb3-356"><a href="#cb3-356" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-357"><a href="#cb3-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-358"><a href="#cb3-358" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-359"><a href="#cb3-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-360"><a href="#cb3-360" aria-hidden="true" tabindex="-1"></a><span class="fu">## 부록: R 코드 {.unnumbered}</span></span>
+<span id="cb3-361"><a href="#cb3-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-362"><a href="#cb3-362" aria-hidden="true" tabindex="-1"></a>이 장의 본문에 등장한 그림을 생성한 R 코드를 정리한다. 각 코드는 해당 그림 번호와 함께 표시되어 있다.</span>
+<span id="cb3-363"><a href="#cb3-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-364"><a href="#cb3-364" aria-hidden="true" tabindex="-1"></a><span class="fu">### @fig-scc-cascade 코드</span></span>
+<span id="cb3-365"><a href="#cb3-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-368"><a href="#cb3-368" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-369"><a href="#cb3-369" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: code-scc-cascade</span></span>
+<span id="cb3-370"><a href="#cb3-370" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb3-371"><a href="#cb3-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-372"><a href="#cb3-372" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-373"><a href="#cb3-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-374"><a href="#cb3-374" aria-hidden="true" tabindex="-1"></a>steps <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb3-375"><a href="#cb3-375" aria-hidden="true" tabindex="-1"></a>  <span class="at">x     =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb3-376"><a href="#cb3-376" aria-hidden="true" tabindex="-1"></a>  <span class="at">stage =</span> <span class="fu">c</span>(<span class="st">"1. Emissions path</span><span class="sc">\n</span><span class="st">(GDP growth)"</span>,</span>
+<span id="cb3-377"><a href="#cb3-377" aria-hidden="true" tabindex="-1"></a>            <span class="st">"2. Climate response</span><span class="sc">\n</span><span class="st">(climate sensitivity)"</span>,</span>
+<span id="cb3-378"><a href="#cb3-378" aria-hidden="true" tabindex="-1"></a>            <span class="st">"3. Damages</span><span class="sc">\n</span><span class="st">(damage function)"</span>,</span>
+<span id="cb3-379"><a href="#cb3-379" aria-hidden="true" tabindex="-1"></a>            <span class="st">"4. Present value</span><span class="sc">\n</span><span class="st">(discount rate)"</span>),</span>
+<span id="cb3-380"><a href="#cb3-380" aria-hidden="true" tabindex="-1"></a>  <span class="at">lo    =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>, <span class="sc">-</span><span class="fl">1.3</span>, <span class="sc">-</span><span class="fl">2.6</span>, <span class="sc">-</span><span class="fl">4.4</span>),</span>
+<span id="cb3-381"><a href="#cb3-381" aria-hidden="true" tabindex="-1"></a>  <span class="at">hi    =</span> <span class="fu">c</span>( <span class="fl">0.5</span>,  <span class="fl">1.3</span>,  <span class="fl">2.6</span>,  <span class="fl">4.4</span>),</span>
+<span id="cb3-382"><a href="#cb3-382" aria-hidden="true" tabindex="-1"></a>  <span class="at">note  =</span> <span class="fu">c</span>(<span class="st">"Nobody foresaw</span><span class="sc">\n</span><span class="st">2008 or COVID"</span>,</span>
+<span id="cb3-383"><a href="#cb3-383" aria-hidden="true" tabindex="-1"></a>            <span class="st">"IPCC range:</span><span class="sc">\n</span><span class="st">1.5-4.5 C"</span>,</span>
+<span id="cb3-384"><a href="#cb3-384" aria-hidden="true" tabindex="-1"></a>            <span class="st">"</span><span class="sc">\"</span><span class="st">We are largely</span><span class="sc">\n</span><span class="st">in the dark</span><span class="sc">\"</span><span class="st">"</span>,</span>
+<span id="cb3-385"><a href="#cb3-385" aria-hidden="true" tabindex="-1"></a>            <span class="st">"1% vs 5%:</span><span class="sc">\n</span><span class="st">SCC differs &gt;10x"</span>)</span>
+<span id="cb3-386"><a href="#cb3-386" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-387"><a href="#cb3-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-388"><a href="#cb3-388" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(steps, <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span></span>
+<span id="cb3-389"><a href="#cb3-389" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lo, <span class="at">ymax =</span> hi), <span class="at">fill =</span> <span class="st">"#D73027"</span>, <span class="at">alpha =</span> <span class="fl">0.18</span>) <span class="sc">+</span></span>
+<span id="cb3-390"><a href="#cb3-390" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> hi), <span class="at">color =</span> <span class="st">"#D73027"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb3-391"><a href="#cb3-391" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> lo), <span class="at">color =</span> <span class="st">"#D73027"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb3-392"><a href="#cb3-392" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray55"</span>) <span class="sc">+</span></span>
+<span id="cb3-393"><a href="#cb3-393" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="dv">0</span>), <span class="at">size =</span> <span class="fl">2.6</span>, <span class="at">color =</span> <span class="st">"#2166AC"</span>) <span class="sc">+</span></span>
+<span id="cb3-394"><a href="#cb3-394" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fl">0.40</span>, <span class="at">label =</span> stage), <span class="at">size =</span> <span class="fl">2.95</span>,</span>
+<span id="cb3-395"><a href="#cb3-395" aria-hidden="true" tabindex="-1"></a>             <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">color =</span> <span class="st">"gray15"</span>, <span class="at">vjust =</span> <span class="dv">0</span>, <span class="at">lineheight =</span> <span class="fl">0.95</span>,</span>
+<span id="cb3-396"><a href="#cb3-396" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">label.size =</span> <span class="dv">0</span>, <span class="at">label.padding =</span> <span class="fu">unit</span>(<span class="fl">0.12</span>, <span class="st">"lines"</span>)) <span class="sc">+</span></span>
+<span id="cb3-397"><a href="#cb3-397" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="sc">-</span><span class="fl">0.60</span>, <span class="at">label =</span> note), <span class="at">size =</span> <span class="fl">2.5</span>,</span>
+<span id="cb3-398"><a href="#cb3-398" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"gray40"</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">lineheight =</span> <span class="fl">0.95</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>,</span>
+<span id="cb3-399"><a href="#cb3-399" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">label.size =</span> <span class="dv">0</span>, <span class="at">label.padding =</span> <span class="fu">unit</span>(<span class="fl">0.12</span>, <span class="st">"lines"</span>)) <span class="sc">+</span></span>
+<span id="cb3-400"><a href="#cb3-400" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> <span class="fl">4.42</span>, <span class="at">xend =</span> <span class="fl">4.42</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">4.4</span>, <span class="at">yend =</span> <span class="fl">4.4</span>,</span>
+<span id="cb3-401"><a href="#cb3-401" aria-hidden="true" tabindex="-1"></a>           <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">ends =</span> <span class="st">"both"</span>, <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.16</span>, <span class="st">"cm"</span>)),</span>
+<span id="cb3-402"><a href="#cb3-402" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">"gray35"</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb3-403"><a href="#cb3-403" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">4.52</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"$20 to $400+ per ton"</span>,</span>
+<span id="cb3-404"><a href="#cb3-404" aria-hidden="true" tabindex="-1"></a>           <span class="at">angle =</span> <span class="dv">270</span>, <span class="at">size =</span> <span class="fl">2.9</span>, <span class="at">color =</span> <span class="st">"gray25"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>) <span class="sc">+</span></span>
+<span id="cb3-405"><a href="#cb3-405" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="fl">0.55</span>, <span class="fl">4.85</span>), <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fl">0.01</span>)) <span class="sc">+</span></span>
+<span id="cb3-406"><a href="#cb3-406" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">5.6</span>, <span class="fl">5.4</span>)) <span class="sc">+</span></span>
+<span id="cb3-407"><a href="#cb3-407" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-408"><a href="#cb3-408" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"The Uncertainty Cascade in Estimating the SCC"</span>,</span>
+<span id="cb3-409"><a href="#cb3-409" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Uncertainty compounds at every step from emissions to present value"</span>) <span class="sc">+</span></span>
+<span id="cb3-410"><a href="#cb3-410" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb3-411"><a href="#cb3-411" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-412"><a href="#cb3-412" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-413"><a href="#cb3-413" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-414"><a href="#cb3-414" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb3-415"><a href="#cb3-415" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">9</span>, <span class="at">color =</span> <span class="st">"gray35"</span>))</span>
+<span id="cb3-416"><a href="#cb3-416" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-417"><a href="#cb3-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-418"><a href="#cb3-418" aria-hidden="true" tabindex="-1"></a><span class="fu">### @fig-scc-estimates 코드</span></span>
+<span id="cb3-419"><a href="#cb3-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-422"><a href="#cb3-422" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-423"><a href="#cb3-423" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: code-scc-estimates</span></span>
+<span id="cb3-424"><a href="#cb3-424" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb3-425"><a href="#cb3-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-426"><a href="#cb3-426" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-427"><a href="#cb3-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-428"><a href="#cb3-428" aria-hidden="true" tabindex="-1"></a>scc_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb3-429"><a href="#cb3-429" aria-hidden="true" tabindex="-1"></a>  <span class="at">study =</span> <span class="fu">c</span>(</span>
+<span id="cb3-430"><a href="#cb3-430" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Nordhaus (2017)</span><span class="sc">\n</span><span class="st">High discount"</span>,</span>
+<span id="cb3-431"><a href="#cb3-431" aria-hidden="true" tabindex="-1"></a>    <span class="st">"US EPA (2021)</span><span class="sc">\n</span><span class="st">Central"</span>,</span>
+<span id="cb3-432"><a href="#cb3-432" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rennert et al.</span><span class="sc">\n</span><span class="st">(2022)"</span>,</span>
+<span id="cb3-433"><a href="#cb3-433" aria-hidden="true" tabindex="-1"></a>    <span class="st">"US EPA (2023)</span><span class="sc">\n</span><span class="st">Updated"</span>,</span>
+<span id="cb3-434"><a href="#cb3-434" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Stern Review</span><span class="sc">\n</span><span class="st">Low discount"</span></span>
+<span id="cb3-435"><a href="#cb3-435" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb3-436"><a href="#cb3-436" aria-hidden="true" tabindex="-1"></a>  <span class="at">scc_central =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">51</span>, <span class="dv">185</span>, <span class="dv">190</span>, <span class="dv">310</span>),</span>
+<span id="cb3-437"><a href="#cb3-437" aria-hidden="true" tabindex="-1"></a>  <span class="at">scc_low     =</span> <span class="fu">c</span>(<span class="dv">5</span>,  <span class="dv">14</span>,  <span class="dv">44</span>, <span class="dv">120</span>, <span class="dv">180</span>),</span>
+<span id="cb3-438"><a href="#cb3-438" aria-hidden="true" tabindex="-1"></a>  <span class="at">scc_high    =</span> <span class="fu">c</span>(<span class="dv">35</span>, <span class="dv">152</span>, <span class="dv">413</span>, <span class="dv">340</span>, <span class="dv">560</span>)</span>
+<span id="cb3-439"><a href="#cb3-439" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb3-440"><a href="#cb3-440" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">study =</span> <span class="fu">factor</span>(study, <span class="at">levels =</span> <span class="fu">rev</span>(study)))</span>
+<span id="cb3-441"><a href="#cb3-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-442"><a href="#cb3-442" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(scc_data, <span class="fu">aes</span>(<span class="at">y =</span> study)) <span class="sc">+</span></span>
+<span id="cb3-443"><a href="#cb3-443" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> scc_low, <span class="at">xmax =</span> scc_high),</span>
+<span id="cb3-444"><a href="#cb3-444" aria-hidden="true" tabindex="-1"></a>                 <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb3-445"><a href="#cb3-445" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> scc_central), <span class="at">color =</span> <span class="st">"#D73027"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb3-446"><a href="#cb3-446" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="dv">51</span>, <span class="dv">190</span>), <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
+<span id="cb3-447"><a href="#cb3-447" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="fu">c</span>(<span class="st">"#4393C3"</span>, <span class="st">"#D73027"</span>), <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb3-448"><a href="#cb3-448" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">58</span>,  <span class="at">y =</span> <span class="fl">0.6</span>, <span class="at">label =</span> <span class="st">"EPA 2021</span><span class="sc">\n</span><span class="st">($51)"</span>,</span>
+<span id="cb3-449"><a href="#cb3-449" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">color =</span> <span class="st">"#4393C3"</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-450"><a href="#cb3-450" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">197</span>, <span class="at">y =</span> <span class="fl">0.6</span>, <span class="at">label =</span> <span class="st">"EPA 2023</span><span class="sc">\n</span><span class="st">($190)"</span>,</span>
+<span id="cb3-451"><a href="#cb3-451" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">color =</span> <span class="st">"#D73027"</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-452"><a href="#cb3-452" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">dollar_format</span>(<span class="at">suffix =</span> <span class="st">"/tCO2"</span>)) <span class="sc">+</span></span>
+<span id="cb3-453"><a href="#cb3-453" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Social Cost of Carbon ($/tCO2)"</span>,</span>
+<span id="cb3-454"><a href="#cb3-454" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-455"><a href="#cb3-455" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Range of SCC Estimates Across Studies"</span>,</span>
+<span id="cb3-456"><a href="#cb3-456" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Bars indicate low-high range; points indicate central estimate."</span>) <span class="sc">+</span></span>
+<span id="cb3-457"><a href="#cb3-457" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb3-458"><a href="#cb3-458" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-459"><a href="#cb3-459" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-460"><a href="#cb3-460" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb3-461"><a href="#cb3-461" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">size =</span> <span class="dv">8</span>))</span>
+<span id="cb3-462"><a href="#cb3-462" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-463"><a href="#cb3-463" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-464"><a href="#cb3-464" aria-hidden="true" tabindex="-1"></a><span class="fu">## 참고문헌 {.unnumbered}</span></span>
+<span id="cb3-465"><a href="#cb3-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-466"><a href="#cb3-466" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb3-467"><a href="#cb3-467" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/YOUR_USERNAME/climate-econ-book/edit/main/05-climate-damages.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/YOUR_USERNAME/climate-econ-book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
