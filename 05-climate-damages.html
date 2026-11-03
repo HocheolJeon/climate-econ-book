@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; 기후변화의 피해와 적응 – 기후변화경제학</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./06-abatement-costs.html" rel="next">
+<link href="./04-market-failure.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8bf607cc09aff24488a246d4e52bb127.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="도구 모음">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="사이트 이동 경로"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-climate-damages.html">제III부 피해·비용과 시간</a></li><li class="breadcrumb-item"><a href="./05-climate-damages.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">기후변화의 피해와 적응</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="웹사이트">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">기후변화경제학</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">책 소개</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">교재 안내</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">제I부 기후와 경제</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-what-is-climate-change.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">기후변화의 과학적 기초</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-climate-economy-link.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">기후와 경제의 상호작용</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">제II부 시장과 시장실패</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-market-efficiency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">시장과 경제적 효율성</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-market-failure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">시장실패와 기후변화</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">제III부 피해·비용과 시간</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-climate-damages.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">기후변화의 피해와 적응</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-abatement-costs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">온실가스 감축비용</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-discounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">할인과 비용편익 분석</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">제IV부 정책수단과 불확실성</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-policy-instruments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기후정책의 수단과 설계</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-uncertainty-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">불확실성·위험과 기후정책</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">참고문헌</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul class="collapse">
+  <li><a href="#이-장의-지도" id="toc-이-장의-지도" class="nav-link active" data-scroll-target="#이-장의-지도">이 장의 지도</a></li>
+  <li><a href="#물리적-영향과-경제적-피해" id="toc-물리적-영향과-경제적-피해" class="nav-link" data-scroll-target="#물리적-영향과-경제적-피해">물리적 영향과 경제적 피해</a></li>
+  <li><a href="#적응의-경제학" id="toc-적응의-경제학" class="nav-link" data-scroll-target="#적응의-경제학">적응의 경제학</a></li>
+  <li><a href="#비시장-가치평가" id="toc-비시장-가치평가" class="nav-link" data-scroll-target="#비시장-가치평가">비시장 가치평가</a></li>
+  <li><a href="#총경제적-영향의-추정" id="toc-총경제적-영향의-추정" class="nav-link" data-scroll-target="#총경제적-영향의-추정">총경제적 영향의 추정</a></li>
+  <li><a href="#탄소의-사회적-비용" id="toc-탄소의-사회적-비용" class="nav-link" data-scroll-target="#탄소의-사회적-비용">탄소의 사회적 비용</a></li>
+  <li><a href="#사례-기후손해배상-소송---누가-피해-비용을-부담하는가" id="toc-사례-기후손해배상-소송---누가-피해-비용을-부담하는가" class="nav-link" data-scroll-target="#사례-기후손해배상-소송---누가-피해-비용을-부담하는가">사례: 기후손해배상 소송 - 누가 피해 비용을 부담하는가</a></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#생각해-볼-문제" id="toc-생각해-볼-문제" class="nav-link" data-scroll-target="#생각해-볼-문제">생각해 볼 문제</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="사이트 이동 경로"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-climate-damages.html">제III부 피해·비용과 시간</a></li><li class="breadcrumb-item"><a href="./05-climate-damages.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">기후변화의 피해와 적응</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">기후변화의 피해와 적응</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>학습목표
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>기후의 물리적 변화가 생태계·농업·건강·노동·기반시설을 거쳐 경제적 손실로 이어지는 경로를 설명할 수 있다.</li>
+<li>위해·노출·취약성의 구분과 IPCC의 다섯 가지 우려 요인을 이용해 기후위험을 분류할 수 있다.</li>
+<li>적응(adaptation)과 완화(mitigation)의 차이, 적응의 주체와 정부의 역할, 적응을 빠뜨린 피해 추정의 문제점을 설명할 수 있다.</li>
+<li>현시선호법과 진술선호법을 이용한 비시장 가치평가의 원리와 한계를 이해한다.</li>
+<li>총경제적 영향을 추정하는 네 가지 방법과 그 결과를 해석할 때의 주의점을 설명할 수 있다.</li>
+<li>총피해와 탄소의 사회적 비용(SCC)의 차이를 이해하고, SCC가 할인율과 셈의 범위에 따라 어떻게 달라지는지 설명할 수 있다.</li>
+<li>탄소세와 기후손해배상 소송이 외부효과를 내재화하는 방식의 차이를 설명할 수 있다.</li>
+</ol>
+</div>
+</div>
+<section id="이-장의-지도" class="level2">
+<h2 class="anchored" data-anchor-id="이-장의-지도">이 장의 지도</h2>
+<p>4장에서 우리는 “외부효과를 가격에 내재화하자”는 처방에 이르렀다. 그런데 가격을 매기려면 그 가격이 얼마인지 알아야 한다. 3장과 4장이 외부효과의 <strong>존재</strong>를 다루었다면, 이 장은 그 피해의 <strong>크기</strong>를 다룬다. 무엇이 얼마나 영향을 받는지, 그것을 어떻게 돈으로 환산하는지, 그 결과가 정책에 어떻게 쓰이는지를 차례로 살펴본다.</p>
+<table class="caption-top table">
+<caption>이 장의 구성.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">절</th>
+<th style="text-align: left;">질문</th>
+<th style="text-align: left;">핵심 개념</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">I. 물리적 영향</td>
+<td style="text-align: left;">무엇이 영향을 받는가?</td>
+<td style="text-align: left;">생태계, 농업, 건강, 노동, 해수면</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">II. 적응</td>
+<td style="text-align: left;">피해를 어떻게 줄일 수 있는가?</td>
+<td style="text-align: left;">적응비용과 잔여피해, 적응의 주체</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">III. 화폐가치화</td>
+<td style="text-align: left;">시장가격이 없는 피해를 어떻게 잴까?</td>
+<td style="text-align: left;">현시선호, 진술선호, 통계적 생명가치</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IV. 총경제적 영향(참고)</td>
+<td style="text-align: left;">전체 피해는 소득의 몇 %인가?</td>
+<td style="text-align: left;">추정 방법, 소득·기온과의 관계</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">V. 한계영향</td>
+<td style="text-align: left;">1톤의 피해는 얼마인가?</td>
+<td style="text-align: left;">탄소의 사회적 비용(SCC)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">VI. 사례</td>
+<td style="text-align: left;">피해 비용을 누가 부담하는가?</td>
+<td style="text-align: left;">기후손해배상 소송</td>
+</tr>
+</tbody>
+</table>
+<p>이 장의 최종 목적지는 <strong>탄소의 사회적 비용(Social Cost of Carbon, SCC)</strong>, 즉 탄소 1톤의 한계피해를 금액으로 나타낸 숫자다. 4장의 피구식 해법은 “피해액만큼 세금을 물린다”였다. SCC가 바로 그 피해액, 다시 말해 탄소 1톤당 피구세의 크기에 대한 추정치다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>결국은 비용-편익 분석
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>감축 정책의 <strong>편익</strong>은 그 정책으로 <strong>회피한 피해</strong>다. 피해를 금액으로 알아야만 6장에서 다룰 감축 비용과 같은 단위로 비교해, 7장에서 “얼마나 줄일 것인가”를 정할 수 있다. 피해 추정이 없으면 비용-편익 분석의 편익 쪽 칸이 비어 있는 셈이다.</p>
+<p>피해를 화폐로 나타내는 일은 자연과 인간의 가치를 돈으로 모두 대체할 수 있다는 주장이 아니다. 서로 다른 정책의 결과를 비교하기 위한 공통 단위를 마련하는 과정이다. 화폐로 평가하기 어려운 손실은 별도로 드러내야 한다 <span class="citation" data-cites="ipcc2022wg2ch16 tol2023">(<a href="references.html#ref-ipcc2022wg2ch16" role="doc-biblioref">O’Neill 기타 2022년</a>; <a href="references.html#ref-tol2023" role="doc-biblioref">Tol 2023년</a>)</span>.</p>
+</div>
+</div>
+<p>같은 폭염이라도 냉방시설과 의료체계가 갖춰진 도시와 그렇지 않은 도시의 피해는 다르다. 같은 해수면 상승이라도 해안에 무엇을 지었는지, 제방을 어떻게 관리했는지에 따라 손실이 달라진다. 따라서 기후피해를 추정하려면 기온 변화뿐 아니라 <strong>누가 어디에서 무엇에 노출되는지</strong>, 그리고 <strong>어떻게 대응할 수 있는지</strong>를 함께 보아야 한다.</p>
+</section>
+<section id="물리적-영향과-경제적-피해" class="level2">
+<h2 class="anchored" data-anchor-id="물리적-영향과-경제적-피해">물리적 영향과 경제적 피해</h2>
+<section id="기후변화의-영향-개관" class="level3">
+<h3 class="anchored" data-anchor-id="기후변화의-영향-개관">기후변화의 영향: 개관</h3>
+<p>기후변화는 농업·임업처럼 사람이 관리하는 생태계와, 산림·산호초·습지처럼 관리되지 않는 생태계 모두에 영향을 미친다. 기온, 강수, 구름, 바람, 해양 산성도의 변화는 동식물에 직접 영향을 주고, 포식과 경쟁 같은 생태적 상호작용을 거쳐 간접 영향을 더한다. 기후 재해가 잦아지고 강해질수록 사람과 동식물이 다른 곳으로 옮겨 가야 하는 압력도 커진다. 특히 취약하고 적응 능력이 낮은 인구일수록 그렇다.</p>
+<p>연구에 따르면 1990년에서 2100년 사이의 기후변화로 지구의 상당 부분에서 <strong>생물군계(biome)</strong>가 바뀔 것으로 예상된다(Tol, <em>Climate Economics</em>, 그림 5.1; 원자료 IPCC AR5 WGII 4장). 생물군계란 기후에 따라 구분되는 큰 단위의 생태계, 예컨대 열대우림, 사바나, 툰드라, 온대림을 말한다. 지구 대부분이 생명이 없는 땅으로 변하지는 않지만, 열대우림이 사바나로, 툰드라가 숲으로 바뀌는 등 <strong>풍경 자체가 달라진다</strong>.</p>
+<p>여기서 경제학의 관점을 분명히 해 두자. <strong>경제학의 초점은 결국 인간의 후생이다.</strong> 생태계와 동식물의 변화도 사람의 생산, 소비, 건강, 자산에 미치는 영향으로 ’피해’가 집계된다. 시장에서 거래되지 않는 산호초나 희귀종도 <strong>사람들이 그것에 부여하는 가치</strong>로 측정한다. 또 하나 중요한 전제는 <strong>영향이 양방향일 수 있다</strong>는 점이다. 모든 영향이 부정적인 것은 아니다. 온난화 초기 단계나 특정 위도·작물에서는 긍정적 효과도 보고된다. 그래서 ’총’효과를 신중하게 따져야 한다.</p>
+</section>
+<section id="위해노출취약성" class="level3">
+<h3 class="anchored" data-anchor-id="위해노출취약성">위해·노출·취약성</h3>
+<p><strong>위해(hazard)</strong>는 폭염, 홍수, 가뭄처럼 손실을 일으킬 수 있는 물리적 현상이다. <strong>노출(exposure)</strong>은 그 현상이 발생하는 곳에 존재하는 사람, 자산, 생태계를 뜻한다. <strong>취약성(vulnerability)</strong>은 같은 충격을 받더라도 얼마나 큰 손실을 겪는지를 나타낸다. 기후위험은 이 세 요소의 상호작용에서 발생한다. 이 구분은 특정한 수학적 곱셈식이 아니라 위험의 원인을 나누는 분석 틀이다(1장 참고).</p>
+<p>예를 들어 해안 침수 손실이 커졌다는 사실만으로 해수면 상승의 효과를 모두 알아낼 수는 없다. 해안의 건물과 인구가 늘어 노출이 증가했을 수도 있고, 배수시설이 부족해 취약성이 높아졌을 수도 있다. 반대로 방재시설의 개선이 물리적 위해의 증가를 일부 상쇄했을 수 있다. 피해 자료를 읽을 때에는 기후 변화와 사회경제적 변화를 구분해야 한다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: IPCC의 다섯 가지 우려 요인과 ‘타는 숯’ 그림
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>IPCC는 다양한 기후위험을 다섯 가지 <strong>우려 요인(Reasons for Concern, RFC)</strong>으로 정리한다.</p>
+<ol type="1">
+<li><strong>고유하고 위협받는 시스템</strong>에 대한 위험: 북극 생태계, 산호초, 고산 생물종 등</li>
+<li><strong>극한 기상현상</strong>으로 인한 위험: 폭염, 가뭄, 폭우, 태풍의 빈도와 강도 증가</li>
+<li><strong>영향의 분포</strong>: 누가 이득을 보고 누가 손해를 보는가(지역·소득 간 불균등)</li>
+<li><strong>전 지구적 총영향</strong>: 전 지구적으로 합산한 경제적·생태적 피해</li>
+<li><strong>대규모 단일 사건</strong>의 위험: 그린란드 빙상 붕괴, 해류 변화 같은 티핑 포인트</li>
+</ol>
+<p>이 분류가 중요한 이유는 어떤 범주를 더 중시하느냐에 따라 “같은 과학”에서도 다른 정책 결론이 나올 수 있기 때문이다. 산호초 같은 고유종을 중시하는 사람과, 해류·빙상 같은 시스템 위험을 중시하는 사람은 같은 증거에서 출발해도 서로 다른 결론에 이를 수 있다.</p>
+<p>이른바 ‘타는 숯(burning embers)’ 그림은 온난화 수준에 따라 위험 수준이 높아지는 과정을 색으로 표시한다(<a href="#fig-reasons-concern" class="quarto-xref">그림&nbsp;<span>5.1</span></a>). 세로축은 산업화 이전 대비 기온 상승, 색은 위험 수준(흰색 → 노랑 → 빨강 → 보라)이며, 회색 띠는 2011-2020년 평균(약 1.09°C)이다. 그림을 보면 고유 시스템(RFC1)과 극한 현상(RFC2)은 현재 기온에서 이미 위험이 뚜렷하지만, <strong>총영향(RFC4)</strong>은 더 높은 기온에서야 ’높음’이 된다. 이 장의 뒷부분에서 다룰 경제적 총피해와 SCC는 주로 RFC4를 숫자로 옮긴 것임을 기억하자. 세계 평균 손실이 작게 계산되어도 특정 생태계나 취약계층의 위험은 매우 높을 수 있다.</p>
+<p>색의 전환은 위험에 관한 종합 판단이며 특정 금액의 피해나 사건 발생확률과 일대일로 대응하지 않는다.</p>
+<div id="fig-reasons-concern" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-reasons-concern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/IPCC_AR6_WGII_Figure_SPM_003ab.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reasons-concern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;5.1: 전 지구적 우려 요인과 온난화 수준. 출처: IPCC AR6 WGII, 그림 SPM.3의 a-b 부분. 적응이 낮거나 없는 경우를 가정했다. 색은 평가된 위험 수준을 나타내며 금전적 피해액이 아니다.
+</figcaption>
+</figure>
+</div>
+<p><a href="https://www.ipcc.ch/report/ar6/wg2/figures/summary-for-policymakers/figure-spm-3/">IPCC 원본과 설명</a></p>
+</div>
+</div>
+</section>
+<section id="영향-1-농업과-식량" class="level3">
+<h3 class="anchored" data-anchor-id="영향-1-농업과-식량">영향 (1): 농업과 식량</h3>
+<p>농업은 기후에 가장 직접적으로 노출된 산업이다. 그런데 기후변화가 농업에 미치는 영향은 생각보다 복잡하다.</p>
+<ul>
+<li><strong>CO₂ 시비효과(CO₂ fertilization).</strong> 대기 중 CO₂ 농도가 높아지면 광합성이 활발해져 대부분의 작물이 더 빨리 자란다. 다만 잡초도 함께 잘 자란다.</li>
+<li><strong>기온과 강수의 변화.</strong> 따뜻하고 습해진 조건은 일부 작물에 유리하지만, 다른 작물은 더 건조해지거나 견딜 수 있는 온도의 한계를 넘는 조건을 만난다.</li>
+<li><strong>시간에 따른 변화.</strong> 전 지구 식량생산은 금세기 초반에는 CO₂ 시비효과로 오히려 늘어나다가, 온난화가 누적되는 후반부로 갈수록 줄어드는 경향을 보인다.</li>
+</ul>
+<p>식량 가격에 대한 연구 결과도 크게 엇갈린다. Tol의 교과서가 정리한 다섯 개 연구를 보면, Reilly et al.(1994)과 Adams et al.(1995)은 2-3°C 온난화까지는 세계 식량 가격이 오히려 <strong>하락</strong>한다고 보았고, Darwin(2004)은 거의 변화가 없다고 보았다. 반면 Parry et al.(1999, 2004)과 Fischer et al.(2002)은 처음부터 가격이 <strong>상승</strong>해 5°C 이상에서는 약 40-50% 오른다고 추정했다. 요약하면, 앞으로 수십 년은 기후변화로 식량생산이 늘어 가격이 내려갈 수도 있지만, 장기적으로는 생산이 줄어 가격이 오를 가능성이 크다.</p>
+<p>한 지역의 수확량 변화와 세계 식량가격 변화도 구별해야 한다. 어떤 지역의 생산이 줄면 다른 지역의 증산과 국제무역이 충격을 완충할 수 있다. 반면 여러 곡창지대에서 동시에 피해가 발생하거나 무역이 제한되면 가격 상승이 커질 수 있다(4장의 엘니뇨 사례). 농민의 생산 손실, 소비자의 식비 증가, 식량 수출국의 수입 변화가 모두 같은 방향으로 움직이는 것은 아니다. 지역별 수확량을 단순히 더하는 것만으로 후생효과를 계산할 수 없는 이유다.</p>
+</section>
+<section id="영향-2-해수면-건강-노동생산성" class="level3">
+<h3 class="anchored" data-anchor-id="영향-2-해수면-건강-노동생산성">영향 (2): 해수면, 건강, 노동생산성</h3>
+<ul>
+<li><strong>해수면 상승</strong>: 토지와 습지가 사라지고, 홍수가 잦아지며, 바닷물이 지하수와 농지로 스며드는 염수 침투가 일어난다. 이를 막으려면 값비싼 방재 조치가 필요하다.</li>
+<li><strong>노동생산성</strong>: 폭염은 특히 옥외 노동의 생산성을 낮춘다. 냉방이 없으면 노동시간과 생산성이 모두 타격을 받는다.</li>
+<li><strong>건강</strong>: 추위로 인한 사망은 줄지만 더위로 인한 사망은 늘어난다. 말라리아나 설사병 같은 감염병의 부담도 커질 수 있다. 순효과의 부호는 지역과 소득 수준에 따라 다르다.</li>
+</ul>
+<table class="caption-top table">
+<caption>기후변화의 주요 영향 경로.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">영역</th>
+<th style="text-align: left;">물리적 변화</th>
+<th style="text-align: left;">경제적 결과와 조정</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">농업과 식량</td>
+<td style="text-align: left;">고온, 강수 변화, 병해충, 물 부족</td>
+<td style="text-align: left;">수확량·품질·가격 변화, 작물 전환과 무역 조정</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">건강과 노동</td>
+<td style="text-align: left;">열 스트레스, 감염 위험, 재해 노출</td>
+<td style="text-align: left;">질병·사망 위험, 노동시간과 생산성 변화</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">연안과 기반시설</td>
+<td style="text-align: left;">해수면 상승, 침수, 극한 강수</td>
+<td style="text-align: left;">자산 손실, 교통·전력 중단, 방재·이주 비용</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">에너지</td>
+<td style="text-align: left;">냉난방 수요와 발전 여건 변화</td>
+<td style="text-align: left;">에너지 지출, 전력 공급비용, 수요관리</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">생태계</td>
+<td style="text-align: left;">서식지 이동, 산불, 해양 변화</td>
+<td style="text-align: left;">생태계서비스 손실, 생물다양성과 비사용가치의 감소</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="직접-피해와-간접-파급" class="level3">
+<h3 class="anchored" data-anchor-id="직접-피해와-간접-파급">직접 피해와 간접 파급</h3>
+<p>침수로 공장이 멈추면 기계의 손상은 직접 피해이고, 부품 공급 중단으로 다른 공장의 생산이 줄어드는 것은 간접 파급이다. 복구 과정에서 건설 지출이 늘었다고 해서 재해가 사회에 순편익을 주었다고 해석할 수는 없다. 복구에는 다른 곳에 쓸 수 있었던 노동과 자원이 투입된다. GDP에 잡히는 거래의 증가와 사람들이 누리는 후생의 증가는 다르다. 유리창을 깨면 유리 가게의 매출이 늘지만 사회가 더 부유해지지는 않는다는 바스티아의 ‘깨진 유리창’ 비유가 바로 이 점을 지적한다.</p>
+<p>또한 손상된 자산의 가치와 그 자산에서 얻지 못한 모든 미래 소득을 동시에 더하면 중복 계산이 발생할 수 있다. 자산 가치 자체가 미래 수익을 반영하기 때문이다. 피해 추정에서는 자산 손실, 생산 손실, 후생 손실 중 무엇을 측정하는지 먼저 밝혀야 한다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 더위는 교실의 학습(인적자본)도 떨어뜨린다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Park, Goodman, Hurwitz, Smith(2020)의 「Heat and Learning」은 더위가 미래의 소득을 좌우하는 학습, 즉 <strong>인적자본</strong>에까지 영향을 미친다는 것을 보여준다 <span class="citation" data-cites="park2020">(<a href="references.html#ref-park2020" role="doc-biblioref">Park 기타 2020년</a>)</span>.</p>
+<ul>
+<li><strong>자료와 방법.</strong> 미국 고등학생 약 1,000만 명의 PSAT(대입 예비시험) 재응시 성적을 이용했다. 같은 학생이 두 번 시험을 보는 사이에 겪은 <strong>등교일의 기온</strong>을 비교했으므로, 학생 개인의 능력이나 가정환경 같은 고정된 특성은 비교에서 빠진다(학생 고정효과). 또 주말·여름방학의 더위, 시험 당일의 더위와도 구분했다.</li>
+<li><strong>주요 결과.</strong> 더운 등교일이 많을수록 성적이 낮았고, 극한 더위일수록 피해가 컸다. 반면 주말이나 여름방학의 더위는 영향이 거의 없었다. 즉 더위가 <strong>수업 시간의 학습</strong>을 방해한다는 뜻이다. 냉방이 없을 때 학년도가 1°F(약 0.56°C) 더우면 그해의 학습량이 약 1% 줄었다.</li>
+<li><strong>적응과 분배.</strong> 학교 냉방이 이 효과를 대부분 상쇄하는 것으로 보인다. 같은 기온 충격의 결과가 인프라에 따라 달라지는 적응의 사례다. 그러나 피해는 흑인·히스패닉 학생에게 더 크게 나타나, 인종 간 학업성취 격차의 약 5%를 설명했다. 기후 피해는 더 취약한 집단에 쏠린다.</li>
+</ul>
+<p>이 사례는 기후피해의 시간이 길어질 수 있음을 보여준다. 당일의 불편함에 그치지 않고 학습 축적이 영향을 받으면 이후의 생산성과 소득에도 연결될 수 있다. 다만 시험점수의 변화에서 평생소득의 변화로 넘어가려면 추가적인 추정과 가정이 필요하며, 여기서 얻은 효과 크기를 다른 나라와 모든 연령의 학생에게 그대로 적용할 수는 없다.</p>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 더위의 피해는 어디까지 미치나 - 최근 실증연구
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>최근 연구는 더위의 피해가 생각보다 훨씬 넓은 범위에 미친다는 것을 보여준다. 아래 표는 분야별 대표 연구를 정리한 것이다.</p>
+<table class="caption-top table">
+<caption>더위의 피해에 관한 최근 연구.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">분야와 질문</th>
+<th style="text-align: left;">연구</th>
+<th style="text-align: left;">핵심 결과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">제조업: 더위는 공장 생산을 얼마나 줄이는가?</td>
+<td style="text-align: left;">Somanathan et al.&nbsp;(2021), <em>JPE</em></td>
+<td style="text-align: left;">인도 공장 자료에서 더운 날 생산성 하락과 결근 증가. 연평균 기온 1°C 상승 시 공장 생산량 약 2% 감소. 냉방이 손실을 상당히 완화.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">건강·사망: 사망 피해와 적응 비용은?</td>
+<td style="text-align: left;">Carleton et al.&nbsp;(2022), <em>QJE</em></td>
+<td style="text-align: left;">40개국 자료로 연령별 기온-사망 관계를 추정하고 소득 증가와 적응을 반영. 고배출 시나리오에서 세기 말 사망률이 인구 10만 명당 평균 약 73명 증가. 적응 비용도 피해에 포함.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">정신건강: 더위는 우울증 위험을 높이는가?</td>
+<td style="text-align: left;">Hua, Qiu &amp; Tan (2023), <em>J. of Population Economics</em></td>
+<td style="text-align: left;">중국 개인 패널에서 30°C 초과 고온 노출이 우울증 가능성을 높임. 중·고령층, 여성, 저학력자, 농업 종사자의 피해가 더 큼.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">공급망: 다른 지역의 폭염이 우리 기업에 미치는 영향은?</td>
+<td style="text-align: left;">Pankratz &amp; Schiller (2024), <em>RFS</em></td>
+<td style="text-align: left;">공급업체 소재지의 더위가 공급업체와 고객 기업의 영업이익을 모두 낮춤. 열 노출이 예상보다 크면 고객이 거래를 끊을 확률이 약 7% 상승.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">농업·무역: 제조업으로 옮겨 적응할 수 있을까?</td>
+<td style="text-align: left;">Nath (2025), <em>JPE</em></td>
+<td style="text-align: left;">더위의 생산성 피해는 농업에서 더 큼. 그러나 최소한의 식량 소비 필요와 높은 무역장벽 때문에 취약국이 오히려 농업에 더 의존할 수 있음. 무역장벽 완화가 피해를 줄임.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">식량: 농민이 적응해도 수확량은 줄어드는가?</td>
+<td style="text-align: left;">Hultgren et al.&nbsp;(2025), <em>Nature</em></td>
+<td style="text-align: left;">6대 작물 자료에 관측된 적응을 반영. 적응과 소득 증가가 피해를 줄이지만 다 상쇄하지는 못함. 고배출 시 칼로리 손실을 무적응 대비 2050년 약 23%, 세기 말 약 34% 완화.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">에너지: 냉방 증가와 난방 감소를 함께 보면?</td>
+<td style="text-align: left;">Rode et al.&nbsp;(2021), <em>Nature</em></td>
+<td style="text-align: left;">기온-에너지 소비 반응을 미래 기후·소득과 결합. 냉방 수요 증가와 난방 수요 감소, 지역별 차이를 함께 평가.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">여가: 시원한 하루에 얼마를 지불할까?</td>
+<td style="text-align: left;">Kuruc, LoPalo &amp; O’Connor (2025), <em>AEJ: Applied</em></td>
+<td style="text-align: left;">50년간 메이저리그 관중 수가 덥거나 추운 날 줄어드는 정도로 날씨의 가치를 추정. 고온 노출의 불편에 따른 후생 손실이 시간당 약 1.53달러.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">거시경제: 극한기상이 경제 전체를 흔드는가?</td>
+<td style="text-align: left;">Kim, Matthes &amp; Phan (2025), <em>AEJ: Macro</em></td>
+<td style="text-align: left;">미국 약 60년 월별 자료에서 표본 후반부에 극한기상 충격이 산업생산·소비 증가율을 낮추고 실업률·물가상승률을 높임. 영향은 최대 20개월 지속.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">산업재해: 더위의 비용은 누구에게 집중되는가?</td>
+<td style="text-align: left;">Park, Pankratz &amp; Behrer (2021), IZA 워킹페이퍼</td>
+<td style="text-align: left;">캘리포니아 산재 청구 자료에서 더위로 연간 약 2만 건의 산재가 추가 발생. 실외뿐 아니라 제조업·창고 등 실내 작업에서도. 저소득·젊은 노동자의 위험이 더 큼.</td>
+</tr>
+</tbody>
+</table>
+<p>이 연구들이 공통으로 강조하는 것은 기온 자체의 변화뿐 아니라 <strong>사람과 기업의 대응</strong>이다. 연구를 읽을 때에는 대상 지역과 기간, 비교집단, 기온 지표, 적응의 포함 여부를 확인해야 한다. 날씨가 더웠던 해의 단기 생산 감소를 장기 기후변화의 피해로 곧바로 바꾸면 적응을 빠뜨릴 수 있다. 반대로 관측된 적응이 미래의 모든 극단적 충격에도 충분하다고 가정하면 피해를 과소평가할 수 있다. 부문별 결과를 합칠 때에도 건강 악화로 인한 노동 손실처럼 겹치는 항목이 있는지 살펴야 한다 <span class="citation" data-cites="hsiang2018 ipcc2022wg2ch16">(<a href="references.html#ref-hsiang2018" role="doc-biblioref">Hsiang 와/과 Kopp 2018년</a>; <a href="references.html#ref-ipcc2022wg2ch16" role="doc-biblioref">O’Neill 기타 2022년</a>)</span>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="적응의-경제학" class="level2">
+<h2 class="anchored" data-anchor-id="적응의-경제학">적응의 경제학</h2>
+<section id="감축과-적응-피해를-줄이는-두-가지-길" class="level3">
+<h3 class="anchored" data-anchor-id="감축과-적응-피해를-줄이는-두-가지-길">감축과 적응: 피해를 줄이는 두 가지 길</h3>
+<p>기후 피해를 줄이는 방법은 두 가지다.</p>
+<ul>
+<li><strong>감축(완화, mitigation)</strong>은 <strong>원인을 줄인다.</strong> 배출 자체를 줄여 기후변화의 <em>크기</em>를 낮춘다. 그 편익은 전 세계와 미래 세대에 퍼지므로 전 지구적 공공재이며, 국제 협력이 필요하다.</li>
+<li><strong>적응(adaptation)</strong>은 <strong>결과를 줄인다.</strong> 같은 기후변화가 일어나도 그것이 피해로 이어지는 <em>정도</em>를 낮춘다. 그 편익은 대체로 그 지역과 당사자에게 바로 돌아오므로 지역적·사적 성격이 강하다.</li>
+</ul>
+<p>적응은 기후변화의 실제 또는 예상되는 효과에 맞춰 자연 시스템과 인간 사회를 조정하는 과정이다. 완화 노력에도 불구하고 피할 수 없는 영향이 남는다는 전제 아래 이루어진다. 나무 그늘과 녹지를 늘려 도시의 열섬을 완화하거나, 옥상녹화와 커뮤니티 정원으로 빗물을 붙잡아 두는 것이 예다. 냉방, 품종 전환, 제방, 조기경보, 주거 이전도 모두 적응이다. 적응은 기후변화의 부정적 영향을 줄이고 긍정적 영향은 키우는 방향으로 작동한다.</p>
+<p>두 대응은 서로의 필요를 줄여 준다는 점에서 <strong>정책 대체재(policy substitutes)</strong>다. 적응을 잘하면 같은 기후변화의 피해가 작아지므로 감축의 편익이 줄고, 감축을 많이 하면 적응할 필요가 줄어든다. 그러나 대체만 하는 관계는 아니다. 적응으로 피하기 어려운 피해가 있으므로 완화가 필요하고, 이미 발생하는 변화에 대응하려면 적응도 필요하다.</p>
+</section>
+<section id="피해-추정이-과장되는-이유-적응을-빼먹지-말-것" class="level3">
+<h3 class="anchored" data-anchor-id="피해-추정이-과장되는-이유-적응을-빼먹지-말-것">피해 추정이 과장되는 이유: 적응을 빼먹지 말 것</h3>
+<p>많은 피해 추정 연구가 “농부가 기후변화 이후에도 지금과 똑같은 작물과 방식을 고수한다”고 가정한다. 이를 <strong>바보 농부 가설(dumb farmer hypothesis)</strong>이라 부른다. 실제 농부라면 기온과 강수가 바뀌면 작물, 파종 시기, 품종을 바꾼다. 적응을 빼먹으면 피해가 체계적으로 <strong>과대평가</strong>된다. Tol은 이를 비꼬아, 실은 농부가 아니라 분석가가 어리석다는 뜻에서 “바보 분석가 가설(dumb analyst hypothesis)”이라고 부른다.</p>
+<p>비슷한 취지로 <strong>그루엔스펙트의 적응 법칙(Gruenspecht rule of adaptation)</strong>이라는 비유도 있다. 해변에 누운 사람의 머리는 바다보다 반 미터도 높지 않다. 그렇다면 해수면이 오르면 모두 익사할까? 손주들은 할머니가 눕던, 지금은 물에 잠긴 바로 그 자리에 고집스럽게 눕지 않는다. 누가 지시하지 않아도 사람들은 적응한다. 그런데도 많은 영향 연구는 사람들이 적응하지 않는다고 가정한다.</p>
+<p>작물 수확량에 관한 연구들의 메타분석도 같은 패턴을 보여준다(Tol, 그림 5.2; 원자료 IPCC AR5 WGII 7장). 온대와 열대의 옥수수·밀·쌀 수확량 변화 추정치는 연구마다 크게 흩어져 있지만, 적응을 반영한 추정치는 반영하지 않은 추정치보다 대체로 손실이 작다. 결과가 매우 분산되어 있는 가운데에서 거의 유일하게 분명한 메시지는 “적응이 수확량을 높인다”는 것이다.</p>
+<p>그렇다고 적응이 공짜이거나 완전한 것은 아니다. 요점은 ’적응 없음’을 기본 시나리오로 삼는 연구는 피해를 과장하기 쉽고, 반대로 적응 비용을 빼먹으면 피해를 과소평가하게 된다는 것이다.</p>
+</section>
+<section id="적응비용과-잔여피해" class="level3">
+<h3 class="anchored" data-anchor-id="적응비용과-잔여피해">적응비용과 잔여피해</h3>
+<p>적응을 많이 하면 피해는 줄어들지만 비용이 든다. 적응 수준을 <span class="math inline">\(a\)</span>, 그 비용을 <span class="math inline">\(C_A(a)\)</span>, 적응 뒤에도 남는 피해를 <span class="math inline">\(D(T,a)\)</span>라 쓰면 일정한 기후 <span class="math inline">\(T\)</span>에서의 총부담은</p>
+<p><span class="math display">\[
+TC(a)=C_A(a)+D(T,a)
+\]</span></p>
+<p>이다. 내부의 최적점에서는 <span class="math inline">\(C_A'(a)=-\partial D(T,a)/\partial a\)</span>가 성립한다. 즉 적응을 한 단위 더 했을 때 드는 비용과 그로 인해 줄어드는 피해가 같아진다. 3장의 등한계 원칙이 적응에도 그대로 적용되는 것이다. 피해를 완전히 없애는 것이 비용 면에서 가능하거나 바람직하다고 미리 가정할 수는 없다. 따라서 기후변화의 진짜 비용은 <strong>적응비용 + 잔여피해</strong>이며, 둘 중 하나만 보면 피해를 잘못 잰다.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>계산 예제 5.1 | 침수 방지시설의 순편익
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>연간 침수확률이 10%, 침수 시 손실이 10억 원인 건물을 생각하자. 적응 전 기대피해는 연간 1억 원이다. 방지시설이 침수확률을 4%로 낮추고 연간 환산 비용이 3천만 원이라면, 잔여 기대피해는 4천만 원이고 총부담은 7천만 원이다.</p>
+<p>시설의 편익은 피한 기대피해인 <span class="math inline">\(1억-4천만=6천만\)</span> 원, 순편익은 <span class="math inline">\(6천만-3천만=3천만\)</span> 원이다. 적응 후에도 4천만 원의 기대피해가 남는다. 이 예제의 모든 수치는 계산을 위한 가정이며, 시설이 다른 지역의 침수위험을 높이는 효과는 없다고 두었다.</p>
+</div>
+</div>
+</section>
+<section id="적응의-세-가지-주체와-정부의-역할" class="level3">
+<h3 class="anchored" data-anchor-id="적응의-세-가지-주체와-정부의-역할">적응의 세 가지 주체와 정부의 역할</h3>
+<p>적응은 누가 하는가? 세 범주로 나눌 수 있다.</p>
+<ul>
+<li><strong>사적(private) 적응</strong>: 대부분의 적응은 이 범주다. 폭염에 옷을 얇게 입거나, 에어컨을 설치하거나, 기업이 작업시간을 바꾸는 것이다. 편익과 비용이 비교적 같은 주체에게 돌아온다.</li>
+<li><strong>규제가 필요한 적응</strong>: 예를 들어 폭염 때 사람들이 냉방된 쇼핑몰에 들어가 더위를 피할 수 있도록 허용하는 것처럼, 규칙을 바꾸어야 가능한 적응이다.</li>
+<li><strong>공공 부문이 관여하는 적응</strong>: 폭염 시 의료 지원, 농민에게 새로운 품종과 재배법을 알려 주는 농업 기술 보급(agricultural extension), 하천 관리와 방재망처럼 여러 사람에게 함께 편익을 주는 사업이다. 한 건물의 방재벽이 이웃으로 물을 밀어낼 수도 있으므로 사적 선택이 사회적으로 최선인 것도 아니다.</li>
+</ul>
+<p>정책적으로 중요한 점은 완화와 적응이 요구하는 <strong>거버넌스의 성격</strong>이 다르다는 것이다. 완화는 본질적으로 전 지구적·집합적 문제라 국제 협력이 필요하지만, 적응은 대체로 지역적·사적이다.</p>
+<p>정부는 적응에서 세 가지 역할을 맡을 수 있다. 기후정보와 조기경보를 제공하는 <strong>촉진자(facilitator)</strong>, 건축·토지이용 기준과 비상 대응 절차를 정하는 <strong>규제자(regulator)</strong>, 제방과 공공의료를 공급하고 취약계층을 직접 지원하는 <strong>서비스 제공자(provider)</strong>다. 역할을 나누면 “적응은 개인에게 맡길 것인가, 정부가 할 것인가”라는 양자택일에서 벗어나 어떤 시장실패를 어떤 수단으로 보완할지 분석할 수 있다. 정부의 적응 역할은 뒤의 적응 장에서 자세히 다룬다.</p>
+</section>
+<section id="사례-2003년-프랑스-폭염-적응-실패의-기록" class="level3">
+<h3 class="anchored" data-anchor-id="사례-2003년-프랑스-폭염-적응-실패의-기록">사례: 2003년 프랑스 폭염, 적응 실패의 기록</h3>
+<p>2003년 8월 프랑스를 덮친 기록적 폭염으로 1만 5천 명 가까운 사람이 사망했고, 유럽 전체로는 7만 명이 넘는 초과사망이 보고되었다. 희생자의 대부분은 고령층과 빈곤층이었다. 이 사건은 적응 실패의 사례로 자주 인용된다.</p>
+<ul>
+<li>폭염이 여름 휴가철과 겹쳐 많은 의료진이 휴가 중이었는데, 이들을 비상 소집하는 절차조차 없었다.</li>
+<li>에어컨이 나오는 쇼핑몰은 피난처가 될 수 있다. 그러나 그 이전 미국의 폭염 때는 더위를 피해 쇼핑몰에 들어온 사람들을 경비원이 내보낸 일도 있었다.</li>
+<li>가난한 사람들은 선풍기를 돌릴 전기요금을 감당하기 어려웠는데, 폭염 중에도 전기요금은 면제되지 않았다. 범죄가 잦은 동네에서는 창문을 여는 것조차 두려웠지만 경찰 순찰이 늘지는 않았다.</li>
+</ul>
+<p>이 사례는 정부의 세 역할과 그대로 연결된다. 정보와 조기경보를 제공하는 촉진자, 의무적 대응 절차를 마련하는 규제자, 취약계층을 직접 지원하는 서비스 제공자 - 세 역할 모두에서 구멍이 있었다. 이후 프랑스는 폭염 경보 체계와 취약계층 명부를 만드는 등 제도를 정비했다.</p>
+</section>
+<section id="적응의-한계" class="level3">
+<h3 class="anchored" data-anchor-id="적응의-한계">적응의 한계</h3>
+<p>적응에는 한계도 있다. 비용이 너무 커 실행하지 못하는 경우와, 기술·생태적 조건 때문에 손실을 피할 수 없는 경우는 다르다. 또한 미래의 고온이 현재 어느 지역에서도 관측되지 않는 수준에 이르면, 기존 지역의 경험을 모방하는 것만으로는 충분하지 않을 수 있다. 이 점은 뒤의 ‘영국과 스페인’ 사례에서 다시 다룬다.</p>
+</section>
+</section>
+<section id="비시장-가치평가" class="level2">
+<h2 class="anchored" data-anchor-id="비시장-가치평가">비시장 가치평가</h2>
+<section id="영향을-어떻게-돈으로-바꾸는가" class="level3">
+<h3 class="anchored" data-anchor-id="영향을-어떻게-돈으로-바꾸는가">영향을 어떻게 ’돈’으로 바꾸는가</h3>
+<p>기후변화의 영향은 매우 많고 다양하다. 작물, 건강, 생태계, 여가를 모두 더하려면 <strong>공통의 단위</strong>가 필요하다. <strong>화폐가치화(monetary valuation)</strong>는 시장에서 거래되지 않는 환경재와 서비스, 즉 비시장재의 가치를 돈으로 추정하는 작업이다. 모든 영향을 같은 단위로 표현하면 총피해와 한계피해를 <strong>감축 비용과 직접 비교</strong>할 수 있다. 이것이 비용-편익 분석의 전제조건이다.</p>
+<p>농산물은 가격이 있지만 깨끗한 공기, 안전, 생태계의 가치는 시장에서 완전하게 거래되지 않는다. 따라서 시장 생산액만으로 기후피해를 평가하면 중요한 부분을 누락한다. 경제적 가치평가는 환경의 변화에 대해 사람들이 다른 소비를 얼마나 포기할 의사가 있는지 살펴본다.</p>
+</section>
+<section id="지불의사와-수용의사" class="level3">
+<h3 class="anchored" data-anchor-id="지불의사와-수용의사">지불의사와 수용의사</h3>
+<p><strong>지불의사(willingness to pay, WTP)</strong>는 개선을 얻거나 손실을 피하기 위해 지불할 용의가 있는 최대 금액이다(3장 참고). <strong>수용의사(willingness to accept, WTA)</strong>는 손실을 받아들이는 데 필요한 최소 보상액이다. 이론적으로는 두 값이 비슷해야 할 것 같지만, 실제 연구에서는 같은 변화라도 WTA가 WTP보다 체계적으로 크게 나타난다. 37개 연구의 168개 추정치를 비교한 메타분석도 이를 확인했다.</p>
+<p>기후변화에서 이 차이는 중요하다. “손주에게 더 나은 기후를 사 주기 위해 얼마를 낼 것인가(WTP)”로 묻느냐, “손주에게 더 나쁜 기후를 떠넘기는 대가로 얼마를 받아야 하는가(WTA)”로 묻느냐에 따라 피해의 값이 달라진다. 어느 쪽이 맞는지는 누가 안정된 기후에 대한 권리를 가진다고 보느냐, 즉 4장의 재산권 문제와 연결된다.</p>
+<p>또한 소득이 낮아 지불의사가 작다고 해서 그 사람의 안전이 본질적으로 덜 중요하다는 뜻은 아니다. 국가 간 피해를 단순히 금액으로 합산할 때 분배 문제를 별도로 다루어야 하는 이유다.</p>
+</section>
+<section id="현시선호와-진술선호" class="level3">
+<h3 class="anchored" data-anchor-id="현시선호와-진술선호">현시선호와 진술선호</h3>
+<p>비시장 가치를 추정하는 방법은 크게 두 갈래다.</p>
+<table class="caption-top table">
+<caption>비시장 가치평가 방법의 비교.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">현시선호(revealed preference)</th>
+<th style="text-align: left;">진술선호(stated preference)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">원리</td>
+<td style="text-align: left;">사람들이 관련 시장에서 <strong>실제로 한 행동</strong>으로부터 가치를 역산</td>
+<td style="text-align: left;">가상의 상황을 <strong>직접 질문</strong>해 지불의사나 선호를 알아냄</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">대표 방법</td>
+<td style="text-align: left;">헤도닉 가격법(부동산·임금), 여행비용법</td>
+<td style="text-align: left;">조건부가치측정법(CVM), 선택실험법(CE)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">포착하는 가치</td>
+<td style="text-align: left;">직접 이용가치</td>
+<td style="text-align: left;">비사용가치(선택가치·유산가치·존재가치)까지</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">한계</td>
+<td style="text-align: left;">시장 행동으로 드러나지 않는 가치는 놓친다</td>
+<td style="text-align: left;">실제로 돈을 내지 않으므로 응답이 진실이라는 보장이 없다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>현시선호법</strong>의 예를 들어 보자. <strong>헤도닉 가격법</strong>은 주택가격이 환경의 질에 따라 어떻게 달라지는지 분석한다. 같은 크기와 연식의 아파트라도 공기가 깨끗한 동네의 아파트가 더 비싸다면, 그 가격 차이가 깨끗한 공기에 대한 사람들의 평가를 반영한다고 본다. 마찬가지로 위험한 직업의 임금이 더 높다면 그 차이로 사망 위험의 가치를 추정할 수 있다. <strong>여행비용법</strong>은 공원이나 해변을 방문하기 위해 사람들이 쓴 이동비용과 시간을 이용해 그 장소의 가치를 추정한다. 이런 방법에서는 행동에 영향을 주는 다른 특성과 정보의 차이를 통제해야 한다.</p>
+<p><strong>진술선호법</strong>은 가상의 변화에 대한 선택과 지불의사를 설문으로 묻는다. 예컨대 “북극곰 서식지를 보전하는 프로그램에 매년 얼마를 내겠습니까?”라고 묻는 식이다. 실제로 이용하지 않는 생태계의 보전에 대한 가치, 즉 <strong>비사용가치</strong>도 다룰 수 있다. 비사용가치에는 나중에 이용할 가능성을 남겨 두는 <strong>선택가치</strong>, 후손에게 물려주는 <strong>유산가치</strong>, 그저 존재한다는 사실만으로 느끼는 <strong>존재가치</strong>가 있다. 다만 응답자가 제시된 상황과 예산 제약을 제대로 이해했는지, 실제로는 내지 않을 돈을 과장해 말하지 않았는지(가상 편향) 검토해야 한다. 어느 방법도 모든 가치를 자동으로 정확하게 측정하지 않는다.</p>
+<table class="caption-top table">
+<caption>가치평가 방법별 해석의 주의점.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">방법</th>
+<th style="text-align: left;">주된 정보</th>
+<th style="text-align: left;">해석에서 중요한 점</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">헤도닉 가격</td>
+<td style="text-align: left;">주택가격·임금과 환경·위험의 관계</td>
+<td style="text-align: left;">다른 특성, 선택과 이동, 위험에 관한 정보</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">여행비용</td>
+<td style="text-align: left;">방문 횟수와 이동의 금전·시간 비용</td>
+<td style="text-align: left;">방문의 여러 목적, 대체 장소</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">조건부 가치평가·선택실험</td>
+<td style="text-align: left;">설명된 정책에 대한 설문 응답</td>
+<td style="text-align: left;">질문 설계, 가상 편향, 지불 가능성</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">편익 이전</td>
+<td style="text-align: left;">다른 지역에서 추정한 가치</td>
+<td style="text-align: left;">소득·환경·제도와 변화 규모의 차이</td>
+</tr>
+</tbody>
+</table>
+<p>기후변화의 가치평가에는 특히 어려운 점이 하나 더 있다. <strong>편익 이전(benefit transfer)</strong>, 즉 다른 곳에서 추정한 가치를 빌려 쓰는 문제다. 미래의 기후 영향은 아직 관측된 적이 없고, 가치평가 연구는 대부분 부유한 나라에서 이루어지는데 피해는 가난한 나라에 집중된다. 미국에서 추정한 값을 방글라데시에 그대로 적용해도 될까? 소득, 환경, 제도, 변화의 규모가 모두 다르다는 점을 고려해야 한다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 통계적 생명가치
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>통계적 생명가치(value of a statistical life, VSL)는 특정 개인의 생명에 가격표를 붙이는 개념이 아니다. 작은 사망위험 감소에 대한 여러 사람의 지불의사를 합산한 값이다. 가령 1만 명이 각자 사망확률 <span class="math inline">\(1/10{,}000\)</span>의 감소에 10만 원을 지불할 의사가 있다면, 기대 사망자 수 1명 감소에 대한 합계 지불의사는 10억 원이다.</p>
+<p>이 값은 위험의 크기와 맥락, 소득, 연령 구성, 조사방법에 따라 달라질 수 있다. 국가 간 비교에서는 금액 합산이 가진 분배상의 함의와 비화폐적 판단을 함께 제시해야 한다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="총경제적-영향의-추정" class="level2">
+<h2 class="anchored" data-anchor-id="총경제적-영향의-추정">총경제적 영향의 추정</h2>
+<p>이 절은 참고용이다. 기후변화의 전체 피해가 소득의 몇 %에 해당하는지에 관한 연구들을 살펴보지만, 정책에 실제로 필요한 것은 다음 절의 한계피해(SCC)라는 점을 염두에 두고 읽자.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 네 가지 추정 방법
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>열거법(enumerative method)</strong>: 영향별로 물리적 수량에 추정 가격을 곱해 더한다. 즉 <span class="math inline">\(\sum(\text{영향별 가격}\times\text{물리적 수량})\)</span>이다. 농업·건강·연안 등을 각각 평가해 합하므로 무엇을 포함했는지 명확하지만, 누락과 중복에 주의해야 한다.</li>
+<li><strong>연산 가능 일반균형(computable general equilibrium, CGE) 모형</strong>: 물리적 영향을 경제에 대한 ’충격’으로 투입해, 가격 변화와 시장·국가 간 상호작용까지 반영한다. 결과는 대체탄력성과 시장구조에 관한 가정의 영향을 받으며, 자급자족 농업이나 비시장 후생처럼 국민계정에 잡히지 않는 것은 놓친다.</li>
+<li><strong>통계적·리카디언 모형(statistical/Ricardian)</strong>: 기후가 다른 지역의 농지가격이나 순수익을 비교하여, 장기간의 적응이 반영된 차이를 추정한다. 땅의 가치가 그 땅에서 얻는 수익에 따라 정해진다는 리카도(David Ricardo, 1817)의 지대이론에서 이름을 땄다 <span class="citation" data-cites="mendelsohn1994">(<a href="references.html#ref-mendelsohn1994" role="doc-biblioref">Mendelsohn 기타 1994년</a>)</span>.</li>
+<li><strong>전문가 설문(expert elicitation)</strong>: 자료가 부족한 영역을 전문가에게 직접 물어 집계한다. 질문 설계와 전문가 선정, 판단의 분포를 공개하는 것이 중요하다.</li>
+</ol>
+<p>리카디언 방법은 “공간으로 시간을 대체”하는 방법이다. 지금 더운 지역을 미래의 우리 지역이라고 가정하는 것이다. 문제는 그 지역이 기후만 다른 것이 아니라 토질, 문화, 제도, 작물 선택까지 다르다는 점이다. 더운 지역의 농부가 오렌지를 키운다고 해서, 미래에 더워진 우리 지역의 밀밭이 곧바로 오렌지 농장이 될 수 있다고 가정하는 셈이다. 서로 다른 접근법의 숫자가 다르면 우선 측정 대상과 포함 범위가 같은지 확인한다 <span class="citation" data-cites="tol2023">(<a href="references.html#ref-tol2023" role="doc-biblioref">Tol 2023년</a>)</span>.</p>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 기후와 날씨 - 추정을 왜곡하는 흔한 함정
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“기후는 우리가 기대하는 것이고, 날씨는 우리가 실제로 겪는 것이다”(1장). 많은 통계적 추정은 한 해의 가뭄이나 혹서 같은 <strong>단기 날씨 충격</strong>에 대한 경제 반응을 측정해 <strong>장기 기후변화</strong>의 영향으로 확장한다. 그러나 둘은 다르다.</p>
+<ul>
+<li>날씨 충격에는 사람들이 즉각적이고 임시방편적으로만 반응할 수 있다. 비가 오면 우산을 쓰는 정도다.</li>
+<li>기후변화에는 자본, 품종, 제방 등을 장기적·구조적으로 바꾸어 적응할 시간이 있다.</li>
+</ul>
+<p>한 지역의 평소보다 더운 해와 덜 더운 해를 비교하면, 지역의 고정된 특성을 상당 부분 제거할 수 있다. 그러나 그렇게 추정한 단기 반응에는 농작물·주택·산업구조의 장기 조정이 충분히 들어 있지 않을 수 있다. 반대로 서로 다른 기후 지역을 비교하면 적응된 경제를 관찰할 수 있지만, 기후 이외의 지역 차이가 결과에 섞이기 쉽다. 날씨 충격 기반 추정이 장기 기후 효과와 같아지려면 완전한 시장, 합리적 기대, 연속적 적응 같은 엄격한 조건이 필요하다.</p>
+<p>따라서 “단기 자료는 항상 피해를 과대평가한다”거나 “지역 간 자료가 항상 더 정확하다”는 결론은 성립하지 않는다. 장기 누적 손실, 적응비용, 조정 한계가 모두 중요하다 <span class="citation" data-cites="deschenes2007 schlenker2009 burke2015">(<a href="references.html#ref-deschenes2007" role="doc-biblioref">Deschênes 와/과 Greenstone 2007년</a>; <a href="references.html#ref-schlenker2009" role="doc-biblioref">Schlenker 와/과 Roberts 2009년</a>; <a href="references.html#ref-burke2015" role="doc-biblioref">Burke 기타 2015년</a>)</span>.</p>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 총경제적 영향 추정치 - 기온 상승별
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tol의 교과서는 발표된 총경제적 영향 추정치들을 한 그림에 모아(가로축: 온난화 °C, 세로축: 후생 등가 소득 변화 %) 이를 결합한 최선 추정과 불확실성 구간을 제시한다(Tol, 그림 6.2). 그 모양은 대략 다음과 같다. 초기 온난화에서는 약간의 이득이 있고, 이후 손실이 점점 커지며, 불확실성은 <strong>아래쪽(나쁜 쪽)으로 더 넓다.</strong></p>
+<p>몇 가지 숫자를 살펴보자.</p>
+<ul>
+<li>2.5°C 온난화의 후생 손실은 13개 추정치 평균으로 소득의 약 <strong>1.7%</strong>에 해당한다.</li>
+<li>그러나 발표된 수십 개의 추정치 가운데에는 2.5°C에서 영향이 양(+)이라는 연구와 음(-)이라는 연구가 공존한다. 결론을 내리기에는 근거가 아직 얇다.</li>
+<li>초기 온난화의 이득(난방비와 추위로 인한 사망 감소, CO₂ 시비효과)은 일종의 <strong>매몰된 이득</strong>이다. 1°C는 이미 넘었고 2°C도 피하기 어려워, 우리가 무엇을 하든 얻게 된다. 따라서 정책이 좌우하는 <strong>앞으로의 온난화는 순피해</strong>다. 3°C에서의 추정치는 소득의 -0.7%에서 -9.2%에 걸쳐 있다.</li>
+<li>자주 인용되는 한 줄 요약은 “한 세기의 기후변화는 10년치 경제성장을 잃는 것보다 나쁘지 않다”는 것이다. 그러나 이 요약은 평균에 관한 것이며, 불확실성이 비대칭적이라는 점을 함께 기억해야 한다. 배출과 기후 반응 모두 “생각보다 나쁠” 가능성이 “생각보다 좋을” 가능성보다 크다고 보는 연구자가 많다(9장).</li>
+</ul>
+<p>특정 온난화에서 세계 GDP의 몇 %라는 추정치는 <strong>그 연구의 기준연도, 적응 가정, 포함한 피해와 모형에 조건부인 값</strong>이다. 이를 모든 미래 시점의 공인된 손실률로 사용할 수 없다.</p>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 가난한 나라일수록 더 취약하다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>같은 2.5°C 온난화라도 나라마다 영향은 크게 다르다. Tol은 국가별 추정치를 1인당 소득과 기온에 대해 그려 보이는데(Tol, 그림 6.3), <strong>가난할수록, 그리고 더울수록 피해가 크다</strong>는 뚜렷한 패턴이 나타난다. 세계 전체의 영향은 대략 0에 가깝게 계산되지만, <strong>대다수 나라는 음(-)의 영향</strong>을 받는다. 세계 경제가 소수의 부유한 나라에 집중되어 있고, 세계 평균은 사람이 아니라 달러를 세기 때문이다.</p>
+<p>가난한 나라가 더 취약한 이유는 세 가지다.</p>
+<ol type="1">
+<li>농업처럼 날씨에 노출된 부문이 경제에서 차지하는 비중이 <strong>더 크다</strong>.</li>
+<li>이미 <strong>더 덥고</strong>, 생물물리학적 한계에 더 가깝다. 따라서 추가 온난화의 한계피해가 더 크다.</li>
+<li>적응에 필요한 <strong>수단, 자금, 정치적 의지</strong>가 부족하다. 피해가 소외 계층에 집중되면 정치 엘리트가 적응에 관심을 덜 기울일 수도 있다.</li>
+</ol>
+<p>다만 예외도 있다. 몽골은 가난하지만 추운 나라여서 온난화의 수혜자일 수 있고, 싱가포르는 부유하지만 저지대 섬나라라 해수면 상승에 취약하다. “가난하면 취약하다”는 평균적 패턴일 뿐 법칙은 아니다.</p>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 영국이 스페인의 기후를 갖게 된다면
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>영국의 미래 기후가 지금의 스페인과 비슷해진다면, 영국은 스페인의 관습 - 한낮의 낮잠(시에스타), 열을 차단하는 건축양식 등 - 을 <strong>빌려올 수 있다</strong>. 이미 존재하는 ’답’이 있기 때문이다.</p>
+<p>그러나 지구상에서 가장 더운 지역이 더 더워지면, 참고할 <strong>선례 자체가 존재하지 않는다</strong>. 완전히 새로운 기술, 품종, 생활방식을 <em>발명</em>해야 한다. 가난한 열대 국가일수록 이 문제에 직면하기 쉽다. 적응의 한계가 왜 가난한 나라에서 더 빨리 나타나는지를 보여주는 사례다.</p>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 말라리아와 소득 - 기후만의 문제가 아니다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>1900년경에는 전 세계 육지의 약 53%가 말라리아 발생 지역이었지만, 2002년에는 27%로 줄었다. 그 주된 이유는 기후가 아니라 <strong>경제발전과 방역</strong>(살충제, 모기장 등)이었다. 연 1인당 소득이 약 3,000달러를 넘는 나라에서는 자국 내 말라리아 사망이 사실상 사라진다.</p>
+<p>1999년의 한 연구는 기후변화만 고려하면 기후 관련 말라리아 사망이 연 7만 5천 명에서 세기 말 약 25만 명으로, 인구 증가까지 더하면 2100년 약 75만 명으로 늘어날 것으로 예측했다. 그러나 경제성장까지 함께 고려하면 사망은 늘다가 2085년경 근절된다고 보았다. 실제로는 그 후 모기장 보급 등으로 말라리아 사망이 크게 줄어, 그 예측은 이미 낡은 것이 되었다.</p>
+<p>이 사례의 교훈은 두 가지다. 첫째, 기후변화의 건강 영향은 <strong>소득과 보건정책과 떼어놓고 볼 수 없다.</strong> 둘째, 장기 예측은 겸손해야 한다. 몇 년 뒤의 정책과 기술 변화가 가장 정교한 모형의 전망조차 뒤집을 수 있다. 다만 말라리아의 위험도 기온뿐 아니라 방역·주거·의료와 관련되므로, 하나의 소득 문턱으로 소멸 여부를 예측할 수는 없다 <span class="citation" data-cites="tol2023 ipcc2022wg2ch16">(<a href="references.html#ref-tol2023" role="doc-biblioref">Tol 2023년</a>; <a href="references.html#ref-ipcc2022wg2ch16" role="doc-biblioref">O’Neill 기타 2022년</a>)</span>.</p>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 셸링 추측(Schelling Conjecture)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>노벨경제학상 수상자 토머스 셸링(Thomas Schelling)은 가난한 나라에 대한 기후변화의 피해는 배출을 줄이는 것보다 <strong>개발원조(경제발전 지원)</strong>를 통해 더 빠르게 줄일 수 있다고 주장했다. 가난 자체가 기후 취약성의 핵심 원인이기 때문이다. 앞의 말라리아 사례가 이 주장을 뒷받침하는 예다.</p>
+<p>실제 공적개발원조(ODA) 가운데 기후 관련 비중은 2010-2019년 평균으로 적응 약 8%, 완화 약 11%에 그치고, 나머지 81%는 일반 개발원조였다. 셸링 추측에 대해서는 비판도 있다. ‘기후 전용’ 자금이 기존 개발원조를 <strong>대체</strong>할 뿐 순지원액은 늘지 않을 수 있고, 기후 전문가가 개발의 우선순위를 잘못 판단할 위험도 있다. 무엇보다 발전이 모든 기후피해를 상쇄한다는 명제는 아니다. 셸링 추측은 발전정책과 기후정책이 서로 연결되어 있다는 점을 보여준다.</p>
+</div>
+</div>
+</section>
+<section id="탄소의-사회적-비용" class="level2">
+<h2 class="anchored" data-anchor-id="탄소의-사회적-비용">탄소의 사회적 비용</h2>
+<section id="한계적-영향-정책은-한-단위-더에-의존한다" class="level3">
+<h3 class="anchored" data-anchor-id="한계적-영향-정책은-한-단위-더에-의존한다">한계적 영향: 정책은 ’한 단위 더’에 의존한다</h3>
+<p>1-3장에서 배운 원리 그대로, 정책 결정은 <strong>한계</strong> 비용과 편익에 의존한다. 그런데 기후변화는 전 지구적이고 장기적이어서 한계 비용과 편익을 계산하기 어렵다. 기후에 영향을 주는 것은 모든 나라가 수십 년에 걸쳐 <strong>누적한</strong> 배출량이기 때문이다. 온실가스 배출 <strong>한 단위</strong>가 초래하는 추가 피해를 <strong>한계피해비용(marginal damage cost)</strong>이라 하며, 이를 흔히 <strong>탄소의 사회적 비용(Social Cost of Carbon, SCC)</strong>이라 부른다.</p>
+</section>
+<section id="scc의-정의" class="level3">
+<h3 class="anchored" data-anchor-id="scc의-정의">SCC의 정의</h3>
+<p><strong>탄소의 사회적 비용</strong>은 특정 시점에 CO₂를 한 톤 추가 배출했을 때 발생하는 미래의 추가 피해를 그 배출 시점의 가치로 환산한 금액이다. 조금 더 엄밀하게 말하면, 배출량의 아주 작은 변화로 인해 달라지는 화폐가치화된 영향의 순현재가치(NPV) 변화를 그 배출량 변화로 나눈 값이다. 총피해를 총배출량으로 나눈 평균비용과는 다르다.</p>
+<p>SCC의 성질을 정리하면 다음과 같다.</p>
+<ul>
+<li><strong>감축의 편익이기도 하다.</strong> 작은 변화에서는 한 톤 더 배출할 때의 한계피해와 한 톤 줄일 때의 한계편익이 같다. 그래서 SCC는 감축정책의 편익을 재는 가격표가 된다.</li>
+<li><strong>기후정책의 강도를 보여주는 척도다.</strong> SCC가 크면 더 강한 감축이 정당화된다.</li>
+<li><strong>최적에서는 피구세와 같다.</strong> 배출 경로가 사회적으로 최적이라면, SCC는 정확히 순후생을 극대화하기 위해 배출에 매겨야 할 가격, 즉 피구세와 같다.</li>
+<li><strong>많은 가정에 의존한다.</strong> 할인율, 피해함수, 배출 시나리오 등에 따라 추정치가 연구마다 크게 다르다.</li>
+</ul>
+</section>
+<section id="왜-사회적-비용인가" class="level3">
+<h3 class="anchored" data-anchor-id="왜-사회적-비용인가">왜 ‘사회적’ 비용인가</h3>
+<p>CO₂를 배출한 가계와 기업은 그 비용을 부담하지 않고, <strong>사회가 대신</strong> 부담한다. 우리는 휘발유 값은 내지만, 그 배출이 부를 폭염·홍수·흉작의 비용은 내지 않는다. 즉 이 비용은 배출자의 의사결정 <strong>바깥에</strong> 있다. 4장의 외부효과 그 자체다. SCC는 탄소 1톤이 만드는 <strong>한계 외부비용</strong>이다.</p>
+<p>그래서 SCC는 탄소세의 근거가 된다. 내가 배출한 1톤이 사회에 100달러의 피해를 준다면, 나에게 톤당 100달러를 물려 그 피해를 스스로 부담하게 하면 된다. 이것이 외부효과의 내재화다(Pindyck, <em>Climate Future</em>, 2022, 3.1절).</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">중요</span>용어 주의: 미시경제학의 ’사회적 비용’과 다르다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>미시경제학 교과서에서 사회적 한계비용은 사적 비용과 외부비용의 <strong>합계</strong>다. 그런데 기후 문헌에서 SCC는 관례적으로 <strong>외부비용만</strong>을 가리킨다.</p>
+<p><span class="math display">\[\text{SMC}_{\text{CO}_2} = \text{PMC}_{\text{CO}_2} + \underbrace{\text{SCC}}_{\text{외부비용}}\]</span></p>
+<p>같은 ’사회적 비용’이라는 말이 서로 다른 대상을 가리키므로 혼동하지 않도록 주의하자.</p>
+</div>
+</div>
+</section>
+<section id="scc의-수식-표현" class="level3">
+<h3 class="anchored" data-anchor-id="scc의-수식-표현">SCC의 수식 표현</h3>
+<p>배출 시점을 <span class="math inline">\(t\)</span>, 미래 시점을 <span class="math inline">\(s\)</span>, 실질 할인율을 <span class="math inline">\(r\)</span>라 하면 단순한 확실성 모형에서</p>
+<p><span class="math display">\[
+\mathrm{SCC}_t
+=\sum_{s=t}^{H}
+\frac{\partial D_s/\partial E_t}{(1+r)^{s-t}}
+\]</span></p>
+<p>로 나타낼 수 있다. <span class="math inline">\(\partial D_s/\partial E_t\)</span>는 오늘의 배출 한 톤이 미래 <span class="math inline">\(s\)</span>의 피해를 얼마나 바꾸는지다. 탄소순환, 기온 반응, 적응과 경제 경로가 이 항에 들어간다. 분모의 <span class="math inline">\((1+r)^{s-t}\)</span>는 먼 미래의 피해일수록 현재가치로 작게 환산하는 할인을 나타낸다. 총피해의 현재가치를 먼저 구성한 뒤 현재 배출량으로 미분하는 것과 같은 원리다. 할인은 7장, 불확실한 상태별 가치평가는 9장에서 설명한다 <span class="citation" data-cites="nordhaus2017">(<a href="references.html#ref-nordhaus2017" role="doc-biblioref">Nordhaus 2017년</a>)</span>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>계산 예제 5.2 | 한계피해의 현재가치
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>오늘 CO₂를 한 톤 더 배출하면 1년 뒤 10달러, 2년 뒤 10달러의 추가 피해가 발생하고 이후 추가 피해는 없다고 가정하자. 할인율이 연 3%이면 SCC는</p>
+<p><span class="math display">\[
+\frac{10}{1.03}+\frac{10}{1.03^2}=19.13\text{달러/tCO₂}
+\]</span></p>
+<p>다. 이 예제의 10달러는 <strong>추가 한 톤이 만든 피해의 차이</strong>이며 경제 전체의 피해가 아니다. 실제 모형에서 미래 피해를 계산 기간 밖에서 0으로 두는 것은 별도의 절단 가정이다. 할인율이 양수라는 이유만으로 그 이후 피해가 실제로 사라지는 것은 아니다.</p>
+<p><strong>한 걸음 더.</strong> 할인율을 1%로 낮추면 SCC는 <span class="math inline">\(10/1.01+10/1.01^2\simeq19.70\)</span>달러가 된다. 피해가 2년이 아니라 200년에 걸쳐 나타난다면 할인율의 차이는 훨씬 큰 차이를 만든다. 이것이 SCC 논쟁에서 할인율이 핵심인 이유다.</p>
+</div>
+</div>
+</section>
+<section id="scc는-어떻게-추정하는가-통합평가모형" class="level3">
+<h3 class="anchored" data-anchor-id="scc는-어떻게-추정하는가-통합평가모형">SCC는 어떻게 추정하는가: 통합평가모형</h3>
+<p>실제 SCC는 <strong>통합평가모형(Integrated Assessment Model, IAM)</strong>으로 추정한다. IAM은 기후 모형과 경제 모형을 결합해 자연과 사회경제 과정을 함께 모델링한다. 대략 다음 단계를 거친다.</p>
+<ol type="1">
+<li>인구와 경제성장 등을 바탕으로 <strong>미래 배출량</strong>을 예측한다.</li>
+<li>기온 상승, 해수면 상승 등 <strong>미래 기후 반응</strong>을 모델링한다.</li>
+<li>농업, 보건, 에너지 수요 등에 미치는 <strong>경제적 영향</strong>을 평가한다.</li>
+<li>미래의 피해를 <strong>현재가치로 환산</strong>해 모두 더한다.</li>
+<li>오늘 1톤을 추가로 배출한 경로에 대해 같은 계산을 반복하고, 두 결과의 차이를 구한다.</li>
+</ol>
+<p>간단한 IAM은 10장에서 직접 만들어 본다.</p>
+</section>
+<section id="scc-추정치의-폭과-활용" class="level3">
+<h3 class="anchored" data-anchor-id="scc-추정치의-폭과-활용">SCC 추정치의 폭과 활용</h3>
+<p>SCC 추정치는 연구와 가정에 따라 수 배에서 수십 배까지 차이가 날 만큼 폭이 넓다. 가장 큰 이유는 <strong>할인율</strong>이다. 그럼에도 SCC는 비용-편익 분석의 핵심 투입값으로 쓰인다. 배출을 늘리는 정책의 비용과 배출을 줄이는 정책의 편익을 같은 가격으로 환산해 비교할 수 있기 때문이다.</p>
+<p>예를 들어 SCC가 톤당 50달러라고 하자. 정책 A가 배출을 50만 톤 늘린다면 그 기후 비용은 <span class="math inline">\(50\text{만}\times50=2{,}500\)</span>만 달러이고, 정책 B가 배출을 50만 톤 줄인다면 그 기후 편익도 2,500만 달러다. 같은 가격표로 서로 다른 정책의 비용과 편익을 직접 비교할 수 있다(RFF, “Social Cost of Carbon 101”).</p>
+</section>
+<section id="실제로는-미국-정부의-scc는-어떻게-변해-왔나" class="level3">
+<h3 class="anchored" data-anchor-id="실제로는-미국-정부의-scc는-어떻게-변해-왔나">실제로는: 미국 정부의 SCC는 어떻게 변해 왔나</h3>
+<p>미국은 연방 규제의 비용-편익 분석에 SCC를 사용해 왔다. 그런데 그 값은 정권에 따라 크게 바뀌었다.</p>
+<table class="caption-top table">
+<caption>미국 정부의 SCC 변화. 달러와 배출 기준 연도는 보고서마다 조금씩 다르다. 2026년 가을 기준. 출처: IWG(2010, 2016, 2021); EPA(2023); 행정명령 14154; OMB M-25-27(2025).</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">시기·주체</th>
+<th style="text-align: left;">대표값($/tCO₂)</th>
+<th style="text-align: left;">무엇이 바뀌었나</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2010 정부 간 작업반(IWG)</td>
+<td style="text-align: left;">21 (2010년 배출)</td>
+<td style="text-align: left;">DICE·FUND·PAGE 세 IAM의 평균, 할인율 3%, 전 지구 피해</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2013·2016 IWG 개정</td>
+<td style="text-align: left;">37 → 42</td>
+<td style="text-align: left;">모형 갱신. 2016년 값은 2020년 배출 기준</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2017 트럼프 1기</td>
+<td style="text-align: left;">약 1-7</td>
+<td style="text-align: left;"><strong>국내 피해만</strong> 셈, 할인율 3%·7%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 IWG 잠정치</td>
+<td style="text-align: left;">51 (5%: 14, 2.5%: 76)</td>
+<td style="text-align: left;">2016년 방식으로 복귀, 물가만 반영</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 EPA 최종 보고서</td>
+<td style="text-align: left;"><strong>190</strong> (2.5%: 120, 1.5%: 340)</td>
+<td style="text-align: left;">새 피해함수(RFF의 GIVE 모형 등), <strong>할인율 2%</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025~ 트럼프 2기</td>
+<td style="text-align: left;">사실상 0</td>
+<td style="text-align: left;">행정명령 14154로 IWG 해체·추정치 철회, 법이 요구할 때만 기후 피해를 셈</td>
+</tr>
+</tbody>
+</table>
+<p>같은 1톤인데 0달러에서 190달러까지 달라진다. 차이의 대부분은 과학이 아니라 두 가지 선택에서 나온다.</p>
+<ul>
+<li><strong>할인율</strong>: 51달러에서 190달러로의 변화 가운데 상당 부분은 할인율을 3%에서 2%로 낮춘 결과다.</li>
+<li><strong>셈의 범위</strong>: 전 지구의 피해를 셀 것인가, 자국의 피해만 셀 것인가. 미국 국내 피해만 세면 값은 크게 작아진다.</li>
+</ul>
+<p>SCC는 정해진 자연 상수가 아니라 <strong>가치판단이 담긴 정책 변수</strong>다. 할인율은 7장에서 다룬다.</p>
+</section>
+<section id="추정치의-비교-기준" class="level3">
+<h3 class="anchored" data-anchor-id="추정치의-비교-기준">추정치의 비교 기준</h3>
+<p>SCC를 비교할 때에는 배출연도, 가격 기준연도, 통화, 실질 할인율, 피해의 지리적 범위, 포함한 부문과 분석기간을 함께 확인해야 한다. 달러/tC와 달러/tCO₂도 다르다. 탄소 1톤은 CO₂ 약 <span class="math inline">\(44/12=3.667\)</span>톤에 해당하므로, 같은 피해를 표시한 달러/tC 값을 3.667로 나누어야 달러/tCO₂가 된다.</p>
+<p>정부의 정책평가에 쓰이는 수치와 학술적 추정치도 구분해야 한다. 정부가 특정 값을 채택하거나 평가 지침을 변경하는 일은 행정적 판단이며, 물리적 피해 자체가 그때 사라지거나 생긴다는 뜻이 아니다. 이 책에서는 한 개의 수치를 보편적인 정답으로 제시하기보다, 무엇을 가정하면 어떤 값이 나오는지 설명하는 데 초점을 둔다.</p>
+</section>
+</section>
+<section id="사례-기후손해배상-소송---누가-피해-비용을-부담하는가" class="level2">
+<h2 class="anchored" data-anchor-id="사례-기후손해배상-소송---누가-피해-비용을-부담하는가">사례: 기후손해배상 소송 - 누가 피해 비용을 부담하는가</h2>
+<section id="볼더-기후소송" class="level3">
+<h3 class="anchored" data-anchor-id="볼더-기후소송">볼더 기후소송</h3>
+<p>SCC와 탄소세는 배출 <strong>이전에</strong> 가격을 매겨 외부효과를 내재화하는 방법이다. 그런데 이미 발생한 피해에 대해 배출자에게 <strong>사후에</strong> 책임을 묻는 방법도 있다. 미국 콜로라도주 볼더(Boulder) 시와 카운티의 기후소송이 대표적 사례다.</p>
+<ul>
+<li><strong>당사자.</strong> 원고는 콜로라도 주정부가 아니라 볼더 시와 볼더 카운티이고, 피고는 석유기업 엑손모빌(ExxonMobil)과 선코(Suncor)다.</li>
+<li><strong>청구 내용.</strong> 2018년 제소된 이 소송에서 원고는 피고 기업들이 화석연료의 위험을 알면서도 오도하는 홍보 등을 통해 기후피해에 기여했다고 주장한다. 기업들은 위법행위를 부인한다. 원고가 요구하는 것은 <strong>금전적 배상</strong>으로, 산불 대응, 홍수 방지 시설, 가뭄 대응 등 과거와 미래의 지역 비용 일부를 기업이 부담하라는 것이다.</li>
+<li><strong>진행 상황.</strong> 콜로라도주 대법원은 2025년 이 청구가 진행될 수 있다고 판단했다. 2026년 10월 5일 미국 연방대법원은 <em>Suncor Energy v. Boulder County</em> (No.&nbsp;25-170) 사건의 구두변론을 열었다. 쟁점은 주(州)법에 따른 이런 청구가 애초에 가능한가이다. 기업들은 대기오염에 관한 연방의 권한이 이런 주법상 청구를 배제한다고 주장한다. 로이터 보도에 따르면 변론에서 커탄지 브라운 잭슨 대법관은 이 단계의 판단이 “다소 이르다(sort of premature)”는 취지의 의문을 제기하기도 했다. <strong>현재는 기업의 책임이나 배상액이 확정된 단계가 아니다.</strong></li>
+</ul>
+<p>출처: John Kruzel and Andrew Chung, “US Supreme Court wrestles with oil companies’ bid to scuttle climate lawsuit,” <em>Reuters</em> (2026.10.5); Colorado Supreme Court opinion (2025); Boulder County 사건 개요(원고 측 설명). 사건 상태 기준일: 2026.10.6.</p>
+</section>
+<section id="탄소세와-기후손해배상-외부효과를-내재화하는-두-경로" class="level3">
+<h3 class="anchored" data-anchor-id="탄소세와-기후손해배상-외부효과를-내재화하는-두-경로">탄소세와 기후손해배상: 외부효과를 내재화하는 두 경로</h3>
+<table class="caption-top table">
+<caption>외부효과를 내재화하는 두 경로.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">탄소세: 사전 가격 부과</th>
+<th style="text-align: left;">기후손해배상: 사후 책임 부과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">기준</td>
+<td style="text-align: left;">추가 배출 1톤의 기대 한계피해(SCC)</td>
+<td style="text-align: left;">입증된 피해와 법적으로 인정된 책임</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">목적</td>
+<td style="text-align: left;">배출 선택의 한계 유인 개선</td>
+<td style="text-align: left;">피해 비용의 보상과 부담 배분</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">시점</td>
+<td style="text-align: left;">배출 시점에 가격 부과(ex ante, 사전)</td>
+<td style="text-align: left;">피해 발생 후 배상 청구(ex post, 사후)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">어려움</td>
+<td style="text-align: left;">SCC 추정, 정책 범위, 집행</td>
+<td style="text-align: left;">인과관계 입증, 책임 배분, 소송 비용</td>
+</tr>
+</tbody>
+</table>
+<p>두 경로는 경제학적으로 연결되어 있다. 사후 배상도 <strong>예상되는 책임</strong>을 통해 현재 행동에 영향을 줄 수 있다. 미래에 배상해야 할 수도 있다고 예상하는 기업은 지금 배출과 정보 공개에 더 신중해질 것이다. 다만 불확실하고 제한적인 배상이 곧 최적 탄소가격과 같은 효과를 낸다고 볼 수는 없다.</p>
+</section>
+<section id="scc와-배상액은-다르다" class="level3">
+<h3 class="anchored" data-anchor-id="scc와-배상액은-다르다">SCC와 배상액은 다르다</h3>
+<ul>
+<li><strong>SCC</strong>는 특정 시점에 추가로 배출한 1톤이 만드는 <strong>전 지구의</strong> 미래 피해의 현재가치다. 최적 조건에서는 피구세의 기준이 된다.</li>
+<li><strong>배상액</strong>은 특정 원고의 손실 가운데 피고의 행위에 귀속되고 법적으로 회복 가능한 부분이다. 지역, 기간, 인과관계와 법적 기준이 중요하다.</li>
+</ul>
+<p>따라서 <strong>기업의 누적 배출량 × 현재 SCC</strong>를 곧바로 볼더의 배상액으로 볼 수 없다. 또한 배상금은 피해 비용의 부담을 피해자에게서 기업으로 옮기는 <strong>이전</strong>이다. 이미 발생한 물리적 피해를 없애지는 않는다. 사회 전체의 후생이 개선되는지는 예방 유인, 적응 재원, 소송과 집행의 비용까지 따져야 한다.</p>
+</section>
+<section id="피해-입증과-책임-배분" class="level3">
+<h3 class="anchored" data-anchor-id="피해-입증과-책임-배분">피해 입증과 책임 배분</h3>
+<p>기후소송에서 책임을 묻기 위해서는 세 단계의 질문에 답해야 한다.</p>
+<ol type="1">
+<li><strong>기후 귀속(attribution)</strong>: 인간 활동이 온난화와 재해의 확률·강도를 얼마나 바꾸었는가? (1장의 사건 귀속 연구)</li>
+<li><strong>피해 귀속</strong>: 그 변화가 지역의 손실과 대응 비용을 얼마나 늘렸는가? 노출, 취약성, 적응과 다른 원인도 고려해야 한다.</li>
+<li><strong>책임 배분(apportionment)</strong>: 그 피해 가운데 각 기업의 행위에 법적으로 귀속되는 몫은 얼마인가?</li>
+</ol>
+<p>이를 강의용으로 단순화하면 “지역 손실 × 기후변화 귀속 비중 × 기업 책임 비중”으로 분해해 볼 수 있다. 그러나 이는 법원이 확정한 산식이 아니다. 각 비중에는 불확실성이 있고, 배출 기여도만으로 위법성이나 법적 인과관계가 자동으로 입증되지도 않는다.</p>
+</section>
+<section id="주법과-연방법-지역-배상이-전-지구-배출-규제인가" class="level3">
+<h3 class="anchored" data-anchor-id="주법과-연방법-지역-배상이-전-지구-배출-규제인가">주법과 연방법: 지역 배상이 전 지구 배출 규제인가</h3>
+<p>이 소송의 핵심 법적 쟁점은 경제학적 긴장과도 연결된다. 볼더 측은 이것이 지역 피해에 대한 주법상 구제이며, 기만적 행위 등을 이유로 비용 일부를 회수하는 청구라는 입장이다. 기업 측은 전 지구 배출에 한 주의 법을 적용하면 사실상 그 주가 기후정책을 정하게 되며, 헌법과 연방 대기청정법(Clean Air Act)이 이런 청구를 막는다는 입장이다. 법적으로는 연방법이 주법상 청구를 배제하는가(선점, preemption)가 쟁점이다.</p>
+<p>경제학적으로 보면, 이는 <strong>지역 피해의 보상</strong>과 <strong>전 지구 외부효과의 관리</strong> 사이의 긴장이다. 분권적인 책임 추궁은 피해자에게 구제 수단을 주고 기업에 정보 공개 유인을 줄 수 있지만, 여러 지역에서 같은 배출에 대해 중복 청구가 일어나거나 관할 간 조정이 어려워질 수 있다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 토론 - 기후손해배상은 탄소가격을 보완할 수 있는가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>탄소세가 충분하지 않을 때, 예상되는 배상책임은 기업의 배출과 정보 공개 유인을 어떻게 바꾸는가?</li>
+<li>배출 기여도와 기만적 행위 가운데 무엇을 기준으로 책임을 배분해야 하는가? 효율성과 형평성은 같은 답을 주는가?</li>
+<li>탄소가격과 배상제도가 함께 존재할 때, 같은 피해에 대해 두 번 부담하지 않도록 예방 유인과 보상을 어떻게 조정할 것인가?</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<ul>
+<li><strong>피해의 경로.</strong> 기후피해는 물리적 변화와 사회경제적 조건(노출, 취약성)이 함께 만든다. 농업, 건강, 노동, 해수면, 에너지, 생태계에 걸쳐 영향이 나타나며, 영향은 양방향일 수 있다. IPCC의 다섯 가지 우려 요인은 서로 다른 성격의 위험을 함께 보게 한다.</li>
+<li><strong>적응.</strong> 감축은 원인을, 적응은 결과를 줄인다. 적응은 피해를 줄이지만 자원을 사용하므로 적응비용과 잔여피해를 함께 계산해야 한다. 적응을 빼먹으면 피해가 과대평가되고(바보 농부 가설), 적응비용을 빼먹으면 과소평가된다. 정부는 촉진자, 규제자, 제공자로서 적응을 돕는다.</li>
+<li><strong>가치평가.</strong> 현시선호법과 진술선호법으로 비시장 가치를 추정한다. 화폐가치는 비교를 돕는 공통 단위이지만 생태적 한계와 분배 문제를 대신 판단해 주지 않는다.</li>
+<li><strong>총피해(참고).</strong> 총경제적 영향 추정치는 2.5°C에서 소득의 1-2% 수준으로 계산되기도 하지만, 불확실성이 크고 나쁜 쪽으로 치우쳐 있으며, 가난하고 더운 나라에 피해가 집중된다.</li>
+<li><strong>SCC.</strong> 정책에 필요한 한계적 지표는 추가 배출의 미래 피해를 현재가치로 평가한 SCC다. 최적에서는 피구세와 같다. 미국 정부의 SCC가 0달러에서 190달러까지 달라진 것은 주로 할인율과 셈의 범위라는 가치판단 때문이다.</li>
+<li><strong>기후손해배상.</strong> 탄소세가 사전적 가격이라면 기후소송은 사후적 책임이다. 배상액은 SCC와 다르며, 피해 귀속과 책임 배분이라는 별도의 문제를 풀어야 한다.</li>
+</ul>
+<p>다음 장에서는 그 피해를 피하기 위해 필요한 감축비용을 살펴본다. 감축의 편익(SCC)과 비용을 같은 기준에서 비교해야 정책의 규모와 수단을 판단할 수 있다.</p>
+</section>
+<section id="생각해-볼-문제" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="생각해-볼-문제">생각해 볼 문제</h2>
+<ol type="1">
+<li>적응을 고려하지 않은 피해 추정은 과대평가되기 쉽다. 그렇다면 적응을 고려한 추정은 언제나 정확한가? 적응 비용과 적응의 한계를 함께 고려해 논의하라.</li>
+<li>2003년 프랑스 폭염에서 드러난 문제들을 정부의 세 역할(촉진자, 규제자, 제공자)로 분류해 보고, 한국의 폭염 대응에서 개선할 점을 제안하라.</li>
+<li>북극곰 서식지 보전의 가치를 측정하려면 현시선호법과 진술선호법 가운데 어느 쪽이 적합한가? 그 이유와 한계는?</li>
+<li>미국 정부의 SCC가 국내 피해만 셀 때 크게 작아지는 이유는 무엇인가? 한국이 SCC를 정한다면 전 지구 피해와 국내 피해 가운데 무엇을 기준으로 해야 한다고 생각하는가?</li>
+<li>볼더 기후소송에서 원고가 승소한다면, 이는 탄소세를 도입한 것과 같은 효과를 내는가? 같은 점과 다른 점을 정리하라.</li>
+</ol>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-burke2015" class="csl-entry" role="listitem">
+Burke, Marshall, Solomon M. Hsiang, 와/과 Edward Miguel. 2015년. <span>“Global Non-linear Effect of Temperature on Economic Production”</span>. <em>Nature</em> 527: 235–39.
+</div>
+<div id="ref-deschenes2007" class="csl-entry" role="listitem">
+Deschênes, Olivier, 와/과 Michael Greenstone. 2007년. <span>“The Economic Impacts of Climate Change: Evidence from Agricultural Output and Random Fluctuations in Weather”</span>. <em>American Economic Review</em> 97 (1): 354–85. <a href="https://doi.org/10.1257/aer.97.1.354">https://doi.org/10.1257/aer.97.1.354</a>.
+</div>
+<div id="ref-hsiang2018" class="csl-entry" role="listitem">
+Hsiang, Solomon, 와/과 Robert E. Kopp. 2018년. <span>“An Economist’s Guide to Climate Change Science”</span>. <em>Journal of Economic Perspectives</em> 32 (4): 3–32.
+</div>
+<div id="ref-mendelsohn1994" class="csl-entry" role="listitem">
+Mendelsohn, Robert, William D. Nordhaus, 와/과 Daigee Shaw. 1994년. <span>“The Impact of Global Warming on Agriculture: A Ricardian Analysis”</span>. <em>American Economic Review</em> 84 (4): 753–71.
+</div>
+<div id="ref-nordhaus2017" class="csl-entry" role="listitem">
+Nordhaus, William D. 2017년. <span>“Revisiting the Social Cost of Carbon”</span>. <em>Proceedings of the National Academy of Sciences</em> 114 (7): 1518–23.
+</div>
+<div id="ref-ipcc2022wg2ch16" class="csl-entry" role="listitem">
+O’Neill, Brian, Maarten van Aalst, Zelina Zaiton Ibrahim, 기타. 2022년. <span>“Key Risks Across Sectors and Regions”</span>. Chap. 16 in <em>Climate Change 2022: Impacts, Adaptation and Vulnerability. Contribution of Working Group II to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change</em>, <span class="nocase">편집자： Hans-Otto Pörtner, Debra C. Roberts, 기타</span>. Cambridge University Press. <a href="https://doi.org/10.1017/9781009325844.025">https://doi.org/10.1017/9781009325844.025</a>.
+</div>
+<div id="ref-park2020" class="csl-entry" role="listitem">
+Park, R. Jisung, Joshua Goodman, Michael Hurwitz, 와/과 Jonathan Smith. 2020년. <span>“Heat and Learning”</span>. <em>American Economic Journal: Economic Policy</em> 12 (2): 306–39. <a href="https://doi.org/10.1257/pol.20180612">https://doi.org/10.1257/pol.20180612</a>.
+</div>
+<div id="ref-schlenker2009" class="csl-entry" role="listitem">
+Schlenker, Wolfram, 와/과 Michael J. Roberts. 2009년. <span>“Nonlinear Temperature Effects Indicate Severe Damages to U.S. Crop Yields under Climate Change”</span>. <em>Proceedings of the National Academy of Sciences</em> 106 (37): 15594–98. <a href="https://doi.org/10.1073/pnas.0906865106">https://doi.org/10.1073/pnas.0906865106</a>.
+</div>
+<div id="ref-tol2023" class="csl-entry" role="listitem">
+Tol, Richard S. J. 2023년. <em>Climate Economics: Economic Analysis of Climate, Climate Change and Climate Policy</em>. 3rd ed. Edward Elgar Publishing.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/hocheoljeon\.github\.io\/climate-econ-book\/");
+      const newWindowLabel = "(opens in a new tab)";
+      const newWindowNoteId = "quarto-ext-newwindow-label";
+      // Links reference one hidden label through aria-describedby, so the
+      // announcement never changes their accessible name.
+      var describeNewWindow = (link) => {
+        if (!window.document.getElementById(newWindowNoteId)) {
+          var newWindowNote = window.document.createElement("span");
+          newWindowNote.id = newWindowNoteId;
+          newWindowNote.hidden = true;
+          newWindowNote.textContent = newWindowLabel;
+          window.document.body.appendChild(newWindowNote);
+        }
+        var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(newWindowNoteId)) {
+          describedBy.push(newWindowNoteId);
+          link.setAttribute("aria-describedby", describedBy.join(" "));
+        }
+      }
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            describeNewWindow(link);
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"스크롤 가능한 코드","output":"스크롤 가능한 출력"};
+  </script>
+<nav class="page-navigation" aria-label="페이지">
+  <div class="nav-page nav-page-previous">
+      <a href="./04-market-failure.html" class="pagination-link" aria-label="시장실패와 기후변화">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">시장실패와 기후변화</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./06-abatement-costs.html" class="pagination-link" aria-label="온실가스 감축비용">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">온실가스 감축비용</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>전호철 · 기후변화경제학 · 1–9장</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>CC BY-NC-SA 4.0 · 제3자 자료는 별도 출처 참조</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

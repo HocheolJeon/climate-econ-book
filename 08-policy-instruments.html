@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; 기후정책의 수단과 설계 – 기후변화경제학</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./09-uncertainty-risk.html" rel="next">
+<link href="./07-discounting.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8bf607cc09aff24488a246d4e52bb127.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="도구 모음">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="사이트 이동 경로"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08-policy-instruments.html">제IV부 정책수단과 불확실성</a></li><li class="breadcrumb-item"><a href="./08-policy-instruments.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기후정책의 수단과 설계</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="웹사이트">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">기후변화경제학</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">책 소개</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">교재 안내</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">제I부 기후와 경제</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-what-is-climate-change.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">기후변화의 과학적 기초</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-climate-economy-link.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">기후와 경제의 상호작용</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">제II부 시장과 시장실패</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-market-efficiency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">시장과 경제적 효율성</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-market-failure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">시장실패와 기후변화</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">제III부 피해·비용과 시간</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-climate-damages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">기후변화의 피해와 적응</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-abatement-costs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">온실가스 감축비용</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-discounting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">할인과 비용편익 분석</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">제IV부 정책수단과 불확실성</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-policy-instruments.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기후정책의 수단과 설계</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-uncertainty-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">불확실성·위험과 기후정책</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">참고문헌</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul class="collapse">
+  <li><a href="#들어가며-감축을-어떻게-시킬-것인가" id="toc-들어가며-감축을-어떻게-시킬-것인가" class="nav-link active" data-scroll-target="#들어가며-감축을-어떻게-시킬-것인가">들어가며: 감축을 어떻게 “시킬” 것인가</a></li>
+  <li><a href="#정책수단의-분류" id="toc-정책수단의-분류" class="nav-link" data-scroll-target="#정책수단의-분류">정책수단의 분류</a></li>
+  <li><a href="#비용효과성과-등한계-원칙" id="toc-비용효과성과-등한계-원칙" class="nav-link" data-scroll-target="#비용효과성과-등한계-원칙">비용효과성과 등한계 원칙</a></li>
+  <li><a href="#탄소세와-보조금" id="toc-탄소세와-보조금" class="nav-link" data-scroll-target="#탄소세와-보조금">탄소세와 보조금</a></li>
+  <li><a href="#배출권거래제" id="toc-배출권거래제" class="nav-link" data-scroll-target="#배출권거래제">배출권거래제</a></li>
+  <li><a href="#감시집행과-국제적-연계" id="toc-감시집행과-국제적-연계" class="nav-link" data-scroll-target="#감시집행과-국제적-연계">감시·집행과 국제적 연계</a></li>
+  <li><a href="#가격-수단-vs.-수량-수단" id="toc-가격-수단-vs.-수량-수단" class="nav-link" data-scroll-target="#가격-수단-vs.-수량-수단">가격 수단 vs.&nbsp;수량 수단</a></li>
+  <li><a href="#기술혁신과-동태적-효율성" id="toc-기술혁신과-동태적-효율성" class="nav-link" data-scroll-target="#기술혁신과-동태적-효율성">기술혁신과 동태적 효율성</a></li>
+  <li><a href="#배출권의-초기-배분" id="toc-배출권의-초기-배분" class="nav-link" data-scroll-target="#배출권의-초기-배분">배출권의 초기 배분</a></li>
+  <li><a href="#세수-활용과-이중배당" id="toc-세수-활용과-이중배당" class="nav-link" data-scroll-target="#세수-활용과-이중배당">세수 활용과 이중배당</a></li>
+  <li><a href="#정책-성과와-부수적-편익" id="toc-정책-성과와-부수적-편익" class="nav-link" data-scroll-target="#정책-성과와-부수적-편익">정책 성과와 부수적 편익</a></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#생각해-볼-문제" id="toc-생각해-볼-문제" class="nav-link" data-scroll-target="#생각해-볼-문제">생각해 볼 문제</a></li>
+  <li><a href="#읽을거리" id="toc-읽을거리" class="nav-link" data-scroll-target="#읽을거리">읽을거리</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="사이트 이동 경로"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08-policy-instruments.html">제IV부 정책수단과 불확실성</a></li><li class="breadcrumb-item"><a href="./08-policy-instruments.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기후정책의 수단과 설계</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기후정책의 수단과 설계</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>학습목표
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>외부효과가 있을 때 정부 개입이 정당화되는 이유를 후생경제학 정리로 설명할 수 있다.</li>
+<li>직접규제와 시장기반 수단(탄소세·보조금·배출권거래제)의 작동 원리를 비교하고, 네 가지 평가기준으로 평가할 수 있다.</li>
+<li>등한계 원칙을 도출하고, 공통 탄소가격이 정부가 기업별 비용을 몰라도 비용효과적 배분을 만드는 이유를 설명할 수 있다.</li>
+<li>한국 배출권거래제(K-ETS)의 구조와 가격 흐름을 이해하고, 감시·집행·연계·상쇄의 쟁점을 설명할 수 있다.</li>
+<li>감축비용이 불확실할 때 가격수단과 수량수단 가운데 무엇이 유리한지 바이츠만 정리로 판단할 수 있다.</li>
+<li>정책수단별 혁신 유인, 배출권의 초기 배분, 세수 활용(이중배당), 부수적 편익을 평가할 수 있다.</li>
+</ol>
+</div>
+</div>
+<section id="들어가며-감축을-어떻게-시킬-것인가" class="level2">
+<h2 class="anchored" data-anchor-id="들어가며-감축을-어떻게-시킬-것인가">들어가며: 감축을 어떻게 “시킬” 것인가</h2>
+<p>7장에서는 정부가 한계감축비용(MAC)과 한계피해(MD)가 같아지는 곳에서 감축량을 정한다고 가정했다. 그런데 정부가 “몇 톤 줄이는 것이 최적”이라는 답을 알아도, 실제로 배출하는 것은 수많은 기업과 가계다. 이들이 사회적으로 바람직한 만큼 배출을 줄이게 하려면 어떤 제도가 필요할까? 이 장은 그 <strong>집행의 문제</strong>를 다룬다.</p>
+<table class="caption-top table">
+<caption>이 장의 지도. 6장의 MAC와 5장의 MD를 실제로 “같게 만드는” 세 가지 방법과, 불확실성 속에서의 선택을 다룬다.</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">절</th>
+<th style="text-align: left;">질문</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">I. 직접규제</td>
+<td style="text-align: left;">정부가 무엇을, 어떻게 할지 직접 지시하면 어떻게 되는가?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">II. 탄소세</td>
+<td style="text-align: left;">배출에 가격을 매기면(피구세·보조금) 어떻게 되는가?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">III. 배출권거래제</td>
+<td style="text-align: left;">총량을 정하고 거래를 허용하면 어떻게 되는가? 한국은 어떻게 운영하는가?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IV. 가격 vs.&nbsp;수량</td>
+<td style="text-align: left;">감축비용을 정확히 모를 때 어느 방법이 더 안전한가(바이츠만 정리)?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">V. 혁신·배분·세수</td>
+<td style="text-align: left;">장기적인 기술혁신, 배출권을 처음 누구에게 줄지, 걷은 돈을 어디에 쓸지</td>
+</tr>
+</tbody>
+</table>
+<section id="왜-정부-개입이-정당화되는가" class="level3">
+<h3 class="anchored" data-anchor-id="왜-정부-개입이-정당화되는가">왜 정부 개입이 정당화되는가</h3>
+<p>3장에서 배운 <strong>후생경제학 제1정리</strong>는 경쟁시장의 균형이 일정한 조건 아래 파레토 최적이라고 말한다. 이 정리는 흔히 “정부는 시장을 가만히 내버려 두어야 한다”는 주장의 근거로 쓰인다. 그러나 제1정리에는 <strong>외부효과가 없다</strong>는 전제가 있다. 온실가스 배출은 대표적인 외부효과다(4장). 외부효과가 있으면 시장균형은 더 이상 파레토 최적이 아니며, 이것이 <strong>시장실패</strong>다. 이 경우 정부의 개입은 후생을 개선할 수 있고, 따라서 정당화된다.</p>
+<p><strong>후생경제학 제2정리</strong>도 이 장에서 쓸모가 있다. 자원이 처음에 적절히 분배되어 있다면 어떤 파레토 최적도 경쟁시장을 통해 달성할 수 있다는 정리다. 이는 <strong>효율성</strong>(시장이 해결)과 <strong>분배</strong>(초기 배분이 결정)를 분리해 다룰 수 있다는 근거가 된다. 뒤에서 배출권을 누구에게 처음 나누어 줄지 다룰 때 이 생각이 다시 등장한다.</p>
+<p>그러므로 이 장의 질문은 “개입할 것인가”가 아니라 “<strong>어떤 수단으로</strong> 개입할 것인가”다.</p>
+</section>
+</section>
+<section id="정책수단의-분류" class="level2">
+<h2 class="anchored" data-anchor-id="정책수단의-분류">정책수단의 분류</h2>
+<p>정책수단은 크게 두 무리로 나눌 수 있다.</p>
+<table class="caption-top table">
+<caption>정책수단의 분류.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">시장기반 수단(market-based)</th>
+<th style="text-align: left;">직접규제(command-and-control)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">당사자 간 직접 협상(4장의 코즈 정리)</td>
+<td style="text-align: left;">기술 규제(technology control)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">세금·보조금</td>
+<td style="text-align: left;">배출량·피해 통제(output/damage control)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">거래 가능한 배출권(tradable permits)</td>
+<td style="text-align: left;">법적 책임(liability)</td>
+</tr>
+</tbody>
+</table>
+<p>두 무리의 핵심 차이는 <strong>누가 결정하느냐</strong>다. 시장기반 수단은 “얼마나, 어떻게 줄일지”를 오염원이 스스로 선택하게 한다. 직접규제는 정부가 “무엇을, 어떻게” 할지 직접 지시한다. 이 차이가 이 장의 모든 비교를 관통한다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 정보 제공 수단
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>세 번째 무리로 <strong>정보 제공 수단</strong>이 있다. 배출량 공개 의무, 환경 인증 표시, 넛지(예: 이웃 가구와 비교한 에너지 사용 보고서) 같은 것이다. 기후 분야에서는 온실가스 배출량 보고 의무, 탄소발자국 표시, 기업의 배출 공시 등이 해당한다.</p>
+<p>정보 제공 수단은 소비자와 투자자의 정보 비대칭을 줄여 준다. 그러나 외부효과 자체를 교정하지는 못한다. 배출하는 사람이 그 피해를 비용으로 느끼게 만드는 것은 아니기 때문이다. 따라서 주된 수단이 아니라 <strong>보조 수단</strong>으로 보는 것이 적절하다.</p>
+</div>
+</div>
+<section id="직접규제" class="level3">
+<h3 class="anchored" data-anchor-id="직접규제">직접규제</h3>
+<p>직접규제는 가장 흔한 형태의 환경정책이며, 특히 정책입안자에게 인기가 높다. <strong>명령과 통제(command and control)</strong>라고도 부르는데, 정부가 사람과 기업에게 무엇을 하고 하지 말지, 어떻게 하고 하지 말지 지시하는 방식이기 때문이다. 연비 기준, 발전소의 황산화물(SO₂) 배출 한도가 대표적인 예다.</p>
+<p>직접규제는 대상에 따라 여러 유형이 있다.</p>
+<ul>
+<li><strong>투입·기술 규제</strong>: 무연 휘발유 의무화, 촉매변환기 장착 의무, 연비 기준.</li>
+<li><strong>산출·성능 규제</strong>: 발전소 SO₂ 배출 한도, 유아용품의 발암물질 금지.</li>
+<li><strong>제품 규제</strong>: 특정 성분이나 구조의 요건.</li>
+<li><strong>시간·장소 규제</strong>: 심야 비행 금지, 자연보호구역 내 건축 금지, 프레온가스(CFC) 전면 금지.</li>
+</ul>
+<p>이 가운데 특히 구분해야 할 것은 <strong>기술기준</strong>과 <strong>성능기준</strong>이다. 기술기준은 특정 설비나 기술(예: 탈황설비 설치)을 쓰라고 정한다. 성능기준은 산출량당 배출 한도만 정하고 방법은 기업이 고르게 한다. 성능기준이 더 유연하지만, 산출량당 기준이라면 생산이 늘 때 총배출도 늘 수 있다는 한계가 있다.</p>
+<p>직접규제가 제대로 작동하려면 규제자가 규제 대상 활동을 <strong>자세히 알아야</strong> 합리적인 지시를 내릴 수 있다. 따라서 행위자나 사용 기술의 수가 적을 때 잘 작동한다. 배출원과 감축기술이 매우 다양한 온실가스에는 직접규제가 적합하지 않은 경우가 많다.</p>
+<p>그렇다고 직접규제가 언제나 열등한 것은 아니다. 직접규제가 더 나은 경우도 있다.</p>
+<ul>
+<li>기업들의 감축기술이 거의 같아서 <strong>거래의 이득이 작은</strong> 경우.</li>
+<li>오염원이 매우 많고 작아서 배출을 일일이 측정하는 <strong>감시 비용이 과도한</strong> 경우.</li>
+<li>빠른 위험 억제가 필요하거나 최소 안전기준이 중요한 경우.</li>
+</ul>
+<p>기후 분야에서 직접규제가 쓰이는 예로는 자동차 연비 기준, 건물 에너지 기준, 메탄 누출 규제가 있다. 다만 이것이 시장기반 수단보다 반드시 나은 것은 아니다.</p>
+</section>
+<section id="시장기반-수단" class="level3">
+<h3 class="anchored" data-anchor-id="시장기반-수단">시장기반 수단</h3>
+<p>시장기반 수단은 <strong>유인부합적(incentive-compatible)</strong> 수단이라고도 하며 직접규제의 주된 대안이다. 가장 오래된 것은 세금과 보조금이다.</p>
+<p>단기에는 보조금을 세금의 단순한 반대로 볼 수 있다. 배출 한 톤에 1만 원의 세금을 매기든, 한 톤 줄일 때마다 1만 원의 보조금을 주든, 기업이 한 톤 더 줄일 때 얻는 이득은 1만 원으로 같다. 내지 않아도 되는 세금은 감축에 대한 보상과 같기 때문이다. 그러나 두 수단의 <strong>분배 효과</strong>는 다르다.</p>
+<ul>
+<li>세금은 <strong>오염자 부담 원칙(polluter pays principle)</strong>을 따른다. 돈이 가계와 기업에서 정부로 이동한다.</li>
+<li>보조금은 <strong>피해자 부담 원칙(victim pays principle)</strong>을 따른다. 돈이 정부(결국 납세자)에서 가계와 기업으로 이동한다.</li>
+</ul>
+<p><strong>장기</strong>에는 배출량에 미치는 효과도 다르다. 세금은 과세 산업의 <strong>평균 생산비용을 높여</strong> 배출 산업이 세금이 없을 때보다 축소된다. 반대로 감축 보조금은 그 부문의 <strong>평균 사업비용을 낮춰</strong> 추가 투자가 유입되고 배출 부문이 확대된다. 결론적으로, 장기적으로 보조금은 세금에 비해 <strong>총배출량을 늘린다.</strong></p>
+<p><strong>배출권(tradable permits)</strong>은 비교적 최근의 시장기반 수단이다. 규제자가 배출 <strong>총량 상한(cap)</strong>을 정하고, 총량을 단위로 나누어 각 배출원에 배출권을 준다. 배출권이 부족한 기업은 남는 기업에게서 살 수 있다. 이렇게 배출권 시장에서 형성된 가격은 <strong>세금과 똑같이</strong> 작동한다.</p>
+<p>시장기반 수단의 핵심 장점은 규제자가 배출을 <strong>어떻게</strong> 줄일지 정하지 않는다는 데 있다. 그 결정은 자기 비용을 가장 잘 아는 가계와 기업에 맡겨진다.</p>
+</section>
+<section id="어떤-수단이-최선인가-네-가지-기준" class="level3">
+<h3 class="anchored" data-anchor-id="어떤-수단이-최선인가-네-가지-기준">어떤 수단이 “최선”인가: 네 가지 기준</h3>
+<p>정책수단을 비교할 때는 다음 네 가지 기준을 쓴다 <span class="citation" data-cites="keohane2016 tol2023">(<a href="references.html#ref-keohane2016" role="doc-biblioref">Keohane 와/과 Olmstead 2016년</a>; <a href="references.html#ref-tol2023" role="doc-biblioref">Tol 2023년</a>)</span>.</p>
+<ol type="1">
+<li><strong>환경 효과성(environmental effectiveness)</strong>: 목표한 배출량이나 농도를 실제로 달성하는가?</li>
+<li><strong>정태적 비용효과성(static cost-effectiveness)</strong>: 주어진 목표를 <strong>최소 비용</strong>으로 달성하는가?</li>
+<li><strong>동태적 비용효과성(dynamic cost-effectiveness)</strong>: 시간이 지나면서 더 나은 감축기술을 개발할 <strong>혁신 유인</strong>을 주는가?</li>
+<li><strong>정치적 수용성(political acceptability)</strong>: 오염원과 유권자가 받아들일 수 있는가?</li>
+</ol>
+<p>예를 들어 배출권거래제는 총량이 고정되어 있으므로, 감시와 집행이 제대로 된다면 환경 효과성이 가장 확실하다. 반면 탄소세는 기업들이 얼마나 반응할지(MAC)를 정확히 모르면 목표 배출량을 맞추지 못할 수 있다. 이 문제는 IV절에서 자세히 다룬다. 한 기준에서 유리한 수단이 다른 모든 기준에서도 우월한 것은 아니다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 반등효과
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>효율 기준이 환경 효과성을 떨어뜨리는 대표적인 경로가 <strong>반등효과(rebound effect)</strong>다. 연비가 좋아지면 1km를 달리는 비용이 싸지므로 사람들이 더 많이 운전한다. 에너지 서비스가 싸지면서 사용량이 늘어 감축 효과가 일부 상쇄되는 것이다. 19세기 영국의 경제학자 제번스(W. S. Jevons, 1865)는 증기기관의 석탄 효율이 좋아지자 석탄 소비가 오히려 늘었다고 지적했다. 효율 개선 자체는 바람직하지만, 효율 기준만으로 총배출 목표를 달성할 수 있다고 가정해서는 안 된다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="비용효과성과-등한계-원칙" class="level2">
+<h2 class="anchored" data-anchor-id="비용효과성과-등한계-원칙">비용효과성과 등한계 원칙</h2>
+<section id="사회계획자의-문제" class="level3">
+<h3 class="anchored" data-anchor-id="사회계획자의-문제">사회계획자의 문제</h3>
+<p>모든 것을 아는 사회계획자가 목표 배출량 <span class="math inline">\(\bar E\)</span>를 <strong>최소 비용</strong>으로 달성하려 한다고 하자. 기업 <span class="math inline">\(i\)</span>의 규제 이전 배출량을 <span class="math inline">\(e_{i0}\)</span>, 규제 이후 배출량을 <span class="math inline">\(e_i\)</span>라 하면 감축량은 <span class="math inline">\(e_{i0}-e_i\)</span>이고, 감축비용은 <span class="math inline">\(C_i(e_{i0}-e_i)\)</span>다. 사회계획자의 문제는</p>
+<p><span class="math display">\[
+\min_{e_i}\; \sum_i C_i(e_{i0}-e_i)\quad\text{s.t.}\quad \sum_i e_i\leq \bar E
+\]</span></p>
+<p>이다. 여기서 <span class="math inline">\(C_i(e_{i0}-e_i)\)</span>는 <span class="math inline">\(C_i\)</span>와 <span class="math inline">\((e_{i0}-e_i)\)</span>의 곱이 아니라, <strong>함수</strong> <span class="math inline">\(C_i(\cdot)\)</span>에 감축량을 넣은 값이라는 점에 주의하자.</p>
+<p>라그랑지안을 세우면</p>
+<p><span class="math display">\[
+\mathcal{L}=\sum_i C_i(e_{i0}-e_i)-\lambda\Big(\bar E-\sum_i e_i\Big)
+\]</span></p>
+<p>이고, <span class="math inline">\(e_i\)</span>에 대한 1계 조건은 <span class="math inline">\(-C_i'(e_{i0}-e_i)+\lambda=0\)</span>, 즉</p>
+<p><span class="math display">\[
+\boxed{C_1'=C_2'=\cdots=C_i'=\lambda\quad \forall i}
+\]</span></p>
+<p>이다. 모든 오염원이 <strong>같은 한계감축비용</strong>에서 감축할 때 주어진 총감축을 가장 싸게 달성한다. 이것이 3장과 6장에서 만난 <strong>등한계 원칙(equimarginal principle)</strong>이다. 라그랑주 승수 <span class="math inline">\(\lambda\)</span>는 배출 제약을 한 단위 완화할 때 절약되는 비용, 즉 배출 한 톤의 <strong>그림자가격</strong>이다.</p>
+<p>직관은 간단하다. 기업 A의 한계비용이 기업 B보다 낮다면, A가 한 단위 더 줄이고 B가 한 단위 덜 줄여도 총감축량은 같지만 총비용은 낮아진다. 한계비용이 같아질 때까지 이 재분배는 계속 이득이 된다. 뒤에서 확인하겠지만, 이 조건을 저절로 만족시키는 정책이 <strong>피구세</strong>와 <strong>배출권거래제</strong>다.</p>
+</section>
+<section id="직접규제는-왜-비용효과적이지-않은가" class="level3">
+<h3 class="anchored" data-anchor-id="직접규제는-왜-비용효과적이지-않은가">직접규제는 왜 비용효과적이지 않은가</h3>
+<p>두 기업에 <strong>똑같은</strong> 배출기준을 부과하는 경우를 생각하자. 직접규제의 전형적인 모습이다. 두 기업의 MAC가 다르다면, 같은 기준은 한 기업에게는 너무 느슨하고 다른 기업에게는 너무 빡빡하다.</p>
+<div id="fig-policy-allocation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-policy-allocation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/abatement-allocation.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-policy-allocation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.1: 동일 감축과 등한계 배분의 비교. 두 기업의 총감축량은 12로 같으며, 가상 비용함수를 사용했다.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>계산 예제 8.1 | 동일 감축과 비용효과적 배분
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>두 기업의 한계감축비용이 <span class="math inline">\(\mathrm{MAC}_1=2A_1\)</span>, <span class="math inline">\(\mathrm{MAC}_2=6A_2\)</span>이고(총비용은 각각 <span class="math inline">\(A_1^2\)</span>, <span class="math inline">\(3A_2^2\)</span>), 총 12단위를 줄여야 한다고 하자. 각 기업의 기준선 배출은 아래 선택이 가능할 만큼 충분하다고 둔다.</p>
+<p><strong>동일 감축</strong>: 각자 6단위를 줄이면 비용은 <span class="math inline">\(6^2+3\times6^2=36+108=144\)</span>다. 이때 한계비용은 기업 1이 12, 기업 2가 36으로 크게 다르다.</p>
+<p><strong>등한계 배분</strong>: <span class="math inline">\(2A_1=6A_2\)</span>와 <span class="math inline">\(A_1+A_2=12\)</span>를 풀면 <span class="math inline">\(A_1=9\)</span>, <span class="math inline">\(A_2=3\)</span>이다. 비용은 <span class="math inline">\(9^2+3\times3^2=81+27=108\)</span>이고, 두 기업의 공통 MAC는 18이다.</p>
+<p>같은 총감축을 36만큼(25%) 싸게 달성했다. 정부가 두 기업의 비용함수를 몰라도, 톤당 18의 탄소가격을 매기면 각 기업은 자신의 MAC가 18이 되는 곳까지 스스로 감축하여 이 배분을 선택한다. 기업별 기술 상한이 구속적이면 내부해 조건은 수정된다.</p>
+</div>
+</div>
+<p>그림의 면적으로 정리하면 다음과 같다. 가로축에 정해진 총감축량을 놓고, 기업 1의 감축량은 왼쪽 끝 <span class="math inline">\(O_1\)</span>부터, 기업 2의 감축량은 오른쪽 끝 <span class="math inline">\(O_2\)</span>부터 잰다. 같은 기준 <span class="math inline">\(\bar e_1=\bar e_2\)</span>일 때와 등한계 배분 <span class="math inline">\(e_1^*, e_2^*\)</span>일 때 각 기업의 총감축비용(MAC 아래 면적)을 영역 <span class="math inline">\(a,b,c,d,e\)</span>로 나타내면,</p>
+<table class="caption-top table">
+<caption>같은 기준과 등한계 배분의 총감축비용 비교. 절감액은 <span class="math inline">\(a+b\)</span>다.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">같은 기준</th>
+<th style="text-align: center;">등한계</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">기업 1 (MAC 낮음)</td>
+<td style="text-align: center;"><span class="math inline">\(e\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(e+c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">기업 2 (MAC 높음)</td>
+<td style="text-align: center;"><span class="math inline">\(a+b+c+d\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">합계</td>
+<td style="text-align: center;"><span class="math inline">\(a+b+c+d+e\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c+d+e\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>등한계 배분은 세율이나 배출권 가격 <span class="math inline">\(p^*\)</span> 하나로 달성된다. 배출권거래제라면 기업 1이 더 감축해 배출권을 팔아 <span class="math inline">\(b\)</span>만큼, 기업 2는 덜 감축하고 배출권을 사서 <span class="math inline">\(a\)</span>만큼 이득을 본다. 정부가 직접규제로 이 결과를 얻으려면 <strong>모든</strong> 기업의 MAC를 정확히 알아야 하는데, 이는 현실적으로 불가능하다.</p>
+</section>
+<section id="숫자로-보는-등한계-원칙-위반" class="level3">
+<h3 class="anchored" data-anchor-id="숫자로-보는-등한계-원칙-위반">숫자로 보는 등한계 원칙 위반</h3>
+<p>등한계 원칙의 위반이 얼마나 클 수 있는지 보여주는 유명한 연구가 있다. 비스쿠시(Viscusi, 1996)는 미국의 안전·환경 규제들을 “<strong>통계적 생명</strong> 한 명을 구하는 데 드는 비용”으로 환산해 비교했다.</p>
+<table class="caption-top table">
+<caption>규제별 통계적 생명 1명당 비용. 출처: Viscusi (1996).</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">규제</th>
+<th style="text-align: right;">통계적 생명 1명당 비용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">무통풍 실내난방기 규제</td>
+<td style="text-align: right;">약 10만 달러</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">자동차 에어백·안전띠 규제</td>
+<td style="text-align: right;">수백만 달러</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">석면 규제</td>
+<td style="text-align: right;">수천만~수억 달러</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">작업장 포름알데히드 규제</td>
+<td style="text-align: right;">약 720억 달러</td>
+</tr>
+</tbody>
+</table>
+<p>가장 싼 규제와 가장 비싼 규제의 비용이 약 70만 배 차이 난다. 같은 돈을 포름알데히드 규제 대신 에어백 규제를 강화하는 데 썼다면 훨씬 많은 생명을 구할 수 있었다. 각 규제가 <strong>개별적·비조율적으로</strong> 결정되기 때문에 생기는 비효율이며, 바로 등한계 원칙의 위반이다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 통계적 생명
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>통계적 생명(statistical life)</strong>은 특정한 한 사람이 아니라, 여러 사람의 사망 위험이 조금씩 줄어든 결과 기대값으로 1명의 사망을 피하는 것을 뜻한다. 예를 들어 10만 명의 연간 사망 위험을 각각 10만분의 1씩 낮추면 통계적 생명 1명을 구한 것이다. 5장에서 본 통계적 생명가치(VSL)는 이런 작은 위험 감소에 대한 지불의사를 합한 값이다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="탄소세와-보조금" class="level2">
+<h2 class="anchored" data-anchor-id="탄소세와-보조금">탄소세와 보조금</h2>
+<section id="피구세" class="level3">
+<h3 class="anchored" data-anchor-id="피구세">피구세</h3>
+<p>외부효과는 <strong>사적</strong> 비용·편익과 <strong>사회적</strong> 비용·편익의 괴리 때문에 비효율을 낳는다. 음의 외부효과에는 세금으로 사적 한계비용을 높이고(또는 감축에 보조금을 주고), 양의 외부효과에는 보조금으로 사적 한계비용을 낮춘다. 세율이 외부효과의 <strong>한계피해(MD)</strong>와 같을 때 이 세금을 <strong>피구세(Pigouvian tax)</strong>라 부른다 <span class="citation" data-cites="pigou1920">(<a href="references.html#ref-pigou1920" role="doc-biblioref">Pigou 1920년</a>)</span>. 4장에서 배운 바로 그것이다.</p>
+<p>배출 한 단위당 세금 <span class="math inline">\(t\)</span>를 부과하면 기업은 감축비용과 세금의 합을 최소화한다.</p>
+<p><span class="math display">\[
+\min_{e_i}\; C_i(e_{i0}-e_i)+t\,e_i
+\quad\Longrightarrow\quad
+C_i'(e_{i0}-e_i)=t\quad\forall i
+\]</span></p>
+<p>모든 기업이 <strong>같은 세율 <span class="math inline">\(t\)</span></strong>를 마주하므로, 각자 자신의 한계감축비용이 <span class="math inline">\(t\)</span>와 같아지는 지점에서 스스로 감축을 멈춘다. 그 결과 정부가 개별 기업의 MAC를 몰라도 전체적으로 <span class="math inline">\(C_1'=C_2'=\cdots=t\)</span>, 즉 등한계 원칙이 <strong>저절로</strong> 성립한다. 이것이 탄소세의 가장 중요한 장점이다.</p>
+<p>다만 공통 세율은 <strong>주어진 총감축</strong>을 가장 싸게 달성하게 할 뿐이다. 그 세율이 유도하는 총감축량이 사회적으로 바람직한지는 7장처럼 피해와 비용을 비교해야 한다. 아무 세율이나 매겼다고 피구세가 되는 것은 아니다.</p>
+</section>
+<section id="보조금-세금과-무엇이-다른가" class="level3">
+<h3 class="anchored" data-anchor-id="보조금-세금과-무엇이-다른가">보조금: 세금과 무엇이 다른가</h3>
+<p>경제학자들은 보통 세금 같은 시장기반 수단을 선호한다. 보조금은 “<strong>음(−)의 세금</strong>”이다. 정치적으로는 인기가 많다. 기업은 보조금을 환영한다. 그러나 효율성 측면에서는 덜 바람직하다.</p>
+<ul>
+<li>보조금 재원은 다른 세금으로 마련해야 하는데, 그 세금은 경제를 왜곡한다.</li>
+<li>일단 시작하면 정치적으로 <strong>중단하기 어렵다.</strong></li>
+<li>앞에서 보았듯이 장기적으로 보조금은 해당 산업의 평균비용을 낮춰 <strong>오염 산업 자체를 키우는</strong> 역설을 낳을 수 있다.</li>
+</ul>
+<p>예를 들어 천연펄프로 종이를 만드는 공장에 오염을 줄인 만큼 보조금을 준다고 하자. 각 공장은 오염을 덜 배출하지만, 세금을 매길 때보다 천연펄프 종이가 <strong>상대적으로 싸져</strong> 재생종이보다 많이 쓰이게 된다. 그 결과 산업 전체의 벌목과 오염은 세금을 쓸 때보다 많아질 수 있다.</p>
+<p>물론 모든 보조금이 나쁜 것은 아니다. 연구개발의 지식 파급효과나 신생 기술의 자금 제약처럼 <strong>다른 시장실패</strong>를 겨냥한 보조금은 탄소가격을 보완할 수 있다. 보조금이 어떤 행동을 보상하고 어떤 시장실패를 해결하려는지 구체적으로 밝혀야 한다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 화석연료 보조금 폐지
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“가격을 바로잡는다”는 것은 탄소에 가격을 매기는 것뿐 아니라 <strong>잘못된 보조금을 없애는 것</strong>도 포함한다. 많은 나라가 연료 가격을 낮추기 위해 화석연료에 보조금을 준다. 이는 음(−)의 탄소세와 같다.</p>
+<p>국제에너지기구(IEA)는 2013년 전 세계 화석연료 소비 보조금을 약 5,230억 달러로 추정했으며, 일부만 폐지해도 연 약 3.6억 톤의 CO₂를 줄일 수 있다고 보았다. 2009년 G20은 비효율적인 화석연료 보조금의 단계적 폐지를 약속했지만 성과는 엇갈렸다. 인도네시아와 인도가 비교적 성공한 사례로 꼽힌다. 보조금 폐지는 저소득층의 연료비 부담을 늘리므로, 성공 사례들은 대개 현금 지원 같은 보완책을 함께 마련했다.</p>
+</div>
+</div>
+</section>
+<section id="제3의-수단-법적-책임" class="level3">
+<h3 class="anchored" data-anchor-id="제3의-수단-법적-책임">제3의 수단: 법적 책임</h3>
+<p>세금이나 배출권과 달리 <strong>법적 책임(liability)</strong>은 기업에게 사전에 규제를 가하지 않는다. 대신 “사고가 나면 책임지라”는 <strong>사후적</strong> 유인을 준다.</p>
+<p><strong>과실책임 원칙(negligence rule)</strong>을 생각해 보자. 기업은 오염 저감이나 안전조치 같은 예방 수준 <span class="math inline">\(x\)</span>를 스스로 정한다. 예방비용 <span class="math inline">\(C(x)\)</span>는 <span class="math inline">\(x\)</span>와 함께 증가하고, 기대피해 <span class="math inline">\(D(x)\)</span>는 감소한다. 사회적으로 효율적인 예방 수준은 예방의 한계비용과 예방으로 줄어드는 한계피해가 같아지는 곳, 즉 <span class="math inline">\(\mathrm{MC}(x^*)=-\mathrm{MD}(x^*)\)</span>다. 규제는 단순하다. “원하는 대로 하라. 다만 <span class="math inline">\(x^*\)</span> 이상으로 예방하지 않았는데 사고가 나면 피해 <strong>전액</strong>을 배상하라.” 그러면 기업은 스스로 <span class="math inline">\(x^*\)</span>를 선택한다.</p>
+<p>법적 책임은 정부가 매 순간 배출량을 측정하고 가격을 매길 필요가 없다는 장점이 있다. 사고나 소송이 일어났을 때만 작동한다. 그러나 이것이 단점이기도 하다. 기후피해는 수많은 배출원에서 나온 온실가스가 국경을 넘어 오랜 시간에 걸쳐 일으키므로, 특정 피해를 특정 배출자와 연결하고 <strong>인과관계를 입증</strong>하기가 매우 어렵다. 5장에서 본 기후소송이 늘고 있지만, 배상제도가 탄소가격처럼 작동한다고 가정할 수는 없다.</p>
+</section>
+<section id="차선의-규제" class="level3">
+<h3 class="anchored" data-anchor-id="차선의-규제">차선의 규제</h3>
+<p>지금까지는 시장이 경쟁적이고 정부가 선한 의도만 가진다고 가정했다. 이 가정 가운데 하나라도 깨지면 교과서의 피구세는 더 이상 최적이 아니다. 이를 <strong>차선(second-best)</strong>의 문제라 한다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 독점기업에 피구세를 물리면
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>독점기업은 원래부터 생산량을 사회적 최적보다 <strong>적게</strong> 만든다. 그래서 오염도 이미 경쟁시장보다 적게 배출한다. 여기에 피구세를 매기면 독점기업의 한계비용이 <strong>한 번 더</strong> 올라가, 이미 너무 적은 생산량이 더욱 줄어든다. 오염은 줄지만 독점의 과소생산 문제(자중손실)는 악화된다. 세금 하나로 외부효과와 독점이라는 두 문제를 동시에 해결하려다 오히려 총후생이 떨어질 수 있다.</p>
+<p>간단히 산출 <span class="math inline">\(q\)</span> 한 단위가 배출 한 단위를 만든다고 하자. 역수요를 <span class="math inline">\(P(q)\)</span>, 비용을 <span class="math inline">\(C(q)\)</span>, 외부피해를 <span class="math inline">\(D(q)\)</span>라 하면 사회적 최적은 <span class="math inline">\(P=C'+D'\)</span>이고, 세율 <span class="math inline">\(\tau\)</span>를 마주한 독점기업은 <span class="math inline">\(P+qP'=C'+\tau\)</span>를 선택한다. 원하는 <span class="math inline">\(q^*\)</span>를 구현할 세율은</p>
+<p><span class="math display">\[
+\tau^*=D'(q^*)+q^*P'(q^*)
+\]</span></p>
+<p>다. 수요가 우하향하면(<span class="math inline">\(P'&lt;0\)</span>) 두 번째 항이 음수이므로 <strong>독점기업에 대한 최적 세율은 순수 피구세보다 낮다.</strong> 선형 수요와 이차 비용 같은 특정 함수를 가정하면 <span class="math inline">\(\tau^{\text{독점}}=\tfrac32\psi-\tfrac12\bar\pi\)</span>처럼 피구세 <span class="math inline">\(\psi\)</span>보다 작은 구체적인 식을 얻는다(<span class="math inline">\(\bar\pi\)</span>는 수요 절편과 관련된 모수). 직관적으로, 경쟁시장에서는 세율 1단위 인상에 산출이 <span class="math inline">\(1/2\)</span>단위 줄지만 독점은 <span class="math inline">\(1/3\)</span>단위만 줄이는 식으로 세금에 덜 반응하기 때문이다.</p>
+<p>이 결과는 별도의 경쟁정책을 쓸 수 없고 배출과 산출이 일대일로 연결된 단순 모형에 조건부다. 교훈은 “외부효과에는 피구세”라는 처방이 시장에 <strong>다른 왜곡이 없을 때만</strong> 그대로 성립한다는 것이다. 환경정책과 경쟁정책을 함께 고려해야 한다.</p>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 규제자도 사람이다 - 포획과 리바이어던
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>지금까지는 규제자가 오직 사회후생만 최대화한다고 가정했다. 현실의 규제자는 다른 동기를 가질 수 있다.</p>
+<p><strong>규제 포획(Peltzman 모형).</strong> 규제자가 산업계의 이익(이윤 <span class="math inline">\(\pi\)</span>)에 가중치 <span class="math inline">\(\vartheta&gt;0\)</span>을 둔다면 세율은</p>
+<p><span class="math display">\[
+\tau=\frac{\psi-\vartheta\pi}{1-\vartheta}&lt;\psi
+\]</span></p>
+<p>처럼 피구세보다 <strong>낮아진다</strong>. 규제가 느슨해지는 것이다.</p>
+<p><strong>리바이어던(Brennan-Buchanan 모형).</strong> 반대로 규제자가 세수 자체를 선호한다면(큰 정부 성향 <span class="math inline">\(\Lambda&gt;0\)</span>) 세율은 피구세보다 <strong>높아진다</strong>. 정부가 세수를 늘리려고 “환경”을 명분으로 삼는 경우다.</p>
+<p>두 모형은 “규제자가 사회후생이 아닌 다른 것을 원한다”는 공통점이 있지만 방향은 정반대다. 포획은 과소규제, 리바이어던은 과다규제를 낳는다.</p>
+<p>이 모형들은 특정 정책이 실제로 포획되었다는 증거가 아니다. 예컨대 K-ETS의 높은 무상할당 비율은 포획의 논리로 <strong>해석할 수 있지만</strong>, 무상할당이나 세율 수준만으로 규제자의 동기를 알아낼 수는 없다. 결정 과정과 근거 자료를 공개하고 독립적인 사후평가를 하는 제도가 중요하다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="배출권거래제" class="level2">
+<h2 class="anchored" data-anchor-id="배출권거래제">배출권거래제</h2>
+<section id="작동-원리" class="level3">
+<h3 class="anchored" data-anchor-id="작동-원리">작동 원리</h3>
+<p>배출권거래제(emissions trading system, ETS)는 <strong>총량제한 배출권거래(cap-and-trade)</strong>라고도 부른다. 정부가 총배출량에 <strong>상한(cap)</strong>을 정하고, 그만큼의 배출권을 기업에 나누어 준다. 배출이 할당량보다 많은 기업은 부족분을 여유 있는 기업에게서 <strong>구매</strong>하고, 배출이 할당량보다 적은 기업은 잉여분을 <strong>판매</strong>한다. 수량(상한)은 직접규제처럼 정부가 고정하지만, 가격은 시장이 정한다는 점에서 두 세계의 특징을 결합한 제도다.</p>
+<p>운영 절차는 다음과 같다.</p>
+<ol type="1">
+<li>규제자가 (최적) 총배출량 <span class="math inline">\(E^*\)</span>를 결정한다.</li>
+<li>거래소 같은 거래 제도를 설립한다.</li>
+<li>배출권을 초기 할당하여 시장을 연다(<span class="math inline">\(\sum_i E_i=E^*\)</span>).</li>
+<li>배출권 거래가 시작된다.</li>
+</ol>
+<p>이 모든 것은 <strong>배출권을 보유한 경우에만 배출을 허용하는 법적 장치</strong>를 전제로 한다. 기업은 매년 배출량을 측정·보고하고 검증받은 뒤, 그만큼의 배출권을 정부에 제출한다.</p>
+<p>기업 <span class="math inline">\(i\)</span>에게는 세 가지 선택이 있다. 할당받은 배출권 <span class="math inline">\(E_i\)</span>만큼 배출을 줄이거나, 덜 줄이고 부족분을 구매하거나, 더 줄이고 남는 배출권을 판매하는 것이다. 어느 쪽을 고를지는 자신의 한계감축비용과 배출권 가격 <span class="math inline">\(p\)</span>의 비교로 결정된다.</p>
+</section>
+<section id="배출권의-비용효과성" class="level3">
+<h3 class="anchored" data-anchor-id="배출권의-비용효과성">배출권의 비용효과성</h3>
+<p>기업 <span class="math inline">\(i\)</span>가 배출권 <span class="math inline">\(E_i\)</span>를 보유하고 실제로 <span class="math inline">\(e_i\)</span>를 배출한다면 총비용은</p>
+<p><span class="math display">\[
+TC_i=C_i(e_{i0}-e_i)+p\,(e_i-E_i)
+\]</span></p>
+<p>다. 배출권이 부족하면(<span class="math inline">\(e_i&gt;E_i\)</span>) 사서 메우고, 남으면 팔아서 수입을 얻는다. 비용 최소화의 1계 조건은</p>
+<p><span class="math display">\[
+C_i'(e_{i0}-e_i)=p\quad\forall i
+\]</span></p>
+<p>이다. 시장균형에서는 <span class="math inline">\(\sum_i e_i=\sum_i E_i=E^*\)</span>이고, 모든 기업의 한계비용이 <strong>같은 시장가격 <span class="math inline">\(p\)</span></strong>로 수렴한다. 탄소세와 똑같이 등한계 원칙이 저절로 성립한다. 한계비용이 낮은 기업은 많이 줄여서 배출권을 팔고, 높은 기업은 배출권을 산다. 그 결과 “싼 감축부터” 이루어진다.</p>
+<p>배출권거래제의 장점을 정리하면 다음과 같다.</p>
+<ul>
+<li>배출권이라는 시장을 만들어 외부효과를 <strong>내재화</strong>한다.</li>
+<li>총배출량을 <strong>직접 통제</strong>한다. 세금보다 환경 효과성이 확실하다.</li>
+<li>모든 기업의 MAC를 공통 거래가격으로 <strong>같게</strong> 만든다.</li>
+<li>감축 <strong>방법의 선택은 기업 자율</strong>에 맡겨 산업 간 이질성을 자연스럽게 수용한다.</li>
+<li>완전경쟁이라면 초기 배분과 관계없이 비용효과적이다. 배분은 형평성에만 영향을 준다(뒤의 ‘초기 배분’ 절). 다만 시장지배력을 가진 대기업은 배출권을 쥐고 팔지 않아 가격을 올릴 수 있다.</li>
+</ul>
+<p>정보 요구량에 대해서는 주의가 필요하다. “정해진 감축목표를 싸게 달성”하는 것만 원한다면 정부가 알아야 할 것이 적다. 그러나 목표 자체를 사회적 최적(MAC = MD)에 맞추려면, 세금과 마찬가지로 비용과 피해에 대한 많은 정보가 필요하다.</p>
+</section>
+<section id="배출권거래제에-비해-탄소세가-갖는-장점" class="level3">
+<h3 class="anchored" data-anchor-id="배출권거래제에-비해-탄소세가-갖는-장점">배출권거래제에 비해 탄소세가 갖는 장점</h3>
+<p>탄소세와 배출권거래제는 둘 다 탄소에 가격을 매기는 수단이다. 최소비용 감축이라는 효율성도, “돈을 내고 오염할 권리를 산다”는 대중의 반발도 공통이다. 그럼에도 핀딕(Pindyck, 2022)은 탄소세가 다음과 같은 장점이 있다고 지적한다 <span class="citation" data-cites="pindyck2022">(<a href="references.html#ref-pindyck2022" role="doc-biblioref">Pindyck 2022년</a>)</span>.</p>
+<p><strong>1. 다른 정책과 함께 써도 추가 감축 효과가 유지된다.</strong> 배출 상한이 20억 톤인 상태에서 재생에너지 의무를 추가한다고 하자. 배출권거래제에서는 총배출이 여전히 20억 톤이다. <strong>비용만 늘어난다.</strong> 탄소세에서는 의무만큼 <strong>추가 감축</strong>이 일어난다.</p>
+<p>이를 <strong>풍선효과(waterbed effect)</strong>라고 한다. 배출권거래제는 <strong>총량</strong>을 고정한다. 재생에너지 의무로 발전소 배출이 줄면 남는 배출권이 시장에 팔리고, 배출권 가격이 떨어지며, 다른 업종이 그만큼 더 배출한다. 감축이 일어나는 장소만 더 비싼 부문으로 옮겨질 뿐이다. 반면 탄소세는 <strong>가격</strong>을 고정하므로 다른 업종의 세율이 변하지 않고, 전력 부문의 감축분이 그대로 추가 감축이 된다. EU 배출권거래제(EU ETS)는 남는 배출권을 흡수하고 소각하는 <strong>시장안정화예비분</strong>(MSR, 2019년~)으로 이 효과를 완화하고 있다.</p>
+<p><strong>2. 배출권 배분 문제가 없다.</strong> 배출권을 누구에게 얼마나 나눌지에 대한 공정한 기준이 명확하지 않고, 배분은 정치적 압력에 좌우되기 쉽다(예: K-ETS의 높은 무상할당 비율).</p>
+<p><strong>3. 제도가 단순하다.</strong> 톤당 세율만 정하면 된다.</p>
+</section>
+<section id="사례-한국-배출권거래제k-ets" class="level3">
+<h3 class="anchored" data-anchor-id="사례-한국-배출권거래제k-ets">사례: 한국 배출권거래제(K-ETS)</h3>
+<p>한국은 2015년 1월 전국 단위의 배출권거래제를 도입했다. 동아시아 최초의 전국 단위 제도다. 제도는 몇 년 단위의 <strong>계획기간</strong>으로 운영되며, 계획기간마다 할당 방식과 시장 운영 규칙이 바뀌어 왔다.</p>
+<div id="fig-kets-timeline" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kets-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/ch08/kets-timeline.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kets-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.2: 국내 배출권거래제의 계획기간별 주요 변화. 기후에너지환경부(2025)를 바탕으로 재구성.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-kets-timeline" class="quarto-xref">그림&nbsp;<span>8.2</span></a> 의 흐름을 요약하면, 제1차 계획기간(2015-2017)에는 전량 무상할당으로 제도를 안착시키는 데 집중했다. 제2차(2018-2020)에 유상할당 3%를 도입하고, 제3차(2021-2025)에는 유상할당을 10%로 늘리고 증권사 등 시장 참여자를 확대했다. 제4차(2026-2030)에는 발전 부문의 유상할당을 15%에서 2030년 50%까지 단계적으로 늘리고, 총량을 3차 대비 약 16.8% 축소하며, 총량 안에 시장안정화 예비분을 확보한다.</p>
+<div id="fig-kets-price" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kets-price-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/ch08/kets-price.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kets-price-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.3: 한국 배출권(KAU) 월별 가격과 거래량, 2015년 1월~2026년 10월. 가격은 KAU 전 연도물을 합산한 월 거래량 가중평균이며 무거래 월은 제외했다. 2026년 10월은 13일까지의 부분월이다. 출처: 한국거래소 배출권시장 정보플랫폼(조회: 2026.10.14).
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-kets-price" class="quarto-xref">그림&nbsp;<span>8.3</span></a> 를 보면, 2015년 시장 개설 이후 제2차 계획기간에 가격이 톤당 4만 원 가까이 올랐으나, 제3차 계획기간에는 한때 1만 원 아래로 떨어졌다. 할당이 넉넉해 잉여배출권이 많았고, 그 결과 감축 유인이 약해졌다는 평가를 받았다. 제4차 계획기간이 시작된 2026년에는 가격이 다시 빠르게 올라, 2026년 10월 13일 KAU26 종가는 톤당 30,350원이었다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 제4차 계획기간의 가격 반등 - 원인과 평가
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>공급 축소 전망과 선매수.</strong> 할당량 감소를 예상한 기업들의 선매수가 가격 상승의 원인으로 지목된다(머니투데이, 2026.2.16). 정부는 발전 부문 유상할당을 2030년 50%까지 확대하고 시장안정화 예비분을 도입하는 계획을 발표했다(<a href="https://www.korea.kr/news/policyNewsView.do?newsId=156727454">기후에너지환경부, 제4차 할당계획 브리핑, 2025.11.11</a>).</p>
+<ul>
+<li><strong>가격신호 강화</strong>: 정부는 잉여배출권과 낮은 가격으로 약해진 감축 유인을 회복하려 한다. 가격 반등은 이러한 방향과 부합한다.</li>
+<li><strong>투자 효과는 별도로 검증해야 한다</strong>: 기후 싱크탱크 플랜잇은 대규모 산업설비의 전환에는 충분히 높은 가격 수준과 <strong>예측 가능한 장기 가격경로</strong>가 필요하다고 지적했다(한국경제, 2026.10.2 보도).</li>
+<li><strong>변동성 위험</strong>: KDI는 계획기간 사이의 공급 축소와 이월 제한이 겹치면 가격 변동성이 커질 수 있다고 사전에 경고했다(KDI FOCUS, 2023).</li>
+</ul>
+<p><strong>경제학적 해석.</strong> 유상할당 확대 자체는 총량(cap)을 줄이지 않는다. 누가 배출권의 가치를 가져가는지를 바꿀 뿐이다. 총량 축소, 할당 방식, 이월 규칙, 예비분을 구분해야 하고, 가격 반등도 희소성 증가와 부합하지만 그것만으로 정책의 성공이 입증되지는 않는다. 정책 성과는 실제 감축투자와 배출량 변화, 그리고 가격의 지속성으로 평가해야 한다. 이 설명은 발표 당시의 설계와 목표에 관한 것이며 사후 성과 추정이 아니다.</p>
+</div>
+</div>
+</section>
+<section id="다른-나라의-배출권시장-세-가지-성적표" class="level3">
+<h3 class="anchored" data-anchor-id="다른-나라의-배출권시장-세-가지-성적표">다른 나라의 배출권시장: 세 가지 성적표</h3>
+<p>같은 “배출권거래제”라는 이름 아래에서도 성패가 갈린다.</p>
+<table class="caption-top table">
+<caption>배출권거래제의 세 가지 성적표.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">제도</th>
+<th style="text-align: left;">개요</th>
+<th style="text-align: center;">평가</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">미국 SO₂ 거래제(1990~)</td>
+<td style="text-align: left;">산성비 대응, 발전 부문</td>
+<td style="text-align: center;">대체로 성공</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RECLAIM(로스앤젤레스)</td>
+<td style="text-align: left;">도심 대기오염물질 거래</td>
+<td style="text-align: center;">성공적이지 못함</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EU ETS 1·2기(~2012)</td>
+<td style="text-align: left;">교토의정서 이행</td>
+<td style="text-align: center;">평가 엇갈림</td>
+</tr>
+</tbody>
+</table>
+<p>총량(cap)이 얼마나 엄격한지, 무상할당과 유상할당의 비율, 감시·집행 역량이 실제 성과를 가른다. K-ETS의 낮은 가격도 이 스펙트럼 어딘가에 있다.</p>
+</section>
+</section>
+<section id="감시집행과-국제적-연계" class="level2">
+<h2 class="anchored" data-anchor-id="감시집행과-국제적-연계">감시·집행과 국제적 연계</h2>
+<section id="배출을-측정해야-가격을-매길-수-있다" class="level3">
+<h3 class="anchored" data-anchor-id="배출을-측정해야-가격을-매길-수-있다">배출을 측정해야 가격을 매길 수 있다</h3>
+<p>가격을 매기려면 배출을 측정해야 한다. <strong>측정·보고·검증(MRV: measurement, reporting, verification)</strong>은 정책의 부수적인 행정절차가 아니라 “배출 한 톤”이 무엇을 뜻하는지 정하는 기반이다.</p>
+<p>모든 배출을 매번 감시할 수는 없다. 그래서 규제자는 확률 <span class="math inline">\(\pi\)</span>로 점검하고, 적발 시 톤당 벌금 <span class="math inline">\(f\)</span>를 매긴다. 기업이 마주하는 톤당 <strong>기대 비용</strong>은 <span class="math inline">\(\pi f\)</span>다. 따라서 <span class="math inline">\(\pi f=\mathrm{MD}\)</span>가 되도록 정하면 피구세와 같은 유인을 줄 수 있다. 예를 들어 점검 확률이 1/2이라면 벌금을 세율의 2배로 정하면 된다. 또 위반 기업을 더 자주 점검하면 감시 비용을 아낄 수 있다.</p>
+<p><strong>누구에게 의무를 지울지</strong>도 중요한 설계 선택이다.</p>
+<ul>
+<li><strong>상류(upstream)</strong>: 화석연료 생산·수입업체. 대상이 적어 감시가 쉽다.</li>
+<li><strong>중류(midstream)</strong>: 발전소·공장. EU ETS(약 1만 1천 개 시설)와 K-ETS가 이 방식이다.</li>
+<li><strong>하류(downstream)</strong>: 가구·차량. 대상이 수백만이라 감시 비용이 과도하다.</li>
+</ul>
+<p>현실의 집행 수준은 제도마다 크게 다르다. 미국 SO₂ 거래제는 굴뚝 연속측정 장비를 의무화하고 톤당 2,000달러(배출권 가격의 수 배)의 벌금을 매겨 준수율이 사실상 100%였다. EU ETS는 초기에 부가가치세 사기와 배출권 등록부 해킹 사건으로 거래가 일시 중단되기도 했고, 회원국마다 집행 역량이 달랐다. 중국은 배출 통계의 불일치가 30%를 넘는 문제 때문에 총량이 아닌 <strong>배출 원단위</strong>(산출량당 배출) 기준으로 제도를 운영한다.</p>
+</section>
+<section id="국가-간-연계와-상쇄배출권" class="level3">
+<h3 class="anchored" data-anchor-id="국가-간-연계와-상쇄배출권">국가 간 연계와 상쇄배출권</h3>
+<p><strong>배출권시장의 연계(linking).</strong> 두 시장이 서로의 배출권을 인정하면 공통 가격이 형성되고, 연계 지역 전체에서 등한계 원칙이 성립해 총비용이 줄어든다. 캘리포니아-퀘벡(2014), EU-스위스(2020)가 그 예다. 그러나 위험도 있다. 집행 수준이 <strong>가장 약한 참여국</strong>에 맞춰질 수 있고, 한쪽의 초과 할당이나 가격 상한이 전체로 전이된다. 단위가 같다고 해서 서로 다른 규칙으로 발행된 배출권이 같은 환경적 가치를 갖는 것은 아니다.</p>
+<p><strong>상쇄배출권(offset).</strong> 제도 바깥의 감축이나 제거를 인정하여 제도 안의 의무 이행에 사용하게 하는 것이다. 대표적인 예가 교토의정서의 <strong>청정개발체제(CDM)</strong>다. 개발도상국의 감축사업에서 나온 감축분을 인증(CER)하여 선진국이 의무 이행에 쓸 수 있게 했다.</p>
+<p>문제는 감축분이 “<strong>사업이 없었다면</strong> 배출했을 양(가정) − 실제 배출”로 계산된다는 데 있다. 가정된 기준선은 관측할 수 없으므로, 그 사업이 정말로 추가적인 감축을 만들었는지(<strong>추가성</strong>, additionality) 확인하기 어렵다. 냉매 생산의 부산물인 HFC-23을 파괴하는 사업은 감축비용이 매우 싸서, 크레디트 판매 수입을 노리고 공장을 새로 세우는 일까지 벌어졌다. 결국 공급 과잉으로 CER 가격이 폭락했다. 같은 문제는 파리협정 6조의 국가 간 감축실적 이전과 K-ETS의 외부사업 상쇄에도 그대로 적용된다. 추가성, 기준선, 다른 지역으로의 배출 이동(누출, leakage), 저장의 영속성, 이중계산 방지가 관건이다.</p>
+</section>
+</section>
+<section id="가격-수단-vs.-수량-수단" class="level2">
+<h2 class="anchored" data-anchor-id="가격-수단-vs.-수량-수단">가격 수단 vs.&nbsp;수량 수단</h2>
+<section id="확실성-아래에서는-같다" class="level3">
+<h3 class="anchored" data-anchor-id="확실성-아래에서는-같다">확실성 아래에서는 같다</h3>
+<p>배출권거래제에서는 <strong>배출량은 알지만 비용은 모른다.</strong> 상한은 정해져 있지만 그것을 지키는 데 드는 비용(배출권 가격)은 시장이 찾아낸다. 탄소세에서는 <strong>한계비용(세율)은 알지만 배출량은 모른다.</strong> 가격은 정해져 있지만 기업들이 얼마나 줄일지는 지켜보아야 안다.</p>
+<p>정부가 MAC 곡선을 정확히 안다면 두 수단은 완전히 동등하다.</p>
+<p><span class="math display">\[
+t=C_i'(e_{i0}-e_i)=p\quad\forall i
+\]</span></p>
+<p>적절한 세율 <span class="math inline">\(t^*\)</span>를 고르는 것과 적절한 총량 <span class="math inline">\(E^*\)</span>를 고르는 것은 같은 결과를 낳는다. 문제는 현실에서 정부가 기업들의 MAC를 정확히 모른다는 것이다. 그 불확실성 속에서 두 수단은 더 이상 같지 않다. 이것이 바이츠만(Martin Weitzman)의 “가격 대 수량” 분석이다 <span class="citation" data-cites="weitzman1974">(<a href="references.html#ref-weitzman1974" role="doc-biblioref">Weitzman 1974년</a>)</span>.</p>
+</section>
+<section id="정부가-비용을-과대평가했다면" class="level3">
+<h3 class="anchored" data-anchor-id="정부가-비용을-과대평가했다면">정부가 비용을 과대평가했다면</h3>
+<p>정부가 실제 한계감축비용보다 <strong>더 비싸다고 착각</strong>하고 정책을 설계했다고 하자. 정부는 추정한 MAC와 MD의 교점에서 세율 <span class="math inline">\(t\)</span>와 상한 <span class="math inline">\(\bar E\)</span>를 정하지만, 기업은 <strong>실제</strong> MAC에 따라 반응한다.</p>
+<ul>
+<li><strong>수량 수단(배출권)</strong>: 감축이 비싸다고 생각했으므로 상한을 느슨하게(너무 많이) 정한다. <strong>과소규제</strong>다. 오염원은 이득을 보지만 사회는 순손실을 본다.</li>
+<li><strong>가격 수단(탄소세)</strong>: 감축이 비싸다고 생각했으므로 세율을 높게 매긴다. 실제 감축비용은 더 싸므로 기업은 예상보다 많이 줄인다. <strong>과다규제</strong>다. 환경은 이득을 보지만(과잉감축) 사회는 순손실을 본다.</li>
+</ul>
+<div id="fig-weitzman-error" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-weitzman-error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/ch08/weitzman-error.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-weitzman-error-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.4: 감축비용 추정 오류의 후생손실. 가로축은 배출량이며, MAC는 배출을 한 단위 더 줄이는 비용이다. 정부는 추정 MAC(점선)와 MD의 교점에서 세율 <span class="math inline">\(t\)</span>와 상한 <span class="math inline">\(\bar E\)</span>를 정한다. 실제 MAC(실선)가 더 낮으면, 탄소세 아래에서 기업은 실제 MAC가 <span class="math inline">\(t\)</span>와 같아지는 <span class="math inline">\(E_T&lt;E^*\)</span>까지 줄여 과잉감축이 되고, 배출권 아래에서는 <span class="math inline">\(\bar E&gt;E^*\)</span>로 과다배출이 된다. 색칠한 삼각형이 각각의 후생손실이다. 가상의 선형 함수로 그렸다.
+</figcaption>
+</figure>
+</div>
+<p>두 경우 모두 틀린 추정은 피할 수 없다. 질문은 “<strong>어느 쪽 실수의 대가가 더 작은가</strong>”다.</p>
+</section>
+<section id="한계피해의-기울기가-답을-가른다" class="level3">
+<h3 class="anchored" data-anchor-id="한계피해의-기울기가-답을-가른다">한계피해의 기울기가 답을 가른다</h3>
+<p><a href="#fig-weitzman-slopes" class="quarto-xref">그림&nbsp;<span>8.5</span></a> 는 같은 추정 오류에서 MD의 기울기만 바꾼 것이다.</p>
+<div id="fig-weitzman-slopes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-weitzman-slopes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/ch08/weitzman-slopes.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-weitzman-slopes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.5: MD 기울기에 따른 후생손실의 비교. 두 그림 모두 정부가 감축비용을 과대평가한 경우다. (a) MD가 가파르면 가격수단(탄소세)의 손실이 크다. (b) MD가 완만하면 수량수단(배출권)의 손실이 크다. 가상의 선형 함수로 그렸다.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>MD가 가파를 때</strong>: 배출량이 조금만 어긋나도 피해가 급변한다. 따라서 <strong>수량을 맞추는 것</strong>이 중요하다. MAC를 잘못 추정해도 MD와의 교점에서 배출량은 크게 변하지 않으므로 상한 <span class="math inline">\(\bar E\)</span>는 <span class="math inline">\(E^*\)</span>에 가깝다. 그러나 교점의 가격은 크게 달라지므로 세율 <span class="math inline">\(t\)</span>는 많이 빗나간다.</li>
+<li><strong>MD가 완만할 때</strong>: 한 톤의 피해가 배출량과 관계없이 거의 일정하다. 따라서 <strong>가격을 맞추는 것</strong>이 중요하다. MAC를 잘못 추정해도 교점의 가격은 거의 그대로이므로 세율 <span class="math inline">\(t\)</span>는 정답에 가깝지만, 교점의 배출량은 크게 달라져 상한 <span class="math inline">\(\bar E\)</span>가 많이 빗나간다.</li>
+</ul>
+</section>
+<section id="바이츠만-정리" class="level3">
+<h3 class="anchored" data-anchor-id="바이츠만-정리">바이츠만 정리</h3>
+<p>이를 일반화한 것이 <strong>바이츠만 정리</strong>다.</p>
+<blockquote class="blockquote">
+<p>감축의 한계편익(MB) 곡선이 한계비용(MAC) 곡선보다 <strong>더 가파르면</strong>, 수량 수단의 실수가 가격 수단의 실수보다 후생손실이 작다. 반대로 MB가 MAC보다 <strong>더 완만하면</strong>, 가격 수단의 실수가 후생손실이 작다.</p>
+</blockquote>
+<table class="caption-top table">
+<caption>바이츠만 정리의 요약.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">상대적으로 더 가파른 곡선</th>
+<th style="text-align: left;">더 유리한 수단</th>
+<th style="text-align: left;">이유</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">MB(= MD)가 가파름</td>
+<td style="text-align: left;">수량(배출권)</td>
+<td style="text-align: left;">감축량 오차를 억제하는 것이 중요</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MAC가 가파름</td>
+<td style="text-align: left;">가격(세금)</td>
+<td style="text-align: left;">급격한 비용 상승을 피하는 것이 중요</td>
+</tr>
+</tbody>
+</table>
+<p>주의할 점이 있다. 표준 모형에서 수단 선택을 가르는 것은 <strong>감축비용(MAC)의 불확실성</strong>이다. 한계편익(MB)의 불확실성은 수단 선택과 무관하다. 기업은 MB가 아니라 세율이나 배출권 가격에 반응하므로, 정부가 MB를 잘못 알면 두 수단이 <strong>똑같이</strong> 틀린 배출량을 낳기 때문이다. 다만 이는 국소적인 선형·이차 근사와 비용 충격에 관한 표준 가정 아래의 결과다. 비용과 편익의 충격이 함께 움직이거나, 비선형적 임계점이나 여러 시점의 제약이 중요하면 비교가 달라진다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 추정 오류의 네 가지 경우
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>정부가 추정한 MAC와 MD의 교점에서 세율 <span class="math inline">\(t\)</span>와 상한 <span class="math inline">\(\bar E\)</span>를 정하고, 기업은 실제 MAC에 따라 반응한다고 하자.</p>
+<table class="caption-top table">
+<caption>추정 오류의 네 가지 경우.</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">추정 오류</th>
+<th style="text-align: left;">탄소세</th>
+<th style="text-align: left;">배출권(상한)</th>
+<th style="text-align: left;">바이츠만 정리 적용</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">MAC 과대추정</td>
+<td style="text-align: left;"><span class="math inline">\(t\)</span> 과다 → <span class="math inline">\(E_T&lt;E^*\)</span> (과잉감축)</td>
+<td style="text-align: left;"><span class="math inline">\(\bar E\)</span> 과다 → <span class="math inline">\(\bar E&gt;E^*\)</span> (과소감축)</td>
+<td style="text-align: left;">MD가 가파르면 배출권, 완만하면 탄소세</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MAC 과소추정</td>
+<td style="text-align: left;"><span class="math inline">\(t\)</span> 과소 → <span class="math inline">\(E_T&gt;E^*\)</span> (과소감축)</td>
+<td style="text-align: left;"><span class="math inline">\(\bar E\)</span> 과소 → <span class="math inline">\(\bar E&lt;E^*\)</span> (과잉감축)</td>
+<td style="text-align: left;">MD가 가파르면 배출권, 완만하면 탄소세</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MD 과대추정</td>
+<td style="text-align: left;"><span class="math inline">\(t\)</span> 과다 → <span class="math inline">\(E_T&lt;E^*\)</span> (과잉감축)</td>
+<td style="text-align: left;"><span class="math inline">\(\bar E\)</span> 과소 → <span class="math inline">\(\bar E&lt;E^*\)</span> (과잉감축)</td>
+<td style="text-align: left;">차이 없음: <span class="math inline">\(E_T=\bar E\)</span>, 손실 동일</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MD 과소추정</td>
+<td style="text-align: left;"><span class="math inline">\(t\)</span> 과소 → <span class="math inline">\(E_T&gt;E^*\)</span> (과소감축)</td>
+<td style="text-align: left;"><span class="math inline">\(\bar E\)</span> 과다 → <span class="math inline">\(\bar E&gt;E^*\)</span> (과소감축)</td>
+<td style="text-align: left;">차이 없음: <span class="math inline">\(E_T=\bar E\)</span>, 손실 동일</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>MAC 오류</strong>: 두 수단의 오차 방향이 <strong>반대</strong>다. 과대추정이든 과소추정이든 바이츠만 정리대로 기울기에 따라 유리한 수단이 갈린다.</li>
+<li><strong>MD 오류</strong>: 기업은 실제 MAC에 반응하므로, 잘못된 세율 <span class="math inline">\(t\)</span>에서의 배출량이 잘못된 상한 <span class="math inline">\(\bar E\)</span>와 정확히 같아진다. 두 수단의 결과가 <strong>같다.</strong> 앞에서 말한 “MB의 불확실성은 수단 선택과 무관하다”의 근거다.</li>
+</ul>
+<p><a href="#fig-weitzman-error" class="quarto-xref">그림&nbsp;<span>8.4</span></a> 와 같은 형식으로 나머지 세 경우를 직접 그려 보면 이 표를 확인할 수 있다(생각해 볼 문제 3).</p>
+</div>
+</div>
+</section>
+<section id="기후변화에-적용하면-왜-탄소세가-유리한가" class="level3">
+<h3 class="anchored" data-anchor-id="기후변화에-적용하면-왜-탄소세가-유리한가">기후변화에 적용하면: 왜 탄소세가 유리한가</h3>
+<p>기후변화는 배출의 <strong>유량(flow)</strong>이 아니라 대기 중에 누적된 <strong>저량(stock)</strong>에 의해 좌우된다(7장). 한 해의 배출은 대기 중 저량의 작은 일부이므로, 한 해의 배출량이 예상보다 조금 많거나 적어도 한 톤의 한계피해는 <strong>크게 달라지지 않는다.</strong> 즉 연간 배출량 기준의 MD 곡선은 <strong>매우 완만</strong>하다.</p>
+<p>바이츠만 정리에 따르면, MD가 완만한 저량 오염물질에서는 <strong>가격 수단(탄소세)의 실수가 수량 수단(배출권)의 실수보다 비용이 작다.</strong> 이것이 많은 경제학자들이 기후정책에서 탄소세를 선호하는 이론적 근거 가운데 하나다.</p>
+<p>그러나 네 가지 평가기준의 나머지까지 고려하면 결론이 달라질 수 있다.</p>
+<ul>
+<li><strong>정치 현실</strong>: 국가 간 탄소세율을 조정하는 것은 정치적으로 거의 불가능하다. 현실에서는 배출권거래제가 주류다.</li>
+<li><strong>경기순응성</strong>: 배출권 가격은 불황에 떨어져 기업 부담을 자동으로 덜어 준다. EU ETS가 정치적으로 살아남은 이유 가운데 하나다.</li>
+<li><strong>누적 예산과 임계점</strong>: 1.5°C나 2°C 같은 누적 탄소예산이나 기후체계의 임계점(9장)을 중시하면 수량 통제의 가치가 커진다.</li>
+</ul>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 혼합형 수단 - 가격 하한·상한(안전밸브)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>배출권시장에 가격 하한과 상한을 두면 수량 수단과 가격 수단의 장점을 함께 취할 수 있다.</p>
+<div id="fig-price-collar" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-price-collar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/ch08/price-collar.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-price-collar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.6: 가격 하한과 상한이 있는 배출권 공급. 파란 선이 배출권 공급이며, 하한·총량·상한의 세 구간으로 이루어진다. 점선은 서로 다른 감축비용 상황에서의 배출권 수요다. 가상의 함수로 그렸다.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>MAC가 보통일 때</strong>: 총량 <span class="math inline">\(\bar E\)</span>에서 가격이 결정된다. 수량 수단으로 작동한다.</li>
+<li><strong>MAC가 낮을 때</strong>: 가격이 하한에서 멈춘다(경매 최저가격, 배출권 회수). 배출이 총량보다 적어지며, 감축과 혁신의 유인이 유지된다.</li>
+<li><strong>MAC가 높을 때</strong>: 상한 가격에서 배출권을 추가 발행하여 비용 폭등을 막는다. 가격 수단으로 작동한다.</li>
+</ul>
+<p>캘리포니아·퀘벡의 경매 최저가격과 전략적 예비분, EU의 시장안정화예비분, 영국의 가격 억제 장치, K-ETS의 시장안정화 조치가 그 예다.</p>
+<p>단, 가격 상한을 지키기 위해 배출권을 무제한 추가 발행하면 원래의 총량을 유지할 수 없다. 반대로 예비분이 한정되어 있으면 모든 상황에서 상한을 보장하지 못한다. 경매 최저가격도 유통시장 전체의 가격을 자동으로 보장하지는 않는다. 장치의 이름보다 발행·회수·이월 규칙이 중요하다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="기술혁신과-동태적-효율성" class="level2">
+<h2 class="anchored" data-anchor-id="기술혁신과-동태적-효율성">기술혁신과 동태적 효율성</h2>
+<section id="혁신은-어디서-오는가" class="level3">
+<h3 class="anchored" data-anchor-id="혁신은-어디서-오는가">혁신은 어디서 오는가</h3>
+<p>기술 변화는 세 단계로 나누어 볼 수 있다.</p>
+<table class="caption-top table">
+<caption>기술 변화의 세 단계.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">단계</th>
+<th style="text-align: left;">누가 하나</th>
+<th style="text-align: left;">동기</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">발명(invention)</td>
+<td style="text-align: left;">대학·연구소</td>
+<td style="text-align: left;">명예·호기심</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">혁신(innovation)</td>
+<td style="text-align: left;">기업 연구소</td>
+<td style="text-align: left;">이윤</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">확산(diffusion)</td>
+<td style="text-align: left;">사업가</td>
+<td style="text-align: left;">꾸준한 수익</td>
+</tr>
+</tbody>
+</table>
+<p>기후 기술정책은 <strong>혁신</strong> 단계에 집중하는 것이 좋다. 탈탄소화는 완전히 새로운 발명보다는, 이미 알고 있는 대안(태양광, 배터리, 히트펌프 등)을 실용화하고 경쟁력 있게 만드는 문제에 가깝기 때문이다.</p>
+<p>혁신 투자에는 “규제가 앞으로도 계속된다”는 <strong>믿음</strong>이 필요하다. 이 점에서도 탄소세가 유리하다. 세금은 좀처럼 폐지되지 않지만, 보조금은 단명하기 쉽고, 배출권 가격은 변동이 크며, 직접규제는 목표 이상으로 줄일 유인을 주지 않는다. <strong>예측가능성</strong>에서 탄소세가 앞선다.</p>
+<p>혁신을 직접 촉진하는 수단도 있다.</p>
+<ul>
+<li><strong>특허</strong>: 일시적인 독점으로 혁신을 보상한다.</li>
+<li><strong>현상금</strong>: 1714년 영국 의회의 경도(longitude) 상금, 오늘날의 X 프라이즈 같은 것이다.</li>
+<li><strong>사전 구매 약정</strong>: 아직 없는 제품을 일정 가격에 사겠다고 미리 약속한다.</li>
+<li><strong>최고효율 기준제(top runner)</strong>: 시장에서 가장 효율적인 제품을 몇 년 뒤의 기준으로 삼는다.</li>
+</ul>
+<p>다만 정부는 어떤 기술이 유망한지 <strong>선별하는 데 서툴다</strong>는 점을 기억해야 한다. 탄소가격은 기술을 고르지 않고 모든 감축 방법에 같은 보상을 준다는 장점이 있다. 반면 연구개발의 지식 파급효과나 전력망 같은 기반시설의 조정 문제는 탄소가격만으로 해결되지 않으므로, 연구개발 지원 등이 탄소가격을 보완할 수 있다.</p>
+</section>
+<section id="기술-도입-유인-탄소세-배출권-배출기준" class="level3">
+<h3 class="anchored" data-anchor-id="기술-도입-유인-탄소세-배출권-배출기준">기술 도입 유인: 탄소세 &gt; 배출권 &gt; 배출기준</h3>
+<p>기업이 감축비용을 낮추는 신기술을 도입할지 결정한다고 하자. 그 유인은 정책수단에 따라 다르다.</p>
+<div id="fig-tech-adoption" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tech-adoption-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/ch08/tech-adoption.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tech-adoption-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.7: 정책수단별 신기술 도입의 이득. 기존 기술(<span class="math inline">\(MC_0\)</span>) 아래에서 세율 <span class="math inline">\(t\)</span>와 배출기준은 같은 감축량 <span class="math inline">\(X\)</span>(기준)을 유도한다. 신기술(<span class="math inline">\(MC_1\)</span>)을 도입하면 배출기준에서는 면적 <span class="math inline">\(a\)</span>만큼, 탄소세에서는 <span class="math inline">\(a+b\)</span>만큼 이득이다. 가상의 선형 함수로 그렸다.
+</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<caption>신기술 도입의 이득. 혁신의 가치는 도입 이득만큼이며, 이득이 클수록 신기술을 개발·도입할 유인이 크다.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">배출기준</th>
+<th style="text-align: center;">탄소세</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">도입 전 감축량</td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span>(기준)</td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span>(기준)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">도입 후 감축량</td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span>(기준) 그대로</td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span>(세금)로 증가</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">① 같은 감축량을 더 싸게</td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">② 추가 감축: 아낀 세금 − 추가 감축비용</td>
+<td style="text-align: center;">없음</td>
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>도입 이득 합계</strong></td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a+b\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>배출기준</strong>: 정해진 양만 줄이면 끝이다. 신기술은 <strong>같은 양을 더 싸게</strong> 줄이는 수단일 뿐이며, 더 줄여도 보상이 없다.</li>
+<li><strong>탄소세</strong>: 남은 배출 1톤마다 <span class="math inline">\(t\)</span>를 계속 낸다. 신기술로 한계비용이 낮아지면 <span class="math inline">\(MC_1=t\)</span>가 될 때까지 더 줄여 세금도 아낀다. 감축량이 늘어 총감축비용은 오히려 늘 수 있지만, 아낀 세금이 그보다 커서 순이득이 <span class="math inline">\(a+b\)</span>다.</li>
+<li><strong>배출권</strong>: 한 기업만 신기술을 도입하면 배출권 가격 <span class="math inline">\(p\)</span>가 그대로이므로 탄소세와 같다(<span class="math inline">\(a+b\)</span>). 그러나 신기술이 <strong>확산</strong>되면 감축이 쉬워져 배출권 수요가 줄고 가격 <span class="math inline">\(p\)</span>가 떨어진다. 추가 감축의 이득 <span class="math inline">\(b\)</span>가 줄어든다. 그래서 배출권의 혁신 유인은 탄소세보다 작지만 배출기준보다는 크다.</li>
+<li><strong>기술기준</strong>은 특정 기술에 고정되어 있으므로 더 나은 기술을 개발할 유인이 가장 약하다.</li>
+</ul>
+<p><strong>톱니효과(ratchet effect)</strong>도 있다. 배출기준 아래에서 신기술이 나오면 규제자가 기준을 강화할 수 있다. 그러면 기업은 혁신을 드러내지 않을 유인까지 갖게 된다.</p>
+<p>이 순위는 특정 모형의 결과다. 세율과 총량의 향후 조정, 특허, 연구개발 경쟁, 가격 기대를 달리 가정하면 순위가 달라질 수 있다. 특정 조건의 비교를 보편적인 정책 서열로 읽어서는 안 된다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 동태적 효율성 - 탄소가격은 시간에 따라 얼마나 올라야 하나
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>7장에서 SCC와 최적 탄소세가 시간이 지나며 오른다는 것을 보았다. 이를 간단한 모형으로 확인해 보자.</p>
+<p><strong>변수와 가정.</strong> <span class="math inline">\(L(t)\)</span>는 대기 중 초과 탄소량, <span class="math inline">\(E(t)\)</span>는 배출량, <span class="math inline">\(\rho\)</span>는 사회적 할인율, <span class="math inline">\(\delta\)</span>는 자연 제거율이다. <span class="math inline">\(D(L)\)</span>은 매 시점의 기후피해, <span class="math inline">\(D'(L)&gt;0\)</span>은 탄소 1단위가 더 있을 때의 한계피해다. <span class="math inline">\(B(E)\)</span>는 배출을 수반하는 생산·소비의 순편익이다. 확실성, 일정한 <span class="math inline">\(\rho\)</span>와 <span class="math inline">\(\delta\)</span>, 단일 탄소 저장고를 가정한다. 사회의 문제는</p>
+<p><span class="math display">\[
+\dot L=E-\delta L,\qquad
+\max_{E(t)}\int_0^\infty e^{-\rho t}\{B(E(t))-D(L(t))\}\,dt
+\]</span></p>
+<p>이다. <span class="math inline">\(\lambda(t)&gt;0\)</span>은 지금 탄소 1단위를 배출할 때 생기는 미래 피해의 현재가치, 즉 최적 탄소가격이다.</p>
+<p><strong>1단계: 지금 배출한 1톤은 미래에도 피해를 준다.</strong> <span class="math inline">\(t\)</span>에 배출한 1톤 가운데 <span class="math inline">\(s\)</span> 시점에 남는 양은 <span class="math inline">\(e^{-\delta(s-t)}\)</span>다. 미래 한계피해를 할인하여 더하면</p>
+<p><span class="math display">\[
+\lambda(t)=\int_t^\infty D'(L(s))\,\underbrace{e^{-\delta(s-t)}}_{\text{남아 있는 탄소}}\,\underbrace{e^{-\rho(s-t)}}_{\text{현재가치 할인}}\,ds.
+\]</span></p>
+<p><strong>2단계: 이 적분을 <span class="math inline">\(t\)</span>에 대해 미분한다.</strong> 적분의 시작점이 뒤로 움직이면 오늘의 피해가 빠지고, 남은 미래 피해는 할인·제거 기간이 짧아져 재평가된다.</p>
+<p><span class="math display">\[
+\dot\lambda=-D'(L)+(\rho+\delta)\lambda
+\quad\Longrightarrow\quad
+\boxed{\frac{\dot\lambda}{\lambda}=\rho+\delta-\frac{D'(L)}{\lambda}}
+\]</span></p>
+<p><span class="math inline">\(\dot\lambda/\lambda\)</span>는 탄소가격의 <strong>상승률</strong>이다. 마지막 항 <span class="math inline">\(D'(L)/\lambda\)</span>는 현재의 한계피해를 탄소가격으로 나눈 비율이며, 피해의 증가 속도가 아니다. 한계피해가 일정하면 <span class="math inline">\(\lambda=D'/(\rho+\delta)\)</span>도 일정하여 상승률은 0이다. 따라서 최적 탄소가격이 항상 할인율만큼 오르는 것은 아니며, 이 식만으로 초기 가격이나 상승 여부가 정해지지도 않는다.</p>
+<p>출처: Di Maria, Smulders &amp; van der Werf (2017), <em>Environmental and Resource Economics</em>, 2절. 원문의 탄소가격 <span class="math inline">\(\tau\)</span>를 여기서는 <span class="math inline">\(\lambda\)</span>로 표기했다.</p>
+</div>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 비용효과성과 호텔링 법칙
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>환경목표를 이미 정했다면, 피해를 다시 최적화하지 않고 그 목표를 최소비용으로 달성하는 배출 경로를 찾는다. 이때 <span class="math inline">\(\lambda\)</span>는 환경제약의 그림자가격이다.</p>
+<p>탄소 저장량 상한 <span class="math inline">\(L\leq\bar L\)</span>이 아직 구속적이지 않은 구간을 생각하자. 오늘 1톤을 배출하면 <span class="math inline">\(\Delta t\)</span> 뒤에는 <span class="math inline">\(e^{-\delta\Delta t}\)</span>톤이 남는다. 배출 시점을 바꾸어도 한계가치가 같아야 하므로</p>
+<p><span class="math display">\[
+\lambda(t)=e^{-\rho\Delta t}e^{-\delta\Delta t}\lambda(t+\Delta t)
+\quad\Longrightarrow\quad
+\boxed{\frac{\dot\lambda}{\lambda}=\rho+\delta},\qquad \lambda(t)=\lambda(0)e^{(\rho+\delta)t}
+\]</span></p>
+<p>이다. 사회적 최적의 식에서 <span class="math inline">\(D'(L)/\lambda\)</span> 항이 빠진 것이다. 누적배출 예산처럼 자연 제거를 무시하면(<span class="math inline">\(\delta=0\)</span>) 상승률이 할인율 <span class="math inline">\(\rho\)</span>와 같아지는데, 이것이 고갈성 자원 가격에 관한 <strong>호텔링 법칙</strong>이다. 7장에서 비용효과적 탄소가격이 “할인율보다 약간 높은 속도로” 올라야 한다고 한 것이 이 결과다.</p>
+<ul>
+<li>농도 상한에 도달해 제약이 구속적이 되면 추가 제약항이 생긴다. 고정 상한만으로 이 식이 모든 시점에 성립하지는 않는다.</li>
+<li>초기 가격 <span class="math inline">\(\lambda(0)\)</span>는 환경목표, 초기 탄소량, 감축비용, 경계조건을 함께 풀어 결정한다.</li>
+</ul>
+<p><strong>녹색 역설(green paradox).</strong> 미래의 규제로 화석연료의 수익성이 낮아질 것으로 예상하면 자원 보유자는 <strong>채굴을 앞당길</strong> 수 있다. 규제가 오히려 단기 배출을 늘리는 것이다. 이는 공급자의 기대와 정책 시행 시점에 관한 별도 논점이며, 위 식만으로 현실에서의 발생 여부가 결정되지는 않는다.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="배출권의-초기-배분" class="level2">
+<h2 class="anchored" data-anchor-id="배출권의-초기-배분">배출권의 초기 배분</h2>
+<section id="누구에게-먼저-주는가" class="level3">
+<h3 class="anchored" data-anchor-id="누구에게-먼저-주는가">누구에게 먼저 주는가</h3>
+<p>배출권거래제는 총량을 정한 뒤 그 배출권을 <strong>누구에게 처음 나누어 줄지</strong> 정해야 한다. 세 가지 방법이 있다.</p>
+<ul>
+<li><strong>무상할당(grandfathering)</strong>: 기준연도의 <strong>과거 배출량</strong>에 비례해 무료로 나누어 준다. 기존 오염원에게 유리하다. 과거에 많이 배출한 기업일수록 더 많이 받으므로 불공정하다는 비판을 받는다.</li>
+<li><strong>벤치마킹(benchmarking)</strong>: 업종별 <strong>모범 사례(best practice)</strong>의 배출 효율을 기준으로 나누어 준다. 효율적인 기업이 상대적으로 유리하다.</li>
+<li><strong>경매(auction)</strong>: 시장가격에 판매한다. 분배 효과가 세금과 같으며, 수입을 다른 세금 인하나 피해 보상에 쓸 수 있다.</li>
+</ul>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: EU ETS 항공 부문의 역설
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>EU ETS는 2012년 항공 부문을 편입하면서 2005년 배출량을 기준으로 무상할당했다. 그 사이 빠르게 성장하며 신형·효율적인 항공기를 도입한 저가항공사(라이언에어 등)는 <strong>불리하게</strong>, 성장이 느렸던 기존 대형 항공사(루프트한자 등)는 <strong>유리하게</strong> 배분받았다. 과거 배출량을 기준으로 삼으면 더 깨끗하고 빠르게 성장한 기업이 역설적으로 손해를 볼 수 있다.</p>
+</div>
+</div>
+</section>
+<section id="공짜로-받은-배출권도-공짜가-아니다" class="level3">
+<h3 class="anchored" data-anchor-id="공짜로-받은-배출권도-공짜가-아니다">공짜로 받은 배출권도 공짜가 아니다</h3>
+<p>무상할당이면 기업의 감축 유인이 약해지지 않을까? 그렇지 않다. 공짜로 받은 배출권도 사용하면 <strong>팔 기회를 포기</strong>한다. 따라서 무상할당된 배출권으로 배출하더라도 그 배출에는 시장가격만큼의 <strong>기회비용</strong>이 있다. 할당량이 기업의 현재 선택과 무관하게 고정되어 있다면, 무상할당과 경매의 감축 유인은 같다(앞의 1계 조건 <span class="math inline">\(C_i'=p\)</span>에 할당량 <span class="math inline">\(E_i\)</span>가 나타나지 않는다는 점을 확인하라).</p>
+<p>그러나 <strong>분배</strong>는 다르다. 경매 수입은 정부에 돌아가고, 무상할당된 배출권의 가치는 기업에 돌아간다. 또 미래의 할당이 현재의 생산량이나 배출량에 따라 바뀐다면 할당량이 고정되어 있다는 가정이 깨진다. 그러면 기업의 생산·폐쇄·진입 선택까지 영향을 받는다.</p>
+</section>
+<section id="초기-배분은-효율성에-영향을-주는가-코즈-정리의-재등장" class="level3">
+<h3 class="anchored" data-anchor-id="초기-배분은-효율성에-영향을-주는가-코즈-정리의-재등장">초기 배분은 효율성에 영향을 주는가: 코즈 정리의 재등장</h3>
+<p>이 질문은 4장의 코즈 정리와 같은 구조다 <span class="citation" data-cites="coase1960">(<a href="references.html#ref-coase1960" role="doc-biblioref">Coase 1960년</a>)</span>. 한 경제주체(예: 4장의 무 재배 농민)는 오염 활동에서 편익을 얻고, 다른 주체(예: 낚시 여행 업체)는 오염으로 피해를 입는다고 하자. 사회계획자라면 오염 활동의 한계편익과 오염의 한계피해가 같아지는 <span class="math inline">\(Q^*\)</span>에서 오염량을 정할 것이다. 대안으로 규제자가 어느 한쪽에 명시적인 재산권을 주고 시장(협상)을 조직할 수 있다.</p>
+<div id="fig-initial-allocation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-initial-allocation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/ch08/initial-allocation.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-initial-allocation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.8: 초기 배분과 최종 배분. 파란 선은 오염원이 배출에서 얻는 한계편익(= 감축의 한계비용), 빨간 선은 배출의 한계피해(= 감축의 한계편익)다. 어느 쪽에 권리를 주든 거래는 같은 효율적 배출량 <span class="math inline">\(Q^*\)</span>로 수렴한다. 가상의 선형 함수로 그렸다.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>피해자에게 깨끗한 환경에 대한 권리(오염이 전혀 없을 권리)가 있을 때</strong>: 출발점은 <span class="math inline">\(Q=0\)</span>이다. 배출하려면 오염원이 피해자에게 보상해야 한다. 오염원의 지불의사(파란 선)가 피해자가 요구하는 보상(빨간 선)보다 큰 동안 거래가 이루어져 배출이 늘고, <span class="math inline">\(Q^*\)</span>에서 두 금액이 같아져 거래가 멈춘다. 돈은 오염원에서 피해자로 흐른다.</li>
+<li><strong>오염원에게 무제한 배출 권리가 있을 때</strong>: 출발점은 규제가 없을 때의 배출량 <span class="math inline">\(Q_0\)</span>이다. 감축하려면 피해자가 오염원에게 보상해야 한다. 피해자의 지불의사(빨간 선)가 오염원이 요구하는 보상(파란 선)보다 큰 동안 거래가 이루어져 배출이 줄고, 역시 <span class="math inline">\(Q^*\)</span>에서 멈춘다. 돈은 피해자에서 오염원으로 흐른다.</li>
+</ul>
+<p>두 경우 모두 <strong>같은 효율적 수량 <span class="math inline">\(Q^*\)</span></strong>로 수렴한다. 초기 배분은 효율성과 무관하며, 오직 <strong>형평성</strong>(누가 돈을 내고 누가 받는가)에만 영향을 준다. 이것이 서두에서 본 후생경제학 제2정리의 아이디어이기도 하다.</p>
+<p>물론 이 결론은 거래비용, 시장지배력, 자금 제약이 없고 초기 할당이 현재 선택과 무관하다는 조건에 의존한다. 그리고 배분이 효율성과 무관하다는 것은 형평성이 같다는 뜻이 아니다. 배출권을 누가 처음 받는지는 소득과 자산의 분배를 크게 바꾼다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 코즈 정리는 실제로도 일어난다
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>사적 협상은 조용히 끝나므로 잘 알려지지 않지만, 기록으로 남은 실제 사례들이 있다.</p>
+<ul>
+<li><strong>트레일 제련소 사건</strong>: 캐나다의 제련회사가 국경을 넘은 대기오염에 대해 미국 농민들에게 배상했다(코즈 정리 이전의 판례).</li>
+<li><strong>뫼즈강 사건</strong>: 프랑스의 칼리(potash) 광산이 염분을 방류한 피해에 대해 네덜란드 농민과 상수도 업체에 배상했다.</li>
+<li><strong>American Electric Power</strong>: 대기오염 기준 위반에 대한 보상으로, 전력회사가 한 마을 주민 전체의 집을 <strong>사들였다</strong>.</li>
+<li><strong>핀란드와 소련</strong>: 콜라 반도 니켈 광산의 월경성 대기오염을 정화하도록 피해국인 핀란드가 비용을 지불했다.</li>
+<li><strong>뉴욕시</strong>: 상수원 보호를 위해 상류 유역의 토지를 <strong>직접 매입</strong>했다.</li>
+</ul>
+<p>거의 모든 사례가 국가나 대기업처럼 <strong>협상 비용을 감당할 수 있는</strong> 소수의 당사자 사이에서 일어났다는 공통점이 있다. 코즈 정리의 “당사자 수가 적어야 한다”는 전제(4장)를 실증하는 셈이다. 수십억 명의 배출자와 피해자가 얽힌 기후변화에서는 사적 협상이 해법이 되기 어렵다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="세수-활용과-이중배당" class="level2">
+<h2 class="anchored" data-anchor-id="세수-활용과-이중배당">세수 활용과 이중배당</h2>
+<p>탄소세나 배출권 경매는 정부에 수입을 가져다준다. 이 돈을 어디에 쓰느냐에 따라 경제적 효과와 정치적 수용성이 크게 달라진다. 6장에서 배운 이론을 다시 떠올려 보자. 세수로 소득세 같은 왜곡적 세금을 낮추면 후생이 개선된다(<strong>약한 이중배당</strong>). 그러나 환경편익을 빼고도 총비용이 음(−)이 된다(<strong>강한 이중배당</strong>)는 보장은 없다 <span class="citation" data-cites="goulder1995">(<a href="references.html#ref-goulder1995" role="doc-biblioref">Goulder 1995년</a>)</span>.</p>
+<table class="caption-top table">
+<caption>탄소가격 수입의 사용 사례.</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">제도(도입)</th>
+<th style="text-align: left;">세수 사용</th>
+<th style="text-align: left;">결과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">스웨덴 탄소세(1991)</td>
+<td style="text-align: left;">소득세 인하를 포함한 세제개편과 함께 도입</td>
+<td style="text-align: left;">세율이 세계 최고 수준(톤당 100달러 이상), 수송 배출 약 11% 감소 추정</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">독일 생태세제개혁(1999)</td>
+<td style="text-align: left;">에너지세 세수로 연금보험료율 인하</td>
+<td style="text-align: left;">노동비용 감소, 고용 소폭 증가 추정</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">브리티시컬럼비아 탄소세(2008)</td>
+<td style="text-align: left;">세수 중립: 소득세·법인세 인하 + 저소득층 환급</td>
+<td style="text-align: left;">연료 소비 5~15% 감소, GDP 악영향 확인 안 됨</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">스위스 CO₂ 부담금(2008)</td>
+<td style="text-align: left;">약 2/3를 가구(1인당 균등)와 기업에 환급</td>
+<td style="text-align: left;">장기간 유지</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">캐나다 연방 탄소세(2019)</td>
+<td style="text-align: left;">세수 약 90%를 가구에 정액 환급</td>
+<td style="text-align: left;">다수 가구가 순수혜였으나 2025년 소비자 탄소세 폐지</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">프랑스 탄소세(2014)</td>
+<td style="text-align: left;">일반 재정에 흡수, 환급이 잘 보이지 않음</td>
+<td style="text-align: left;">2018년 노란조끼 시위 후 추가 인상 동결</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">한국 K-ETS(2015)</td>
+<td style="text-align: left;">유상할당(약 10%) 수입을 기후대응기금으로</td>
+<td style="text-align: left;">세금 인하 형태의 환류 없음</td>
+</tr>
+</tbody>
+</table>
+<p>실증 연구들은 다음을 말해 준다.</p>
+<ul>
+<li><strong>경제 전체</strong>: 유럽의 탄소세 도입국에서 GDP와 고용에 유의한 부정적 효과가 발견되지 않았다(Metcalf &amp; Stock, 2023). 브리티시컬럼비아도 같은 결과를 보였다.</li>
+<li><strong>강한 이중배당은 드물다</strong>: 미국에 대한 추정에서 조세상호작용 효과가 세수 환류 효과보다 커서, 최적 오염세는 한계피해의 약 0.63배였다(Parry, 1995). 대부분의 연구는 약한 이중배당만 성립한다고 본다.</li>
+<li><strong>환류 방식이 결과를 좌우한다</strong>: 같은 세수라도 가장 왜곡이 큰 세금을 낮출 때 이득이 크다. 정액 환급은 형평성에 유리하지만 효율 이득은 작다.</li>
+<li><strong>정치적 수용성</strong>: 프랑스에서는 환급이 있어도 다수가 “손해를 볼 것”이라고 믿었다(Douenne &amp; Fabre, 2022). 캐나다는 정액 환급에도 소비자 탄소세가 폐지되었다. 환류의 <strong>가시성</strong>과 정부에 대한 <strong>신뢰</strong>가 관건이다.</li>
+</ul>
+<p>세수 환류 효과는 <strong>세금</strong>이나 <strong>경매</strong>에서만 생긴다. 무상할당(K-ETS의 약 90%)은 이 이득을 포기하는 선택이다. 경매 비중의 확대와 수입 사용처의 설계가 효율과 수용성을 함께 좌우한다.</p>
+</section>
+<section id="정책-성과와-부수적-편익" class="level2">
+<h2 class="anchored" data-anchor-id="정책-성과와-부수적-편익">정책 성과와 부수적 편익</h2>
+<section id="비용효과적-수단은-실제로-돈을-아낀다-미국-so₂-사례" class="level3">
+<h3 class="anchored" data-anchor-id="비용효과적-수단은-실제로-돈을-아낀다-미국-so₂-사례">비용효과적 수단은 실제로 돈을 아낀다: 미국 SO₂ 사례</h3>
+<p>1990년 미국 산성비 프로그램(SO₂ 배출권거래제)의 실제 비용을 “다른 수단을 썼다면”과 비교한 연구가 있다.</p>
+<table class="caption-top table">
+<caption>미국 SO₂ 감축의 수단별 연간 비용.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">정책 수단</th>
+<th style="text-align: right;">연간 비용(같은 감축량 기준)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">이론상 최소비용</td>
+<td style="text-align: right;">3억 1,500만 달러</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>실제: 배출권거래제</strong></td>
+<td style="text-align: right;"><strong>7억 4,700만 달러</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">일률적 배출기준</td>
+<td style="text-align: right;">9억 달러 (+20%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">기술(탈황설비) 의무화</td>
+<td style="text-align: right;">25억 5,500만 달러 (+242%)</td>
+</tr>
+</tbody>
+</table>
+<p>이 장 앞부분의 “직접규제는 왜 비용효과적이지 않은가”가 실제 정책에서 수억 달러 단위로 확인된 사례다. 동시에 실제 거래제의 비용이 이론상 최소비용의 두 배 이상이었다는 점도 눈여겨보자. 거래비용, 주(州) 규제, 기업의 학습 등 현실의 마찰 때문이다. 또 이 프로그램은 2005년 이후 규제 강화와 소송을 거치며 2010년대 초 사실상 기능을 잃었다. 성공한 제도도 영구하지는 않다.</p>
+<p>한 오염물질의 경험을 온실가스에 그대로 옮길 수도 없다. 피해의 공간 분포, 연료와 기술, 기존 규제와 시장구조가 다르다. 거래제 도입 전후의 비용 변화를 모두 거래제의 인과효과로 돌려서도 안 된다 <span class="citation" data-cites="keohane2016">(<a href="references.html#ref-keohane2016" role="doc-biblioref">Keohane 와/과 Olmstead 2016년</a>)</span>.</p>
+</section>
+<section id="부수적-편익-온실가스와-대기오염의-상호작용" class="level3">
+<h3 class="anchored" data-anchor-id="부수적-편익-온실가스와-대기오염의-상호작용">부수적 편익: 온실가스와 대기오염의 상호작용</h3>
+<p>화석연료 연소를 줄이면 기후편익과 함께 미세먼지 같은 지역 대기오염이 줄어 건강 편익이 생긴다. 이를 <strong>부수적 편익(co-benefit)</strong>이라 한다. 그러나 모든 조치가 온실가스와 대기오염을 같은 방향으로 움직이지는 않는다.</p>
+<table class="caption-top table">
+<caption>조치별 온실가스와 대기오염의 상호작용.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">조치</th>
+<th style="text-align: center;">CO₂</th>
+<th style="text-align: center;">대기오염(미세먼지·SO₂·NOₓ)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">석탄 → 가스 발전</td>
+<td style="text-align: center;">감소</td>
+<td style="text-align: center;">감소</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">화석연료 → 재생에너지</td>
+<td style="text-align: center;">감소</td>
+<td style="text-align: center;">감소</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">휘발유차 → 경유차</td>
+<td style="text-align: center;">감소</td>
+<td style="text-align: center;">증가</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">굴뚝 탈황설비 설치</td>
+<td style="text-align: center;">증가(에너지 소비)</td>
+<td style="text-align: center;">감소</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>부수적 편익이 크면 감축의 편익이 커져 <strong>최적 감축량이 늘어난다.</strong> 다만 방향이 조치마다 다르므로 일률적으로 더해서는 안 된다.</li>
+<li>미국 SO₂ 프로그램은 편익이 비용의 약 10배였는데, 그 가운데 85% 이상이 <strong>건강 편익</strong>이었다. 산성비 대책으로 시작했지만 실제 편익은 대기질 개선에서 나왔다.</li>
+<li>대기오염 정책이 강할수록 기후정책의 부수적 편익은 작아진다. 원칙적으로 대기오염은 대기오염 정책으로 직접 다루는 것이 효율적이다.</li>
+<li>한국에서는 석탄발전 감축이 미세먼지와 온실가스를 함께 줄이는 대표적 사례다.</li>
+</ul>
+<div id="fig-co-benefit" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-co-benefit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/ch08/co-benefit.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-co-benefit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;8.9: 부수적 편익을 반영한 최적 감축량. 기후 편익만 고려하면 MAC = MB(기후)인 <span class="math inline">\(X_1^*\)</span>에서 감축하지만, 부수적 편익을 더하면 한계편익 곡선이 위로 이동하여 최적 감축량이 <span class="math inline">\(X_2^*\)</span>로 늘어난다. 파란 영역은 기후 편익만 보면 놓치는 추가 감축의 순편익이다. 가상의 함수로 그렸다.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-co-benefit" class="quarto-xref">그림&nbsp;<span>8.9</span></a> 에서 기후 편익(MB(기후))은 감축으로 피하는 기후피해, 즉 SCC다. 전 지구적이고 장기적이다. 부수적 편익(MB(부수))은 대기질 개선의 건강 편익, 에너지 절약 등으로 지역적이고 단기적이다. 부수적 편익을 더하면 최적 감축량이 <span class="math inline">\(X_1^*\)</span>에서 <span class="math inline">\(X_2^*\)</span>로 늘어나며, MAC가 완만할수록 증가 폭이 크다. 반대로 경유차 전환처럼 부수적 영향이 음(−)이면 곡선이 아래로 이동하여 최적 감축량이 줄어든다. 같은 건강 피해를 여러 편익 항목에 중복해서 더하지 않도록 주의해야 한다.</p>
+</section>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<ul>
+<li><strong>개입의 근거.</strong> 외부효과가 있으면 후생경제학 제1정리의 전제가 깨져 시장균형이 비효율적이다. 질문은 “어떤 수단으로” 개입할지다.</li>
+<li><strong>수단의 분류와 평가.</strong> 직접규제는 정부가 방법을 지시하고, 시장기반 수단(세금·보조금·배출권)은 오염원이 스스로 선택하게 한다. 수단은 환경 효과성, 정태적·동태적 비용효과성, 정치적 수용성으로 평가한다.</li>
+<li><strong>등한계 원칙.</strong> 주어진 감축을 최소비용으로 달성하려면 모든 오염원의 MAC가 같아야 한다. 공통 탄소가격(세금 또는 배출권 가격)은 정부가 기업별 비용을 몰라도 이 조건을 저절로 만족시킨다. 직접규제는 그렇지 못하며, 비용 차이가 수십만 배에 이르기도 한다.</li>
+<li><strong>세금 vs.&nbsp;보조금 vs.&nbsp;배출권.</strong> 보조금은 장기적으로 오염 산업을 키울 수 있다. 배출권은 총량을 확실히 통제하지만, 다른 정책과 겹치면 풍선효과로 추가 감축이 사라진다. K-ETS는 무상할당 위주에서 유상할당 확대와 총량 축소로 바뀌고 있다.</li>
+<li><strong>감시와 연계.</strong> 측정·보고·검증 없이는 가격도 없다. 시장 연계와 상쇄배출권은 비용을 낮추지만 추가성과 집행의 문제를 안고 있다.</li>
+<li><strong>가격 vs.&nbsp;수량.</strong> 감축비용이 불확실할 때, MB가 MAC보다 완만하면 가격 수단이, 가파르면 수량 수단이 유리하다(바이츠만 정리). 저량 오염물질인 기후변화에서는 탄소세가 이론적으로 유리하지만, 정치 현실과 누적 예산을 고려하면 혼합형 수단이 쓰인다.</li>
+<li><strong>혁신·배분·세수.</strong> 혁신 유인은 대체로 탄소세 &gt; 배출권 &gt; 배출기준 순이다. 배출권의 초기 배분은 (조건이 맞으면) 효율성이 아닌 형평성만 바꾼다. 세수를 어떻게 환류하느냐가 효율과 정치적 수용성을 좌우한다.</li>
+</ul>
+<p>다음 장에서는 이 모든 분석의 배경에 있는 더 넓은 <strong>불확실성과 위험</strong>, 그리고 파국적 결과의 가능성이 정책 판단을 어떻게 바꾸는지 살펴본다.</p>
+</section>
+<section id="생각해-볼-문제" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="생각해-볼-문제">생각해 볼 문제</h2>
+<ol type="1">
+<li>이론에서는 배출권거래제가 한계감축비용을 같게 만들어 최소비용 감축을 유도한다고 했다. 그런데 현실의 한국 기업들은 왜 감축투자 대신 배출권 구매를 택하는 경우가 많았을까? 가격 수준, 가격 예측가능성, 투자의 비가역성과 관련지어 설명하라.</li>
+<li>한국의 배출권 가격이 오랫동안 EU의 4분의 1 수준에 머문 것은 시장의 실패일까, 아니면 정책 설계(높은 무상할당 비율, 느슨한 총량)의 결과일까? 가격신호를 되살리기 위한 정책 옵션(유상할당 확대, 최저가격제, 총량 축소, 이월·차입 제한 등)을 이 장의 개념으로 평가하라. 수량을 고정해도 가격이 무너지면 감축 유인 자체가 사라질 수 있는가?</li>
+<li><a href="#fig-weitzman-error" class="quarto-xref">그림&nbsp;<span>8.4</span></a> 와 같은 형식(가로축 배출량)으로 MAC 과소추정, MD 과대추정, MD 과소추정의 세 경우를 그리고, 각 수단의 <span class="math inline">\(E_T\)</span>, <span class="math inline">\(\bar E\)</span>와 후생손실 삼각형을 표시하여 ‘추정 오류의 네 가지 경우’ 표를 확인하라.</li>
+<li>한국이 탄소세를 새로 도입한다면 걷은 세수를 어디에 써야 할까? 효율성(이중배당), 형평성(저소득층 부담), 정치적 수용성(가시성과 신뢰)의 세 관점에서 프랑스와 캐나다의 경험을 참고하여 논하라.</li>
+<li>재생에너지 의무화 제도(RPS)와 배출권거래제가 함께 운영될 때 풍선효과가 어떻게 생기는지 설명하고, 이를 완화할 수 있는 제도 설계를 제안하라.</li>
+</ol>
+</section>
+<section id="읽을거리" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="읽을거리">읽을거리</h2>
+<ul>
+<li>Tol, R. S. J. (2023). <em>Climate Economics: Economic Analysis of Climate, Climate Change and Climate Policy</em>, 3rd ed.&nbsp;Edward Elgar. 4장 “Policy Instruments for Emission Reduction” <span class="citation" data-cites="tol2023">(<a href="references.html#ref-tol2023" role="doc-biblioref">Tol 2023년</a>)</span>.</li>
+<li>탄소세의 원리를 설명한 영상: <a href="https://www.youtube.com/watch?v=45wuGMgG1tE" class="uri">https://www.youtube.com/watch?v=45wuGMgG1tE</a></li>
+<li>The Economist, “How do carbon markets work?”: <a href="https://youtu.be/u26xcY9doso" class="uri">https://youtu.be/u26xcY9doso</a></li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-coase1960" class="csl-entry" role="listitem">
+Coase, Ronald H. 1960년. <span>“The Problem of Social Cost”</span>. <em>Journal of Law and Economics</em> 3: 1–44.
+</div>
+<div id="ref-goulder1995" class="csl-entry" role="listitem">
+Goulder, Lawrence H. 1995년. <span>“Environmental Taxation and the Double Dividend: A Reader’s Guide”</span>. <em>International Tax and Public Finance</em> 2: 157–83. <a href="https://doi.org/10.1007/BF00877495">https://doi.org/10.1007/BF00877495</a>.
+</div>
+<div id="ref-keohane2016" class="csl-entry" role="listitem">
+Keohane, Nathaniel O., 와/과 Sheila M. Olmstead. 2016년. <em>Markets and the Environment</em>. 2nd ed. Island Press.
+</div>
+<div id="ref-pigou1920" class="csl-entry" role="listitem">
+Pigou, Arthur C. 1920년. <em>The Economics of Welfare</em>. Macmillan.
+</div>
+<div id="ref-pindyck2022" class="csl-entry" role="listitem">
+Pindyck, Robert S. 2022년. <em>Climate Future: Averting and Adapting to Climate Change</em>. Oxford University Press.
+</div>
+<div id="ref-tol2023" class="csl-entry" role="listitem">
+Tol, Richard S. J. 2023년. <em>Climate Economics: Economic Analysis of Climate, Climate Change and Climate Policy</em>. 3rd ed. Edward Elgar Publishing.
+</div>
+<div id="ref-weitzman1974" class="csl-entry" role="listitem">
+Weitzman, Martin L. 1974년. <span>“Prices vs. Quantities”</span>. <em>Review of Economic Studies</em> 41 (4): 477–91. <a href="https://doi.org/10.2307/2296698">https://doi.org/10.2307/2296698</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/hocheoljeon\.github\.io\/climate-econ-book\/");
+      const newWindowLabel = "(opens in a new tab)";
+      const newWindowNoteId = "quarto-ext-newwindow-label";
+      // Links reference one hidden label through aria-describedby, so the
+      // announcement never changes their accessible name.
+      var describeNewWindow = (link) => {
+        if (!window.document.getElementById(newWindowNoteId)) {
+          var newWindowNote = window.document.createElement("span");
+          newWindowNote.id = newWindowNoteId;
+          newWindowNote.hidden = true;
+          newWindowNote.textContent = newWindowLabel;
+          window.document.body.appendChild(newWindowNote);
+        }
+        var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(newWindowNoteId)) {
+          describedBy.push(newWindowNoteId);
+          link.setAttribute("aria-describedby", describedBy.join(" "));
+        }
+      }
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            describeNewWindow(link);
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"스크롤 가능한 코드","output":"스크롤 가능한 출력"};
+  </script>
+<nav class="page-navigation" aria-label="페이지">
+  <div class="nav-page nav-page-previous">
+      <a href="./07-discounting.html" class="pagination-link" aria-label="할인과 비용편익 분석">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">할인과 비용편익 분석</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./09-uncertainty-risk.html" class="pagination-link" aria-label="불확실성·위험과 기후정책">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">불확실성·위험과 기후정책</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>전호철 · 기후변화경제학 · 1–9장</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>CC BY-NC-SA 4.0 · 제3자 자료는 별도 출처 참조</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

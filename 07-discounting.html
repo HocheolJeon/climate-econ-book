@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; 할인과 비용편익 분석 – 기후변화경제학</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./08-policy-instruments.html" rel="next">
+<link href="./06-abatement-costs.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8bf607cc09aff24488a246d4e52bb127.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="도구 모음">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="사이트 이동 경로"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-climate-damages.html">제III부 피해·비용과 시간</a></li><li class="breadcrumb-item"><a href="./07-discounting.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">할인과 비용편익 분석</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="웹사이트">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">기후변화경제학</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">책 소개</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">교재 안내</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">제I부 기후와 경제</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-what-is-climate-change.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">기후변화의 과학적 기초</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-climate-economy-link.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">기후와 경제의 상호작용</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">제II부 시장과 시장실패</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-market-efficiency.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">시장과 경제적 효율성</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-market-failure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">시장실패와 기후변화</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">제III부 피해·비용과 시간</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-climate-damages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">기후변화의 피해와 적응</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-abatement-costs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">온실가스 감축비용</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-discounting.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">할인과 비용편익 분석</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">제IV부 정책수단과 불확실성</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-policy-instruments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기후정책의 수단과 설계</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-uncertainty-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">불확실성·위험과 기후정책</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">참고문헌</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul class="collapse">
+  <li><a href="#들어가며-넷제로가-최선인가" id="toc-들어가며-넷제로가-최선인가" class="nav-link active" data-scroll-target="#들어가며-넷제로가-최선인가">들어가며: 넷제로가 최선인가?</a></li>
+  <li><a href="#정태적-비용-편익-분석-최적-배출" id="toc-정태적-비용-편익-분석-최적-배출" class="nav-link" data-scroll-target="#정태적-비용-편익-분석-최적-배출">정태적 비용-편익 분석: 최적 배출</a></li>
+  <li><a href="#현재가치와-할인" id="toc-현재가치와-할인" class="nav-link" data-scroll-target="#현재가치와-할인">현재가치와 할인</a></li>
+  <li><a href="#사회적-할인율" id="toc-사회적-할인율" class="nav-link" data-scroll-target="#사회적-할인율">사회적 할인율</a></li>
+  <li><a href="#할인율과-scc" id="toc-할인율과-scc" class="nav-link" data-scroll-target="#할인율과-scc">할인율과 SCC</a></li>
+  <li><a href="#최적-기후정책" id="toc-최적-기후정책" class="nav-link" data-scroll-target="#최적-기후정책">최적 기후정책</a></li>
+  <li><a href="#다시-넷제로로-경제학자의-답" id="toc-다시-넷제로로-경제학자의-답" class="nav-link" data-scroll-target="#다시-넷제로로-경제학자의-답">다시 넷제로로: 경제학자의 답</a></li>
+  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">요약</a></li>
+  <li><a href="#생각해-볼-문제" id="toc-생각해-볼-문제" class="nav-link" data-scroll-target="#생각해-볼-문제">생각해 볼 문제</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="사이트 이동 경로"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-climate-damages.html">제III부 피해·비용과 시간</a></li><li class="breadcrumb-item"><a href="./07-discounting.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">할인과 비용편익 분석</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">할인과 비용편익 분석</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>학습목표
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>넷제로 목표를 경제학의 관점에서 평가하기 위해 무엇을 알아야 하는지 설명할 수 있다.</li>
+<li>정태적 비용-편익 분석에서 최적 배출 조건(<span class="math inline">\(\mathrm{MB}=\mathrm{MD}\)</span>)을 도출하고, 그것이 4장의 새뮤얼슨 조건과 같은 구조임을 설명할 수 있다.</li>
+<li>미래 금액을 현재가치로 환산하고, 순현재가치(NPV)와 동태적 최적 조건을 이해한다.</li>
+<li>램지 공식 <span class="math inline">\(r=\rho+\eta g\)</span>로 사회적 할인율을 분해하고, 순수 시간선호율이 왜 윤리의 문제인지 설명할 수 있다.</li>
+<li>할인율이 SCC를 얼마나 바꾸는지, 스턴과 노드하우스의 논쟁이 무엇을 둘러싼 것인지 설명할 수 있다.</li>
+<li>비용-편익 분석이 100% 감축을 권하지 않는 이유와, 백스톱 기술이 있을 때 넷제로가 정당화되는 조건을 설명할 수 있다.</li>
+<li>최적 탄소세의 시간 경로, 피구세와 SCC의 차이를 설명할 수 있다.</li>
+</ol>
+</div>
+</div>
+<section id="들어가며-넷제로가-최선인가" class="level2">
+<h2 class="anchored" data-anchor-id="들어가며-넷제로가-최선인가">들어가며: 넷제로가 최선인가?</h2>
+<p><strong>넷제로(net zero)</strong>란 대기로 내보내는 온실가스의 양과, 숲·탄소포집·저장 같은 흡수원이 빼내는 양을 같게 만들어 <strong>순배출을 0</strong>으로 하는 목표다. IPCC(2018)의 1.5°C 특별보고서는 온난화를 1.5°C로 제한하려면 전 세계 CO₂ 순배출을 2030년까지 2010년 대비 약 45% 줄이고 <strong>2050년경 넷제로</strong>에 도달해야 한다고 평가했다. 세계는 이미 약 1.1°C 더워졌고, 지금 추세라면 금세기 안에 3°C 가까이 오르는 경로에 있다.</p>
+<p>과학자들은 넷제로가 필요하다고 말한다. 그렇다면 <strong>경제학자로서</strong> 우리는 2050 넷제로를 지지해야 할까? 아니면 다른 답이 나올까? 이 장은 이 질문에 답하기 위한 도구를 마련한다.</p>
+<table class="caption-top table">
+<caption>이 장의 지도.</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">앞 장들의 재료</th>
+<th style="text-align: left;">이 장의 작업</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">5장: 감축의 <strong>편익</strong>표 = 탄소의 사회적 비용(SCC)</td>
+<td style="text-align: left;">I. 비용-편익의 틀: MB = MD</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6장: 감축의 <strong>비용</strong>표 = 한계감축비용(MAC)</td>
+<td style="text-align: left;">II. 할인: 시점이 다른 값의 비교</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">III. 할인율과 SCC: 스턴 vs.&nbsp;노드하우스</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">IV. 최적 기후정책: 얼마나, 언제 줄일까</td>
+</tr>
+</tbody>
+</table>
+<p>앞의 두 장은 가격표를 하나씩 만들었다. 한 톤 줄일 때의 편익(SCC)과 한 톤 줄일 때의 비용(MAC)이다. 이 장은 둘을 <strong>같은 시점의 값</strong>으로 맞추어(할인) 한 그림 위에서 만나게 한다. 이어서 8장에서는 그 가격을 실제로 어떻게 매길지(정책수단)를, 9장에서는 불확실성이 있을 때 결론이 어떻게 바뀌는지를 다룬다.</p>
+<section id="경제학자의-질문-무엇을-최대화하는가" class="level3">
+<h3 class="anchored" data-anchor-id="경제학자의-질문-무엇을-최대화하는가">경제학자의 질문: 무엇을 최대화하는가</h3>
+<p>넷제로가 최적인가에 대한 답은 <strong>목표가 무엇이냐</strong>에 달려 있다. 경제학자는 <strong>효율성</strong>에 초점을 둔다. 자원을 효율적으로 배분해 사회의 후생을 최대화하는 것이다. 실증 분석에서는 일정 기간에 걸친 <strong>할인된 순편익(discounted net benefits)</strong>을 최대화하는 결과를 찾는다. 이를 위해서는 감축의 편익과 비용을 모두 알아야 한다.</p>
+<p>이 장에서 쓰는 용어를 정리해 두자.</p>
+<ul>
+<li>감축의 <strong>편익</strong> = 감축으로 <strong>회피한 피해</strong>. 한 톤 기준으로는 SCC(5장)다.</li>
+<li>감축의 <strong>비용</strong> = 감축비용. 한 톤 기준으로는 MAC(6장)다.</li>
+<li>같은 관계를 배출의 관점에서 쓰면, 배출의 편익 <span class="math inline">\(B(E)\)</span>는 배출을 줄이면 포기하게 되는 것, 즉 감축비용이다.</li>
+</ul>
+</section>
+</section>
+<section id="정태적-비용-편익-분석-최적-배출" class="level2">
+<h2 class="anchored" data-anchor-id="정태적-비용-편익-분석-최적-배출">정태적 비용-편익 분석: 최적 배출</h2>
+<section id="피해는-저량에서-온다" class="level3">
+<h3 class="anchored" data-anchor-id="피해는-저량에서-온다">피해는 저량에서 온다</h3>
+<p>온실가스는 <strong>저량 오염물질(stock pollutant)</strong>이다. 경제에 주는 피해는 그해의 배출량(유량)이 아니라 대기 중에 <strong>쌓인 양</strong>(저량)에 달려 있다(1장의 욕조 비유). 저량은 배출에서 대기 중 분해·흡수분을 뺀 것이 누적된 양이다. 피해함수는 온실가스가 만드는 외부효과, 즉 사회가 보상 없이 떠안는 <strong>공공악재(public bad)</strong>를 나타내며, 5장의 가치평가를 통해 전 세계의 모든 피해를 하나의 화폐 가치로 담는다.</p>
+<p>간단한 교육용 관계식은 <span class="math inline">\(M_{t+1}=(1-\delta)M_t+E_t\)</span>다. 여기서 <span class="math inline">\(M_t\)</span>는 대기 중 저량, <span class="math inline">\(E_t\)</span>는 배출, <span class="math inline">\(\delta\)</span>는 자연 제거율이다. 이 식은 자연 제거율이 일정한 하나의 저장고를 가정한다. 실제 CO₂는 서로 다른 시간척도의 여러 과정을 거치므로 하나의 일정한 수명으로 설명할 수 없다. 이 저량이라는 성질 때문에 오늘의 배출은 수십, 수백 년 동안 피해를 낳는다. 그래서 뒤에서 <strong>할인</strong>이 필요해진다. 오늘 한 톤을 줄이는 편익은 오늘의 피해 감소가 아니라 <strong>그 한 톤이 앞으로 만들었을 미래 피해 감소의 전체</strong>다.</p>
+</section>
+<section id="최적-배출-순편익의-최대화" class="level3">
+<h3 class="anchored" data-anchor-id="최적-배출-순편익의-최대화">최적 배출: 순편익의 최대화</h3>
+<p>먼저 시간을 무시한 정태적 분석에서 시작하자. 비용-편익 분석은 최선의 행동을 찾는다. 탄소세처럼 행동이 연속적인 값을 가질 수 있다면 순편익을 최대화하면 된다.</p>
+<p><span class="math display">\[\max_{E}\; G = B(E) - D(E)\]</span></p>
+<p>여기서 <span class="math inline">\(G\)</span>는 순이득(후생), <span class="math inline">\(E\)</span>는 배출, <span class="math inline">\(B\)</span>는 배출의 편익, <span class="math inline">\(D\)</span>는 배출의 피해다. 1계 조건은</p>
+<p><span class="math display">\[\frac{\partial G}{\partial E}=0 \;\Longleftrightarrow\; \underbrace{\frac{\partial D}{\partial E}}_{\text{한계피해 MD}} \;=\; \underbrace{\frac{\partial B}{\partial E}}_{\text{배출의 한계편익 MB = MAC}}\]</span></p>
+<p>이다. 배출의 한계편익(= 한 톤 더 줄일 때의 비용)이 배출의 한계피해(= 한 톤 더 줄일 때의 편익)와 같아지는 곳이 최적이다. 감축량 <span class="math inline">\(A=E_0-E\)</span>로 쓰면 같은 조건이 <span class="math inline">\(\mathrm{MAC}(A^*)=\mathrm{MD}(E_0-A^*)\)</span>가 된다.</p>
+<div id="fig-optimal-emissions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-optimal-emissions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/ch07/optimal-emissions.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-optimal-emissions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.1: 최적 배출의 결정. (a) 총 사적 이득 <span class="math inline">\(B(E)\)</span>는 배출을 늘리면 처음엔 증가하다가 <span class="math inline">\(E^0\)</span>에서 최대가 된다. 피해 <span class="math inline">\(D(E)\)</span>를 빼면 순이득은 그보다 왼쪽인 <span class="math inline">\(E^*\)</span>에서 최대가 된다. (b) 한계값으로 보면, 규제가 없을 때 배출자는 한계 사적 이득이 0인 <span class="math inline">\(E^0\)</span>까지 배출하지만, 사회적 최적은 MB = MD인 <span class="math inline">\(E^*\)</span>다. 노란 삼각형은 규제가 없을 때의 후생손실이다. Tol, <em>Climate Economics</em>, 그림 8.3-8.5를 바탕으로 가상의 함수(<span class="math inline">\(B=2E-0.1E^2\)</span>, <span class="math inline">\(D=0.15E^2\)</span>)로 재구성했다.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-optimal-emissions" class="quarto-xref">그림&nbsp;<span>7.1</span></a> 를 차례로 읽어 보자.</p>
+<p><strong>(a) 총량.</strong> 갈색 곡선은 배출로 얻는 총 사적 이득이다. 배출을 늘리면 처음에는 이득이 늘지만 일정 수준 이후에는 줄어든다. 이득이 무한히 늘어난다면 무한히 배출하는 것이 최적일 텐데, 그것은 비현실적이다. 난방은 쾌적한 온도까지만, 이동은 필요한 곳까지만 하면 된다. 규제가 없을 때 배출자는 피해를 고려하지 않으므로, 총 사적 이득이 가장 큰 <span class="math inline">\(E^0\)</span>까지 배출한다. 이는 4장의 외부효과와 같은 논리다. 초록 곡선은 피해(마이너스로 표시)이고, 빨간 곡선은 둘을 합한 순이득이다. 순이득이 가장 큰 <span class="math inline">\(E^*\)</span>가 <strong>사회적 최적 배출량</strong>이며, 규제가 없을 때의 <span class="math inline">\(E^0\)</span>보다 왼쪽에 있다. 그러나 <span class="math inline">\(E^*\)</span>는 0이 아니다.</p>
+<p><strong>(b) 한계.</strong> 오른쪽 그림은 왼쪽 곡선들의 기울기, 즉 한계값이다. 왼쪽 빨간 곡선의 최대점(기울기 = 0)은 오른쪽 빨간 점선이 0이 되는 점이고, 이 점에서 갈색(한계 사적 이득)과 초록(한계피해) 선이 교차한다. 즉 <strong>한계 순이득 = 0 ⇔ MB = MD</strong>다. 규제가 없으면 <span class="math inline">\(E^0\)</span>까지 배출해 노란 삼각형만큼의 후생손실이 생긴다. 이 교차점의 높이만큼 탄소에 가격 <span class="math inline">\(p^*\)</span>를 매기면 배출자는 스스로 <span class="math inline">\(E^*\)</span>까지 배출을 줄인다. 5장의 SCC(MD)와 6장의 MAC가 바로 이 그림의 두 곡선이다.</p>
+<p>이 그림에서 비용-편익 분석의 두 가지 함의가 나온다.</p>
+<ul>
+<li><strong>첫 감축은 비용이 작고 편익이 크다.</strong> 따라서 상당한 감축이 필요하다.</li>
+<li><strong>마지막 감축은 비용이 크고 편익이 작다.</strong> 따라서 배출을 완전히 없애는 것은 비효율적일 수 있다.</li>
+</ul>
+<p>이 조건은 내부해를 설명한다. 허용 범위의 끝에서 순편익이 최대가 되면 두 한계값이 같지 않아도 최적일 수 있다(3장 계산 예제 3.5). 또 현실의 기후피해는 누적 배출에 따라 여러 시점에 발생하므로, 한 해의 비용과 한 해의 피해만 비교해서는 충분하지 않다. 이 문제는 뒤의 동태적 분석에서 다룬다.</p>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: MB = MD와 새뮤얼슨 조건(4장)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>감축은 전 지구적 공공재이므로, MB = MD는 4장의 새뮤얼슨 조건을 배출량의 언어로 쓴 것이다.</p>
+<table class="caption-top table">
+<caption>새뮤얼슨 조건과 최적 감축 조건의 대응.</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">4장 공공재</th>
+<th style="text-align: left;">7장 기후정책</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">공공재의 양 <span class="math inline">\(G\)</span></td>
+<td style="text-align: left;">감축량 <span class="math inline">\(A = E^0 - E\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">개인 <span class="math inline">\(i\)</span>의 한계지불의사 <span class="math inline">\(\mathrm{MWTP}_i\)</span></td>
+<td style="text-align: left;">국가 <span class="math inline">\(i\)</span>가 한 단위 감축으로 피하는 한계피해 <span class="math inline">\(\mathrm{MD}_i\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">사회적 한계지불의사 <span class="math inline">\(\sum_i \mathrm{MWTP}_i\)</span> (수직 합산)</td>
+<td style="text-align: left;">전 세계 한계피해 <span class="math inline">\(\mathrm{MD}=\sum_i \mathrm{MD}_i\)</span> = <strong>SCC</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">공급의 한계비용 MC</td>
+<td style="text-align: left;">한계감축비용 MAC = 배출의 한계편익 MB</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">효율 조건: <span class="math inline">\(\sum_i \mathrm{MWTP}_i = \mathrm{MC}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_i \mathrm{MD}_i = \mathrm{MAC}\)</span> ⇔ MD = MB</td>
+</tr>
+</tbody>
+</table>
+<p>이 대응에서 세 가지 함의가 나온다.</p>
+<ol type="1">
+<li><strong>SCC는 전 세계 피해의 합이다.</strong> 국내 피해만 쓰면 사회 전체의 지불의사 대신 자기의 지불의사만 쓰는 셈이다. 5장에서 본 미국 SCC의 ‘전 세계 vs.&nbsp;국내’ 논쟁이 바로 이것이다.</li>
+<li><strong>자발적 감축은 과소공급된다.</strong> 각국은 자국의 한계피해가 MAC와 같아지는 곳에서 감축을 멈춘다. 4장의 무임승차 구조와 같으며, 국제협력이 필요한 이유다.</li>
+<li><strong>탄소가격 = SCC.</strong> 모든 배출자에게 전 세계 한계피해만큼 가격을 매기면, 가격을 통해 새뮤얼슨 조건을 달성할 수 있다.</li>
+</ol>
+<p>국가별 편익을 더할 때에는 같은 피해를 중복 계산하지 않고 공통된 가격·시점 기준을 사용해야 한다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="현재가치와-할인" class="level2">
+<h2 class="anchored" data-anchor-id="현재가치와-할인">현재가치와 할인</h2>
+<section id="시간이-들어오면-시점이-다른-비용과-편익" class="level3">
+<h3 class="anchored" data-anchor-id="시간이-들어오면-시점이-다른-비용과-편익">시간이 들어오면: 시점이 다른 비용과 편익</h3>
+<p>기후경제학자 톨(Richard Tol)은 기후변화를 걱정한다는 것은 “먼 미래, 먼 나라, 낮은 확률”을 걱정하는 것이라고 표현했다. 기후변화는 <strong>장기적이고, 전 지구적이며, 불확실한</strong> 문제다. 이 장은 그 가운데 ’장기’를 다룬다. 지역 간 형평성과 불확실성은 뒤의 장들에서 다룬다.</p>
+<p>문제는 <strong>서로 다른 시점</strong>에 발생하는 비용과 편익을 어떻게 비교하느냐다. 오늘 CO₂를 줄이는 비용과 수십 년 뒤에 나타나는 편익(회피한 피해) 가운데 어떤 비용이 어떤 편익만큼의 값어치가 있을까? 서로 다른 시점의 금액을 공통된 기준으로 바꾸는 작업이 <strong>할인(discounting)</strong>이다. 미래를 할인한다는 말은 미래가 중요하지 않다는 선언이 아니다. 시간에 따른 자원의 가치 차이를 어떤 방식으로 평가할지 명시하는 일이다.</p>
+</section>
+<section id="복리와-할인" class="level3">
+<h3 class="anchored" data-anchor-id="복리와-할인">복리와 할인</h3>
+<p>오늘 100만 원을 연 3%로 운용하면 1년 뒤 103만 원이 된다. 반대로 1년 뒤의 103만 원은 같은 비교 기준에서 오늘 100만 원의 가치다. 할인은 복리 계산을 거꾸로 하는 것이다. <span class="math inline">\(t\)</span>년 뒤의 금액 <span class="math inline">\(X_t\)</span>의 현재가치는</p>
+<p><span class="math display">\[
+PV(X_t)=\frac{X_t}{(1+r)^t}
+\]</span></p>
+<p>이다. <span class="math inline">\(r\)</span>은 기간당 할인율이며, 연간 금액에는 연간 할인율을 사용한다. 연도마다 할인율이 다르면 분모를 <span class="math inline">\((1+r_1)(1+r_2)\cdots(1+r_t)\)</span>로 바꾼다.</p>
+<p>비용 <span class="math inline">\(C_t\)</span>와 편익 <span class="math inline">\(B_t\)</span>를 합쳐 정책의 <strong>순현재가치(net present value, NPV)</strong>를 계산하면</p>
+<p><span class="math display">\[
+NPV=\sum_{t=0}^{H}\frac{B_t-C_t}{(1+r)^t}
+\]</span></p>
+<p>가 된다. NPV가 양수이면 그 비교 기준에서 편익이 비용보다 크다. 서로 양립할 수 없는 여러 대안 가운데서는 같은 기준선과 범위에서 계산한 NPV를 비교해야 한다. “편익이 비용보다 크다”는 조건과 “가능한 대안 가운데 가장 좋다”는 조건은 다르다(3장의 칼도-힉스 기준).</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>계산 예제 7.1 | 할인율 하나가 결론을 뒤집는다 - 100년 뒤 1조 원의 현재가치
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>다른 편익은 없고 100년 뒤 1조 원의 피해를 피하는 정책을 생각하자. 오늘 1,000억 원이 든다.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">연간 실질 할인율</th>
+<th style="text-align: right;">현재가치</th>
+<th style="text-align: right;">1조 원 대비</th>
+<th style="text-align: right;">오늘 1,000억 원을 지출할 때 NPV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1%</td>
+<td style="text-align: right;">약 3,697억 원</td>
+<td style="text-align: right;">37%</td>
+<td style="text-align: right;">약 +2,697억 원</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3%</td>
+<td style="text-align: right;">약 520억 원</td>
+<td style="text-align: right;">5.2%</td>
+<td style="text-align: right;">약 −480억 원</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">약 76억 원</td>
+<td style="text-align: right;">0.76%</td>
+<td style="text-align: right;">약 −924억 원</td>
+</tr>
+</tbody>
+</table>
+<p>1%에서 현재가치는 <span class="math inline">\(10{,}000/(1.01)^{100}\simeq3{,}697\)</span>억 원이다. 할인율을 1%에서 5%로 올리면 같은 미래 피해의 현재가치가 <strong>약 50분의 1</strong>로 줄어들고, 정책의 판단이 정반대로 바뀐다. 할인율이 높으면 “지금 돈이 들고 편익은 나중에 오는” 기후정책을 정당화하기 어렵다.</p>
+<p>이는 할인율을 마음대로 골라도 된다는 뜻이 아니라, 선택의 근거와 민감도를 반드시 제시해야 한다는 뜻이다.</p>
+</div>
+</div>
+<div id="fig-discounting" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-discounting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/textbook/discounting.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-discounting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;7.2: 100년 뒤 1조 원의 현재가치. 일정한 실질 할인율을 적용한 설명용 계산이며 관측자료가 아니다.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="실질금액과-명목금액" class="level3">
+<h3 class="anchored" data-anchor-id="실질금액과-명목금액">실질금액과 명목금액</h3>
+<p>명목금액은 해당 시점의 가격으로 표시한 금액이고, 실질금액은 물가 변화를 제거하여 특정 기준연도의 구매력으로 표시한 금액이다. 실질금액에는 실질 할인율, 명목금액에는 명목 할인율을 사용해야 한다.</p>
+<p>명목금리 <span class="math inline">\(i\)</span>, 실질금리 <span class="math inline">\(r\)</span>, 물가상승률 <span class="math inline">\(\pi\)</span>의 관계는 <span class="math inline">\((1+i)=(1+r)(1+\pi)\)</span>다. 낮은 금리에서는 <span class="math inline">\(r\approx i-\pi\)</span>로 근사할 수 있다. 이미 물가를 제거한 피해액에 높은 명목금리를 적용하면 미래 피해를 지나치게 작게 평가한다.</p>
+</section>
+<section id="분석기간과-말기-가치" class="level3">
+<h3 class="anchored" data-anchor-id="분석기간과-말기-가치">분석기간과 말기 가치</h3>
+<p>분석을 특정 연도 <span class="math inline">\(H\)</span>에서 끝낼 때에는 그 이후의 편익과 비용을 어떻게 처리했는지 밝혀야 한다. 이후의 순편익을 0으로 가정할 수도 있고, 이후 흐름의 가치를 말기 가치로 포함할 수도 있다. 두 방식은 서로 다른 가정이다.</p>
+<p>예를 들어 180년 뒤의 할인계수는 연 1%에서 약 0.167, 3%에서 약 0.0049다. 할인율이 낮거나 미래 피해가 커지면 먼 미래의 기여도 무시하기 어렵다. “충분히 먼 미래이므로 0”은 계산 결과를 확인해야 하는 판단이지, 할인 자체의 정의가 아니다.</p>
+</section>
+<section id="동태적-비용-편익-분석" class="level3">
+<h3 class="anchored" data-anchor-id="동태적-비용-편익-분석">동태적 비용-편익 분석</h3>
+<p>이제 시간을 넣어 앞의 최적화 문제를 다시 쓰자. 기후변화는 동태적 문제다. 오늘의 배출이 앞으로 오랫동안 피해를 낳는다.</p>
+<p><span class="math display">\[\max_{E_0,E_1,\ldots}\; \sum_t \frac{G_t}{(1+r)^t} = \sum_t \frac{B(E_t)-D(E_t,E_{t-1},\ldots,E_0)}{(1+r)^t}\]</span></p>
+<p>배출의 편익은 그해에만 생기지만, 피해는 그때까지의 <strong>모든 배출</strong>, 즉 저량에 달려 있다. 1계 조건은 모든 시점 <span class="math inline">\(t\)</span>에서</p>
+<p><span class="math display">\[\sum_{s\geq0} \frac{1}{(1+r)^s}\frac{\partial D_{t+s}}{\partial E_t} \;=\; \frac{\partial B_t}{\partial E_t}\qquad \forall\, t\]</span></p>
+<p>이다. 배출의 한계편익은 <strong>모든 시점에서</strong> 한계피해의 <strong>현재가치</strong>와 같아야 한다. 좌변, 즉 오늘 한 톤이 앞으로 낳을 피해를 모두 할인해 더한 것이 바로 5장에서 정의한 <strong>SCC</strong>다. 정태적 조건 MB = MD에서 MD를 “미래 한계피해의 현재가치 합”으로 바꾼 것이 동태적 조건이다.</p>
+</section>
+</section>
+<section id="사회적-할인율" class="level2">
+<h2 class="anchored" data-anchor-id="사회적-할인율">사회적 할인율</h2>
+<section id="할인율은-어떻게-정하나" class="level3">
+<h3 class="anchored" data-anchor-id="할인율은-어떻게-정하나">할인율은 어떻게 정하나</h3>
+<p>가장 간단한 방법은 <strong>시장이자율을 그대로 쓰는 것</strong>이다. 위험이 없는 투자의 실질이자율은 시장균형에서의 자본 생산성을 나타낸다. 현재 자원을 감축에 투입하면 다른 소비와 투자를 포기하므로 이 기회비용은 중요하다.</p>
+<p>그러나 기후변화처럼 시간 지평이 아주 긴 문제에서는 시장이자율이 사회의 선호를 제대로 반영하지 못할 수 있다.</p>
+<ul>
+<li><strong>시장실패와 시장 불완전성.</strong> 위험한 민간투자의 수익률에는 위험, 세금, 자본시장의 제약이 섞여 있다.</li>
+<li><strong>정부의 ‘초책임성(super-responsibility)’.</strong> 정부는 현재 세대뿐 아니라 아직 투표권도 없는 <strong>미래 세대</strong>도 대표해야 한다.</li>
+<li><strong>개인의 이중 역할.</strong> 같은 사람도 시장에서 소비자로 행동할 때보다 시민으로서 판단할 때 미래 세대를 더 걱정한다.</li>
+</ul>
+<p>그래서 할인율의 결정 요인을 경제적·윤리적 고려에서 직접 찾는 <strong>사회적 할인</strong> 접근이 쓰인다. 관측되는 저축·투자 행동과 수익률을 중시하는 <strong>기술적·실증적 접근</strong>과, 세대 간 후생을 어떻게 비교해야 하는지에서 출발하는 <strong>규범적 접근</strong>이 있다. 정책평가는 어느 접근을 사용하며 어떤 가정을 채택했는지 드러내야 한다.</p>
+</section>
+<section id="왜-미래를-할인하는가" class="level3">
+<h3 class="anchored" data-anchor-id="왜-미래를-할인하는가">왜 미래를 할인하는가</h3>
+<p>선호와 효용의 관점에서 미래를 할인하는 이유는 세 가지다.</p>
+<ol type="1">
+<li><strong>순수 시간선호(pure rate of time preference)</strong>: 순수한 조급함이다. 같은 효용이라면 나중보다 지금 누리고 싶다.</li>
+<li><strong>경제성장(소비 평활화)</strong>: 10년 뒤 더 부유해진다면, 오늘의 1만 원이 10년 뒤의 1만 원보다 더 소중하다. 소득이 많을수록 추가 1만 원의 만족(한계효용)이 작기 때문이다.</li>
+<li><strong>불확실성</strong>: 미래가 불확실할 때 높은 할인율은 위험을 더 감수하는 태도를, 낮은 할인율은 더 신중한(예방적) 태도를 뜻할 수 있다(9장).</li>
+</ol>
+</section>
+<section id="램지-공식" class="level3">
+<h3 class="anchored" data-anchor-id="램지-공식">램지 공식</h3>
+<p>이 직관을 공식으로 정리한 것이 <strong>램지 공식</strong>이다(Frank Ramsey, 1928). 사회후생을 미래 소비의 효용을 할인하여 더한 값으로 표현해 보자. 1인당 소비를 <span class="math inline">\(c_t\)</span>, 순수 시간선호율을 <span class="math inline">\(\rho\)</span>라 하면, 인구가 일정한 연속시간 표현은</p>
+<p><span class="math display">\[
+W=\int_0^\infty e^{-\rho t}u(c_t)\,dt
+\]</span></p>
+<p>이다. 여기서 <span class="math inline">\(\rho\)</span>는 <strong>효용 자체</strong>에 적용하는 할인율이다. 반면 정책평가에서 <strong>돈이나 소비 단위</strong>에 적용하는 할인율 <span class="math inline">\(r\)</span>은 미래 소비의 한계효용도 고려한다.</p>
+<p>상대위험회피도가 일정한 효용함수(CRRA)를</p>
+<p><span class="math display">\[
+u(c)=\frac{c^{1-\eta}}{1-\eta}\quad(\eta\ne1),\qquad
+u(c)=\ln c\quad(\eta=1)
+\]</span></p>
+<p>로 두면 <span class="math inline">\(u'(c)=c^{-\eta}\)</span>다. 미래의 소비가 많아질수록 추가 소비 한 단위의 효용은 낮아진다. 소비가 확실하게 연속 증가율 <span class="math inline">\(g\)</span>로 성장할 때 소비 할인율은</p>
+<p><span class="math display">\[
+\boxed{r=\rho+\eta g}
+\]</span></p>
+<p>가 된다 <span class="citation" data-cites="ramsey1928">(<a href="references.html#ref-ramsey1928" role="doc-biblioref">Ramsey 1928년</a>)</span>. 각 항의 의미는 다음과 같다.</p>
+<ul>
+<li><span class="math inline">\(\rho\)</span>: <strong>순수 시간선호율</strong>. 조급함을 나타내며 가장 논쟁적인 항이다.</li>
+<li><span class="math inline">\(\eta\)</span>: <strong>한계효용의 소비탄력성</strong>. 소비가 늘수록 한계효용이 얼마나 빨리 줄어드는가를 나타낸다(9장에서는 상대적 위험회피도로 다시 등장한다).</li>
+<li><span class="math inline">\(g\)</span>: <strong>1인당 소비 증가율</strong>.</li>
+<li><span class="math inline">\(\eta g\)</span>: 부유해짐에 따라 <strong>1원의 가치(한계효용)가 줄어드는 속도</strong>.</li>
+</ul>
+<p>이 식은 단순한 연속시간·확실성 모형의 관계이며, 불확실한 성장이나 위험한 정책편익을 모두 처리하는 만능식은 아니다.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">힌트</span>계산 예제 7.2 | 시간선호와 소비 성장
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>스턴에 가까운 값</strong>: <span class="math inline">\(\rho=0.1\%\)</span>, <span class="math inline">\(\eta=1\)</span>, <span class="math inline">\(g=1.3\%\)</span>이면 <span class="math inline">\(r=0.1\%+1\times1.3\%=1.4\%\)</span>다.</p>
+<p><strong>노드하우스에 가까운 값</strong>: <span class="math inline">\(\rho=1.5\%\)</span>, <span class="math inline">\(\eta=2\)</span>, <span class="math inline">\(g=2\%\)</span>이면 <span class="math inline">\(r=1.5\%+2\times2\%=5.5\%\)</span>다.</p>
+<p>두 값의 차이는 약 4%포인트다. 계산 예제 7.1에서 보았듯이, 100년 뒤 피해의 현재가치는 이 차이만으로 수십 배 달라진다.</p>
+<p><strong>한 걸음 더.</strong> <span class="math inline">\(\rho\)</span>를 0으로 두더라도 미래가 더 부유해지고 한계효용이 감소하면 <span class="math inline">\(r\)</span>은 양수다. 반대로 미래 소비가 감소한다면(<span class="math inline">\(g&lt;0\)</span>) <span class="math inline">\(\eta g\)</span>는 음수가 되어 할인율이 낮아진다. “미래의 돈은 항상 덜 중요하다”는 단정이 성립하지 않는 이유다. 부유한 미래라는 가정과 지금보다 어려운 미래라는 가정은 같은 평가를 낳지 않는다.</p>
+</div>
+</div>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: 램지 공식의 도출
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>미래 소비 한 단위의 후생가치를 현재 소비 단위로 표시하는 계수는 <span class="math inline">\(e^{-\rho t}u'(c_t)/u'(c_0)\)</span>다. 첫째 항은 효용 자체의 할인이고, 둘째 항은 미래와 현재의 한계효용 비율이다. <span class="math inline">\(c_t=c_0e^{gt}\)</span>와 <span class="math inline">\(u'(c)=c^{-\eta}\)</span>를 대입하면</p>
+<p><span class="math display">\[
+e^{-\rho t}\frac{u'(c_t)}{u'(c_0)}
+=e^{-\rho t}e^{-\eta gt}
+=e^{-(\rho+\eta g)t}.
+\]</span></p>
+<p>따라서 소비의 할인율은 <span class="math inline">\(\rho+\eta g\)</span>다. <span class="math inline">\(\eta\)</span>가 클수록 같은 소비 격차에 더 큰 한계효용 차이를 부여한다. 기대효용이라는 같은 틀에서는 <span class="math inline">\(\eta\)</span>가 위험회피도이기도 하다. 그러나 위험과 시점 간 대체에 서로 다른 모수를 허용하는 선호도 있으므로, 두 역할의 동일시는 이 효용함수의 특징이다.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="세대-간-형평성-rho는-윤리의-문제다" class="level3">
+<h3 class="anchored" data-anchor-id="세대-간-형평성-rho는-윤리의-문제다">세대 간 형평성: <span class="math inline">\(\rho\)</span>는 윤리의 문제다</h3>
+<p>시간에 걸친 최적 감축 경로를 정하는 것은 결국 감축의 부담을 <strong>현재 세대와 미래 세대</strong>에 어떻게 나눌 것인가를 정하는 것이며, 이는 할인율의 선택으로 귀결된다.</p>
+<p>램지 공식의 두 항은 성격이 다르다. <span class="math inline">\(\eta g\)</span> 부분은 “미래 세대가 더 부유할 것이므로” 할인하는 것이다. 이는 성장이 계속된다는 경험적 가정에 기댄다. 반면 <span class="math inline">\(\rho&gt;0\)</span>은 “미래 세대의 효용은 <strong>단지 나중에 태어났다는 이유만으로</strong> 덜 중요하다”는 뜻이다. 램지 자신을 포함한 많은 철학자와 경제학자가 이것을 윤리적으로 정당화하기 어렵다고 보았다. 램지는 미래의 효용을 할인하는 것은 “윤리적으로 옹호할 수 없으며 상상력의 빈곤에서 나온다”고 썼다.</p>
+<p>반면 다른 경제학자들은 실제 사람들의 저축 행동과 시장이자율에서 드러나는 조급함을 존중해야 한다고 본다. 정책 결정자가 자신의 윤리관에 따라 <span class="math inline">\(\rho\)</span>를 0에 가깝게 정하는 것은 실제 사람들의 선호를 무시하는 것이라는 주장이다. 이 논쟁은 2장에서 본 규범적 경제학의 전형적인 예다. 데이터만으로는 결론이 나지 않는다.</p>
+</section>
+</section>
+<section id="할인율과-scc" class="level2">
+<h2 class="anchored" data-anchor-id="할인율과-scc">할인율과 SCC</h2>
+<section id="scc-추정치의-분포-할인율이-가른다" class="level3">
+<h3 class="anchored" data-anchor-id="scc-추정치의-분포-할인율이-가른다">SCC 추정치의 분포: 할인율이 가른다</h3>
+<p>할인율은 SCC를 얼마나 바꿀까? 미국 RFF(Resources for the Future)가 정리한 미국 정부 SCC의 모의실험 분포를 보면, 할인율 7%, 5%, 3%, 2.5%에서 평균 SCC가 각각 약 5달러, 14달러, 50달러, 75달러(톤 CO₂당)로 커진다. 할인율이 낮을수록 평균이 커질 뿐 아니라 분포의 오른쪽 꼬리도 길어진다.</p>
+<p>더 넓은 문헌을 보아도 마찬가지다. Tol은 69개의 총영향 추정치에서 파생된 약 5,900개의 SCC 추정치를 모아 분석했는데(Tol, 그림 6.8과 표 6.1), 추정치를 가장 크게 가르는 변수는 <strong>순수 시간선호율</strong>, 즉 램지 공식의 <span class="math inline">\(\rho\)</span>였다.</p>
+<table class="caption-top table">
+<caption>순수 시간선호율에 따른 SCC 추정치. 탄소 1톤당 달러이며, 3.67로 나누면 CO₂ 1톤당 값이 된다. 출처: Tol, <em>Climate Economics</em>, 그림 6.8, 표 6.1.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">가정</th>
+<th style="text-align: right;">SCC 평균 (<span class="math inline">\(/tC) | SCC 중앙값 (\)</span>/tC)</th>
+<th style="text-align: right;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">순수 시간선호율 0%</td>
+<td style="text-align: right;">약 407</td>
+<td style="text-align: right;">약 650</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">순수 시간선호율 1%</td>
+<td style="text-align: right;">약 163</td>
+<td style="text-align: right;">약 300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">순수 시간선호율 3%</td>
+<td style="text-align: right;">약 43</td>
+<td style="text-align: right;">약 50</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">전체 연구</td>
+<td style="text-align: right;">179</td>
+<td style="text-align: right;">-</td>
+</tr>
+</tbody>
+</table>
+<p>순수 시간선호율을 0%로 잡으면 SCC가 3%일 때보다 거의 <strong>10배</strong> 커진다. 할인율이 낮을수록 오른쪽 꼬리도 훨씬 두꺼워지는데, 이는 할인율이 피해의 크기뿐 아니라 <strong>피해의 불확실성</strong>도 함께 할인하기 때문이다.</p>
+</section>
+<section id="램지-공식의-모수에-따른-scc" class="level3">
+<h3 class="anchored" data-anchor-id="램지-공식의-모수에-따른-scc">램지 공식의 모수에 따른 SCC</h3>
+<p>Tol의 그림 11.4는 같은 피해 모형에서 할인 모수만 바꾸었을 때 SCC가 어떻게 달라지는지 보여준다. 불확실성과 형평성 가중치가 없는 단순한 경우, <span class="math inline">\(\eta\)</span>는 할인율 <span class="math inline">\(r=\rho+\eta g\)</span>를 통해서만 작동한다.</p>
+<ul>
+<li><strong><span class="math inline">\(\rho\)</span>의 효과</strong>: <span class="math inline">\(\eta=0\)</span>일 때 SCC는 <span class="math inline">\(\rho\)</span>가 1%, 2%, 3%이면 각각 약 300, 60, 10달러/tC다. <span class="math inline">\(\rho\)</span> 1%포인트의 차이로 SCC가 몇 배씩 달라진다.</li>
+<li><strong><span class="math inline">\(\eta\)</span>의 효과</strong>: <span class="math inline">\(\eta\)</span>가 커지면 할인율이 높아져 SCC가 급감한다. <span class="math inline">\(\eta\geq1\)</span>이면 세 경우 모두 0 근처로 떨어진다.</li>
+</ul>
+<p>SCC는 할인 모수에 매우 민감해서, 같은 피해 추정에서도 모수 선택만으로 0에서 수백 달러까지 달라진다. 다만 불확실성을 모형에 넣으면 <span class="math inline">\(\eta\)</span>가 <strong>위험회피도</strong>로도 작동해, <span class="math inline">\(\eta\)</span>가 클 때 오히려 SCC가 다시 커질 수 있다. 위험회피적인 사회일수록 나쁜 결과에 대비하는 보험의 가치를 크게 보기 때문이다. 이 점은 9장에서 다룬다.</p>
+</section>
+<section id="스턴-보고서2006" class="level3">
+<h3 class="anchored" data-anchor-id="스턴-보고서2006">스턴 보고서(2006)</h3>
+<p>할인율 논쟁의 중심에는 <strong>스턴 보고서</strong>가 있다. 영국 정부가 의뢰하고 니컬러스 스턴이 주도한 이 보고서는 기후변화의 영향과 경제적 비용에 관한 근거를 종합해, 강력하고 이른 행동의 편익이 행동하지 않는 비용을 훨씬 능가한다고 결론지었다 <span class="citation" data-cites="stern2007">(<a href="references.html#ref-stern2007" role="doc-biblioref">Stern 2007년</a>)</span>.</p>
+<ul>
+<li><strong>피해</strong>: 기후변화를 방치하면 지금부터 영원히 매년 세계 GDP의 <strong>최소 5%</strong>를 잃는 것과 같다. 더 넓은 위험과 영향을 고려하면 최대 <strong>20%</strong>에 이른다.</li>
+<li><strong>감축비용</strong>: 온실가스 농도를 500-550ppm CO₂e로 안정화하는 데 매년 세계 GDP의 약 <strong>1%</strong>가 든다.</li>
+<li><strong>SCC</strong>: 모의실험 모형 PAGE2002를 사용해 SCC를 <strong>314달러/tC</strong>로 추정했다. 발표된 추정치 가운데 높은 쪽 끝이다.</li>
+</ul>
+<p>스턴 보고서는 시장 영향뿐 아니라 비시장 영향과 재앙적 위험, 기후 반응의 불확실성, 피해의 지역 간 불균등, 세대 간 후생 분배를 명시적으로 고려했다. 보고서의 피해 추정표(Stern Review, 표 6.1)를 보면, 시장 영향만 고려하면 현재 1인당 소비의 손실(균형성장 등가)이 평균 약 2.1%이지만, 재앙 위험과 비시장 영향을 더하고 기후 반응이 큰 경우를 가정하면 14.4%까지 커진다. 그리고 그 표 아래 주석에 결정적인 가정이 적혀 있다. <strong>효용 할인율(순수 시간선호율) 0.1%, 한계효용 탄력성 1.0</strong>이다.</p>
+</section>
+<section id="스턴-vs.-노드하우스-차이의-대부분은-할인율" class="level3">
+<h3 class="anchored" data-anchor-id="스턴-vs.-노드하우스-차이의-대부분은-할인율">스턴 vs.&nbsp;노드하우스: 차이의 대부분은 할인율</h3>
+<p>스턴 보고서에는 많은 반론이 제기되었다.</p>
+<ul>
+<li><strong>노드하우스(2007)</strong>: 스턴의 결론은 0에 가까운 순수 시간선호율과 특정 효용함수의 조합에 <strong>결정적으로</strong> 달려 있다. 시장이자율과 일치하는 할인율을 쓰면 결론이 크게 달라진다.</li>
+<li><strong>바이츠먼(2007)</strong>: 스턴의 할인율 분석에는 회의적이지만, 우리가 기후변화를 할인할 이자율에 대해 흔히 인정하는 것보다 훨씬 덜 확실하다는 점을 강조했다. 이 불확실성 자체가 낮은 할인율을 지지할 수 있다(9장).</li>
+<li><strong>멘델손(2008)</strong>은 “스턴 보고서는 경제 분석인가?”라고 물으며 다섯 가지를 비판했다. 최적화에 기초하지 않았고, 시간 지평이 매우 길며(2100년 이후까지), 가치평가의 불확실성이 큰 비시장 영향을 포함했고, 피해를 미래로 외삽하면서 적응 능력의 발전을 무시했으며(5장의 ‘바보 농부’ 문제), 매우 낮은 할인율을 택했다는 것이다.</li>
+</ul>
+<p>정리하면, 같은 과학과 비슷한 피해 모형에서도 <span class="math inline">\(\rho\)</span> 하나가 “지금 강하게”(스턴)와 “처음엔 완만하게”(노드하우스)를 가른다. 할인율은 기술적 모수가 아니라 <strong>가치판단</strong>이다. 다만 두 연구의 차이를 할인율 하나로 모두 설명할 수는 없다. 경제 성장, 피해함수, 기술, 불확실성과 정책 제약도 결과를 바꾼다 <span class="citation" data-cites="stern2007 nordhaus2017">(<a href="references.html#ref-stern2007" role="doc-biblioref">Stern 2007년</a>; <a href="references.html#ref-nordhaus2017" role="doc-biblioref">Nordhaus 2017년</a>)</span>.</p>
+</section>
+</section>
+<section id="최적-기후정책" class="level2">
+<h2 class="anchored" data-anchor-id="최적-기후정책">최적 기후정책</h2>
+<section id="비용-편익-분석을-기후에-적용하면" class="level3">
+<h3 class="anchored" data-anchor-id="비용-편익-분석을-기후에-적용하면">비용-편익 분석을 기후에 적용하면</h3>
+<p>비용-편익 분석은 기후정책에 대해 무엇을 말할까? 핵심은 두 가지다(Tol, 8.2.1절).</p>
+<ul>
+<li><strong>완전 감축의 한계비용은 크다.</strong> 에너지 사용의 상당 부분은 낭비이거나 왜곡된 유인의 결과라 조금 줄이기는 쉽다. 그러나 모든 배출을 없애는 것은 어렵다. 항공, 일부 산업공정, 군사 같은 틈새 용도에는 아직 마땅한 대안이 없고, 풍력과 태양광도 비중이 커지면 전력망 보강 비용이 급증한다.</li>
+<li><strong>완전 감축의 추가 편익은 작다.</strong> 온난화를 6°C에서 5°C로 줄이는 편익은 크지만, 0.1°C를 0.01°C로 줄이는 편익은 아주 작다. 약간의 기후변화는 피해가 거의 없다.</li>
+</ul>
+<p>따라서 비용-편익 분석의 관점에서는 <strong>온실가스 배출을 0으로 줄이는 것이 최적이 되기 어렵다.</strong> 그런데 국제법은 사실상 그것을 요구한다. 왜 그런지 살펴보자.</p>
+</section>
+<section id="협약-2조의-안정화는-넷제로를-뜻하나" class="level3">
+<h3 class="anchored" data-anchor-id="협약-2조의-안정화는-넷제로를-뜻하나">협약 2조의 ’안정화’는 넷제로를 뜻하나?</h3>
+<p>유엔기후변화협약(UNFCCC) 2조는 협약의 궁극적 목적을 “기후체계에 위험한 인위적 간섭을 막는 수준에서 대기 중 온실가스 농도를 <strong>안정화</strong>하는 것”이라고 규정한다. 단순한 저량 모형 <span class="math inline">\(S_t = (1-\delta)S_{t-1} + E_{t-1}\)</span>(<span class="math inline">\(S\)</span>: 저량, <span class="math inline">\(E\)</span>: 배출, <span class="math inline">\(\delta\)</span>: 분해율)에서 안정화, 즉 <span class="math inline">\(S_t=S_{t-1}\)</span>이면</p>
+<p><span class="math display">\[S=(1-\delta)S+E \;\Longleftrightarrow\; \delta S = E \;\Longleftrightarrow\; S=\frac{E}{\delta}\]</span></p>
+<p>이다. 분해가 있다면(<span class="math inline">\(\delta&gt;0\)</span>) 어떤 수준의 배출에서도 농도는 안정화될 수 있다. 그러나 CO₂의 상당 부분은 사실상 분해되지 않는다(<span class="math inline">\(\delta\approx0\)</span>). 그렇다면 농도를 안정화하려면 <span class="math inline">\(E=0\)</span>, 즉 <strong>넷제로</strong>여야 한다. 1장에서 본 기후과학의 결론, 즉 CO₂ 순배출이 0이 되어야 CO₂로 인한 온난화가 멈춘다는 것과 같은 이야기다.</p>
+<p>CO₂의 <strong>넷제로</strong>는 인간 활동의 CO₂ 배출과 인간에 의한 제거가 균형을 이루는 상태다. 모든 온실가스를 CO₂환산량으로 합친 넷제로와는 구별된다. 순배출을 0으로 만드는 것과 이미 축적된 온난화나 모든 피해를 즉시 되돌리는 것도 다르다.</p>
+</section>
+<section id="언제-100-감축이-정당화되나-백스톱-기술" class="level3">
+<h3 class="anchored" data-anchor-id="언제-100-감축이-정당화되나-백스톱-기술">언제 100% 감축이 정당화되나: 백스톱 기술</h3>
+<p>그렇다면 비용-편익 분석이 넷제로를 정당화할 수 있는 조건은 무엇일까? 답은 <strong>백스톱 기술(backstop technology)</strong>, 즉 배출 없이 화석연료를 완전히 대체할 수 있는 기술이다. Tol(8.3.1절)은 다섯 가지 조건을 제시한다.</p>
+<ol type="1">
+<li>CO₂를 배출하지 않는 에너지원이다.</li>
+<li>모든 에너지 수요를 충족할 만큼 풍부하다.</li>
+<li>공급곡선이 평평하다. 즉 한계비용이 일정하다. 바람이 좋은 곳부터 짓는 풍력은 이 조건을 만족하지 않는다.</li>
+<li>에너지는 동질적인 상품이다. 백스톱이 화석연료보다 싸지면 시장의 일부가 아니라 <strong>전체</strong>를 대체한다(승자독식).</li>
+<li>경제가 <strong>이력현상(hysteresis)</strong>을 보인다. 일단 탄소중립 상태가 되면 정책 개입 없이도 되돌아가지 않는다.</li>
+</ol>
+<p>다섯 조건이 모두 맞으면, 충분히 높은 탄소세가 백스톱을 작동시키고 경제는 탈탄소화한 뒤 되돌아가지 않는다. 이 경우 비용-편익 분석도 <strong>완전 감축</strong>을 정당화한다. 요약하면, <strong>적정한 가격의 완벽하고 영구적인 화석연료 대체재</strong>가 있을 때다.</p>
+<p>이것은 큰 “만약”들이다. 기후변화가 멈춘 뒤 땅속에 남은 값싼 화석연료를 다시 쓰고 싶은 유혹을 견딜 수 있을까? 다만 정태적 교과서 그림에서 내부 최적점의 배출량이 양수라고 해서 장기 넷제로 목표가 경제학과 모순되는 것은 아니다. 누적 배출의 제약, 기술변화, 비가역적 피해와 안전 기준을 포함하면 선택의 조건이 달라진다. 마지막 배출을 대체하거나 제거하는 한계비용이 그 배출의 사회적 피해보다 작다면 완전 감축이 효율적일 수 있다. 기술이 존재한다는 사실과 즉시 무제한으로 사용할 수 있다는 가정은 구분해야 한다.</p>
+</section>
+<section id="dice의-최적-경로-처음엔-조금-나중엔-더" class="level3">
+<h3 class="anchored" data-anchor-id="dice의-최적-경로-처음엔-조금-나중엔-더">DICE의 최적 경로: 처음엔 조금, 나중엔 더</h3>
+<p>노드하우스의 <strong>DICE 모형</strong>은 “세상을 선한 독재자가 다스린다면 온실가스를 어떻게 하겠는가?”라는 질문에 답하는 모형이다. 전 세계 후생을 최대화하는 탄소세와 그에 따른 배출 감축률을 계산한다(Tol, 그림 8.9). 그 답은 <strong>처음엔 조금 줄이고, 나중에 더 많이</strong>다. 그러나 농도를 완전히 안정화할 만큼은 아니다. DICE의 계산에서 아무런 통제가 없는 경로의 CO₂ 농도는 2100년 800ppm을 넘지만, 최적 경로는 600ppm 근처에서 상승이 둔화될 뿐 2100년까지 <strong>완전히 안정화되지는 않는다</strong>(Tol, 그림 8.10).</p>
+<p>1991년 이후 수많은 연구가 이어졌지만 Tol은 그 결론을 다음과 같이 요약한다.</p>
+<ul>
+<li><strong>단기 감축은 완만해야 한다.</strong> 거의 모든 가정에서 견고한 결론이다. 에너지 사용은 집, 자동차, 기계 같은 내구재에 묶여 있어 급격한 감축은 큰 자본 파괴를 뜻한다(6장의 점진적 경로).</li>
+<li><strong>감축이 가속되는 속도는 가정에 매우 민감하다.</strong> 다만 감축은 시간이 갈수록 강해진다.</li>
+<li><strong>100% 감축이 최적으로 나오는 경우는 거의 없다.</strong> 이 결론도 가정에 관계없이 견고하다.</li>
+</ul>
+<p>다만 IAM의 최적 경로는 주어진 가정 아래 목적함수를 최대화한 결과일 뿐이다. “모형이 최적이라고 계산했다”는 말과 “모든 윤리적·정치적 기준에서 최선이다”라는 말은 다르다. 미래 피해가 GDP의 비율로 표현되면 생태적 손실, 불평등, 돌이킬 수 없는 변화가 충분히 반영되었는지 확인해야 한다. 과거의 최적 탄소가격이나 최적 온난화 수준을 현재의 공인된 권고치로 옮겨서도 안 된다. 여러 할인율, 피해함수, 성장 경로에서 결론이 얼마나 달라지는지 보여주는 <strong>민감도 분석</strong>이 필요하다.</p>
+</section>
+<section id="탄소세를-매기면-scc도-달라진다-피구세-vs.-scc" class="level3">
+<h3 class="anchored" data-anchor-id="탄소세를-매기면-scc도-달라진다-피구세-vs.-scc">탄소세를 매기면 SCC도 달라진다: 피구세 vs.&nbsp;SCC</h3>
+<p>5장의 SCC는 추가 배출이 초래하는 미래 한계피해의 현재가치다. 그런데 이 값을 어떤 경로에서 계산하느냐에 따라 달라진다.</p>
+<ul>
+<li><strong>SCC</strong>(좁은 의미): 기후정책이 <em>없는</em> 배출 경로에서 추정한 한계피해</li>
+<li><strong>피구세</strong>: 탄소세가 한계피해와 같아지도록 <em>최적</em> 감축을 하는 경로에서의 한계피해</li>
+</ul>
+<p>탄소세를 매기면 배출이 줄고 기후변화가 덜 심해지므로 한계피해도 작아진다. 따라서 <strong>피구세 &lt; SCC</strong>다. Tol의 메타분석에서 순수 시간선호율 1%를 기준으로 보면, 피구세의 평균은 154달러/tC(표준오차 19), 무정책 경로의 SCC 평균은 195달러/tC(표준오차 23)다. 탄소세는 한계피해 추정의 <strong>불확실성도 줄인다.</strong> 배출이 줄면 극단적 기후변화의 가능성이 작아지기 때문이다.</p>
+<p>외부효과 외에 다른 왜곡이 없고 적절한 조건이 충족되면, <strong>최적 경로에서 계산한 SCC</strong>를 배출가격에 반영하여 효율적인 선택을 유도할 수 있다. 각 기업은 감축비용이 탄소가격보다 낮은 기회를 선택하므로 사회가 평가한 피해가 사적 결정에 들어간다. 이 원리를 실제 정책으로 구현하는 방법은 8장에서 다룬다.</p>
+</section>
+<section id="scc는-해마다-오른다-탄소세도-올라야-한다" class="level3">
+<h3 class="anchored" data-anchor-id="scc는-해마다-오른다-탄소세도-올라야-한다">SCC는 해마다 오른다, 탄소세도 올라야 한다</h3>
+<p>배출이 누적될수록 농도와 기온이 높아지고, 같은 한 톤이 초래하는 한계피해도 커진다. 그래서 SCC는 <strong>시간이 갈수록 상승</strong>한다. 연구들의 평균을 보면 SCC 증가율은 연 약 <strong>2.2%</strong>(표준편차 1.0%)다. 정책이 없는 경로에서는 약 2.3%, 최적 정책(피구세) 경로에서는 약 2.1%다. 기후정책은 기후변화에 장기적으로만 영향을 주므로, 피구세는 SCC보다 낮을 뿐 아니라 더 완만하게 오른다(Tol, 6.6절).</p>
+<p>이는 탄소세나 배출권 가격의 <strong>시간 경로</strong>를 설계할 때 기준점이 된다. 목표에 따라 두 가지 경로가 있다.</p>
+<ul>
+<li><strong>동태적 효율(비용-편익 분석)</strong>: 탄소가격은 SCC를 따라 연 약 <strong>2.2%</strong>씩 올라야 한다.</li>
+<li><strong>동태적 비용효과성(주어진 목표를 최소비용으로)</strong>: 탄소가격은 대략 <strong>할인율보다 약간 높은</strong> 속도로 올라야 한다. 정해진 누적 배출 예산을 시간에 걸쳐 가장 싸게 나누려면, 할인된 한계감축비용이 모든 시점에서 같아야 하기 때문이다(3장 등한계 원칙의 시간 버전).</li>
+</ul>
+<div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>참고: SCC와 사업의 평균 감축비용
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>사업의 순현재가치를 감축량으로 나눈 값은 SCC의 정의와 다르다. 어떤 사업의 감축 1톤당 순편익은 그 사업의 비용과 편익을 함께 반영한다. SCC는 특정 기준 경로에서 <strong>추가 배출 한 톤의 한계피해</strong>다. 두 값을 비교할 때에는 가격연도, 배출 시점, 분석기간과 피해 범위를 맞추어야 한다.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="다시-넷제로로-경제학자의-답" class="level2">
+<h2 class="anchored" data-anchor-id="다시-넷제로로-경제학자의-답">다시 넷제로로: 경제학자의 답</h2>
+<p>이 장의 출발점이었던 질문으로 돌아가자. 넷제로가 최선인가?</p>
+<ul>
+<li>감축의 비용과 편익에 관한 추정치는 <strong>적정한(modest) 감축</strong>을 가리킨다. 감축은 분명히 정당화되지만, 급격한 감축은 그렇지 않다.</li>
+<li>신뢰할 만한 연구들이 동의하는 것은, 감축은 <strong>완만하게 시작해 점점 강해지고</strong>, 장기적으로도 <strong>100%에는 못 미친다</strong>는 것이다.</li>
+<li>중기의 ‘적정한’ 수준이 얼마인지는 <strong>가정에 매우 민감</strong>하다. 그 가운데 가장 큰 것이 <strong>할인율</strong>이다.</li>
+<li>넷제로(100% 감축)를 비용-편익 분석으로 정당화하려면 <strong>적정 가격의 완벽하고 영구적인 화석연료 대체재</strong>, 즉 백스톱이 있어야 한다.</li>
+</ul>
+<p>이 장을 한 줄로 요약하면 다음 식이다.</p>
+<p><span class="math display">\[\max \sum_t \frac{B(E_t)-D(\cdot)}{(1+r)^t}\]</span></p>
+<p>피해(<span class="math inline">\(D\)</span>, 5장), 감축비용(<span class="math inline">\(B\)</span>, 6장), 할인(<span class="math inline">\(r\)</span>, 이 장)이 모두 모여야 “얼마나 줄일까”에 답할 수 있다. 넷제로는 과학이 말하는 목표이고, 비용-편익 분석은 그 목표가 <strong>어떤 조건에서</strong> 경제적으로도 최선인지를 묻는다. 그리고 그 답은 할인율이라는 가치판단과, 9장에서 다룰 불확실성과 파국적 위험을 어떻게 다루느냐에 따라 크게 달라진다.</p>
+</section>
+<section id="요약" class="level2">
+<h2 class="anchored" data-anchor-id="요약">요약</h2>
+<ul>
+<li><strong>정태적 최적.</strong> 최적 배출은 배출의 한계편익(= MAC)과 한계피해(MD)가 같아지는 곳에서 결정된다. 이는 4장의 새뮤얼슨 조건과 같은 구조이며, 탄소가격을 전 세계 한계피해(SCC)와 같게 매기면 달성할 수 있다. 최적 배출량은 규제 없는 배출량보다 작지만 0은 아니다.</li>
+<li><strong>할인.</strong> 서로 다른 시점의 비용과 편익은 현재가치로 환산해 비교한다. 100년 뒤 피해의 현재가치는 할인율 1%와 5%에서 약 50배 차이 난다. 동태적 최적 조건에서 한계피해의 현재가치 합이 곧 SCC다.</li>
+<li><strong>사회적 할인율.</strong> 램지 공식 <span class="math inline">\(r=\rho+\eta g\)</span>는 할인율을 순수 시간선호, 한계효용의 탄력성, 소비 증가율로 분해한다. <span class="math inline">\(\rho\)</span>는 미래 세대를 단지 나중에 태어났다는 이유로 덜 중시할 것인가라는 윤리적 선택이다.</li>
+<li><strong>할인율과 SCC.</strong> SCC는 할인 모수에 매우 민감하다. 스턴과 노드하우스의 결론 차이의 상당 부분은 할인율이라는 가치판단에서 나온다.</li>
+<li><strong>최적 정책.</strong> 비용-편익 분석은 대체로 완만하게 시작해 점점 강해지는 감축을 권하며, 100% 감축은 백스톱 기술이 있을 때에만 정당화된다. 탄소가격은 시간이 갈수록 올라야 하고, 최적 경로의 피구세는 무정책 경로의 SCC보다 낮다.</li>
+</ul>
+<p>다음 장에서는 이렇게 평가한 감축을 실제로 유도하는 정책수단, 즉 직접규제, 탄소세, 배출권거래제를 살펴본다.</p>
+</section>
+<section id="생각해-볼-문제" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="생각해-볼-문제">생각해 볼 문제</h2>
+<ol type="1">
+<li>램지 공식에서 <span class="math inline">\(\rho=0\)</span>이 윤리적으로 옳다고 주장하는 사람과, 시장이자율에서 드러난 사람들의 선호를 존중해야 한다고 주장하는 사람이 논쟁한다. 각 입장의 근거를 정리하고, 이 논쟁이 사실의 문제인지 가치의 문제인지 판단하라.</li>
+<li>기후변화로 미래 세대의 소비가 오히려 줄어든다면(<span class="math inline">\(g&lt;0\)</span>) 램지 공식의 할인율은 어떻게 되는가? 이것이 기후정책에 갖는 함의는?</li>
+<li>비용-편익 분석은 100% 감축을 권하지 않는데 파리협정은 넷제로를 목표로 한다. 두 입장을 조화시킬 수 있는 논리를 백스톱 기술, 불확실성, 비가역성의 관점에서 제시하라.</li>
+<li>한국 정부가 탄소세를 도입하면서 세율을 매년 일정 비율로 올리겠다고 발표한다면, 그 인상률은 어떤 기준으로 정해야 하는가?</li>
+<li>SCC를 무정책 경로에서 계산할 때와 최적 정책 경로에서 계산할 때 값이 다른 이유를 설명하라. 탄소세 수준을 정할 때는 어느 값을 써야 하는가?</li>
+</ol>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-nordhaus2017" class="csl-entry" role="listitem">
+Nordhaus, William D. 2017년. <span>“Revisiting the Social Cost of Carbon”</span>. <em>Proceedings of the National Academy of Sciences</em> 114 (7): 1518–23.
+</div>
+<div id="ref-ramsey1928" class="csl-entry" role="listitem">
+Ramsey, Frank P. 1928년. <span>“A Mathematical Theory of Saving”</span>. <em>Economic Journal</em> 38 (152): 543–59.
+</div>
+<div id="ref-stern2007" class="csl-entry" role="listitem">
+Stern, Nicholas. 2007년. <em>The Economics of Climate Change: The Stern Review</em>. Cambridge University Press.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/hocheoljeon\.github\.io\/climate-econ-book\/");
+      const newWindowLabel = "(opens in a new tab)";
+      const newWindowNoteId = "quarto-ext-newwindow-label";
+      // Links reference one hidden label through aria-describedby, so the
+      // announcement never changes their accessible name.
+      var describeNewWindow = (link) => {
+        if (!window.document.getElementById(newWindowNoteId)) {
+          var newWindowNote = window.document.createElement("span");
+          newWindowNote.id = newWindowNoteId;
+          newWindowNote.hidden = true;
+          newWindowNote.textContent = newWindowLabel;
+          window.document.body.appendChild(newWindowNote);
+        }
+        var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+        if (!describedBy.includes(newWindowNoteId)) {
+          describedBy.push(newWindowNoteId);
+          link.setAttribute("aria-describedby", describedBy.join(" "));
+        }
+      }
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            describeNewWindow(link);
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"스크롤 가능한 코드","output":"스크롤 가능한 출력"};
+  </script>
+<nav class="page-navigation" aria-label="페이지">
+  <div class="nav-page nav-page-previous">
+      <a href="./06-abatement-costs.html" class="pagination-link" aria-label="온실가스 감축비용">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">온실가스 감축비용</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./08-policy-instruments.html" class="pagination-link" aria-label="기후정책의 수단과 설계">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">기후정책의 수단과 설계</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>전호철 · 기후변화경제학 · 1–9장</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>CC BY-NC-SA 4.0 · 제3자 자료는 별도 출처 참조</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
