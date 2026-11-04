@@ -716,6 +716,30 @@ L(\Delta T)=1-\frac{1}{1+0.01(\Delta T)^2}
 </tbody>
 </table>
 <p>기대 손실은 (확률) × (손실)이다. 예컨대 두 번째 줄은 <span class="math inline">\(0.5\times0+0.5\times14\%=7\%\)</span>다. 위험중립적인 사회라도, 2°C가 확실하면 GDP의 최대 4%까지, 8°C의 가능성이 25%라면 최대 <strong>10%</strong>까지 낼 용의가 있다. 기대 기온은 모두 같은데 왜 그럴까? 4°C는 2°C보다 <strong>두 배 이상</strong> 해롭고, 8°C는 2°C보다 <strong>네 배를 훨씬 넘게</strong> 해롭기 때문이다.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">노트</span>왜 “위험중립이어도 생긴다”인가: 젠센 부등식
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>위험중립적인 사회는 손실의 <strong>기댓값</strong>만 본다. 그런데 피해함수 <span class="math inline">\(L(\Delta T)\)</span>가 볼록하면 젠센 부등식에 따라</p>
+<p><span class="math display">\[
+E\,L(\Delta T)\;&gt;\;L(E\,\Delta T)
+\]</span></p>
+<p>가 성립한다. 기댓값만 보는 사회에게도 “기온이 불확실한 상태”가 “평균 기온이 확실한 상태”보다 나쁘다는 뜻이다. 기온이 따뜻한 쪽으로 빗나갈 때 늘어나는 손실이, 같은 폭만큼 시원한 쪽으로 빗나갈 때 줄어드는 손실보다 크기 때문이다.</p>
+<p>위 표로 확인해 보자. 세 복권 모두 <span class="math inline">\(E\,\Delta T=2\)</span>°C이므로 <span class="math inline">\(L(E\,\Delta T)=4\%\)</span>로 같다. 그러나 <span class="math inline">\(E\,L(\Delta T)\)</span>는 4%, 7%, 10%로 커진다. 그 차이인 0, 약 3%포인트, 약 6%포인트가 <strong>볼록성만으로 생긴 보험가치</strong>다. 효용함수가 선형(위험중립)이어도 이 차이는 사라지지 않는다.</p>
+<p>두 경로는 <strong>휘어 있는 곳</strong>이 다르다.</p>
+<ul>
+<li><strong>① 볼록성</strong>: 기온 → 피해 단계(물리·경제적 피해함수)가 휘어 있다. 사회의 선호와는 무관하다.</li>
+<li><strong>② 위험회피</strong>: 피해 → 후생 단계(효용함수)가 휘어 있다. 기대손실이 같아도 불확실성 자체를 싫어한다.</li>
+</ul>
+<p>두 효과는 서로 독립적이며 더해진다. 위험중립적인 사회는 ①만 반영해 7%나 10%를 낼 용의가 있고, 위험회피적인 사회는 여기에 위험프리미엄 <span class="math inline">\(\pi\)</span>를 더 얹는다. 젠센 부등식의 다른 적용은 부록의 “참고: 하나의 수학, 젠센 부등식”에 정리해 두었다.</p>
+</div>
+</div>
 <p>이것이 우리가 화재·폭풍·홍수에 대비해 집을 보험에 들고, 큰 입원비에 대비해 의료보험에 들며, 건강하게 오래 살 것으로 예상하면서도 생명보험에 드는 이유다. 같은 이유로 사회는 <strong>매우 나쁜(설령 가능성이 낮더라도) 기후 결과</strong>에 대비한 보험에 상당한 금액을 낼 용의가 있어야 한다.</p>
 <p>그런데 지금까지는 기대 <strong>GDP 손실</strong>만 보았다. GDP 10% 손실이 5% 손실의 <strong>정확히 두 배</strong>만큼 나쁘다고 암묵적으로 가정한 것이다. 이 가정을 풀면 두 번째 경로가 나온다.</p>
 </section>
@@ -833,7 +857,7 @@ L(\Delta T)=1-\frac{1}{1+0.01(\Delta T)^2}
 <p>꼬리가 길수록(8°C) 위험회피의 효과가 커진다. <span class="math inline">\(\eta=5\)</span>이면 지불의사(20.9%)가 기대손실(9.8%)의 <strong>두 배</strong>를 넘는다.</p>
 <p>이 확실성등가 손실은 “기준 소비를 확실하게 얻는 대안과 비교할 때, 이 위험을 <strong>완전히</strong> 없애기 위해 포기할 용의가 있는 소비 비율”이다. 실제 감축정책은 모든 위험을 없애지 않으며 비용도 든다. 실제 정책평가에서는 두 정책 각각의 상태별 순소비와 기대효용을 비교해야 한다. 또 이 함수는 모든 온도에서 볼록한 것이 아니므로(약 5.8°C에서 변곡), 위 세 경우의 결과를 임의의 분포에 일반화해서는 안 된다(부록 A4).</p>
 <div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -842,7 +866,7 @@ L(\Delta T)=1-\frac{1}{1+0.01(\Delta T)^2}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>7장의 할인과 이 장의 위험을 하나의 식으로 합칠 수 있다. 현재 소비를 <span class="math inline">\(c_0\)</span>, 미래 시점 <span class="math inline">\(t\)</span>·상태 <span class="math inline">\(s\)</span>의 소비를 <span class="math inline">\(c_{t,s}\)</span>, 정책의 작은 소비 편익을 <span class="math inline">\(\Delta c_{t,s}\)</span>라 하자. 그 편익의 현재 소비 단위 가치는</p>
 <p><span class="math display">\[
@@ -1213,7 +1237,7 @@ L(M_2)=1-\frac{1}{1+0.03\,M_2}
 <h2 class="unnumbered anchored" data-anchor-id="부록-이론으로-다시-보기">부록: 이론으로 다시 보기</h2>
 <p>본문의 숫자 예제가 보여준 결과는 특정 숫자에서 나온 우연이 아니라 기대효용 이론의 일반적인 성질이다. 이 부록은 그것을 몇 개의 명제로 정리한다. 수학에 관심 있는 학생을 위한 내용이므로 건너뛰어도 본문을 이해하는 데 지장은 없다.</p>
 <div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1222,7 +1246,7 @@ L(M_2)=1-\frac{1}{1+0.03\,M_2}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>이 장의 세 가지 결과는 모두 <strong>젠센 부등식(Jensen’s inequality)</strong>의 응용이다. 볼록함수 <span class="math inline">\(f\)</span>에 대해 <span class="math inline">\(E\,f(X)\geq f(E\,X)\)</span>, 오목함수에 대해서는 부등호가 반대다.</p>
 <table class="caption-top table">
@@ -1273,7 +1297,7 @@ L(M_2)=1-\frac{1}{1+0.03\,M_2}
 </div>
 </div>
 <div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1282,7 +1306,7 @@ L(M_2)=1-\frac{1}{1+0.03\,M_2}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>A1. 설정.</strong> GDP를 1로 정규화하고 한 시점만 본다(할인 없음). 기온 상승 <span class="math inline">\(T\)</span>는 확률변수로 <span class="math inline">\(E\,T=\mu\)</span>, <span class="math inline">\(\mathrm{Var}(T)=\sigma^2\)</span>이다. 소비는 <span class="math inline">\(c(T)=1-L(T)\)</span>이고, <span class="math inline">\(L\)</span>은 증가·볼록한 손실함수, <span class="math inline">\(u\)</span>는 증가·오목한 효용함수다. 기온 상승을 <strong>완전히 피하기 위해</strong> 낼 수 있는 최대 비율(보험료의 상한) <span class="math inline">\(w\)</span>는</p>
 <p><span class="math display">\[
@@ -1405,7 +1429,7 @@ w=1-\big[\,q\,\epsilon^{1-\eta}+1-q\,\big]^{\frac{1}{1-\eta}}
 </div>
 </div>
 <div class="reference-box callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1414,7 +1438,7 @@ w=1-\big[\,q\,\epsilon^{1-\eta}+1-q\,\big]^{\frac{1}{1-\eta}}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>B1. 옵션가치의 정의: 정보의 가치.</strong> 선택 <span class="math inline">\(a\)</span>, 불확실한 상태 <span class="math inline">\(\theta\)</span>, 보수 <span class="math inline">\(V(a,\theta)\)</span>라 하자. <strong>배우고 나서</strong> 고를 수 있으면 기대보수는 <span class="math inline">\(E_\theta[\max_a V(a,\theta)]\)</span>, <strong>지금 확정</strong>해야 하면 <span class="math inline">\(\max_a E_\theta V(a,\theta)\)</span>다. 모든 <span class="math inline">\(\theta\)</span>와 <span class="math inline">\(a'\)</span>에 대해 <span class="math inline">\(\max_a V(a,\theta)\geq V(a',\theta)\)</span>이므로, 기댓값을 취하고 <span class="math inline">\(a'\)</span>에 대해 최대화하면</p>
 <p><span class="math display">\[
